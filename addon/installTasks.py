@@ -13,8 +13,9 @@ def onInstall():
 	positions = os.path.join(os.path.dirname(__file__), "..", "goldenCursor", "globalPlugins", "files")
 	# Without importing old positions, saved positions would be lost.
 	newPositions = os.path.join(os.path.dirname(__file__), "globalPlugins", "files")
-	os.mkdir(newPositions)
-	if os.path.exists(positions):
+	if not os.path.exists(positions):
+		os.mkdir(newPositions)
+	else:
 		try:
 			shutil.copytree(positions, newPositions)
 		except IOError, WindowsError:
