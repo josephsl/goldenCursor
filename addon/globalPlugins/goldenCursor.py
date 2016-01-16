@@ -74,7 +74,11 @@ class positionsList(gui.SettingsDialog):
 			ui.message(_('no selection'))
 			return
 
-		name = wx.GetTextFromUser(_('you can rename this name.'),_('rename dialog'),self.listBox.StringSelection)
+		oldName = self.listBox.StringSelection
+		name = wx.GetTextFromUser(_('you can rename this name.'),_('Rename'),self.listBox.StringSelection)
+		# When escape is pressed, an empty string is returned.
+		if name == "" or name == oldName:
+			return
 		self.listBox.SetFocus()
 		x_y = self.listBox.GetClientData(self.listBox.GetSelection())
 		del self.data [index]
