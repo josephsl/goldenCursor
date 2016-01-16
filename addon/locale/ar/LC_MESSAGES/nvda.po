@@ -1,0 +1,134 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: golden cursor2.0\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: author : salah atair, translation and keycommands are made by "
+"wafeeq taher <atair1978@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ar\n"
+"X-Generator: Poedit 1.6.4\n"
+
+msgid "Enter the value for position number you wish to jump to"
+msgstr "أدخلْ القيمة التي تريد الانتقال اليها."
+
+msgid "please enter comma between the first  and the second number"
+msgstr "من فضْلِكَ افْصِلْ ما بين x وَ y بفاصلة."
+
+msgid "Error"
+msgstr "خطأ!"
+
+msgid "please enter an integer number."
+msgstr "من فضلك أَدْخِلْ رقم صحيح ."
+
+msgid "This key Not used.Press h for Help "
+msgstr "هذا المفتاح غير مستخدم اضغط h للمساعدة."
+
+msgid "to select a value for mouse movement (1, 10, 20, 50. 100."
+msgstr "لتحديد قيمة البكسل. ما بين 1 . 5 . 10 . 20 . 50 . 100."
+
+msgid "report pixels off"
+msgstr "الاعلان عن البكسل.تعطيل."
+
+msgid "report pixels on"
+msgstr "الاعلان عن البكسل .تشغيل."
+
+msgid "%s , %s' %(x,y)"
+msgstr "%s , %s' %(x,y)"
+
+msgid "Moves the Mouse pointer right."
+msgstr "تحريك المؤشر لليمين."
+
+msgid "Moves the Mouse pointer left."
+msgstr "تحريك المؤشر لليسار."
+
+msgid "Moves the Mouse pointer up."
+msgstr "تحريك المؤشر للأعلى."
+
+msgid "Moves the Mouse pointer down."
+msgstr "تحريك المؤشر للأسفل."
+
+msgid "restriction on"
+msgstr "حصر المؤشر تشغيل."
+
+msgid "restriction off"
+msgstr "حصر المؤشر تعطيل."
+
+msgid ""
+"Toggles the restriction between the 2 levels you can toggle between "
+"Application Window restriction and Unrestricted."
+msgstr "تبديل  لحَصر المؤشر في نافذة التطبيق النشط."
+
+msgid "Jump to position"
+msgstr "الانتقال الى."
+
+msgid "report the positions of the mouse."
+msgstr "الاعلان عن البكسل لموضع الفأرة الحالي."
+
+msgid "toggle reporting of pixels"
+msgstr "التَّبْديل بين تشغيل وتعطيل الإعلان عن البكسل."
+
+msgid "type the x/y value you wish the cursor to jump to"
+msgstr "لكتابةقيمة x, y لانتقال المؤشر اليها."
+
+msgid "please enter the value for the name of the position."
+msgstr "اكتب اسماً للموضع الحالي."
+
+msgid "Enter the value for position name you wish to save."
+msgstr "اكتب اسما للموضع الحالي."
+
+msgid "save position"
+msgstr "حفظ الموضع."
+
+msgid "there is no saved data for this application."
+msgstr "لا توجد أي بيانات محفوظة لهذا التطبيق حتى الآن."
+
+msgid "list of positions"
+msgstr "قائمة بلمواضع المحفوظة."
+
+msgid "choose a item of this list"
+msgstr "عرض العناصر. "
+
+msgid "ok"
+msgstr "موافق."
+
+msgid "cancel"
+msgstr "الغاء."
+
+msgid ""
+"To open a list showing the points that have already been saved for this "
+"application."
+msgstr "لِفَتحِ قائمة تعْرِض الإحداثيات المُخَزَّنة لهذا التطْبيق."
+
+msgid "to save a the current position."
+msgstr "لفتْحِ محاوَرة تتيح لكَ تخزين الموضع الحالي."
+
+msgid "the position had saved."
+msgstr "تم حفظ الموضع."
+
+msgid "rename"
+msgstr "اعادة تسمية."
+
+msgid "delete"
+msgstr "حذف."
+
+msgid "clear"
+msgstr "حذف نهائي."
+
+msgid "you can rename this name."
+msgstr "قم بإعادة التسمية؟"
+
+msgid "rename dialog"
+msgstr "محاورة لإعادة التسمية."
+
+msgid "the list is empty."
+msgstr "القائمة فارغة."
+
+msgid "no selection"
+msgstr "لايوجد تحديد."
+
+msgid "positions List"
+msgstr "قائمة المواضع."
