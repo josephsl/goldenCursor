@@ -5,6 +5,7 @@
 #License GNU GPL
 # Date: 25/12/2015
 #team work: author : salah atair, translation and keycommands are made by wafeeq taher
+# Additional tweaking done by Joseph Lee and contributors, resetting version to 1.0.
 #now it became easy to control the mouse using keyboard
 
 
@@ -171,7 +172,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			p = data+u'\n'+p
 		with codecs.open(path,'w','utf-8') as f:
 			f.write(p)
-			ui.message(_('the position had saved.'))
+			ui.message(_('the position has been saved.'))
 	script_savePosition.__doc__ = _('to save a the current position.')
 
 	def script_mouseMovementChange (self, gesture):
