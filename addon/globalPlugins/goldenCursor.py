@@ -1,14 +1,12 @@
 ﻿# -*- coding: utf-8 -*-
 #golden cursor
 # Copyright (C) 2015-2016 
-#Version 2.2
+#Version 1.1dev
 #License GNU GPL
 # Date: 25/12/2015
 #team work: author : salah atair, translation and keycommands are made by wafeeq taher
 # Additional tweaking done by Joseph Lee and contributors, resetting version to 1.0.
 #now it became easy to control the mouse using keyboard
-
-
 
 import codecs
 from threading import Timer
@@ -28,11 +26,17 @@ import win32api
 import addonHandler
 addonHandler.initTranslation()
 filesPath = os.path.join(os.path.dirname(__file__), 'files')
-
+isOpened = 0
 class positionsList(gui.SettingsDialog):
 	title = _("positions List")
 	def __init__(self, parent):
 		super(positionsList, self).__init__(parent)
+
+	def __del__(self):
+		super(positionsList, self).__del__()
+		global isOpened
+		if isOpened == 1:
+			isOpened = 0
 
 	def makeSettings(self, sizer):
 		appName = api.getForegroundObject().appModule.appName
@@ -50,11 +54,11 @@ class positionsList(gui.SettingsDialog):
 			if i [0] == u'[':
 				self.listBox.Append(i[1:-1], self.data [self.data.index(i)+1])
 		buttonsSizer = wx.BoxSizer(wx.HORIZONTAL)
-		b_rename = wx.Button(self, -1,_('rename'))
+		b_rename = wx.Button(self, -1,_('&rename'))
 		buttonsSizer.Add(b_rename)
-		b_delete = wx.Button(self, -1,_('delete'))
+		b_delete = wx.Button(self, -1,_('&delete'))
 		buttonsSizer.Add(b_delete)
-		b_clear = wx.Button(self, -1,_('clear'))
+		b_clear = wx.Button(self, -1,_('&clear'))
 		buttonsSizer.Add(b_clear)
 		b_rename.Bind(wx.EVT_BUTTON, self.onRename)
 		b_delete.Bind(wx.EVT_BUTTON, self.onDelete)
@@ -102,6 +106,7 @@ class positionsList(gui.SettingsDialog):
 			return
 		del self.data [index]
 		del self.data [index]
+		ui.message(_('the position has been deleted.'))
 		data = u'\n'.join(self.data)
 		with codecs.open(self.path,'w','utf-8') as f:
 			f.write(data)
@@ -115,10 +120,14 @@ class positionsList(gui.SettingsDialog):
 		except:
 			ui.message(_('The list is empty'))
 		self.listBox.Clear()
+		ui.message(_('the list has been cleared.'))
 
 	def onOk(self, event):
 		super(positionsList, self).onOk(event)
-		x, y= self.listBox.GetClientData(self.listBox.GetSelection()).split(u',')
+		try:
+			x, y= self.listBox.GetClientData(self.listBox.GetSelection()).split(u',')
+		except:
+			return
 		x =int(x)
 		y = int(y)
 		win32api.SetCursorPos((x,y))
@@ -137,10 +146,18 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.restriction = 0
 
 	def script_savedPositionsList(self, gesture):
+		global isOpened 
+		
+		if isOpened == 1:
+			ui.message(_('An NVDA settings dialog is already open. Please close it first.'))
+			return
+		else:
+			isOpened = 1
 		if api.getForegroundObject().appModule.appName+'.gc' in os.listdir(filesPath):
 			gui.mainFrame._popupSettingsDialog(positionsList)
 		else:
 			ui.message(_('there is no saved data for this application.'))
+
 	script_savedPositionsList.__doc__ = _('To open a list showing the points that have already been saved for this application.')
 
 	def script_savePosition(self, gesture):
@@ -176,7 +193,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			p = data+u'\n'+p
 		with codecs.open(path,'w','utf-8') as f:
 			f.write(p)
-			ui.message(_('the position has been saved.'))
+			ui.message(_("the position has been saved in %s." %(path)))
 	script_savePosition.__doc__ = _('to save a the current position.')
 
 	def script_mouseMovementChange (self, gesture):
