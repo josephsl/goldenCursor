@@ -1,12 +1,14 @@
 ﻿# -*- coding: utf-8 -*-
 #golden cursor
 # Copyright (C) 2015-2016 
-#Version 1.1dev
+#Version 2.2
 #License GNU GPL
 # Date: 25/12/2015
 #team work: author : salah atair, translation and keycommands are made by wafeeq taher
 # Additional tweaking done by Joseph Lee and contributors, resetting version to 1.0.
 #now it became easy to control the mouse using keyboard
+
+
 
 import codecs
 from threading import Timer
@@ -27,46 +29,49 @@ import addonHandler
 addonHandler.initTranslation()
 filesPath = os.path.join(os.path.dirname(__file__), 'files')
 isOpened = 0
-class positionsList(gui.SettingsDialog):
-	title = _("positions List")
-	def __init__(self, parent):
-		super(positionsList, self).__init__(parent)
 
-	def __del__(self):
-		super(positionsList, self).__del__()
-		global isOpened
-		if isOpened == 1:
-			isOpened = 0
-
-	def makeSettings(self, sizer):
+class positionsList(wx.Dialog):
+	def __init__(self,parent):
+		super(positionsList,self).__init__(parent,title=_("positions List"))
 		appName = api.getForegroundObject().appModule.appName
 		self.path = os.path.join(filesPath, appName+'.gc')
 		with codecs.open(self.path,'r','utf-8') as f:
 			self.data = f.read().strip()
 		self.data = self.data.split(u'\n')
-		listBoxSizer = wx.BoxSizer(wx.HORIZONTAL)
-		st = wx.StaticText(self,-1,_('choose a item of this list'))
-		listBoxSizer.Add(st)
-		self.listBox = wx.ListBox(self,-1)
-		listBoxSizer.Add(self.listBox)
-		sizer.Add(listBoxSizer)
+		listBoxSizer = wx.BoxSizer(wx.VERTICAL)
+		panel = wx.Panel(self,-1)
+		st = wx.StaticText(panel,-1,_('choose a item of this list'))
+		listBoxSizer.Add(st,0.5, wx.ALL, 10)
+		self.listBox = wx.ListBox(panel,-1)
+		listBoxSizer.Add(self.listBox,0,wx.ALL| wx.EXPAND,10)
 		for i in self.data:
 			if i [0] == u'[':
 				self.listBox.Append(i[1:-1], self.data [self.data.index(i)+1])
-		buttonsSizer = wx.BoxSizer(wx.HORIZONTAL)
-		b_rename = wx.Button(self, -1,_('&rename'))
-		buttonsSizer.Add(b_rename)
-		b_delete = wx.Button(self, -1,_('&delete'))
-		buttonsSizer.Add(b_delete)
-		b_clear = wx.Button(self, -1,_('&clear'))
-		buttonsSizer.Add(b_clear)
+		buttonsSizer = wx.BoxSizer(wx.VERTICAL)
+		b_rename = wx.Button(panel, -1,_('&rename'))
+		buttonsSizer.Add(b_rename,0, wx.ALL| wx.CENTER| wx.EXPAND,10)
+		b_delete = wx.Button(panel, -1,_('&delete'))
+		buttonsSizer.Add(b_delete, 0, wx.ALL| wx.CENTER| wx.EXPAND,10)
+		b_clear = wx.Button(panel, -1,_('c&lear'))
+		buttonsSizer.Add(b_clear, 0, wx.ALL| wx.CENTER| wx.EXPAND,10)
+		b_ok = wx.Button(panel,1,_('&ok'))
+		buttonsSizer.Add(b_ok, 0, wx.ALL| wx.CENTER| wx.EXPAND,10)
+		b_cancel = wx.Button(self, label=_("&cancel"), id=wx.ID_CLOSE)
+		buttonsSizer.Add(b_cancel, 0, wx.ALL| wx.CENTER| wx.EXPAND,10)
 		b_rename.Bind(wx.EVT_BUTTON, self.onRename)
 		b_delete.Bind(wx.EVT_BUTTON, self.onDelete)
 		b_clear.Bind(wx.EVT_BUTTON, self.onClear)
-		sizer.Add(buttonsSizer)
-
-	def postInit(self):
+		b_ok.Bind(wx.EVT_BUTTON, self.onOk)
+		b_cancel.Bind(wx.EVT_BUTTON, lambda evt: self.Close())
+		self.Bind(wx.EVT_CLOSE, self.onCancel)
+		self.EscapeId = wx.ID_CLOSE
+		h = wx.BoxSizer(wx.HORIZONTAL)
+		h.Add(listBoxSizer)
+		h.Add(buttonsSizer)
 		self.listBox.SetFocus()
+		self.listBox.SetSelection(0)
+		self.Centre()
+		self.SetSizer(h)
 
 	def onRename(self, event):
 		if self.listBox.IsEmpty():
@@ -96,9 +101,6 @@ class positionsList(gui.SettingsDialog):
 		self.listBox.SetClientData(i,x_y)
 		self.listBox.SetSelection(i)
 	def onDelete(self,event):
-		if self.listBox.IsEmpty():
-			ui.message(_('the list is empty.'))
-			return
 		try:
 			index = self.data.index(u'['+self.listBox.GetStringSelection()+u']')
 		except:
@@ -113,17 +115,21 @@ class positionsList(gui.SettingsDialog):
 		self.listBox.Delete(self.listBox.GetSelection())
 		if self.listBox.IsEmpty():
 			os.remove(self.path)
+			t1 = Timer(0.2,speech.cancelSpeech)
+			t2 = Timer(0.4,ui.message,[_('the list has been cleared.')])
+			t1.start()
+			t2.start()
+			self.Close()
 
 	def onClear(self, event):
-		try:
-			os.remove(self.path)
-		except:
-			ui.message(_('The list is empty'))
-		self.listBox.Clear()
-		ui.message(_('the list has been cleared.'))
+		os.remove(self.path)
+		t1 = Timer(0.2,speech.cancelSpeech)
+		t2 = Timer(0.4,ui.message,[_('the list has been cleared.')])
+		t1.start()
+		t2.start()
+		self.Close()
 
 	def onOk(self, event):
-		super(positionsList, self).onOk(event)
 		try:
 			x, y= self.listBox.GetClientData(self.listBox.GetSelection()).split(u',')
 		except:
@@ -135,6 +141,12 @@ class positionsList(gui.SettingsDialog):
 		t.start()
 		self.Close()
 
+	def onCancel(self,evt):
+		self.Destroy()
+
+	def __del__(self):
+		global isOpened
+		isOpened = 0
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	scriptCategory = u"golden cursor"
@@ -146,17 +158,16 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.restriction = 0
 
 	def script_savedPositionsList(self, gesture):
-		global isOpened 
-		
-		if isOpened == 1:
-			ui.message(_('An NVDA settings dialog is already open. Please close it first.'))
-			return
+		global isOpened
+		appName = api.getForegroundObject().appModule.appName
+		if appName+'.gc' in os.listdir(filesPath):
+			if isOpened == 0:
+				isOpened = 1
+				positionsList(gui.mainFrame).Show()
+			else:
+				ui.message(_('An NVDA settings dialog is already open. Please close it first.'))
 		else:
-			isOpened = 1
-		if api.getForegroundObject().appModule.appName+'.gc' in os.listdir(filesPath):
-			gui.mainFrame._popupSettingsDialog(positionsList)
-		else:
-			ui.message(_('there is no saved data for this application.'))
+			ui.message(_('there is no any positions for %s.') % appName)
 
 	script_savedPositionsList.__doc__ = _('To open a list showing the points that have already been saved for this application.')
 
@@ -193,7 +204,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			p = data+u'\n'+p
 		with codecs.open(path,'w','utf-8') as f:
 			f.write(p)
-			ui.message(_("the position has been saved in %s." %(path)))
+			ui.message(_('the position has been saved in %s.') % path)
 	script_savePosition.__doc__ = _('to save a the current position.')
 
 	def script_mouseMovementChange (self, gesture):
@@ -317,7 +328,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		x , y= win32api.GetCursorPos()
 		o = api.getDesktopObject().objectFromPoint(x,y)
 		return o
-
 
 	__gestures = {
 	"kb:nvda+windows+c":"mouseMovementChange",
