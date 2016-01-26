@@ -8,8 +8,6 @@
 # Additional tweaking done by Joseph Lee and contributors, resetting version to 1.0.
 #now it became easy to control the mouse using keyboard
 
-
-
 import codecs
 from threading import Timer
 import winsound 
@@ -24,19 +22,26 @@ import mouseHandler
 import ui
 import api
 import win32api
-
 import addonHandler
+
 addonHandler.initTranslation()
 filesPath = os.path.join(os.path.dirname(__file__), 'files')
 isOpened = 0
 
 class positionsList(wx.Dialog):
+
 	def __init__(self,parent):
-		super(positionsList,self).__init__(parent,title=_("positions List"))
+		global isOpened
+		super(positionsList,self).__init__(parent,title=_("positions List"), size =(420,300))
 		appName = api.getForegroundObject().appModule.appName
 		self.path = os.path.join(filesPath, appName+'.gc')
-		with codecs.open(self.path,'r','utf-8') as f:
-			self.data = f.read().strip()
+		try:
+			with codecs.open(self.path,'r','utf-8') as f:
+				self.data = f.read().strip()
+		except:
+			isOpened = 0
+			ui.message(_('there is no any positions for %s.') % appName)
+			return
 		self.data = self.data.split(u'\n')
 		listBoxSizer = wx.BoxSizer(wx.VERTICAL)
 		panel = wx.Panel(self,-1)
@@ -55,8 +60,9 @@ class positionsList(wx.Dialog):
 		b_clear = wx.Button(panel, -1,_('c&lear'))
 		buttonsSizer.Add(b_clear, 0, wx.ALL| wx.CENTER| wx.EXPAND,10)
 		b_ok = wx.Button(panel,1,_('&ok'))
+		b_ok.SetDefault()
 		buttonsSizer.Add(b_ok, 0, wx.ALL| wx.CENTER| wx.EXPAND,10)
-		b_cancel = wx.Button(self, label=_("&cancel"), id=wx.ID_CLOSE)
+		b_cancel = wx.Button(panel, label=_("&cancel"), id=wx.ID_CLOSE)
 		buttonsSizer.Add(b_cancel, 0, wx.ALL| wx.CENTER| wx.EXPAND,10)
 		b_rename.Bind(wx.EVT_BUTTON, self.onRename)
 		b_delete.Bind(wx.EVT_BUTTON, self.onDelete)
@@ -66,25 +72,22 @@ class positionsList(wx.Dialog):
 		self.Bind(wx.EVT_CLOSE, self.onCancel)
 		self.EscapeId = wx.ID_CLOSE
 		h = wx.BoxSizer(wx.HORIZONTAL)
-		h.Add(listBoxSizer)
+		h.Add(listBoxSizer,1,wx.ALL|wx.EXPAND,20)
 		h.Add(buttonsSizer)
 		self.listBox.SetFocus()
 		self.listBox.SetSelection(0)
-		self.Centre()
-		self.SetSizer(h)
+		self.CenterOnScreen()
+		panel.SetSizer(h)
+		self.Show()
 
 	def onRename(self, event):
-		if self.listBox.IsEmpty():
-			ui.message(_('the list is empty.'))
-			return
 		try:
 			index = self.data.index(u'['+self.listBox.GetStringSelection()+u']')
 		except:
 			ui.message(_('no selection'))
 			return
-
 		oldName = self.listBox.StringSelection
-		name = wx.GetTextFromUser(_('you can rename this name.'),_('Rename'),self.listBox.StringSelection)
+		name = wx.GetTextFromUser(_('Edit'),_('Rename'),self.listBox.StringSelection)
 		# When escape is pressed, an empty string is returned.
 		if name == "" or name == oldName:
 			return
@@ -100,6 +103,7 @@ class positionsList(wx.Dialog):
 		self.listBox.Insert(name,i)
 		self.listBox.SetClientData(i,x_y)
 		self.listBox.SetSelection(i)
+
 	def onDelete(self,event):
 		try:
 			index = self.data.index(u'['+self.listBox.GetStringSelection()+u']')
@@ -150,6 +154,7 @@ class positionsList(wx.Dialog):
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	scriptCategory = u"golden cursor"
+
 	def __init__(self, *args, **kwargs):
 		super(GlobalPlugin, self).__init__(*args, **kwargs)
 		self.pixelMoving =5
@@ -159,15 +164,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def script_savedPositionsList(self, gesture):
 		global isOpened
-		appName = api.getForegroundObject().appModule.appName
-		if appName+'.gc' in os.listdir(filesPath):
-			if isOpened == 0:
-				isOpened = 1
-				positionsList(gui.mainFrame).Show()
-			else:
-				ui.message(_('An NVDA settings dialog is already open. Please close it first.'))
+		if isOpened == 0:
+			isOpened = 1
+			positionsList(gui.mainFrame)
 		else:
-			ui.message(_('there is no any positions for %s.') % appName)
+			ui.message(_('An NVDA settings dialog is already open. Please close it first.'))
 
 	script_savedPositionsList.__doc__ = _('To open a list showing the points that have already been saved for this application.')
 
@@ -177,6 +178,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			if result == wx.ID_OK:
 				wx.CallLater(100,self.saving, d.GetValue())
 		gui.runScriptModalDialog(d, callback)
+
 	def saving(self,name):
 		name = name.rstrip()
 		speech.cancelSpeech()
@@ -205,6 +207,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		with codecs.open(path,'w','utf-8') as f:
 			f.write(p)
 			ui.message(_('the position has been saved in %s.') % path)
+
 	script_savePosition.__doc__ = _('to save a the current position.')
 
 	def script_mouseMovementChange (self, gesture):
@@ -256,6 +259,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			if result == wx.ID_OK:
 				wx.CallLater(100,self.jumping, d.GetValue())
 		gui.runScriptModalDialog(d, callback)
+
 	def jumping(self,num):
 		speech.cancelSpeech()
 		if ',' not in num:
@@ -273,7 +277,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		win32api.SetCursorPos((x,y))
 		self.getMouse()
 		ui.message(str(x)+','+ str(y))
+
 	script_goToPosition.__doc__ = _('type the x/y value you wish the cursor to jump to')
+
 	def script_toggleMouseRestriction(self,gesture):
 		self.getAppRestriction = self.getMouse()
 		if self.restriction == 0:
