@@ -1,0 +1,156 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: goldenCursor 1.0\n"
+"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"POT-Creation-Date: 2016-03-18 05:37+1000\n"
+"PO-Revision-Date: 2016-03-17 22:42+0200\n"
+"Last-Translator: Kostadin Kolev <k_kolev1985@mail.bg>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.10\n"
+
+msgid "positions List"
+msgstr "Списък на позициите"
+
+#, python-format
+msgid "there is no any positions for %s."
+msgstr "Няма запаметени позиции за %s."
+
+msgid "choose a item of this list"
+msgstr "Изберете елемент от списъка"
+
+msgid "&rename"
+msgstr "&Преименувай"
+
+msgid "&delete"
+msgstr "&Изтрий"
+
+msgid "c&lear"
+msgstr "Из&чисти"
+
+msgid "no selection"
+msgstr "Не е избрано нищо"
+
+msgid "Edit"
+msgstr "Редактиране"
+
+msgid "Rename"
+msgstr "Преименуване"
+
+msgid "the position has been deleted."
+msgstr "Позицията бе изтрита."
+
+msgid "the list has been cleared."
+msgstr "Списъкът бе изчистен."
+
+msgid "An NVDA settings dialog is already open. Please close it first."
+msgstr ""
+"Вече има отворен диалог за настройка на NVDA. Първо трябва да го затворите."
+
+msgid ""
+"To open a list showing the points that have already been saved for this "
+"application."
+msgstr "Отваряне на списък с позициите , които са записани за това приложение."
+
+msgid "Enter the value for position name you wish to save."
+msgstr ""
+"Въведете стойността за името на позицията, която желаете да запаметите."
+
+msgid "save position"
+msgstr "Запазване на позицията"
+
+msgid "please enter the value for the name of the position."
+msgstr "Моля, въведете стойността за името на позицията."
+
+msgid "Error"
+msgstr "Грешка"
+
+#, python-format
+msgid "the position has been saved in %s."
+msgstr "Позицията бе запаметена в %s."
+
+msgid "to save a the current position."
+msgstr "Запазване на текущата позиция."
+
+msgid "to select a value for mouse movement (1, 10, 20, 50. 100."
+msgstr "Избиране на стойност за придвижване на мишката (1, 10, 20, 50, 100)."
+
+msgid "report pixels off"
+msgstr "Докладването на пикселите е изключено"
+
+msgid "report pixels on"
+msgstr "Докладването на пикселите е включено"
+
+msgid "toggle reporting of pixels"
+msgstr "Превключва докладването на пикселите"
+
+#, python-format
+msgid "%d , %d"
+msgstr "%d , %d"
+
+msgid "report the positions of the mouse."
+msgstr "Докладване на позицията на мишката."
+
+msgid "Moves the Mouse pointer right."
+msgstr "Премества показалеца на мишката надясно"
+
+msgid "Moves the Mouse pointer left."
+msgstr "Премества показалеца на мишката наляво"
+
+msgid "Moves the Mouse pointer up."
+msgstr "Премества показалеца на мишката нагоре"
+
+msgid "Moves the Mouse pointer down."
+msgstr "Премества показалеца на мишката надолу"
+
+msgid "Enter the value for position number you wish to jump to"
+msgstr ""
+"Въведете стойността за номера на позицията, до която желаете да отидете"
+
+msgid "Jump to position"
+msgstr "Придвижване до позиция"
+
+msgid "please enter comma between the first and the second number"
+msgstr "Моля, въведете запетая между първото и второто число"
+
+msgid "please enter an integer number."
+msgstr "Моля, въведете цяло число."
+
+msgid "type the x/y value you wish the cursor to jump to"
+msgstr "Въведете стойността за x/y, до която желаете да се придвижи курсора"
+
+msgid "restriction on"
+msgstr "Ограничаването е включено"
+
+msgid "restriction off"
+msgstr "Ограничаването е изключено"
+
+msgid ""
+"Toggles the restriction between the 2 levels you can toggle between "
+"Application Window restriction and Unrestricted."
+msgstr ""
+"Превключва между двете нива на ограничаване, от които може да избирате: "
+"ограничаване до прозореца на текущото приложение и без ограничаване."
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Golden Cursor moves the mouse with the keyboard"
+msgstr "Златният Курсор придвижва мишката посредством клавиатурата"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid ""
+"Allows you to control the mouse movement with the arrow keys. for further "
+"details please visit the addon guide help."
+msgstr ""
+"Позволява ви да управлявате движението на мишката чрез клавишите за "
+"стрелките. За повече информация, прочетете помощната документация на "
+"добавката."
