@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 #golden cursor
 # Copyright (C) 2015-2016 
 #Version 2.2
