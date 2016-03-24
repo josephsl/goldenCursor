@@ -1,0 +1,156 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: goldenCursor 1.0\n"
+"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"POT-Creation-Date: 2016-03-18 05:37+1000\n"
+"PO-Revision-Date: 2016-03-18 09:03+0200\n"
+"Last-Translator: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
+"Language-Team: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.11\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+msgid "positions List"
+msgstr "Sijainnit"
+
+#, python-format
+msgid "there is no any positions for %s."
+msgstr "Sovellukselle %s ei ole sijainteja."
+
+msgid "choose a item of this list"
+msgstr "Valitse kohde tästä listasta"
+
+msgid "&rename"
+msgstr "&Nimeä uudelleen"
+
+msgid "&delete"
+msgstr "&Poista"
+
+msgid "c&lear"
+msgstr "T&yhjennä"
+
+msgid "no selection"
+msgstr "Ei valintaa"
+
+msgid "Edit"
+msgstr "Muokkaa"
+
+msgid "Rename"
+msgstr "Nimeä uudelleen"
+
+msgid "the position has been deleted."
+msgstr "Sijainti on poistettu."
+
+msgid "the list has been cleared."
+msgstr "Lista on tyhjennetty."
+
+msgid "An NVDA settings dialog is already open. Please close it first."
+msgstr "NVDA:n asetusvalintaikkuna on jo auki. Sulje se ensin."
+
+msgid ""
+"To open a list showing the points that have already been saved for this "
+"application."
+msgstr ""
+"Avaa listan, jossa näkyvät nykyiselle sovellukselle tallennetut sijainnit."
+
+msgid "Enter the value for position name you wish to save."
+msgstr "Anna sijainnille nimi, jolla haluat tallentaa sen."
+
+msgid "save position"
+msgstr "Tallenna sijainti"
+
+msgid "please enter the value for the name of the position."
+msgstr "Anna sijainnin nimi."
+
+msgid "Error"
+msgstr "Virhe"
+
+#, python-format
+msgid "the position has been saved in %s."
+msgstr "Sijainti on tallennettu nimellä %s."
+
+msgid "to save a the current position."
+msgstr "Tallentaa nykyisen sijainnin."
+
+msgid "to select a value for mouse movement (1, 10, 20, 50. 100."
+msgstr ""
+"Valitse hiiren siirtämisen tarkkuus (1, 10, 20, 50 tai 100 kuvapistettä)."
+
+msgid "report pixels off"
+msgstr "Kuvapisteitä ei puhuta"
+
+msgid "report pixels on"
+msgstr "Puhu kuvapisteet"
+
+msgid "toggle reporting of pixels"
+msgstr "Ottaa kuvapisteiden puhumisen käyttöön tai poistaa sen käytöstä"
+
+#, python-format
+msgid "%d , %d"
+msgstr "%d, %d"
+
+msgid "report the positions of the mouse."
+msgstr "Puhu hiiren sijainnit."
+
+msgid "Moves the Mouse pointer right."
+msgstr "Siirtää hiiriosoitinta oikealle."
+
+msgid "Moves the Mouse pointer left."
+msgstr "Siirtää hiiriosoitinta vasemmalle."
+
+msgid "Moves the Mouse pointer up."
+msgstr "Siirtää hiiriosoitinta ylös."
+
+msgid "Moves the Mouse pointer down."
+msgstr "Siirtää hiiriosoitinta alas."
+
+msgid "Enter the value for position number you wish to jump to"
+msgstr "Anna sijainti, johon haluat siirtyä"
+
+msgid "Jump to position"
+msgstr "Siirry sijaintiin"
+
+msgid "please enter comma between the first and the second number"
+msgstr "Anna kaksi pilkulla erotettua numeroa."
+
+msgid "please enter an integer number."
+msgstr "Anna kokonaisluku."
+
+msgid "type the x/y value you wish the cursor to jump to"
+msgstr "Kirjoita x- ja y-arvot, joihin haluat siirtää hiiriosoittimen"
+
+msgid "restriction on"
+msgstr "Rajaus käytössä"
+
+msgid "restriction off"
+msgstr "Rajaus pois"
+
+msgid ""
+"Toggles the restriction between the 2 levels you can toggle between "
+"Application Window restriction and Unrestricted."
+msgstr ""
+"Vaihtaa rajausasetusta kahden vaihtoehdon välillä, jotka ovat sovellusikkuna "
+"ja ei rajausta."
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Golden Cursor moves the mouse with the keyboard"
+msgstr "Golden Cursor siirtää hiirtä näppäimistöä käyttäen"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid ""
+"Allows you to control the mouse movement with the arrow keys. for further "
+"details please visit the addon guide help."
+msgstr ""
+"Mahdollistaa hiiren siirtämisen nuolinäppäinten avulla. Lisätietoja saat "
+"lisäosan ohjeesta."

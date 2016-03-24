@@ -1,0 +1,156 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: goldenCursor 1.0\n"
+"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"POT-Creation-Date: 2016-03-18 05:37+1000\n"
+"PO-Revision-Date: 2016-03-17 22:43-0300\n"
+"Last-Translator: Cleverson Casarin Uliana <clcaul@live.com>\n"
+"Language-Team: Equipe de tradução do NVDA para Português do Brasil "
+"<clever97@gmail.com>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.10\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+msgid "positions List"
+msgstr "Lista de posições"
+
+#, python-format
+msgid "there is no any positions for %s."
+msgstr "Não existem posições para %s."
+
+msgid "choose a item of this list"
+msgstr "Escolha um item desta lista"
+
+msgid "&rename"
+msgstr "&renomear"
+
+msgid "&delete"
+msgstr "&apagar"
+
+msgid "c&lear"
+msgstr "&esvaziar"
+
+msgid "no selection"
+msgstr "sem seleção"
+
+msgid "Edit"
+msgstr "Editar"
+
+msgid "Rename"
+msgstr "Renomear"
+
+msgid "the position has been deleted."
+msgstr "posição foi apagada."
+
+msgid "the list has been cleared."
+msgstr "lista foi esvaziada."
+
+msgid "An NVDA settings dialog is already open. Please close it first."
+msgstr ""
+"Já está aberto um diálogo de opções do NVDA. Por favor feche-o primeiro."
+
+msgid ""
+"To open a list showing the points that have already been saved for this "
+"application."
+msgstr ""
+"Abrir uma lista mostrando os pontos que já foram salvos para este aplicativo."
+
+msgid "Enter the value for position name you wish to save."
+msgstr "Insira o valor para o nome da posição que deseja salvar."
+
+msgid "save position"
+msgstr "salvar posição"
+
+msgid "please enter the value for the name of the position."
+msgstr "por favor insira o valor para o nome da posição."
+
+msgid "Error"
+msgstr "Erro"
+
+#, python-format
+msgid "the position has been saved in %s."
+msgstr "posição foi salva em %s."
+
+msgid "to save a the current position."
+msgstr "salvar a posição atual"
+
+msgid "to select a value for mouse movement (1, 10, 20, 50. 100."
+msgstr "selecionar um valor para o movimento do mouse (1, 10, 20, 50, 100)"
+
+msgid "report pixels off"
+msgstr "desligado anúncio de píxels"
+
+msgid "report pixels on"
+msgstr "ligado anúncio de píxels"
+
+msgid "toggle reporting of pixels"
+msgstr "alterna o anúncio de píxels"
+
+#, python-format
+msgid "%d , %d"
+msgstr "%d, %d"
+
+msgid "report the positions of the mouse."
+msgstr "anuncia as posições do mouse."
+
+msgid "Moves the Mouse pointer right."
+msgstr "Move o ponteiro do mouse para a direita."
+
+msgid "Moves the Mouse pointer left."
+msgstr "Move o ponteiro do mouse para a esquerda."
+
+msgid "Moves the Mouse pointer up."
+msgstr "Move o ponteiro do mouse para cima."
+
+msgid "Moves the Mouse pointer down."
+msgstr "Move o ponteiro do mouse para baixo."
+
+msgid "Enter the value for position number you wish to jump to"
+msgstr "Insira o valor do número da posição para a qual deseja pular"
+
+msgid "Jump to position"
+msgstr "Pular para a posição"
+
+msgid "please enter comma between the first and the second number"
+msgstr "Por favor insira uma vírgula entre o primeiro e o segundo números"
+
+msgid "please enter an integer number."
+msgstr "Por favor insira um número inteiro."
+
+msgid "type the x/y value you wish the cursor to jump to"
+msgstr "Digite o valor x/y para o qual deseja que o cursor pule"
+
+msgid "restriction on"
+msgstr "ligada restrição"
+
+msgid "restriction off"
+msgstr "desligada restrição"
+
+msgid ""
+"Toggles the restriction between the 2 levels you can toggle between "
+"Application Window restriction and Unrestricted."
+msgstr ""
+"Alterna a restrição entre dois níveis; você pode alternar entre restrição à "
+"janela do aplicativo e não-restrito."
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Golden Cursor moves the mouse with the keyboard"
+msgstr "O cursor de ouro move o mouse pelo teclado"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid ""
+"Allows you to control the mouse movement with the arrow keys. for further "
+"details please visit the addon guide help."
+msgstr ""
+"Possibilita controlar o movimento do mouse com as teclas de setas. Para mais "
+"detalhes por favor visite a ajuda do guia do complemento."

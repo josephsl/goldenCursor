@@ -11,10 +11,9 @@ tallentaa hiiren sijainteja sovelluksille.
 
 * NVDA+Shift+L: Näytä tallennettujen sijaintien lista.
 * NVDA+Control+L: Tallenna sijainti.
-* NVDA+Win+C: Valitse siirtämisen taso.
+* NVDA+Win+C: Valitse siirtämisen tarkkuus.
 * NVDA+Win+R: Ota hiiren rajoittaminen käyttöön tai poista se käytöstä.
-* NVDA+Win+S: Ota kuvapisteiden ilmoittaminen käyttöön tai poista se
-  käytöstä.
+* NVDA+Win+S: Ota kuvapisteiden puhuminen käyttöön tai poista se käytöstä.
 * NVDA+Win+J: Avaa valintaikkunan, johon voit kirjoittaa sen sijainnin X- ja
   Y-koordinaatit, johon haluat siirtyä.
 * NVDA+Win+P: Ilmoittaa hiiren nykyisen sijainnin kuvapisteinä.
