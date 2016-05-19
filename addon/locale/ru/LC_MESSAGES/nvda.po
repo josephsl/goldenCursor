@@ -1,0 +1,158 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: goldenCursor 1.1\n"
+"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"POT-Creation-Date: 2016-04-22 07:00+1000\n"
+"PO-Revision-Date: 2016-05-18 05:03+0500\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Denis Shishkin <outsidepro@rambler.ru>\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.7\n"
+
+msgid "positions List"
+msgstr "Список положений мыши"
+
+#, python-format
+msgid "there is no any positions for %s."
+msgstr "Нет сохраненных положений мыши для приложения %s."
+
+msgid "choose a item of this list"
+msgstr "выберите элемент в списке"
+
+msgid "&rename"
+msgstr "пере&именовать"
+
+msgid "&delete"
+msgstr "у&далить"
+
+msgid "c&lear"
+msgstr "о&чистить"
+
+msgid "no selection"
+msgstr "не выделено"
+
+msgid "Edit"
+msgstr "Редактирование"
+
+msgid "Rename"
+msgstr "Переименование"
+
+msgid "the position has been deleted."
+msgstr "положение мыши удалено."
+
+msgid "the list has been cleared."
+msgstr "список очищен."
+
+msgid "An NVDA settings dialog is already open. Please close it first."
+msgstr ""
+"Открыт другой диалог настроек NVDA. Пожалуйста, сначала закройте его."
+
+msgid ""
+"To open a list showing the points that have already been saved for this "
+"application."
+msgstr "Отобразить список точек, сохраненных для текущего приложения."
+
+msgid "Enter the value for position name you wish to save."
+msgstr ""
+"Введите название, под которым хотите сохранит текущее положение мышиь."
+
+msgid "save position"
+msgstr "Сохранить положение мыши"
+
+msgid "please enter the value for the name of the position."
+msgstr "Введите имя положения мыши."
+
+msgid "Error"
+msgstr "Ошибка"
+
+#, python-format
+msgid "the position has been saved in %s."
+msgstr "Положение мыши сохранено в файл %s."
+
+msgid "to save a the current position."
+msgstr "сохранить текущее положение мыши."
+
+msgid "to select a value for mouse movement (1, 10, 20, 50. 100."
+msgstr "выбрать шаг движения мыши (1, 10, 20, 50. 100."
+
+msgid "report pixels off"
+msgstr "сообщение пикселей выключено"
+
+msgid "report pixels on"
+msgstr "сообщение пикселей включено"
+
+msgid "toggle reporting of pixels"
+msgstr "переключить состояние сообщения пикселей"
+
+#, python-format
+msgid "%d , %d"
+msgstr "%d , %d"
+
+msgid "report the positions of the mouse."
+msgstr "Сообщить позицию мыши."
+
+msgid "Moves the Mouse pointer right."
+msgstr "Перемещает указатель мыши вправо."
+
+msgid "Moves the Mouse pointer left."
+msgstr "Перемещает указатель мыши влево."
+
+msgid "Moves the Mouse pointer up."
+msgstr "Перемещает указательмыши вверх."
+
+msgid "Moves the Mouse pointer down."
+msgstr "Перемещает указатель мыши вниз."
+
+msgid "Enter the value for position number you wish to jump to"
+msgstr ""
+"Введите значения положения мыши, на которое необходимо переместить "
+"указатель."
+
+msgid "Jump to position"
+msgstr "Переместить положение мыши"
+
+msgid "please enter comma between the first and the second number"
+msgstr "необходимо поставить запятую между первым и вторым значениями"
+
+msgid "please enter an integer number."
+msgstr "необходимо ввести значение числом."
+
+msgid "type the x/y value you wish the cursor to jump to"
+msgstr ""
+"Ввести значения координат x/y, на которое необходимо переместить курсор"
+
+msgid "restriction on"
+msgstr "Привязка к окну включена"
+
+msgid "restriction off"
+msgstr "Привязка к окну выключена"
+
+msgid ""
+"Toggles the restriction between the 2 levels you can toggle between "
+"Application Window restriction and Unrestricted."
+msgstr ""
+"Переключает состояние привязки к окну между вариантами курсор привязан к "
+"окну или нет."
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Golden Cursor moves the mouse with the keyboard"
+msgstr "Golden Cursor перемещает указатель мыши с помощью клавиатуры."
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid ""
+"Allows you to control the mouse movement with the arrow keys. for further "
+"details please visit the addon guide help."
+msgstr ""
+"Позволяет перемещать курсор указателя мыши, используя стрелки на "
+"клавиатуре. Для более подробной информации, почитайте руководство "
+"пользователя дополнения."
