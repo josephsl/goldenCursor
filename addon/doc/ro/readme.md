@@ -4,7 +4,7 @@
 * Descarcă [versiunea stabilă][1]
 * Descarcă [versiunea în dezvoltare][2]
 
-Acest add-on îți permite să muți mausul folosind tastatura și să salvezi
+Acest supliment îți permite să muți mausul folosind tastatura și să salvezi
 pozițiile mausului pentru aplicații.
 
 ## Comenzi de tastatură
