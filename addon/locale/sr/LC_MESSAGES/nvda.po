@@ -1,0 +1,152 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the goldenCursor package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: goldenCursor 1.2\n"
+"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"POT-Creation-Date: 2017-02-03 07:00+1000\n"
+"PO-Revision-Date: 2017-05-03 17:37+0100\n"
+"Last-Translator: Nikola Jović <wwenikola123@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.10\n"
+
+msgid "positions List"
+msgstr "Lista pozicija"
+
+#, python-format
+msgid "there is no any positions for %s."
+msgstr "Nema pozicija za %s."
+
+msgid "choose a item of this list"
+msgstr "Izaberi stavku liste"
+
+msgid "&rename"
+msgstr "&Preimenuj"
+
+msgid "&delete"
+msgstr "&Obriši"
+
+msgid "c&lear"
+msgstr "Oč&isti"
+
+msgid "no selection"
+msgstr "Nema izbora"
+
+msgid "Edit"
+msgstr "Uredi"
+
+msgid "Rename"
+msgstr "Preimenuj"
+
+msgid "the position has been deleted."
+msgstr "Pozicija je obrisana."
+
+msgid "the list has been cleared."
+msgstr "Lista je očišćena."
+
+msgid "An NVDA settings dialog is already open. Please close it first."
+msgstr "Neki dijalog NVDA podešavanja je već otvoren. Molimo prvo ga zatvorite"
+
+msgid ""
+"To open a list showing the points that have already been saved for this "
+"application."
+msgstr "Da otvorite listu sačuvanih tačaka za ovu aplikaciju"
+
+msgid "Enter the value for position name you wish to save."
+msgstr "Upišite vrednost za ime pozicije koju želite da sačuvate"
+
+msgid "save position"
+msgstr "Sačuvaj poziciju"
+
+msgid "please enter the value for the name of the position."
+msgstr "Molimo upišite vrednost za ime pozicije"
+
+msgid "Error"
+msgstr "Greška"
+
+#, python-format
+msgid "the position has been saved in %s."
+msgstr "Pozicija je sačuvana u %s."
+
+msgid "to save a the current position."
+msgstr "Da sačuvate trenutnu poziciju"
+
+msgid "to select a value for mouse movement (1, 10, 20, 50. 100."
+msgstr "Da izaberete vrednost pomeranja miša(1, 10, 20, 50. 100."
+
+msgid "report pixels off"
+msgstr "Isključeno prijavljivanje piksela"
+
+msgid "report pixels on"
+msgstr "Uključeno prijavljivanje piksela"
+
+msgid "toggle reporting of pixels"
+msgstr "Uključuje i isključuje prijavljivanje piksela"
+
+#, python-format
+msgid "%d , %d"
+msgstr "%d , %d"
+
+msgid "report the positions of the mouse."
+msgstr "Prijavljuje poziciju miša"
+
+msgid "Moves the Mouse pointer right."
+msgstr "Pomera pokazivač miša desno"
+
+msgid "Moves the Mouse pointer left."
+msgstr "Pomera pokazivač miša levo"
+
+msgid "Moves the Mouse pointer up."
+msgstr "Pomera pokazivač miša gore"
+
+msgid "Moves the Mouse pointer down."
+msgstr "Pomera pokazivač miša dole"
+
+msgid "Enter the value for position number you wish to jump to"
+msgstr "Upišite vrednost za broj pozicije na koju želite da skočite"
+
+msgid "Jump to position"
+msgstr "Skoči na poziciju"
+
+msgid "please enter comma between the first and the second number"
+msgstr "Molimo upišite zarez između prvog i drugog broja"
+
+msgid "please enter an integer number."
+msgstr "Molimo upišite ceo broj"
+
+msgid "type the x/y value you wish the cursor to jump to"
+msgstr "Upišite x/y vrednost na koju želite da kursor skoči"
+
+msgid "restriction on"
+msgstr "Zabrana uključena"
+
+msgid "restriction off"
+msgstr "Zabrana isključena"
+
+msgid ""
+"Toggles the restriction between the 2 levels you can toggle between "
+"Application Window restriction and Unrestricted."
+msgstr ""
+"Uključuje i isključuje zabranu koja kada je uključena vam dozvoljava "
+"pomeranje kursora miša samo u prozoru trenutne aplikacije"
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Golden Cursor moves the mouse with the keyboard"
+msgstr "Golden Cursor pomera miš sa tastaturom"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid ""
+"Allows you to control the mouse movement with the arrow keys. for further "
+"details please visit the addon guide help."
+msgstr ""
+"Dozvoljava vam da birate pokretanje miša sa strelicama. Za dodatne detalje "
+"pročitajte pomoć za dodatak."
