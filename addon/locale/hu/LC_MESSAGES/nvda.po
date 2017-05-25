@@ -1,0 +1,156 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: goldenCursor 1.1\n"
+"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"POT-Creation-Date: 2016-04-22 07:00+1000\n"
+"PO-Revision-Date: 2017-05-23 12:13+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.10\n"
+
+msgid "positions List"
+msgstr "Pozíciólista"
+
+#, python-format
+msgid "there is no any positions for %s."
+msgstr "Nincs mentett pozíció az alábbi alkalmazáshoz: %s."
+
+msgid "choose a item of this list"
+msgstr "Válasszon egy elemet az alábbi listáról."
+
+msgid "&rename"
+msgstr "&átnevezés"
+
+msgid "&delete"
+msgstr "&törlés"
+
+msgid "c&lear"
+msgstr "&ürítés"
+
+msgid "no selection"
+msgstr "nem jelölt ki egyetlen elemet sem."
+
+msgid "Edit"
+msgstr "Szerkesztés"
+
+msgid "Rename"
+msgstr "Átnevezés"
+
+msgid "the position has been deleted."
+msgstr "A pozíció törölve."
+
+msgid "the list has been cleared."
+msgstr "A lista kiürítve."
+
+msgid "An NVDA settings dialog is already open. Please close it first."
+msgstr ""
+"Egy NVDA beállítási párbeszédablak már nyitva van, a kívánt ablak megnyitása "
+"előtt azt előbb be kell zárnia."
+
+msgid ""
+"To open a list showing the points that have already been saved for this "
+"application."
+msgstr ""
+"Pozíciólista megnyitása. Az aktív alkalmazáshoz elmentett pozíciókat "
+"tartalmazza."
+
+msgid "Enter the value for position name you wish to save."
+msgstr "Adja meg a menteni kívánt pozíció nevét."
+
+msgid "save position"
+msgstr "pozíció mentése"
+
+msgid "please enter the value for the name of the position."
+msgstr "Kérem írja be a menteni kívánt pozíció nevét."
+
+msgid "Error"
+msgstr "hiba"
+
+#, python-format
+msgid "the position has been saved in %s."
+msgstr "A pozíció elmentve. Mentési hely: %s."
+
+msgid "to save a the current position."
+msgstr "Aktuális pozíció elmentése."
+
+msgid "to select a value for mouse movement (1, 10, 20, 50. 100."
+msgstr "A mozgatás mértékének beállítása (1, 10, 20, 50. 100)."
+
+msgid "report pixels off"
+msgstr "Pixelek bemondása kikapcsolva."
+
+msgid "report pixels on"
+msgstr "Pixelek bemondása bekapcsolva."
+
+msgid "toggle reporting of pixels"
+msgstr "pixelek bemondásának beállítása."
+
+#, python-format
+msgid "%d , %d"
+msgstr "%d , %d"
+
+msgid "report the positions of the mouse."
+msgstr "Az egérmutató helyzetének bemondása."
+
+msgid "Moves the Mouse pointer right."
+msgstr "Az egérmutató mozgatása jobbra."
+
+msgid "Moves the Mouse pointer left."
+msgstr "Az egérmutató mozgatása balra."
+
+msgid "Moves the Mouse pointer up."
+msgstr "Az egérmutató mozgatása felfelé."
+
+msgid "Moves the Mouse pointer down."
+msgstr "Az egérmutató mozgatása lefelé."
+
+msgid "Enter the value for position number you wish to jump to"
+msgstr "Adja meg a kívánt koorrdínátákat vesszővel elválasztva."
+
+msgid "Jump to position"
+msgstr "Ugrás pozícióhoz"
+
+msgid "please enter comma between the first and the second number"
+msgstr "Tegyen vesszőt a két koordináta közé."
+
+msgid "please enter an integer number."
+msgstr "Egész számot adjon meg."
+
+msgid "type the x/y value you wish the cursor to jump to"
+msgstr "megadott koordinátájú pontra ugrás."
+
+msgid "restriction on"
+msgstr "Korlátozás bekapcsolva"
+
+msgid "restriction off"
+msgstr "Korlátozás kikapcsolva"
+
+msgid ""
+"Toggles the restriction between the 2 levels you can toggle between "
+"Application Window restriction and Unrestricted."
+msgstr ""
+"Mozgástér korlátozása. Két lehetőség közül választhat: mozgatás az aktív "
+"ablak keretein belül, vagy korlátozás nélkül az egész képernyőn."
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Golden Cursor moves the mouse with the keyboard"
+msgstr "Az aranykurzor a billentyűzettel mozgatja az egérmutatót."
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid ""
+"Allows you to control the mouse movement with the arrow keys. for further "
+"details please visit the addon guide help."
+msgstr ""
+"Lehetővé teszi az egérmutató mozgatását a nyílbillentyűk segítségével. "
+"további részletekért olvassa el a kiegészítő súgóját."
