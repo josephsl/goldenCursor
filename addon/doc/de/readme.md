@@ -33,6 +33,6 @@ speichert die Mauspositionen für die jeweilige Anwendung ab.
 
 [[!tag stable dev]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=gc
+[1]: https://addons.nvda-project.org/files/get.php?file=gc
 
-[2]: http://addons.nvda-project.org/files/get.php?file=gc-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=gc-dev
