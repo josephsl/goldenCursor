@@ -19,7 +19,7 @@ tallentaa hiiren sijainteja sovelluksille.
 * NVDA+Win+P: Ilmoittaa hiiren nykyisen sijainnin kuvapisteinä.
 * NVDA+Win+nuolinäppäimet: Siirrä hiirtä eri suuntiin.
 * Huom: Näiden komentojen uudelleenmäärittäminen on mahdollista
-  Syöte-eleet-valintaikkunasta, johon pääsee NVDA:n Asetukset-valikosta.
+  Syötekomennot-valintaikkunasta, johon pääsee NVDA:n Asetukset-valikosta.
 
 ## Huomautuksia
 
