@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: goldenCursor 1.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-04-22 07:00+1000\n"
-"PO-Revision-Date: 2017-02-05 01:05+0200\n"
-"Last-Translator:  <shmuel_naaman@yahoo.com>\n"
+"PO-Revision-Date: 2017-11-15 13:01+0200\n"
+"Last-Translator: shmuel_naaman@yahoo.com\n"
 "Language-Team: Shmuel Retbi , Shmuel Naaman\tLanguage: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Poedit 2.0.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Language: he\n"
 
@@ -25,7 +25,7 @@ msgstr "רשימת מיקומים"
 
 #, python-format
 msgid "there is no any positions for %s."
-msgstr "לא זוהו מיקומים עבור %s"
+msgstr "לא זוהו מיקומים עבור %s."
 
 msgid "choose a item of this list"
 msgstr "נא לבחור פריט ברשימה זו"
@@ -49,10 +49,10 @@ msgid "Rename"
 msgstr "שינוי שם"
 
 msgid "the position has been deleted."
-msgstr "המיקום נמחק"
+msgstr "המיקום נמחק."
 
 msgid "the list has been cleared."
-msgstr "הרשימה עכשיו ריקה"
+msgstr "הרשימה עכשיו ריקה."
 
 msgid "An NVDA settings dialog is already open. Please close it first."
 msgstr "תיבת דו-שיח של הגדרות NVDA כבר פתוחה. נא לסגור אותה."
@@ -60,23 +60,23 @@ msgstr "תיבת דו-שיח של הגדרות NVDA כבר פתוחה. נא לס
 msgid ""
 "To open a list showing the points that have already been saved for this "
 "application."
-msgstr "כדי לפתוח רשימת המיקומים שכבר הוגדרו ליישום זה"
+msgstr "כדי לפתוח רשימת המיקומים שכבר הוגדרו ליישום זה."
 
 msgid "Enter the value for position name you wish to save."
-msgstr "נא להקיש ערך עבור שם המיקום שברצונך לשמור"
+msgstr "נא להקיש ערך עבור שם המיקום שברצונך לשמור."
 
 msgid "save position"
 msgstr "שמירת המיקום"
 
 msgid "please enter the value for the name of the position."
-msgstr "נא להקיש ערך עבור שם המיקום"
+msgstr "נא להקיש ערך עבור שם המיקום."
 
 msgid "Error"
 msgstr "שגיאה"
 
 #, python-format
 msgid "the position has been saved in %s."
-msgstr "המיקום נשמר ב%s"
+msgstr "המיקום נשמר ב%s."
 
 msgid "to save a the current position."
 msgstr "יש לשמור במיקום הנוכחי."
@@ -98,19 +98,19 @@ msgid "%d , %d"
 msgstr "%d , %d"
 
 msgid "report the positions of the mouse."
-msgstr "הקראת קואורדינטות העכבר"
+msgstr "הקראת קואורדינטות העכבר."
 
 msgid "Moves the Mouse pointer right."
-msgstr "הזזת מצביע העכבר ימינה"
+msgstr "הזזת מצביע העכבר ימינה."
 
 msgid "Moves the Mouse pointer left."
-msgstr "הזזת מצביע העכבר שמאלה"
+msgstr "הזזת מצביע העכבר שמאלה."
 
 msgid "Moves the Mouse pointer up."
-msgstr "הזזת מצביע העכבר כלפי מעלה"
+msgstr "הזזת מצביע העכבר כלפי מעלה."
 
 msgid "Moves the Mouse pointer down."
-msgstr "הזזת מצביע העכבר כלפי מטה"
+msgstr "הזזת מצביע העכבר כלפי מטה."
 
 msgid "Enter the value for position number you wish to jump to"
 msgstr "נא להקיש ערך המיקום שברצונך להגיע אליו"
@@ -122,7 +122,7 @@ msgid "please enter comma between the first and the second number"
 msgstr "נא להקיש פסיק בין שני הערכים"
 
 msgid "please enter an integer number."
-msgstr "יש להקיש ערכים במספרים שלמים"
+msgstr "יש להקיש ערכים במספרים שלמים."
 
 msgid "type the x/y value you wish the cursor to jump to"
 msgstr "נא להקיש ערכים עבור המיקום האופקי והאנכי שברצונך להגיע אליו"
