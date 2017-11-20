@@ -28,11 +28,11 @@ addonHandler.initTranslation()
 filesPath = os.path.join(os.path.dirname(__file__), 'files')
 isOpened = 0
 
-class positionsList(wx.Dialog):
+class PositionsList(wx.Dialog):
 
 	def __init__(self,parent):
 		global isOpened
-		super(positionsList,self).__init__(parent,title=_("positions List"), size =(420,300))
+		super(PositionsList,self).__init__(parent,title=_("positions List"), size =(420,300))
 		appName = api.getForegroundObject().appModule.appName
 		self.path = os.path.join(filesPath, appName+'.gc')
 		try:
@@ -160,11 +160,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		global isOpened
 		if isOpened == 0:
 			isOpened = 1
-			positionsList(gui.mainFrame)
+			PositionsList(gui.mainFrame)
 		else:
 			ui.message(_('An NVDA settings dialog is already open. Please close it first.'))
 
-	script_savedPositionsList.__doc__ = _('To open a list showing the points that have already been saved for this application.')
+	script_savedPositionsList.__doc__ = _("To open a list showing the points that have already been saved for this application.")
 
 	def script_savePosition(self, gesture):
 		d = wx.TextEntryDialog(gui.mainFrame, _("Enter the value for position name you wish to save."), _("save position"))
@@ -324,22 +324,21 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		else:
 			pass
 
- 	def getMouse(self):
+	def getMouse(self):
 		x , y= win32api.GetCursorPos()
 		o = api.getDesktopObject().objectFromPoint(x,y)
 		return o
 
 	__gestures = {
-	"kb:nvda+windows+c":"mouseMovementChange",
-	"kb:nvda+windows+rightarrow":"moveMouseRight",
-	"kb:nvda+windows+leftarrow":"moveMouseLeft",
-	"kb:nvda+windows+upArrow":"moveMouseUp",
-	"kb:nvda+windows+downArrow":"moveMouseDown",
-	"kb:nvda+windows+j":"goToPosition",
-	"kb:nvda+windows+p":"sayPosition",
-	"kb:nvda+windows+s":"toggleSpeakPixels",
-	"kb:nvda+windows+r":"toggleMouseRestriction",
+		"kb:nvda+windows+c":"mouseMovementChange",
+		"kb:nvda+windows+rightarrow":"moveMouseRight",
+		"kb:nvda+windows+leftarrow":"moveMouseLeft",
+		"kb:nvda+windows+upArrow":"moveMouseUp",
+		"kb:nvda+windows+downArrow":"moveMouseDown",
+		"kb:nvda+windows+j":"goToPosition",
+		"kb:nvda+windows+p":"sayPosition",
+		"kb:nvda+windows+s":"toggleSpeakPixels",
+		"kb:nvda+windows+r":"toggleMouseRestriction",
 		"kb:nvda+shift+l": "savePosition",
 		"kb:nvda+control+l": "savedPositionsList",
-
 	}
