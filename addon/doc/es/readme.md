@@ -7,7 +7,7 @@
 Este complemento te permite mover el ratón utilizando un teclado y guardar
 las posiciones del ratón para las aplicaciones.
 
-## Teclas de órdenes
+## Teclas de Órdenes
 
 * nvda+shift+L: ver una lista de las posiciones guardadas.
 * nvda+control+l: guardar una posición.

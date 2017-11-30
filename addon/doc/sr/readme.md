@@ -7,7 +7,7 @@
 Ovaj dodatak vam dozvoljava pomeranje miša korišćenjem tastature i čuvanje
 pozicije miša za aplikacije
 
-## Komande
+## Key commands
 
 * nvda+šift+L: prikazuje listu sačuvanih pozicija.
 * nvda+kontrol+l: sačuvaj poziciju.

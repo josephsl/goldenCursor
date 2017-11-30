@@ -7,7 +7,7 @@
 Diese Erweiterung ermöglicht das Ziehen der Maus mit der Tastatur und
 speichert die Mauspositionen für die jeweilige Anwendung ab.
 
-## Tastenkombinationen
+## Key commands
 
 * NVDA+Umschalt+L: Liste der gespeicherten Mauspositionen anzeigen.
 * NVDA+Strg+L: Mausposition speichern.

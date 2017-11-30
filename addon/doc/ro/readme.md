@@ -7,7 +7,7 @@
 Acest supliment îți permite să muți mausul folosind tastatura și să salvezi
 pozițiile mausului pentru aplicații.
 
-## Comenzi de tastatură
+## Combinații de taste
 
 * NVDA+Shift+L: Vezi o listă cu pozițiile salvate.
 * NVDA+Control+L: Salvează o poziție.

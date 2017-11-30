@@ -7,7 +7,7 @@
 Este complemento possibilita mover o mouse usando o teclado e salvar
 posições do mouse em aplicativos.
 
-## Comandos de teclas
+## Key commands
 
 * NVDA+Shift+L: Ver a lista de posições salvas.
 * NVDA+Control+L: Salva a posição.

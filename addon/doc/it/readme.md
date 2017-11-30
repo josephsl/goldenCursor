@@ -7,7 +7,7 @@
 Questo add-on permette di spostare il mouse con la tastiera e di salvare le
 posizioni del mouse per le applicazioni. 
 
-## Comandi disponibili
+## Key commands
 
 * nvda+shift+L: mostra un elenco di tutte le posizioni salvate.
 * nvda+control+l: Salva una posizione.

@@ -13,10 +13,10 @@ tallentaa hiiren sijainteja sovelluksille.
 * NVDA+Control+L: Tallenna sijainti.
 * NVDA+Win+C: Valitse siirtämisen tarkkuus.
 * NVDA+Win+R: Ota hiiren rajoittaminen käyttöön tai poista se käytöstä.
-* NVDA+Win+S: Ota kuvapisteiden puhuminen käyttöön tai poista se käytöstä.
+* NVDA+Win+S: Ota pikselien puhuminen käyttöön tai poista se käytöstä.
 * NVDA+Win+J: Avaa valintaikkunan, johon voit kirjoittaa sen sijainnin X- ja
   Y-koordinaatit, johon haluat siirtyä.
-* NVDA+Win+P: Ilmoittaa hiiren nykyisen sijainnin kuvapisteinä.
+* NVDA+Win+P: Ilmoittaa hiiren nykyisen sijainnin pikseleinä.
 * NVDA+Win+nuolinäppäimet: Siirrä hiirtä eri suuntiin.
 * Huom: Näiden komentojen uudelleenmäärittäminen on mahdollista
   Syötekomennot-valintaikkunasta, johon pääsee NVDA:n Asetukset-valikosta.
@@ -25,7 +25,7 @@ tallentaa hiiren sijainteja sovelluksille.
 
 * Käyttäjien tulisi käyttää samaa näytön tarkkuutta sijainteja jakaessaan.
 * Ikkunat tulisi suurentaa parhaimman yhteensopivuuden varmistamiseksi
-  painamallla Win+Ylänuoli.
+  painamallla Win+Nuoli ylös.
 * Olemassa olevat sijainnit tulisi nimetä uudelleen sijainteja jaettaessa.
 
 [[!tag stable dev]]

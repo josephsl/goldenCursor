@@ -7,7 +7,7 @@
 Este complemento permíteche mover o rato usando un teclado e gardar as
 posicións do rato para as aplicacións.
 
-## Teclas de ordes
+## Teclas de Ordes
 
 * nvda+shift+L: ver unha lista das posicións gardadas.
 * nvda+control+l: gardar unha posición.

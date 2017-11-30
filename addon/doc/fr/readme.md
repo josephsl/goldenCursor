@@ -7,7 +7,7 @@
 Ce module vous permet de déplacer la souris à l'aide du clavier et de
 sauvegarder la position de la souris pour les applications.
 
-## Raccourcis-clavier
+## Touche de commandes
 
 * nvda+maj+L : afficher une liste des positions sauvegardées.
 * nvda+contrôle+l : sauvegarder une position.

@@ -8,7 +8,7 @@ Ez a kiegészítő lehetővé teszi az egérkurzor mozgatását a billentyűzet
 használatával, ill. elmenthet vele egérkurzor-koordinátákat a különböző
 alkalmazásokhoz.
 
-## Billentyűparancsok
+## Key commands
 
 * nvda+shift+L: megnyitja az elmentett pozíciók listáját.
 * nvda+control+l: Pozíció mentése.
