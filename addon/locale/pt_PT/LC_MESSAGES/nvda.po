@@ -8,16 +8,15 @@ msgstr ""
 "Project-Id-Version: goldenCursor 1.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-04-22 07:00+1000\n"
-"PO-Revision-Date: 2017-11-05 11:37-0000\n"
-"Last-Translator: Ângelo Abrantes <ampa4374@gmail.com>\n"
+"PO-Revision-Date: 2017-12-05 12:26+0000\n"
+"Last-Translator: Ângelo Miguel Abrantes <ampa4374@gmail.com>\n"
 "Language-Team: Equipa Portuguesa do NVDA <angelomiguelabrantes@gmail.com; rui.fontes@tiflotecnia.com>\n"
 "Language: pt_PT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Portuguese\n"
-"X-Poedit-Country: PORTUGAL\n"
 "X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 2.0.1\n"
 
 msgid "positions List"
 msgstr "Lista de posições"
@@ -119,10 +118,10 @@ msgid "please enter comma between the first and the second number"
 msgstr "Por favor, escreva uma vírgola entre o primeiro e o segundo número"
 
 msgid "please enter an integer number."
-msgstr "Escreva um número inteiro;"
+msgstr "Por favor, escreva um número inteiro;"
 
 msgid "type the x/y value you wish the cursor to jump to"
-msgstr "Escreva o valor de X da posição para onde deseja saltar;"
+msgstr "Escreva o valor de X/y da posição para onde deseja saltar;"
 
 msgid "restriction on"
 msgstr "Restrição ligada"
@@ -136,10 +135,9 @@ msgstr "Alterna entre restrição ligada e desligada; "
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Golden Cursor moves the mouse with the keyboard"
-msgstr "O Cursor Douradomove o rato com o teclado;"
+msgstr "O Cursor Dourado move o rato com o teclado;"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Allows you to control the mouse movement with the arrow keys. for further details please visit the addon guide help."
-msgstr "Permit o controlo do rato através do teclado. Para mais informações, visite: "
-
+msgstr "Permit o controlo do rato através do teclado. Para mais informações, visite o guia de ajuda do extra "
