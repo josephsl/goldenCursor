@@ -42,14 +42,14 @@ class PositionsList(wx.Dialog):
 			isOpened = 0
 			ui.message(_('there is no any positions for %s.') % appName)
 			return
-		self.data = self.data.split(u'\n')
+		self.data = self.data.split("\n")
 		listBoxSizer = wx.BoxSizer(wx.VERTICAL)
 		st = wx.StaticText(self,-1,_('choose a item of this list'))
 		listBoxSizer.Add(st,0.5, wx.ALL, 10)
 		self.listBox = wx.ListBox(self,-1)
 		listBoxSizer.Add(self.listBox,0,wx.ALL| wx.EXPAND,10)
 		for i in self.data:
-			if i [0] == u'[':
+			if i [0] == "[":
 				self.listBox.Append(i[1:-1], self.data [self.data.index(i)+1])
 		buttonsSizer = wx.BoxSizer(wx.VERTICAL)
 		b_rename = wx.Button(self, -1,_('&rename'))
@@ -76,7 +76,7 @@ class PositionsList(wx.Dialog):
 
 	def onRename(self, event):
 		try:
-			index = self.data.index(u'['+self.listBox.GetStringSelection()+u']')
+			index = self.data.index("["+self.listBox.GetStringSelection()+"]")
 		except:
 			ui.message(_('no selection'))
 			return
@@ -88,8 +88,8 @@ class PositionsList(wx.Dialog):
 		self.listBox.SetFocus()
 		x_y = self.listBox.GetClientData(self.listBox.GetSelection())
 		del self.data [index]
-		self.data.insert(index, u'['+name+u']')
-		data = u'\n'.join(self.data)
+		self.data.insert(index, "["+name+"]")
+		data = "\n".join(self.data)
 		with codecs.open(self.path,'w','utf-8') as f:
 			f.write(data)
 		i = self.listBox.GetSelection()
@@ -100,14 +100,14 @@ class PositionsList(wx.Dialog):
 
 	def onDelete(self,event):
 		try:
-			index = self.data.index(u'['+self.listBox.GetStringSelection()+u']')
+			index = self.data.index("["+self.listBox.GetStringSelection()+"]")
 		except:
 			ui.message(_('no selection'))
 			return
 		del self.data [index]
 		del self.data [index]
 		ui.message(_('the position has been deleted.'))
-		data = u'\n'.join(self.data)
+		data = "\n".join(self.data)
 		with codecs.open(self.path,'w','utf-8') as f:
 			f.write(data)
 		self.listBox.Delete(self.listBox.GetSelection())
@@ -129,7 +129,7 @@ class PositionsList(wx.Dialog):
 
 	def onOk(self, event):
 		try:
-			x, y= self.listBox.GetClientData(self.listBox.GetSelection()).split(u',')
+			x, y= self.listBox.GetClientData(self.listBox.GetSelection()).split(",")
 		except:
 			return
 		x =int(x)
@@ -147,7 +147,7 @@ class PositionsList(wx.Dialog):
 		isOpened = 0
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
-	scriptCategory = u"golden cursor"
+	scriptCategory = "golden cursor"
 
 	def __init__(self, *args, **kwargs):
 		super(GlobalPlugin, self).__init__(*args, **kwargs)
@@ -176,7 +176,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def saving(self,name):
 		name = name.rstrip()
 		speech.cancelSpeech()
-		if name == u'':
+		if name == "":
 			wx.CallAfter(gui.messageBox, _("please enter the value for the name of the position."), _("Error"), wx.OK|wx.ICON_ERROR)
 			return
 		x, y = win32api.GetCursorPos()
@@ -187,17 +187,17 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		try:
 			with codecs.open(path,'r','utf-8') as f:
 				data = f.read().strip()
-		except Exception ,e:
-			data = u''
+		except Exception as e:
+			data = ""
 		if name in data:
 			data = data.split('\n')
 			i = data.index(name)
 			del data [i]
 			del data [i]
 			data = '\n'.join(data)
-			p = data+u'\n'+p
+			p = data+"\n"+p
 		else:
-			p = data+u'\n'+p
+			p = data+"\n"+p
 		with codecs.open(path,'w','utf-8') as f:
 			f.write(p)
 			ui.message(_('the position has been saved in %s.') % path)

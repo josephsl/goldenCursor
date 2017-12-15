@@ -18,5 +18,5 @@ def onInstall():
 	else:
 		try:
 			shutil.copytree(positions, newPositions)
-		except IOError, WindowsError:
+		except (IOError, WindowsError):
 			pass
