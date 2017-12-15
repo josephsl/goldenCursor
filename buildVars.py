@@ -14,10 +14,10 @@ addon_info = {
 	"addon_name" : "goldenCursor",
 	# Add-on summary, usually the user visible name of the addon.
 	# Translators: Summary for this add-on to be shown on installation and add-on information.
-	"addon_summary" : _("Golden Cursor moves the mouse with the keyboard"),
+	"addon_summary" : _("Golden Cursor"),
 	# Add-on description
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-	"addon_description" : _("Allows you to control the mouse movement with the arrow keys. for further details please visit the addon guide help."),
+	"addon_description" : _("Allows you to control the mouse movement with the keyboard. for further details please visit the addon guide help."),
 	# version
 	"addon_version" : "1.4",
 	# Author(s)
