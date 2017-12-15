@@ -25,13 +25,21 @@ import winUser
 import addonHandler
 addonHandler.initTranslation()
 
-filesPath = os.path.join(os.path.dirname(__file__), "files")
+# Each global constant is prefixed with "GC".
+
+# Constants
+GCFilesPath = os.path.join(os.path.dirname(__file__), "files")
+# Mouse movement directions
+GCMouseRight = 0
+GCMouseLeft = 1
+GCMouseDown = 2
+GCMouseUp = 3
 
 class PositionsList(wx.Dialog):
 
 	def __init__(self, parent, appName):
 		super(PositionsList, self).__init__(parent, title="Saved positions for %s"%appName, size =(420, 300))
-		self.path = os.path.join(filesPath, appName+".gc")
+		self.path = os.path.join(GCFilesPath, appName+".gc")
 		with codecs.open(self.path, "r", "utf-8") as f:
 			self.data = f.read().strip()
 		self.data = self.data.split("\n")
@@ -141,14 +149,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def __init__(self, *args, **kwargs):
 		super(GlobalPlugin, self).__init__(*args, **kwargs)
 		self.pixelMoving =5
-		self.sayPixel = 1
+		self.sayPixel = True
 		self.getAppRestriction = None
-		self.restriction = 0
+		self.restriction = False
 
 	def script_savedPositionsList(self, gesture):
 		# Don't even think about opening this dialog if positions list does not exist.
 		appName = api.getForegroundObject().appModule.appName
-		if not os.path.exists(os.path.join(filesPath, appName+".gc")):
+		if not os.path.exists(os.path.join(GCFilesPath, appName+".gc")):
 			# Translators: message presented when no saved positions are available for the focused app.
 			ui.message(_("No saved positions for %s.")%appName)
 		else:
@@ -172,8 +180,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		x, y = winUser.getCursorPos()
 		appName = self.getMouse().appModule.appName
 		# If the files path does not exist, create it now.
-		if not os.path.exists(filesPath): os.mkdir(filesPath)
-		path = os.path.join(filesPath, appName+".gc")
+		if not os.path.exists(GCFilesPath): os.mkdir(filesPath)
+		path = os.path.join(GCFilesPath, appName+".gc")
 		name = "["+name+"]"
 		p = name+"\n"+str(x)+","+str(y)
 		try:
@@ -204,14 +212,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	script_mouseMovementChange.__doc__ = _('to select a value for mouse movement (1, 10, 20, 50. 100.')
 
 	def script_toggleSpeakPixels(self, gesture):
-		if self.sayPixel == 1:
-			self.sayPixel =0
-			ui.message(_('report pixels off'))
-			tones.beep(500,200)
-		else:
-			self.sayPixel =1
+		self.sayPixel = not self.sayPixel
+		if self.sayPixel:
 			ui.message(_('report pixels on'))
-			tones.beep(1000,200)
+			tones.beep(1000, 200)
+		else:
+			ui.message(_('report pixels off'))
+			tones.beep(500, 200)
 	script_toggleSpeakPixels.__doc__ = _('toggle reporting of pixels')
 
 	def script_sayPosition(self,gesture):
@@ -220,19 +227,19 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	script_sayPosition.__doc__ = _('report the positions of the mouse.')
 
 	def script_moveMouseRight(self,gesture):
-		self.move_mouse(1)
+		self.moveMouse(GCMouseRight)
 	script_moveMouseRight.__doc__ = _('Moves the Mouse pointer right.')
 
 	def script_moveMouseLeft(self,gesture):
-		self.move_mouse(2)
+		self.moveMouse(GCMouseLeft)
 	script_moveMouseLeft.__doc__ = _('Moves the Mouse pointer left.')
 
 	def script_moveMouseDown(self,gesture):
-		self.move_mouse(3)
+		self.moveMouse(GCMouseDown)
 	script_moveMouseDown.__doc__ = _('Moves the Mouse pointer down.')
 
 	def script_moveMouseUp(self,gesture):
-		self.move_mouse(4)
+		self.moveMouse(GCMouseUp)
 	script_moveMouseUp.__doc__ = _('Moves the Mouse pointer up.')
 
 	def script_goToPosition(self,gesture):
@@ -263,41 +270,31 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def script_toggleMouseRestriction(self,gesture):
 		self.getAppRestriction = self.getMouse()
-		if self.restriction == 0:
-			self.restriction = 1 
+		self.restriction = not self.restriction
+		if self.restriction:
 			ui.message(_('restriction on'))
-			tones.beep(1000,200)
+			tones.beep(1000, 200)
 		else:
-			self.restriction = 0
 			ui.message(_('restriction off'))
-			tones.beep(500,200)
+			tones.beep(500, 200)
 	script_toggleMouseRestriction.__doc__ = _('Toggles the restriction between the 2 levels you can toggle between Application Window restriction and Unrestricted.')
 
-	def move_mouse(self,d):
+	def moveMouse(self, direction):
 		w,h = api.getDesktopObject().location[2:]
 		x , y= winUser.getCursorPos()
-		oldX = x
-		oldY = y
-		if d == 1:
-			x = x+self.pixelMoving
-			pos = str(x)
-		elif d == 2:
-			x = x- self.pixelMoving
-			pos = str(x)
-		elif d == 3:
-			y = y+self.pixelMoving
-			pos = str(y)
-		elif d == 4:
-			y = y-self.pixelMoving
-			pos = str(y)
-		o =api.getMouseObject()
-		if x in range(0,w) and y in range(0,h):
+		oldX, oldY = x, y
+		if direction == GCMouseRight: x+=self.pixelMoving
+		elif direction == GCMouseLeft: x-=self.pixelMoving
+		elif direction == GCMouseDown: y+=self.pixelMoving
+		elif direction == GCMouseUp: y-=self.pixelMoving
+		# Just do a chain comparison, as it is a lot faster.
+		if 0 <= x < w and 0 <= y < h:
 			winUser.setCursorPos(x,y)
 			mouseHandler.executeMouseMoveEvent(x, y)
 		else:
 			winsound.MessageBeep(0)
 			return
-		if self.restriction == 1 and self.getAppRestriction.appModule.appName != self.getMouse().appModule.appName:
+		if self.restriction and self.getAppRestriction.appModule.appName != self.getMouse().appModule.appName:
 			winsound.MessageBeep(0)
 			winUser.setCursorPos(oldX,oldY)
 			mouseHandler.executeMouseMoveEvent(oldX, oldY)
@@ -306,13 +303,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				winUser.setCursorPos(x,y)
 				mouseHandler.executeMouseMoveEvent(x, y)
 			return
-		if self.sayPixel == 1:
-			ui.message(pos)
+		if self.sayPixel:
+			ui.message(str(x if direction in (GCMouseRight, GCMouseLeft) else y))
 
 	def getMouse(self):
 		x , y= winUser.getCursorPos()
-		o = api.getDesktopObject().objectFromPoint(x,y)
-		return o
+		return api.getDesktopObject().objectFromPoint(x,y)
 
 	__gestures = {
 		"kb:nvda+windows+c":"mouseMovementChange",
