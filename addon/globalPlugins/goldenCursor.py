@@ -25,18 +25,18 @@ import winUser
 import addonHandler
 
 addonHandler.initTranslation()
-filesPath = os.path.join(os.path.dirname(__file__), 'files')
+filesPath = os.path.join(os.path.dirname(__file__), "files")
 isOpened = 0
 
 class PositionsList(wx.Dialog):
 
-	def __init__(self,parent):
+	def __init__(self, parent):
 		global isOpened
-		super(PositionsList,self).__init__(parent,title=_("positions List"), size =(420,300))
+		super(PositionsList, self).__init__(parent, title=_("positions List"), size =(420, 300))
 		appName = api.getForegroundObject().appModule.appName
-		self.path = os.path.join(filesPath, appName+'.gc')
+		self.path = os.path.join(filesPath, appName+".gc")
 		try:
-			with codecs.open(self.path,'r','utf-8') as f:
+			with codecs.open(self.path, "r", "utf-8") as f:
 				self.data = f.read().strip()
 		except:
 			isOpened = 0
@@ -90,7 +90,7 @@ class PositionsList(wx.Dialog):
 		del self.data [index]
 		self.data.insert(index, "["+name+"]")
 		data = "\n".join(self.data)
-		with codecs.open(self.path,'w','utf-8') as f:
+		with codecs.open(self.path, "w", "utf-8") as f:
 			f.write(data)
 		i = self.listBox.GetSelection()
 		self.listBox.Delete(i)
@@ -108,7 +108,7 @@ class PositionsList(wx.Dialog):
 		del self.data [index]
 		ui.message(_('the position has been deleted.'))
 		data = "\n".join(self.data)
-		with codecs.open(self.path,'w','utf-8') as f:
+		with codecs.open(self.path, "w", "utf-8") as f:
 			f.write(data)
 		self.listBox.Delete(self.listBox.GetSelection())
 		if self.listBox.IsEmpty():
@@ -181,24 +181,24 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			return
 		x, y = winUser.getCursorPos()
 		appName = self.getMouse().appModule.appName
-		path = os.path.join(filesPath, appName+'.gc')
-		name = '['+name+']'
-		p = name+'\n'+str(x)+','+str(y)
+		path = os.path.join(filesPath, appName+".gc")
+		name = "["+name+"]"
+		p = name+"\n"+str(x)+","+str(y)
 		try:
-			with codecs.open(path,'r','utf-8') as f:
+			with codecs.open(path, "r", "utf-8") as f:
 				data = f.read().strip()
 		except Exception as e:
 			data = ""
 		if name in data:
-			data = data.split('\n')
+			data = data.split("\n")
 			i = data.index(name)
 			del data [i]
 			del data [i]
-			data = '\n'.join(data)
+			data = "\n".join(data)
 			p = data+"\n"+p
 		else:
 			p = data+"\n"+p
-		with codecs.open(path,'w','utf-8') as f:
+		with codecs.open(path, "w", "utf-8") as f:
 			f.write(p)
 			ui.message(_('the position has been saved in %s.') % path)
 
@@ -256,11 +256,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def jumping(self,num):
 		speech.cancelSpeech()
-		if ',' not in num:
+		if "," not in num:
 			wx.CallAfter(gui.messageBox, _("please enter comma between the first and the second number"), _("Error"), wx.OK|wx.ICON_ERROR)
 			return
-		num = num.replace(' ','')
-		num = num.split(',')
+		num = num.replace(" ", "")
+		num = num.split(",")
 		x = num [0]
 		y = num [1]
 		if x.isdigit() == False or y.isdigit() == False:
@@ -331,8 +331,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	__gestures = {
 		"kb:nvda+windows+c":"mouseMovementChange",
-		"kb:nvda+windows+rightarrow":"moveMouseRight",
-		"kb:nvda+windows+leftarrow":"moveMouseLeft",
+		"kb:nvda+windows+rightArrow":"moveMouseRight",
+		"kb:nvda+windows+leftArrow":"moveMouseLeft",
 		"kb:nvda+windows+upArrow":"moveMouseUp",
 		"kb:nvda+windows+downArrow":"moveMouseDown",
 		"kb:nvda+windows+j":"goToPosition",
