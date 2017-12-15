@@ -24,6 +24,12 @@ This add-on allows you to move the mouse using a keyboard and save mouse positio
 * For maximum compatibility, you should maximize windows by pressing Windows+Up arrow.
 * When sharing positions, existing position labels should be renamed.
 
+## Version 2.0
+
+* Requires NVDA 2017.3 or later.
+* The name of the currently focused app is shown as part of the title for positions list dialog.
+* When saving positions, resolved an issue where NvDA may play error tones if the positions folder does not exist.
+
 ## Version 1.4
 
 * Removed win32api dependency to make it compatible with past and future versions of NVDA.
