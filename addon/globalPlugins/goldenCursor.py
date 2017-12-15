@@ -26,13 +26,11 @@ import addonHandler
 addonHandler.initTranslation()
 
 filesPath = os.path.join(os.path.dirname(__file__), "files")
-isOpened = 0
 
 class PositionsList(wx.Dialog):
 
 	def __init__(self, parent, appName):
-		global isOpened
-		super(PositionsList, self).__init__(parent, title=_("Saved positions for %s")%appName), size =(420, 300))
+		super(PositionsList, self).__init__(parent, title="Saved positions for %s"%appName, size =(420, 300))
 		self.path = os.path.join(filesPath, appName+".gc")
 		with codecs.open(self.path, "r", "utf-8") as f:
 			self.data = f.read().strip()
@@ -136,9 +134,6 @@ class PositionsList(wx.Dialog):
 	def onCancel(self,evt):
 		self.Destroy()
 
-	def __del__(self):
-		global isOpened
-		isOpened = 0
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	scriptCategory = "golden cursor"
@@ -176,6 +171,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			return
 		x, y = winUser.getCursorPos()
 		appName = self.getMouse().appModule.appName
+		# If the files path does not exist, create it now.
+		if not os.path.exists(filesPath): os.mkdir(filesPath)
 		path = os.path.join(filesPath, appName+".gc")
 		name = "["+name+"]"
 		p = name+"\n"+str(x)+","+str(y)
