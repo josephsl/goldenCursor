@@ -23,25 +23,19 @@ import ui
 import api
 import winUser
 import addonHandler
-
 addonHandler.initTranslation()
+
 filesPath = os.path.join(os.path.dirname(__file__), "files")
 isOpened = 0
 
 class PositionsList(wx.Dialog):
 
-	def __init__(self, parent):
+	def __init__(self, parent, appName):
 		global isOpened
-		super(PositionsList, self).__init__(parent, title=_("positions List"), size =(420, 300))
-		appName = api.getForegroundObject().appModule.appName
+		super(PositionsList, self).__init__(parent, title=_("Saved positions for %s")%appName), size =(420, 300))
 		self.path = os.path.join(filesPath, appName+".gc")
-		try:
-			with codecs.open(self.path, "r", "utf-8") as f:
-				self.data = f.read().strip()
-		except:
-			isOpened = 0
-			ui.message(_('there is no any positions for %s.') % appName)
-			return
+		with codecs.open(self.path, "r", "utf-8") as f:
+			self.data = f.read().strip()
 		self.data = self.data.split("\n")
 		listBoxSizer = wx.BoxSizer(wx.VERTICAL)
 		st = wx.StaticText(self,-1,_('choose a item of this list'))
@@ -157,14 +151,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.restriction = 0
 
 	def script_savedPositionsList(self, gesture):
-		global isOpened
-		if isOpened == 0:
-			isOpened = 1
-			PositionsList(gui.mainFrame)
+		# Don't even think about opening this dialog if positions list does not exist.
+		appName = api.getForegroundObject().appModule.appName
+		if not os.path.exists(os.path.join(filesPath, appName+".gc")):
+			# Translators: message presented when no saved positions are available for the focused app.
+			ui.message(_("No saved positions for %s.")%appName)
 		else:
-			ui.message(_('An NVDA settings dialog is already open. Please close it first.'))
-
-	script_savedPositionsList.__doc__ = _("To open a list showing the points that have already been saved for this application.")
+			PositionsList(gui.mainFrame, appName)
+	# Translators: input help message for a Golden Cursor command.
+	script_savedPositionsList.__doc__ = _("Opens a dialog listing saved positions for the current application")
 
 	def script_savePosition(self, gesture):
 		d = wx.TextEntryDialog(gui.mainFrame, _("Enter the value for position name you wish to save."), _("save position"))
