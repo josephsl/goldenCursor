@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 #golden cursor
-# Copyright (C) 2015-2016 
+# Copyright (C) 2015-2017
 #Version 2.2
 #License GNU GPL
 # Date: 25/12/2015
 #team work: author : salah atair, translation and keycommands are made by wafeeq taher
 # Additional tweaking done by Joseph Lee and contributors, resetting version to 1.0.
-#now it became easy to control the mouse using keyboard
+
+# Control mouse from the keyboard, including specifying hotspots, different movement units, mouse restrictions and others.
 
 import codecs
 from threading import Timer
@@ -14,7 +15,6 @@ import wx
 import gui
 import os
 import speech
-import time
 import tones
 import globalPluginHandler
 import mouseHandler
@@ -37,7 +37,7 @@ GCMouseUp = 3
 class PositionsList(wx.Dialog):
 
 	def __init__(self, parent, appName):
-		super(PositionsList, self).__init__(parent, title="Saved positions for %s"%appName, size =(420, 300))
+		super(PositionsList, self).__init__(parent, title=_("Saved positions for %s")%(appName), size =(420, 300))
 		self.path = os.path.join(GCFilesPath, appName+".gc")
 		with codecs.open(self.path, "r", "utf-8") as f:
 			self.data = f.read().strip()
