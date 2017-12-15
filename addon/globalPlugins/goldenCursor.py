@@ -10,7 +10,6 @@
 
 import codecs
 from threading import Timer
-import winsound 
 import wx
 import gui
 import os
@@ -292,10 +291,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			winUser.setCursorPos(x,y)
 			mouseHandler.executeMouseMoveEvent(x, y)
 		else:
-			winsound.MessageBeep(0)
+			wx.Bell()
 			return
 		if self.restriction and self.getAppRestriction.appModule.appName != self.getMouse().appModule.appName:
-			winsound.MessageBeep(0)
+			wx.Bell()
 			winUser.setCursorPos(oldX,oldY)
 			mouseHandler.executeMouseMoveEvent(oldX, oldY)
 			if self.getAppRestriction.appModule.appName != self.getMouse().appModule.appName:
