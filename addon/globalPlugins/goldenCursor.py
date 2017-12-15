@@ -193,16 +193,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		with codecs.open(path, "w", "utf-8") as f:
 			f.write(p)
 			ui.message(_('the position has been saved in %s.') % path)
-
 	script_savePosition.__doc__ = _('to save a the current position.')
 
 	def script_mouseMovementChange (self, gesture):
-		list = [1,5,10,20,50,100]
-		index = list.index(self.pixelMoving)
-		try:
-			self.pixelMoving = list[index+1]
-		except:
-			self.pixelMoving = list[0]
+		pixelUnits = (1, 5, 10, 20, 50, 100)
+		pixelUnitChoices = len(pixelUnits)
+		index = pixelUnits.index(self.pixelMoving)
+		self.pixelMoving = pixelUnits[(index+1) % pixelUnitChoices]
 		ui.message(str(self.pixelMoving))
 	script_mouseMovementChange.__doc__ = _('to select a value for mouse movement (1, 10, 20, 50. 100.')
 
@@ -219,8 +216,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def script_sayPosition(self,gesture):
 		x, y = winUser.getCursorPos()
-		str = _('%d , %d' %(x,y)) 
-		ui.message(str)
+		ui.message(_("%d , %d"%(x,y)))
 	script_sayPosition.__doc__ = _('report the positions of the mouse.')
 
 	def script_moveMouseRight(self,gesture):
@@ -231,13 +227,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.move_mouse(2)
 	script_moveMouseLeft.__doc__ = _('Moves the Mouse pointer left.')
 
-	def script_moveMouseUp(self,gesture):
-		self.move_mouse(4)
-	script_moveMouseUp.__doc__ = _('Moves the Mouse pointer up.')
-
 	def script_moveMouseDown(self,gesture):
 		self.move_mouse(3)
 	script_moveMouseDown.__doc__ = _('Moves the Mouse pointer down.')
+
+	def script_moveMouseUp(self,gesture):
+		self.move_mouse(4)
+	script_moveMouseUp.__doc__ = _('Moves the Mouse pointer up.')
 
 	def script_goToPosition(self,gesture):
 		d = wx.TextEntryDialog(gui.mainFrame, _("Enter the value for position number you wish to jump to"), _("Jump to position"))
@@ -263,7 +259,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		winUser.setCursorPos(x,y)
 		self.getMouse()
 		ui.message(str(x)+','+ str(y))
-
 	script_goToPosition.__doc__ = _('type the x/y value you wish the cursor to jump to')
 
 	def script_toggleMouseRestriction(self,gesture):
@@ -313,8 +308,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			return
 		if self.sayPixel == 1:
 			ui.message(pos)
-		else:
-			pass
 
 	def getMouse(self):
 		x , y= winUser.getCursorPos()
@@ -325,8 +318,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		"kb:nvda+windows+c":"mouseMovementChange",
 		"kb:nvda+windows+rightArrow":"moveMouseRight",
 		"kb:nvda+windows+leftArrow":"moveMouseLeft",
-		"kb:nvda+windows+upArrow":"moveMouseUp",
 		"kb:nvda+windows+downArrow":"moveMouseDown",
+		"kb:nvda+windows+upArrow":"moveMouseUp",
 		"kb:nvda+windows+j":"goToPosition",
 		"kb:nvda+windows+p":"sayPosition",
 		"kb:nvda+windows+s":"toggleSpeakPixels",
