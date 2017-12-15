@@ -21,9 +21,9 @@ addon_info = {
 	# version
 	"addon_version" : "1.4",
 	# Author(s)
-	"addon_author" : u"Salah Atair <atair1978@gmail.com>, Wafeeq Taher",
+	"addon_author" : u"Salah Atair <atair1978@gmail.com>, Wafeeq Taher, Joseph Lee <joseph.lee22590@gmail.com>",
 	# URL for the add-on documentation support
-	"addon_url" : 'http://addons.nvda-project.org',
+	"addon_url" : "https://addons.nvda-project.org",
 	# File name for the add-on help file.
 	"addon_docFileName" : "readme.html"
 }
