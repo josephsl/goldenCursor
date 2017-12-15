@@ -21,7 +21,7 @@ import globalPluginHandler
 import mouseHandler
 import ui
 import api
-import win32api
+import winUser
 import addonHandler
 
 addonHandler.initTranslation()
@@ -134,7 +134,7 @@ class PositionsList(wx.Dialog):
 			return
 		x =int(x)
 		y = int(y)
-		win32api.SetCursorPos((x,y))
+		winUser.setCursorPos(x,y)
 		t = Timer(0.5, mouseHandler.executeMouseMoveEvent,[x, y])
 		t.start()
 		self.Close()
@@ -179,7 +179,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if name == "":
 			wx.CallAfter(gui.messageBox, _("please enter the value for the name of the position."), _("Error"), wx.OK|wx.ICON_ERROR)
 			return
-		x, y = win32api.GetCursorPos()
+		x, y = winUser.getCursorPos()
 		appName = self.getMouse().appModule.appName
 		path = os.path.join(filesPath, appName+'.gc')
 		name = '['+name+']'
@@ -226,7 +226,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	script_toggleSpeakPixels.__doc__ = _('toggle reporting of pixels')
 
 	def script_sayPosition(self,gesture):
-		x, y = win32api.GetCursorPos()
+		x, y = winUser.getCursorPos()
 		str = _('%d , %d' %(x,y)) 
 		ui.message(str)
 	script_sayPosition.__doc__ = _('report the positions of the mouse.')
@@ -268,7 +268,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			return
 		x = int(x)
 		y = int(y)
-		win32api.SetCursorPos((x,y))
+		winUser.setCursorPos(x,y)
 		self.getMouse()
 		ui.message(str(x)+','+ str(y))
 
@@ -287,8 +287,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	script_toggleMouseRestriction.__doc__ = _('Toggles the restriction between the 2 levels you can toggle between Application Window restriction and Unrestricted.')
 
 	def move_mouse(self,d):
-		w, h = win32api.GetMonitorInfo(1) ['Monitor'][2:]
-		x , y= win32api.GetCursorPos()
+		w,h = api.getDesktopObject().location[2:]
+		x , y= winUser.getCursorPos()
 		oldX = x
 		oldY = y
 		if d == 1:
@@ -305,18 +305,18 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			pos = str(y)
 		o =api.getMouseObject()
 		if x in range(0,w) and y in range(0,h):
-			win32api.SetCursorPos((x,y))
+			winUser.setCursorPos(x,y)
 			mouseHandler.executeMouseMoveEvent(x, y)
 		else:
 			winsound.MessageBeep(0)
 			return
 		if self.restriction == 1 and self.getAppRestriction.appModule.appName != self.getMouse().appModule.appName:
 			winsound.MessageBeep(0)
-			win32api.SetCursorPos((oldX,oldY))
+			winUser.setCursorPos(oldX,oldY)
 			mouseHandler.executeMouseMoveEvent(oldX, oldY)
 			if self.getAppRestriction.appModule.appName != self.getMouse().appModule.appName:
 				x,y, w, h = self.getAppRestriction.location
-				win32api.SetCursorPos((x,y))
+				winUser.setCursorPos(x,y)
 				mouseHandler.executeMouseMoveEvent(x, y)
 			return
 		if self.sayPixel == 1:
@@ -325,7 +325,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			pass
 
 	def getMouse(self):
-		x , y= win32api.GetCursorPos()
+		x , y= winUser.getCursorPos()
 		o = api.getDesktopObject().objectFromPoint(x,y)
 		return o
 
