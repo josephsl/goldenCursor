@@ -24,6 +24,14 @@ This add-on allows you to move the mouse using a keyboard and save mouse positio
 * For maximum compatibility, you should maximize windows by pressing Windows+Up arrow.
 * When sharing positions, existing position labels should be renamed.
 
+## Version 1.4
+
+* Removed win32api dependency to make it compatible with past and future versions of NVDA.
+
+## Version 1.0
+
+* Initial release.
+
 [1]: https://addons.nvda-project.org/files/get.php?file=gc
 
 [2]: https://addons.nvda-project.org/files/get.php?file=gc-dev
