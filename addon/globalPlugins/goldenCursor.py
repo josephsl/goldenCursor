@@ -136,7 +136,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Translators: message presented when no saved positions are available for the focused app.
 			ui.message(_("No saved positions for %s.")%appName)
 		else:
-			PositionsList(gui.mainFrame, appName)
+			try:
+				d = PositionsList(gui.mainFrame, appName)
+				gui.mainFrame.prePopup()
+				d.Raise()
+				d.Show()
+				gui.mainFrame.postPopup()
+			except RuntimeError:
+				pass
 	# Translators: input help message for a Golden Cursor command.
 	script_savedPositionsList.__doc__ = _("Opens a dialog listing saved positions for the current application")
 
