@@ -28,10 +28,10 @@ def onInstall():
 		for gcFile in os.listdir(oldPositions):
 			path = os.path.join(oldPositions, gcFile)
 			newPositionDatabase = configobj.ConfigObj(os.path.join(newPositions, gcFile), encoding="UTF-8")
-			with codecs.open(self.path, "r", "utf-8") as f:
+			with codecs.open(path, "r", "utf-8") as f:
 				data = f.read().strip()
 			data = data.split("\n")
-			for i in self.data:
+			for i in data:
 				if i[0] == "[":
-					newPositionsDatabase[i[1:-1]] = data[data.index(i)+1]
+					newPositionDatabase[i[1:-1]] = data[data.index(i)+1]
 			newPositionDatabase.write()
