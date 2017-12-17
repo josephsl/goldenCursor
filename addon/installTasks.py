@@ -1,5 +1,5 @@
 # Golden Cursor installation tasks
-# Copyright 2016 Joseph Lee and others, released under GPL.
+# Copyright 2016-2017 Joseph Lee and others, released under GPL.
 
 # Provides needed routines during add-on installation and removal.
 # Routines are partly based on other add-ons, particularly Place Markers by Noelia Martinez (thanks add-on authors).
@@ -10,13 +10,28 @@ import os
 import shutil
 
 def onInstall():
-	positions = os.path.join(os.path.dirname(__file__), "..", "goldenCursor", "globalPlugins", "files")
+	# First and second generation positions storage format are incompatible.
+	positions = os.path.join(os.path.dirname(__file__), "..", "goldenCursor", "savedPositions")
+	oldPositions = os.path.join(os.path.dirname(__file__), "..", "goldenCursor", "globalPlugins", "files")
 	# Without importing old positions, saved positions would be lost.
-	newPositions = os.path.join(os.path.dirname(__file__), "globalPlugins", "files")
-	if not os.path.exists(positions):
-		os.mkdir(newPositions)
-	else:
+	newPositions = os.path.join(os.path.dirname(__file__), "savedPositions")
+	# First, migrate second generation positions database.
+	if os.path.exists(positions):
 		try:
 			shutil.copytree(positions, newPositions)
 		except (IOError, WindowsError):
 			pass
+	if os.path.exists(oldPositions):
+		# Manually migrate first generation database to the new format.
+		import codecs, configobj
+		os.mkdir(newPositions)
+		for gcFile in os.listdir(oldPositions):
+			path = os.path.join(oldPositions, gcFile)
+			newPositionDatabase = configobj.ConfigObj(os.path.join(newPositions, gcFile), encoding="UTF-8")
+			with codecs.open(self.path, "r", "utf-8") as f:
+				data = f.read().strip()
+			data = data.split("\n")
+			for i in self.data:
+				if i[0] == "[":
+					newPositionsDatabase[i[1:-1]] = data[data.index(i)+1]
+			newPositionDatabase.write()
