@@ -109,9 +109,9 @@ class PositionsList(wx.Dialog):
 			return
 		self.positions = None
 		winUser.setCursorPos(int(x), int(y))
-		t = Timer(0.5, mouseHandler.executeMouseMoveEvent,[x, y])
+		t = Timer(0.5, mouseHandler.executeMouseMoveEvent,[int(x), int(y)])
 		t.start()
-		self.Close()
+		self.Destroy()
 
 	def onCancel(self,evt):
 		self.positions.write()
