@@ -4,30 +4,30 @@
 * Herunterladen der [stabilen Version][1]
 * Herunterladen der [Entwicklerversion][2]
 
-Diese Erweiterung ermöglicht das Ziehen der Maus mit der Tastatur und
-speichert die Mauspositionen für die jeweilige Anwendung ab.
+Diese Erweiterung ermöglicht das Ziehen der Maus mit der Tastatur und das
+Speichern der gewünschten Mauspositionen für die jeweilige Anwendung.
 
 ## Tastenkombinationen
 
 * NVDA+Umschalt+L: Liste der gespeicherten Mauspositionen anzeigen.
 * NVDA+Strg+L: Mausposition speichern.
-* NVDA+Win+C wählt die Schrittweite der Bewegungen aus.
-* NVDA+Win+R: Beschränkung der Maus ein- oder ausschalten.
-* NVDa+Win+S: Die Ausgabe von Pixeln ein- oder ausschalten.
+* NVDA+Windows+C wählt die Schrittweite der Bewegungen aus.
+* NVDA+Windows+R: Beschränkung der Maus ein- oder ausschalten.
+* NVDA+Windows+S: Die Ausgabe von Pixeln ein- oder ausschalten.
 * NVDA+Win+J: öffnet ein Dialogfeld, in dem Sie die X- und Y-Koordinaten
   eingeben können, um die Mausposition an die gewünschte Stelle zu ziehen.
 * NVDA+Win+P: sagt die Pixel der aktuellen Mausposition an.
 * NVDA+Win+Pfeiltasten: zieht die Maus in die Richtung der jeweiligen
   Position.
-* Anmerkung: Diese Befehle können im NVDA-Menü unter Einstellungen in
-  Eingabegesten angepasst werden.
+* Anmerkung: Diese Befehle können im NVDA-Menü unter Einstellungen im Dialog
+  Eingaben angepasst werden.
 
 ## Hinweise
 
-* Wenn die Positionen geteilt werden, erhält jeder Teilnehmer die gleiche
-  Bildschirmauflösung.
+* Wenn die Positionen geteilt werden, sollte jeder Teilnehmer die gleiche
+  Bildschirmauflösung eingestellt haben.
 * Für beste Kompatibilität sollten Sie mit der Tastenkombination
-  Win+Pfeiltaste nach oben das Fenster maximieren.
+  Windows+Pfeiltaste nach oben das Fenster maximieren.
 * Wenn Sie die Positionen teilen, sollten Sie die bereits vorhandenen
   Positionsbeschreibungen umbenennen.
 
