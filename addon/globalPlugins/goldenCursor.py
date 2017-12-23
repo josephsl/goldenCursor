@@ -292,7 +292,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				winUser.setCursorPos(x,y)
 				mouseHandler.executeMouseMoveEvent(x, y)
 			return
-		if self.sayPixel:
+		if config.conf["goldenCursor"]["reportNewMouseCoordinates"]:
 			ui.message(str(x if direction in (GCMouseRight, GCMouseLeft) else y))
 
 	def getMouse(self):
