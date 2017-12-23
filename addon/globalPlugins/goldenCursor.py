@@ -125,10 +125,20 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self, *args, **kwargs):
 		super(GlobalPlugin, self).__init__(*args, **kwargs)
-		self.pixelMoving =5
-		self.sayPixel = True
 		self.getAppRestriction = None
 		self.restriction = False
+		self.prefsMenu = gui.mainFrame.sysTrayIcon.preferencesMenu
+		self.gcSettings = self.prefsMenu.Append(wx.ID_ANY, _("&Golden Cursor..."), _("Golden Cursor add-on settings"))
+		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onConfigDialog, self.gcSettings)
+
+	def onConfigDialog(self, evt):
+		gui.mainFrame._popupSettingsDialog(GoldenCursorSettings)
+
+	def terminate(self):
+		try:
+			self.prefsMenu.RemoveItem(self.gcSettings)
+		except (RuntimeError, AttributeError, wx.PyDeadObjectError):
+			pass
 
 	def script_savedPositionsList(self, gesture):
 		# Don't even think about opening this dialog if positions list does not exist.
@@ -173,20 +183,32 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def script_mouseMovementChange (self, gesture):
 		pixelUnits = (1, 5, 10, 20, 50, 100)
+		movementUnit = config.conf["goldenCursor"]["mouseMovementUnit"]
 		pixelUnitChoices = len(pixelUnits)
-		index = pixelUnits.index(self.pixelMoving)
-		self.pixelMoving = pixelUnits[(index+1) % pixelUnitChoices]
-		ui.message(str(self.pixelMoving))
+		try:
+			index = pixelUnits.index(movementUnit)
+			movementUnit = pixelUnits[(index+1) % pixelUnitChoices]
+		except ValueError:
+			for unit in pixelUnits:
+				# No need to check for equality because the try block does this already.
+				if movementUnit > unit:
+					index = pixelUnits.index(unit)
+					movementUnit = pixelUnits[(index+1) % pixelUnitChoices]
+					break
+		config.conf["goldenCursor"]["mouseMovementUnit"] = movementUnit
+		ui.message(str(movementUnit))
 	script_mouseMovementChange.__doc__ = _('to select a value for mouse movement (1, 10, 20, 50. 100.')
 
 	def script_toggleSpeakPixels(self, gesture):
-		self.sayPixel = not self.sayPixel
-		if self.sayPixel:
+		sayPixel = config.conf["goldenCursor"]["reportNewMouseCoordinates"]
+		sayPixel = not sayPixel
+		if sayPixel:
 			ui.message(_('report pixels on'))
 			tones.beep(1000, 200)
 		else:
 			ui.message(_('report pixels off'))
 			tones.beep(500, 200)
+		config.conf["goldenCursor"]["reportNewMouseCoordinates"] = sayPixel
 	script_toggleSpeakPixels.__doc__ = _('toggle reporting of pixels')
 
 	def script_sayPosition(self,gesture):
