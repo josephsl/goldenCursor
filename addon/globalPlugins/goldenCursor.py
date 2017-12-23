@@ -15,6 +15,7 @@ from configobj import ConfigObj
 import globalPluginHandler
 import gui
 import wx
+import config
 import speech
 import tones
 import globalVars
@@ -288,3 +289,32 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		"kb:nvda+shift+l": "savePosition",
 		"kb:nvda+control+l": "savedPositionsList",
 	}
+
+# Add-on config database
+# Borrowed from Enhanced Touch Gestures by Joseph Lee
+confspec = {
+	"reportNewMouseCoordinates": "boolean(default=true)",
+	"mouseMovementUnit": "integer(min=1, max=100, default=5)",
+}
+config.conf.spec["goldenCursor"] = confspec
+
+class GoldenCursorSettings(gui.SettingsDialog):
+	# Translators: This is the label for the Golden Cursor settings dialog.
+	title = _("Golden Cursor Settings")
+
+	def makeSettings(self, settingsSizer):
+		gcHelper = gui.guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
+		# Translators: This is the label for a checkbox in the
+		# Golden Cursor settings dialog.
+		self.mouseCoordinatesCheckBox=gcHelper.addItem(wx.CheckBox(self, label=_("&Announce new mouse coordinates when mouse moves")))
+		self.mouseCoordinatesCheckBox.SetValue(config.conf["goldenCursor"]["reportNewMouseCoordinates"])
+		# Translators: The label for a setting in Golden Cursor settings dialog to change mouse movement units.
+		self.mouseMovementUnit=gcHelper.addLabeledControl(_("Mouse movement &unit (in pixels)"), gui.nvdaControls.SelectOnFocusSpinCtrl, min=1, max=100, initial=config.conf["goldenCursor"]["mouseMovementUnit"])
+
+	def postInit(self):
+		self.mouseCoordinatesCheckBox.SetFocus()
+
+	def onOk(self,evt):
+		config.conf["goldenCursor"]["reportNewMouseCoordinates"] = self.mouseCoordinatesCheckBox.IsChecked()
+		config.conf["goldenCursor"]["mouseMovementUnit"] = self.mouseMovementUnit.Value
+		super(GoldenCursorSettings, self).onOk(evt)
