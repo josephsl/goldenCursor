@@ -8,8 +8,8 @@ This add-on allows you to move the mouse using a keyboard and save mouse positio
 
 ## Key commands
 
-* nvda+shift+L: view a list of the saved positions.
-* nvda+control+l: save a position.
+* nvda+control+L: view a list of the saved positions.
+* nvda+shift+l: save a position.
 * nvda+win+c: select the level of movement.
 * nvda+win+r: toggle mouse restriction.
 * nvda+win+s: toggle the reporting of pixels.
