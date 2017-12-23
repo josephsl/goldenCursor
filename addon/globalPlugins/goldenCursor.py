@@ -191,9 +191,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		except ValueError:
 			for unit in pixelUnits:
 				# No need to check for equality because the try block does this already.
-				if movementUnit > unit:
-					index = pixelUnits.index(unit)
-					movementUnit = pixelUnits[(index+1) % pixelUnitChoices]
+				if movementUnit < unit:
+					movementUnit = unit
 					break
 		config.conf["goldenCursor"]["mouseMovementUnit"] = movementUnit
 		ui.message(str(movementUnit))
@@ -203,13 +202,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		sayPixel = config.conf["goldenCursor"]["reportNewMouseCoordinates"]
 		sayPixel = not sayPixel
 		if sayPixel:
-			ui.message(_('report pixels on'))
-			tones.beep(1000, 200)
+			# Translators: reported when new mouse coordinate announcement is on.
+			ui.message(_("Report new mouse coordinates on"))
 		else:
-			ui.message(_('report pixels off'))
-			tones.beep(500, 200)
+			# Translators: reported when new mouse coordinate announcement is on.
+			ui.message(_("Report new mouse coordinates off"))
 		config.conf["goldenCursor"]["reportNewMouseCoordinates"] = sayPixel
-	script_toggleSpeakPixels.__doc__ = _('toggle reporting of pixels')
+	# Translators: Input help message for a Golden Cursor add-on command.
+	script_toggleSpeakPixels.__doc__ = _("toggles reporting of mouse coordinates in pixels when mouse moves")
 
 	def script_sayPosition(self,gesture):
 		x, y = winUser.getCursorPos()
