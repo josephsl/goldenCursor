@@ -271,10 +271,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		w,h = api.getDesktopObject().location[2:]
 		x , y= winUser.getCursorPos()
 		oldX, oldY = x, y
-		if direction == GCMouseRight: x+=self.pixelMoving
-		elif direction == GCMouseLeft: x-=self.pixelMoving
-		elif direction == GCMouseDown: y+=self.pixelMoving
-		elif direction == GCMouseUp: y-=self.pixelMoving
+		pixelMoving = config.conf["goldenCursor"]["mouseMovementUnit"]
+		if direction == GCMouseRight: x+=pixelMoving
+		elif direction == GCMouseLeft: x-=pixelMoving
+		elif direction == GCMouseDown: y+=pixelMoving
+		elif direction == GCMouseUp: y-=pixelMoving
 		# Just do a chain comparison, as it is a lot faster.
 		if 0 <= x < w and 0 <= y < h:
 			winUser.setCursorPos(x,y)
