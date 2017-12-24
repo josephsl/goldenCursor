@@ -120,6 +120,53 @@ class PositionsList(wx.Dialog):
 		self.Destroy()
 
 
+class PositionJumpDialog(wx.Dialog):
+
+	# The following comes from exit dialog class from GUI package (credit: NV Access and Zahari from Bulgaria).
+	_instance = None
+
+	def __new__(cls, parent, *args, **kwargs):
+		inst = cls._instance() if cls._instance else None
+		if not inst:
+			return super(cls, cls).__new__(cls, parent, *args, **kwargs)
+		return inst
+
+	def __init__(self, parent, level=0):
+		inst = PositionJumpDialog._instance() if PositionJumpDialog._instance else None
+		if inst:
+			return
+		# Use a weakref so the instance can die.
+		import weakref
+		PositionJumpDialog._instance = weakref.ref(self)
+
+		super(PositionJumpDialog, self).__init__(parent, wx.ID_ANY, _("New mouse position"))
+		mainSizer = wx.BoxSizer(wx.VERTICAL)
+		mouseJumpHelper = gui.guiHelper.BoxSizerHelper(self, orientation=wx.VERTICAL)
+
+		x, y = winUser.getCursorPos()
+		w,h = api.getDesktopObject().location[2:]
+		self.xPos = mouseJumpHelper.addLabeledControl(_("&X position"), gui.nvdaControls.SelectOnFocusSpinCtrl, min=0, max=w-1, initial=x)
+		self.yPos = mouseJumpHelper.addLabeledControl(_("&Y position"), gui.nvdaControls.SelectOnFocusSpinCtrl, min=0, max=h-1, initial=y)
+
+		mouseJumpHelper.addDialogDismissButtons(self.CreateButtonSizer(wx.OK | wx.CANCEL))
+		self.Bind(wx.EVT_BUTTON, self.onOk, id=wx.ID_OK)
+		self.Bind(wx.EVT_BUTTON, self.onCancel, id=wx.ID_CANCEL)
+		mainSizer.Add(mouseJumpHelper.sizer, border=gui.guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL)
+		mainSizer.Fit(self)
+		self.SetSizer(mainSizer)
+		self.Center(wx.BOTH | 6)
+		self.xPos.SetFocus()
+
+	def onOk(self, evt):
+		x, y = self.xPos.GetValue(), self.yPos.GetValue()
+		self.Destroy()
+		wx.CallAfter(winUser.setCursorPos, x, y)
+		wx.CallLater(1000, ui.message, "{0}, {1}".format(x, y))
+
+	def onCancel(self, evt):
+		self.Destroy()
+
+
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	scriptCategory = "golden cursor"
 
@@ -233,27 +280,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	script_moveMouseUp.__doc__ = _('Moves the Mouse pointer up.')
 
 	def script_goToPosition(self,gesture):
-		d = wx.TextEntryDialog(gui.mainFrame, _("Enter the value for position number you wish to jump to"), _("Jump to position"))
-		def callback(result):
-			if result == wx.ID_OK:
-				wx.CallLater(100,self.jumping, d.GetValue())
-		gui.runScriptModalDialog(d, callback)
-
-	def jumping(self,num):
-		speech.cancelSpeech()
-		if "," not in num:
-			wx.CallAfter(gui.messageBox, _("please enter comma between the first and the second number"), _("Error"), wx.OK|wx.ICON_ERROR)
-			return
-		x, y = num.split(",")
-		# Integer conversion doesn't care about spaces as long as digits can be represented.
 		try:
-			x, y = int(x), int(y)
-		except ValueError:
-			wx.CallAfter(gui.messageBox, _("please enter an integer number."), _("Error"), wx.OK|wx.ICON_ERROR)
-			return
-		winUser.setCursorPos(x, y)
-		self.getMouse()
-		ui.message("{0}, {1}".format(x, y))
+			d = PositionJumpDialog(gui.mainFrame)
+			gui.mainFrame.prePopup()
+			d.Raise()
+			d.Show()
+			gui.mainFrame.postPopup()
+		except RuntimeError:
+			pass
 	script_goToPosition.__doc__ = _('type the x/y value you wish the cursor to jump to')
 
 	def script_toggleMouseRestriction(self,gesture):
