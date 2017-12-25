@@ -174,10 +174,7 @@ class PositionsList(wx.Dialog):
 		except:
 			return
 		self.positions = None
-		winUser.setCursorPos(int(x), int(y))
-		t = Timer(0.5, mouseHandler.executeMouseMoveEvent,[int(x), int(y)])
-		t.start()
-		self.Destroy()
+		wx.CallLater(500, setMousePosition, int(x), int(y))
 
 	def onClose(self,evt):
 		self.Destroy()
