@@ -60,33 +60,46 @@ class PositionsList(wx.Dialog):
 		super(PositionsList, self).__init__(parent, title=_("Saved positions for %s")%(appName), size =(420, 300))
 		self.appName = appName
 		self.positions = ConfigObj(os.path.join(GCSavedPositions, appName+".gc"), encoding="UTF-8")
+		mainSizer = wx.BoxSizer(wx.VERTICAL)
 		listBoxSizer = wx.BoxSizer(wx.VERTICAL)
 		self.listBox = wx.ListBox(self,-1)
 		listBoxSizer.Add(self.listBox,0,wx.ALL| wx.EXPAND,10)
 		for entry in sorted(self.positions.keys()):
 			self.listBox.Append(entry, self.positions[entry])
-		buttonsSizer = wx.BoxSizer(wx.VERTICAL)
-		b_rename = wx.Button(self, -1,_('&rename'))
-		buttonsSizer.Add(b_rename,0, wx.ALL| wx.CENTER| wx.EXPAND,10)
-		b_delete = wx.Button(self, -1,_('&delete'))
-		buttonsSizer.Add(b_delete, 0, wx.ALL| wx.CENTER| wx.EXPAND,10)
-		b_clear = wx.Button(self, -1,_('c&lear'))
-		buttonsSizer.Add(b_clear, 0, wx.ALL| wx.CENTER| wx.EXPAND,10)
-		buttonsSizer.Add(self.CreateButtonSizer(wx.OK), wx.ALL| wx.CENTER|wx.EXPAND,10)
-		buttonsSizer.Add(self.CreateButtonSizer(wx.CANCEL), wx.ALL| wx.CENTER|wx.EXPAND,10)
-		b_rename.Bind(wx.EVT_BUTTON, self.onRename)
-		b_delete.Bind(wx.EVT_BUTTON, self.onDelete)
-		b_clear.Bind(wx.EVT_BUTTON, self.onClear)
-		self.Bind(wx.EVT_BUTTON, self.onOk, id=wx.ID_OK)
-		self.Bind(wx.EVT_BUTTON, self.onCancel, id=wx.ID_CANCEL)
-		h = wx.BoxSizer(wx.HORIZONTAL)
-		h.Add(listBoxSizer,1,wx.ALL|wx.EXPAND,20)
-		h.Add(buttonsSizer)
+		buttonsSizer = wx.BoxSizer(wx.HORIZONTAL)
+		# Translators: the button to jump to the selected position.
+		jumpButton= wx.Button(self, -1,_("&Jump"))
+		buttonsSizer.Add(jumpButton,0, wx.ALL| wx.CENTER| wx.EXPAND,10)
+		# Translators: the button to rename a saved position.
+		renameButton= wx.Button(self, -1,_("&Rename"))
+		buttonsSizer.Add(renameButton,0, wx.ALL| wx.CENTER| wx.EXPAND,10)
+		# Translators: the button to delete the selected saved position.
+		deleteButton = wx.Button(self, -1,_("&Delete"))
+		buttonsSizer.Add(deleteButton, 0, wx.ALL| wx.CENTER| wx.EXPAND,10)
+		# Translators: the button to clear all saved positions for the focused app.
+		clearButton = wx.Button(self, -1,_("C&lear"))
+		buttonsSizer.Add(clearButton, 0, wx.ALL| wx.CENTER| wx.EXPAND,10)
+		mainSizer.Add(listBoxSizer,1,wx.ALL|wx.EXPAND,20)
+		mainSizer.Add(buttonsSizer)
+		# Translators: The label of a button to close the saved positions dialog.
+		closeButton = wx.Button(self, label=_("&Close"), id=wx.ID_CLOSE)
+		closeButton.Bind(wx.EVT_BUTTON, lambda evt: self.Close())
+		mainSizer.Add(closeButton,border=20,flag=wx.LEFT|wx.RIGHT|wx.BOTTOM|wx.CENTER|wx.ALIGN_RIGHT)
+		self.Bind(wx.EVT_CLOSE, self.onClose)
+		self.EscapeId = wx.ID_CLOSE
+		jumpButton.Bind(wx.EVT_BUTTON, self.onJump)
+		jumpButton.SetDefault()
+		renameButton.Bind(wx.EVT_BUTTON, self.onRename)
+		deleteButton.Bind(wx.EVT_BUTTON, self.onDelete)
+		clearButton.Bind(wx.EVT_BUTTON, self.onClear)
+		# Borrowed from NVDA Core (add-ons manager).
 		self.listBox.SetFocus()
 		self.listBox.SetSelection(0)
-		self.CenterOnScreen()
-		self.SetSizer(h)
-		self.Show()
+		self.Center(wx.BOTH | 6)
+		mainSizer.Fit(self)
+		self.SetSizer(mainSizer)
+		# 6 = wx.CENTER_ON_SCREEN.
+		self.Center(wx.BOTH | 6)
 
 	def onRename(self, event):
 		index = self.listBox.Selection
@@ -133,7 +146,8 @@ class PositionsList(wx.Dialog):
 		os.remove(self.positions.filename)
 		self.Close()
 
-	def onOk(self, event):
+	def onJump(self, event):
+		self.Destroy()
 		self.positions.write()
 		try:
 			x, y= self.positions[self.listBox.GetStringSelection()].split(",")
@@ -145,10 +159,10 @@ class PositionsList(wx.Dialog):
 		t.start()
 		self.Destroy()
 
-	def onCancel(self,evt):
+	def onClose(self,evt):
+		self.Destroy()
 		self.positions.write()
 		self.positions = None
-		self.Destroy()
 
 
 class PositionJumpDialog(wx.Dialog):
