@@ -58,6 +58,7 @@ class PositionsList(wx.Dialog):
 
 	def __init__(self, parent, appName):
 		super(PositionsList, self).__init__(parent, title=_("Saved positions for %s")%(appName), size =(420, 300))
+		self.appName = appName
 		self.positions = ConfigObj(os.path.join(GCSavedPositions, appName+".gc"), encoding="UTF-8")
 		listBoxSizer = wx.BoxSizer(wx.VERTICAL)
 		self.listBox = wx.ListBox(self,-1)
@@ -90,9 +91,18 @@ class PositionsList(wx.Dialog):
 	def onRename(self, event):
 		index = self.listBox.Selection
 		oldName = self.listBox.StringSelection
-		name = wx.GetTextFromUser(_('Edit'),_('Rename'),self.listBox.StringSelection)
+		# Translators: The label of a field to enter a new name for a saved position/tag.
+		name = wx.GetTextFromUser(_("New name"),
+		# Translators: The title of the dialog to rename a saved position.
+		_("Rename"), oldName)
 		# When escape is pressed, an empty string is returned.
 		if name in ("", oldName): return
+		if name in self.positions:
+			# Translators: An error displayed when renaming a saved position
+			# and a tag with the new name already exists.
+			gui.messageBox(_("Another saved position has the same name as the new name. Please choose a different name."),
+				_("Error"), wx.OK | wx.ICON_ERROR, self)
+			return
 		self.listBox.SetString(index, name)
 		self.listBox.SetSelection(index)
 		self.listBox.SetFocus()
@@ -101,23 +111,26 @@ class PositionsList(wx.Dialog):
 
 	def onDelete(self,event):
 		entry = self.listBox.GetStringSelection()
+		if gui.messageBox(
+			# Translators: The confirmation prompt displayed when the user requests to delete the selected tag.
+			_("Are you sure you want to delete the position named {name}? This cannot be undone.".format(name = entry)),
+			# Translators: The title of the confirmation dialog for deletion of selected position.
+			_("Confirm Deletion"),
+			wx.YES_NO | wx.NO_DEFAULT | wx.ICON_QUESTION, self
+		) == wx.NO:
+			return
 		del self.positions[entry]
-		ui.message(_('the position has been deleted.'))
 		self.listBox.Delete(self.listBox.GetSelection())
 		if self.listBox.IsEmpty():
 			os.remove(self.positions.filename)
-			t1 = Timer(0.2,speech.cancelSpeech)
-			t2 = Timer(0.4,ui.message,[_('the list has been cleared.')])
-			t1.start()
-			t2.start()
+			# Translators: A dialog message shown when tags for the application is cleared.
+			gui.messageBox(_("All saved positions for the application {appName} has been deleted.".format(appName = self.appName)),
+			# Translators: Title of the tag clear confirmation dialog.
+			_("Saved positions cleared"), wx.OK|wx.ICON_INFORMATION)
 			self.Close()
 
 	def onClear(self, event):
 		os.remove(self.positions.filename)
-		t1 = Timer(0.2,speech.cancelSpeech)
-		t2 = Timer(0.4,ui.message,[_('the list has been cleared.')])
-		t1.start()
-		t2.start()
 		self.Close()
 
 	def onOk(self, event):
