@@ -382,11 +382,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.getAppRestriction = self.getMouse()
 		self.restriction = not self.restriction
 		if self.restriction:
-			ui.message(_('restriction on'))
-			tones.beep(1000, 200)
+			# Translators: presented when mouse movement is restricted to current application.
+			ui.message(_("Mouse movement restricted to current application"))
 		else:
-			ui.message(_('restriction off'))
-			tones.beep(500, 200)
+			# Translators: presented when mouse movement is unrestricted.
+			ui.message(_("Mouse movement unrestricted"))
 	# Translators: Input help message for a Golden Cursor command.
 	script_toggleMouseRestriction.__doc__ = _("Toggles mouse movement restriction between current application and unrestricted")
 
