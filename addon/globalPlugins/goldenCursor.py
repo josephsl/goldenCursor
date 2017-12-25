@@ -36,6 +36,24 @@ GCMouseLeft = 1
 GCMouseDown = 2
 GCMouseUp = 3
 
+# Reports mouse position, used in various places.
+def reportMousePosition(x=None, y=None):
+	# The coordinates are keywords so specific position can be announced if needed.
+	cursorPos = winUser.getCursorPos()
+	if x is None: x = cursorPos[0]
+	if y is None: y = cursorPos[1]
+	ui.message("{0}, {1}".format(x, y))
+
+def setMousePosition(x, y, announceMousePosition=False):
+	# Setter version of report mouse position function.
+	# The new position announcement is to be used if needed.
+	winUser.setCursorPos(x, y)
+	mouseHandler.executeMouseMoveEvent(x, y)
+	if announceMousePosition:
+		# Announce this half a second later to give the appearance of mouse movement.
+		wx.CallLater(500, reportMousePosition, x=x, y=y)
+	
+
 class PositionsList(wx.Dialog):
 
 	def __init__(self, parent, appName):
@@ -160,8 +178,7 @@ class PositionJumpDialog(wx.Dialog):
 	def onOk(self, evt):
 		x, y = self.xPos.GetValue(), self.yPos.GetValue()
 		self.Destroy()
-		wx.CallAfter(winUser.setCursorPos, x, y)
-		wx.CallLater(1000, ui.message, "{0}, {1}".format(x, y))
+		wx.CallAfter(setMousePosition, x, y, announceMousePosition=True)
 
 	def onCancel(self, evt):
 		self.Destroy()
@@ -260,8 +277,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	script_toggleSpeakPixels.__doc__ = _("toggles reporting of mouse coordinates in pixels when mouse moves")
 
 	def script_sayPosition(self,gesture):
-		x, y = winUser.getCursorPos()
-		ui.message("{0}, {1}".format(x,y))
+		reportMousePosition()
 	script_sayPosition.__doc__ = _('report the positions of the mouse.')
 
 	def script_toggleMouseArrows(self, gesture):
@@ -330,26 +346,22 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		elif direction == GCMouseUp: y-=pixelMoving
 		# Just do a chain comparison, as it is a lot faster.
 		if 0 <= x < w and 0 <= y < h:
-			winUser.setCursorPos(x,y)
-			mouseHandler.executeMouseMoveEvent(x, y)
+			setMousePosition(x, y)
 		else:
 			wx.Bell()
 			return
 		if self.restriction and self.getAppRestriction.appModule.appName != self.getMouse().appModule.appName:
 			wx.Bell()
-			winUser.setCursorPos(oldX,oldY)
-			mouseHandler.executeMouseMoveEvent(oldX, oldY)
+			setMousePosition(oldX,oldY)
 			if self.getAppRestriction.appModule.appName != self.getMouse().appModule.appName:
 				x,y, w, h = self.getAppRestriction.location
-				winUser.setCursorPos(x,y)
-				mouseHandler.executeMouseMoveEvent(x, y)
+				setMousePosition(x, y)
 			return
 		if config.conf["goldenCursor"]["reportNewMouseCoordinates"]:
 			ui.message(str(x if direction in (GCMouseRight, GCMouseLeft) else y))
 
 	def getMouse(self):
-		x , y= winUser.getCursorPos()
-		return api.getDesktopObject().objectFromPoint(x,y)
+		return api.getDesktopObject().objectFromPoint(*winUser.getCursorPos())
 
 	__gestures = {
 		"kb:nvda+windows+c":"mouseMovementChange",
