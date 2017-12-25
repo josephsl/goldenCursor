@@ -1,6 +1,6 @@
 # golden cursor#
 
-* Author: salah atair
+* Author: salah atair, Joseph Lee
 * Download [stable version][1]
 * Download [development version][2]
 
@@ -8,27 +8,33 @@ This add-on allows you to move the mouse using a keyboard and save mouse positio
 
 ## Key commands
 
-* nvda+control+L: view a list of the saved positions.
-* nvda+shift+l: save a position.
-* nvda+win+c: select the level of movement.
-* nvda+win+r: toggle mouse restriction.
-* nvda+win+s: toggle the reporting of pixels.
-* nvda+win + j: open a dialog to type the X, Y position you want to jump to.
-* nvda+win+ p: reporting the pixels for the current position pointer.
-* nvda+win+arrowKeys: move the mouse in different directions.
-* Note: these gestures can be reassigned from the input gestures dialog in the nvda preferences menu.
+* Control+NVDA+L: view saved positions for an application if any.
+* Shift+NVDA+l: save a tag for the current mouse position in the currently focused application.
+* Windows+NVDA+C: change mouse movement unit.
+* Windows+NVDA+R: toggle mouse restriction.
+* Windows+NVDA+S: toggle reporting of mouse position in pixels.
+* Windows+NVDA+J: move mouse to a specific x and y position.
+* Windows+NVDA+P: report mouse position.
+* Windows+NVDA+M: sswitch mouse arrows on or off.
+* Windows+NVDA+arrow keys (or just arrow keys if mouse arrows is on): move mouse.
+
+Note: these gestures can be reassigned via NVDA's Input Gestures dialog under Golden Cursor category.
 
 ## Notes
 
-* When sharing positions, each party should use same display resolution.
+* When sharing positions (tags), each party should use same display resolution.
 * For maximum compatibility, you should maximize windows by pressing Windows+Up arrow.
 * When sharing positions, existing position labels should be renamed.
+* Version 1.x and 2.x mouse position formats are incompatible.
+* To perform functions that require use of arrow keys, turn off mouse arrows first.
 
 ## Version 2.0
 
 * Requires NVDA 2017.3 or later.
+* Position file format is incompatible with 1.x versions. If 1.x position format is found, old positions will be migrated to the new format during installation.
 * The name of the currently focused app is shown as part of the title for positions list dialog.
 * When saving positions, resolved an issue where NvDA may play error tones if the positions folder does not exist.
+* You can now enter mouse arrows mode where you can move the mouse by pressing just arrow keys.
 
 ## Version 1.4
 
