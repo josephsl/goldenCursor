@@ -74,6 +74,8 @@ class PositionsList(wx.Dialog):
 		for entry in sorted(self.positions.keys()):
 			x, y = self.positions[entry].split(",")
 			self.listBox.Append((entry, x, y))
+		self.listBox.Select(0,on=1)
+		self.listBox.SetItemState(0,wx.LIST_STATE_FOCUSED,wx.LIST_STATE_FOCUSED)
 		buttonsSizer = wx.BoxSizer(wx.HORIZONTAL)
 		# Translators: the button to jump to the selected position.
 		jumpButton= wx.Button(self, -1,_("&Jump"))
@@ -88,7 +90,7 @@ class PositionsList(wx.Dialog):
 		deleteButton.Bind(wx.EVT_BUTTON, self.onDelete)
 		buttonsSizer.Add(deleteButton, 0, wx.ALL| wx.CENTER| wx.EXPAND,10)
 		# Translators: the button to clear all saved positions for the focused app.
-		clearButton = wx.Button(self, -1,_("C&lear"))
+		clearButton = wx.Button(self, -1,_("C&lear positions"))
 		clearButton.Bind(wx.EVT_BUTTON, self.onClear)
 		buttonsSizer.Add(clearButton, 0, wx.ALL| wx.CENTER| wx.EXPAND,10)
 		mainSizer.Add(listBoxSizer,1,wx.ALL|wx.EXPAND,20)
@@ -127,30 +129,42 @@ class PositionsList(wx.Dialog):
 		self.positions[name] = self.positions[oldName]
 		del self.positions[oldName]
 
-	def onDelete(self,event):
+	def deletePosition(self, clearPositions=False):
+		message, title = "", ""
 		entry = self.listBox.GetFirstSelected()
 		name = self.listBox.GetItemText(entry)
-		if gui.messageBox(
+		if not clearPositions:
 			# Translators: The confirmation prompt displayed when the user requests to delete the selected tag.
-			_("Are you sure you want to delete the position named {name}? This cannot be undone.".format(name = name)),
+			message = _("Are you sure you want to delete the position named {name}? This cannot be undone.".format(name = name))
 			# Translators: The title of the confirmation dialog for deletion of selected position.
-			_("Confirm Deletion"),
-			wx.YES_NO | wx.NO_DEFAULT | wx.ICON_QUESTION, self
+			title = _("Delete position")
+		else:
+			# Translators: The confirmation prompt displayed when the user is about to clear positions.
+			message = _("Are you sure you want to clear saved positions for the current application ({appName})? This cannot be undone.".format(appName= self.appName))
+			# Translators: The title of the confirmation dialog for clearing saved positions.
+			title = _("Clear saved positions")
+		if gui.messageBox(message, title, wx.YES_NO | wx.NO_DEFAULT | wx.ICON_QUESTION, self
 		) == wx.NO:
 			return
-		del self.positions[name]
-		self.listBox.DeleteItem(entry)
-		if self.listBox.GetItemCount() == 0:
+		if not clearPositions:
+			del self.positions[name]
+			self.listBox.DeleteItem(entry)
+			self.positions.write()
+			if self.listBox.GetItemCount() > 0: self.listBox.Select(0,on=1)
+		if clearPositions or self.listBox.GetItemCount() == 0:
 			os.remove(self.positions.filename)
+			self.positions.clear()
 			# Translators: A dialog message shown when tags for the application is cleared.
 			gui.messageBox(_("All saved positions for the application {appName} has been deleted.".format(appName = self.appName)),
 			# Translators: Title of the tag clear confirmation dialog.
 			_("Saved positions cleared"), wx.OK|wx.ICON_INFORMATION)
 			self.Close()
 
+	def onDelete(self,event):
+		self.deletePosition()
+
 	def onClear(self, event):
-		os.remove(self.positions.filename)
-		self.Close()
+		self.deletePosition(clearPositions=True)
 
 	def onJump(self, event):
 		self.Destroy()
@@ -167,7 +181,7 @@ class PositionsList(wx.Dialog):
 
 	def onClose(self,evt):
 		self.Destroy()
-		self.positions.write()
+		if len(self.positions): self.positions.write()
 		self.positions = None
 
 
