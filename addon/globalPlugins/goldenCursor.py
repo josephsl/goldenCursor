@@ -287,8 +287,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		position = ConfigObj(os.path.join(GCSavedPositions, appName+".gc"), encoding="UTF-8")
 		position[name] = ",".join([str(x), str(y)])
 		position.write()
-		ui.message(_('the position has been saved in %s.') % position.filename)
-	script_savePosition.__doc__ = _('to save a the current position.')
+		# Translators: presented when position (tag) has been saved.
+		ui.message(_("Position has been saved in %s.") % position.filename)
+	# Translators: Input help message for a Golden Cursor command.
+	script_savePosition.__doc__ = _("Opens a dialog to label the current mouse position and saves it")
 
 	def script_mouseMovementChange (self, gesture):
 		pixelUnits = (1, 5, 10, 20, 50, 100)
@@ -305,7 +307,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 					break
 		config.conf["goldenCursor"]["mouseMovementUnit"] = movementUnit
 		ui.message(str(movementUnit))
-	script_mouseMovementChange.__doc__ = _('to select a value for mouse movement (1, 10, 20, 50. 100.')
+	# Translators: input help message for a Golden Cursor command.
+	script_mouseMovementChange.__doc__ = _("Changes mouse movement unit")
 
 	def script_toggleSpeakPixels(self, gesture):
 		sayPixel = config.conf["goldenCursor"]["reportNewMouseCoordinates"]
@@ -322,7 +325,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def script_sayPosition(self,gesture):
 		reportMousePosition()
-	script_sayPosition.__doc__ = _('report the positions of the mouse.')
+	# Translators: Input help message for a Golden Cursor command.
+	script_sayPosition.__doc__ = _("Reports current X and Y mouse position")
 
 	def script_toggleMouseArrows(self, gesture):
 		self.mouseArrows = not self.mouseArrows
@@ -343,19 +347,24 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def script_moveMouseRight(self,gesture):
 		self.moveMouse(GCMouseRight)
-	script_moveMouseRight.__doc__ = _('Moves the Mouse pointer right.')
+	
+	# Translators: Input help message for a Golden Cursor command.
+	script_moveMouseRight.__doc__ = _("Moves the Mouse pointer to the right")
 
 	def script_moveMouseLeft(self,gesture):
 		self.moveMouse(GCMouseLeft)
-	script_moveMouseLeft.__doc__ = _('Moves the Mouse pointer left.')
+	# Translators: Input help message for a Golden Cursor command.
+	script_moveMouseLeft.__doc__ = _("Moves the Mouse pointer to the left")
 
 	def script_moveMouseDown(self,gesture):
 		self.moveMouse(GCMouseDown)
-	script_moveMouseDown.__doc__ = _('Moves the Mouse pointer down.')
+	# Translators: Input help message for a Golden Cursor command.
+	script_moveMouseDown.__doc__ = _("Moves the Mouse pointer down")
 
 	def script_moveMouseUp(self,gesture):
 		self.moveMouse(GCMouseUp)
-	script_moveMouseUp.__doc__ = _('Moves the Mouse pointer up.')
+	# Translators: Input help message for a Golden Cursor command.
+	script_moveMouseUp.__doc__ = _("Moves the Mouse pointer up")
 
 	def script_goToPosition(self,gesture):
 		try:
@@ -366,7 +375,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			gui.mainFrame.postPopup()
 		except RuntimeError:
 			pass
-	script_goToPosition.__doc__ = _('type the x/y value you wish the cursor to jump to')
+	# Translators: Input help message for a Golden Cursor command.
+	script_goToPosition.__doc__ = _("Opens a dialog to enter the X and Y coordinates for the mouse to move to")
 
 	def script_toggleMouseRestriction(self,gesture):
 		self.getAppRestriction = self.getMouse()
@@ -377,7 +387,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		else:
 			ui.message(_('restriction off'))
 			tones.beep(500, 200)
-	script_toggleMouseRestriction.__doc__ = _('Toggles the restriction between the 2 levels you can toggle between Application Window restriction and Unrestricted.')
+	# Translators: Input help message for a Golden Cursor command.
+	script_toggleMouseRestriction.__doc__ = _("Toggles mouse movement restriction between current application and unrestricted")
 
 	def moveMouse(self, direction):
 		w,h = api.getDesktopObject().location[2:]
