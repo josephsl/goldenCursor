@@ -62,22 +62,34 @@ class PositionsList(wx.Dialog):
 		self.positions = ConfigObj(os.path.join(GCSavedPositions, appName+".gc"), encoding="UTF-8")
 		mainSizer = wx.BoxSizer(wx.VERTICAL)
 		listBoxSizer = wx.BoxSizer(wx.VERTICAL)
-		self.listBox = wx.ListBox(self,-1)
-		listBoxSizer.Add(self.listBox,0,wx.ALL| wx.EXPAND,10)
+		self.listBox = wx.ListCtrl(self,-1,style=wx.LC_REPORT|wx.LC_SINGLE_SEL,size=(550,350))
+		# Translators: the column in saved positions list to identify the position name.
+		self.listBox.InsertColumn(0,_("Name"),width=150)
+		# Translators: the column in saved positions list to identify the X coordinate.
+		self.listBox.InsertColumn(1,_("Position X"),width=50)
+		# Translators: the column in saved positions list to identify the Y coordinate.
+		self.listBox.InsertColumn(2,_("Position Y"),width=50)
+		self.listBox.Bind(wx.EVT_LIST_ITEM_ACTIVATED, self.onJump)
+		listBoxSizer.Add(self.listBox,proportion=8)
 		for entry in sorted(self.positions.keys()):
-			self.listBox.Append(entry, self.positions[entry])
+			x, y = self.positions[entry].split(",")
+			self.listBox.Append((entry, x, y))
 		buttonsSizer = wx.BoxSizer(wx.HORIZONTAL)
 		# Translators: the button to jump to the selected position.
 		jumpButton= wx.Button(self, -1,_("&Jump"))
+		jumpButton.Bind(wx.EVT_BUTTON, self.onJump)
 		buttonsSizer.Add(jumpButton,0, wx.ALL| wx.CENTER| wx.EXPAND,10)
 		# Translators: the button to rename a saved position.
 		renameButton= wx.Button(self, -1,_("&Rename"))
+		renameButton.Bind(wx.EVT_BUTTON, self.onRename)
 		buttonsSizer.Add(renameButton,0, wx.ALL| wx.CENTER| wx.EXPAND,10)
 		# Translators: the button to delete the selected saved position.
 		deleteButton = wx.Button(self, -1,_("&Delete"))
+		deleteButton.Bind(wx.EVT_BUTTON, self.onDelete)
 		buttonsSizer.Add(deleteButton, 0, wx.ALL| wx.CENTER| wx.EXPAND,10)
 		# Translators: the button to clear all saved positions for the focused app.
 		clearButton = wx.Button(self, -1,_("C&lear"))
+		clearButton.Bind(wx.EVT_BUTTON, self.onClear)
 		buttonsSizer.Add(clearButton, 0, wx.ALL| wx.CENTER| wx.EXPAND,10)
 		mainSizer.Add(listBoxSizer,1,wx.ALL|wx.EXPAND,20)
 		mainSizer.Add(buttonsSizer)
@@ -87,14 +99,8 @@ class PositionsList(wx.Dialog):
 		mainSizer.Add(closeButton,border=20,flag=wx.LEFT|wx.RIGHT|wx.BOTTOM|wx.CENTER|wx.ALIGN_RIGHT)
 		self.Bind(wx.EVT_CLOSE, self.onClose)
 		self.EscapeId = wx.ID_CLOSE
-		jumpButton.Bind(wx.EVT_BUTTON, self.onJump)
-		jumpButton.SetDefault()
-		renameButton.Bind(wx.EVT_BUTTON, self.onRename)
-		deleteButton.Bind(wx.EVT_BUTTON, self.onDelete)
-		clearButton.Bind(wx.EVT_BUTTON, self.onClear)
 		# Borrowed from NVDA Core (add-ons manager).
 		self.listBox.SetFocus()
-		self.listBox.SetSelection(0)
 		self.Center(wx.BOTH | 6)
 		mainSizer.Fit(self)
 		self.SetSizer(mainSizer)
@@ -102,8 +108,8 @@ class PositionsList(wx.Dialog):
 		self.Center(wx.BOTH | 6)
 
 	def onRename(self, event):
-		index = self.listBox.Selection
-		oldName = self.listBox.StringSelection
+		index = self.listBox.GetFirstSelected()
+		oldName = self.listBox.GetItemText(index)
 		# Translators: The label of a field to enter a new name for a saved position/tag.
 		name = wx.GetTextFromUser(_("New name"),
 		# Translators: The title of the dialog to rename a saved position.
@@ -116,25 +122,25 @@ class PositionsList(wx.Dialog):
 			gui.messageBox(_("Another saved position has the same name as the new name. Please choose a different name."),
 				_("Error"), wx.OK | wx.ICON_ERROR, self)
 			return
-		self.listBox.SetString(index, name)
-		self.listBox.SetSelection(index)
+		self.listBox.SetItemText(index, name)
 		self.listBox.SetFocus()
 		self.positions[name] = self.positions[oldName]
 		del self.positions[oldName]
 
 	def onDelete(self,event):
-		entry = self.listBox.GetStringSelection()
+		entry = self.listBox.GetFirstSelected()
+		name = self.listBox.GetItemText(entry)
 		if gui.messageBox(
 			# Translators: The confirmation prompt displayed when the user requests to delete the selected tag.
-			_("Are you sure you want to delete the position named {name}? This cannot be undone.".format(name = entry)),
+			_("Are you sure you want to delete the position named {name}? This cannot be undone.".format(name = name)),
 			# Translators: The title of the confirmation dialog for deletion of selected position.
 			_("Confirm Deletion"),
 			wx.YES_NO | wx.NO_DEFAULT | wx.ICON_QUESTION, self
 		) == wx.NO:
 			return
-		del self.positions[entry]
-		self.listBox.Delete(self.listBox.GetSelection())
-		if self.listBox.IsEmpty():
+		del self.positions[name]
+		self.listBox.DeleteItem(entry)
+		if self.listBox.GetItemCount() == 0:
 			os.remove(self.positions.filename)
 			# Translators: A dialog message shown when tags for the application is cleared.
 			gui.messageBox(_("All saved positions for the application {appName} has been deleted.".format(appName = self.appName)),
@@ -150,7 +156,7 @@ class PositionsList(wx.Dialog):
 		self.Destroy()
 		self.positions.write()
 		try:
-			x, y= self.positions[self.listBox.GetStringSelection()].split(",")
+			x, y= self.positions[self.listBox.GetItemText(self.listBox.GetFirstSelected())].split(",")
 		except:
 			return
 		self.positions = None
