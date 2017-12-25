@@ -168,12 +168,13 @@ class PositionJumpDialog(wx.Dialog):
 
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
-	scriptCategory = "golden cursor"
+	scriptCategory = _("Golden Cursor")
 
 	def __init__(self, *args, **kwargs):
 		super(GlobalPlugin, self).__init__(*args, **kwargs)
 		self.getAppRestriction = None
 		self.restriction = False
+		self.mouseArrows = False
 		self.prefsMenu = gui.mainFrame.sysTrayIcon.preferencesMenu
 		self.gcSettings = self.prefsMenu.Append(wx.ID_ANY, _("&Golden Cursor..."), _("Golden Cursor add-on settings"))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onConfigDialog, self.gcSettings)
@@ -263,6 +264,23 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		ui.message("{0}, {1}".format(x,y))
 	script_sayPosition.__doc__ = _('report the positions of the mouse.')
 
+	def script_toggleMouseArrows(self, gesture):
+		self.mouseArrows = not self.mouseArrows
+		if self.mouseArrows:
+			self.bindGesture("kb:rightArrow", "moveMouseRight")
+			self.bindGesture("kb:leftArrow", "moveMouseLeft")
+			self.bindGesture("kb:downArrow", "moveMouseDown")
+			self.bindGesture("kb:upArrow", "moveMouseUp")
+			# Translators: presented when toggling mouse arrows feature.
+			ui.message(_("Mouse arrows on"))
+		else:
+			self.clearGestureBindings()
+			self.bindGestures(self.__gestures)
+			# Translators: presented when toggling mouse arrows feature.
+			ui.message(_("Mouse arrows off"))
+	# Translators: input help mode message for a Golden Cursor add-on command.
+	script_toggleMouseArrows.__doc__=_("Toggles mouse arrows to move the mouse with the arrow keys")
+
 	def script_moveMouseRight(self,gesture):
 		self.moveMouse(GCMouseRight)
 	script_moveMouseRight.__doc__ = _('Moves the Mouse pointer right.')
@@ -335,6 +353,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	__gestures = {
 		"kb:nvda+windows+c":"mouseMovementChange",
+		"kb:nvda+windows+m":"toggleMouseArrows",
 		"kb:nvda+windows+rightArrow":"moveMouseRight",
 		"kb:nvda+windows+leftArrow":"moveMouseLeft",
 		"kb:nvda+windows+downArrow":"moveMouseDown",
