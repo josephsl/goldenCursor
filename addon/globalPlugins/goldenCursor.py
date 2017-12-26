@@ -15,7 +15,6 @@ import globalPluginHandler
 import gui
 import wx
 import config
-import speech
 import globalVars
 import mouseHandler
 import ui
@@ -267,30 +266,25 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def script_saveMousePosition(self, gesture):
 		x, y = winUser.getCursorPos()
+		# Stringify coordinates early.
+		x, y = str(x), str(y)
 		# Translators: edit field label for new mouse position.
 		d = wx.TextEntryDialog(gui.mainFrame, _("Enter the name for the current mouse position (x: {x}, Y: {y}".format(x=x, y=y)),
 			# Translators: title for save mouse position dialog.
 			_("Save mouse position"))
 		def callback(result):
 			if result == wx.ID_OK:
-				wx.CallLater(100,self.saving, d.GetValue())
+				name = d.GetValue().rstrip()
+				if name == "": return
+				appName = self.getMouse().appModule.appName
+				# If the files path does not exist, create it now.
+				if not os.path.exists(GCMousePositions): os.mkdir(GCMousePositions)
+				position = ConfigObj(os.path.join(GCMousePositions, appName+".gc"), encoding="UTF-8")
+				position[name] = ",".join([x, y])
+				position.write()
+				# Translators: presented when position (tag) has been saved.
+				ui.message(_("Position has been saved in %s.") % position.filename)
 		gui.runScriptModalDialog(d, callback)
-
-	def saving(self,name):
-		name = name.rstrip()
-		speech.cancelSpeech()
-		if name == "":
-			wx.CallAfter(gui.messageBox, _("please enter the value for the name of the position."), _("Error"), wx.OK|wx.ICON_ERROR)
-			return
-		x, y = winUser.getCursorPos()
-		appName = self.getMouse().appModule.appName
-		# If the files path does not exist, create it now.
-		if not os.path.exists(GCMousePositions): os.mkdir(GCMousePositions)
-		position = ConfigObj(os.path.join(GCMousePositions, appName+".gc"), encoding="UTF-8")
-		position[name] = ",".join([str(x), str(y)])
-		position.write()
-		# Translators: presented when position (tag) has been saved.
-		ui.message(_("Position has been saved in %s.") % position.filename)
 	# Translators: Input help message for a Golden Cursor command.
 	script_saveMousePosition.__doc__ = _("Opens a dialog to label the current mouse position and saves it")
 
