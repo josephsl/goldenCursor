@@ -268,7 +268,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	script_mousePositionsList.__doc__ = _("Opens a dialog listing mouse positions for the current application")
 
 	def script_saveMousePosition(self, gesture):
-		d = wx.TextEntryDialog(gui.mainFrame, _("Enter the value for position name you wish to save."), _("save mouse position"))
+		x, y = winUser.getCursorPos()
+		# Translators: edit field label for new mouse position.
+		d = wx.TextEntryDialog(gui.mainFrame, _("Enter the name for the current mouse position (x: {x}, Y: {y}".format(x=x, y=y)),
+			# Translators: title for save mouse position dialog.
+			_("Save mouse position"))
 		def callback(result):
 			if result == wx.ID_OK:
 				wx.CallLater(100,self.saving, d.GetValue())
