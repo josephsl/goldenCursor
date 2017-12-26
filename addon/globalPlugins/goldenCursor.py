@@ -132,7 +132,7 @@ class PositionsList(wx.Dialog):
 		name = self.listBox.GetItemText(entry)
 		if not clearPositions:
 			# Translators: The confirmation prompt displayed when the user requests to delete the selected tag.
-			message = _("Are you sure you want to delete the position named {name}? This cannot be undone.".format(name = name))
+			message = _(u"Are you sure you want to delete the position named {name}? This cannot be undone.".format(name = name))
 			# Translators: The title of the confirmation dialog for deletion of selected position.
 			title = _("Delete position")
 		else:
