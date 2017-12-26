@@ -29,7 +29,7 @@ addonHandler.initTranslation()
 # Each global constant is prefixed with "GC".
 
 # Constants
-GCSavedPositions = os.path.join(globalVars.appArgs.configPath, "addons", "goldenCursor", "savedPositions")
+GCMousePositions = os.path.join(globalVars.appArgs.configPath, "addons", "goldenCursor", "mousePositions")
 # Mouse movement directions
 GCMouseRight = 0
 GCMouseLeft = 1
@@ -57,17 +57,17 @@ def setMousePosition(x, y, announceMousePosition=False):
 class PositionsList(wx.Dialog):
 
 	def __init__(self, parent, appName):
-		super(PositionsList, self).__init__(parent, title=_("Saved positions for %s")%(appName), size =(420, 300))
+		super(PositionsList, self).__init__(parent, title=_("Mouse positions for %s")%(appName), size =(420, 300))
 		self.appName = appName
-		self.positions = ConfigObj(os.path.join(GCSavedPositions, appName+".gc"), encoding="UTF-8")
+		self.positions = ConfigObj(os.path.join(GCMousePositions, appName+".gc"), encoding="UTF-8")
 		mainSizer = wx.BoxSizer(wx.VERTICAL)
 		listBoxSizer = wx.BoxSizer(wx.VERTICAL)
 		self.listBox = wx.ListCtrl(self,-1,style=wx.LC_REPORT|wx.LC_SINGLE_SEL,size=(550,350))
-		# Translators: the column in saved positions list to identify the position name.
+		# Translators: the column in mouse positions list to identify the position name.
 		self.listBox.InsertColumn(0,_("Name"),width=150)
-		# Translators: the column in saved positions list to identify the X coordinate.
+		# Translators: the column in mouse positions list to identify the X coordinate.
 		self.listBox.InsertColumn(1,_("Position X"),width=50)
-		# Translators: the column in saved positions list to identify the Y coordinate.
+		# Translators: the column in mouse positions list to identify the Y coordinate.
 		self.listBox.InsertColumn(2,_("Position Y"),width=50)
 		self.listBox.Bind(wx.EVT_LIST_ITEM_ACTIVATED, self.onJump)
 		listBoxSizer.Add(self.listBox,proportion=8)
@@ -81,21 +81,21 @@ class PositionsList(wx.Dialog):
 		jumpButton= wx.Button(self, -1,_("&Jump"))
 		jumpButton.Bind(wx.EVT_BUTTON, self.onJump)
 		buttonsSizer.Add(jumpButton,0, wx.ALL| wx.CENTER| wx.EXPAND,10)
-		# Translators: the button to rename a saved position.
+		# Translators: the button to rename a mouse position.
 		renameButton= wx.Button(self, -1,_("&Rename"))
 		renameButton.Bind(wx.EVT_BUTTON, self.onRename)
 		buttonsSizer.Add(renameButton,0, wx.ALL| wx.CENTER| wx.EXPAND,10)
-		# Translators: the button to delete the selected saved position.
+		# Translators: the button to delete the selected mouse position.
 		deleteButton = wx.Button(self, -1,_("&Delete"))
 		deleteButton.Bind(wx.EVT_BUTTON, self.onDelete)
 		buttonsSizer.Add(deleteButton, 0, wx.ALL| wx.CENTER| wx.EXPAND,10)
-		# Translators: the button to clear all saved positions for the focused app.
+		# Translators: the button to clear all mouse positions for the focused app.
 		clearButton = wx.Button(self, -1,_("C&lear positions"))
 		clearButton.Bind(wx.EVT_BUTTON, self.onClear)
 		buttonsSizer.Add(clearButton, 0, wx.ALL| wx.CENTER| wx.EXPAND,10)
 		mainSizer.Add(listBoxSizer,1,wx.ALL|wx.EXPAND,20)
 		mainSizer.Add(buttonsSizer)
-		# Translators: The label of a button to close the saved positions dialog.
+		# Translators: The label of a button to close the mouse positions dialog.
 		closeButton = wx.Button(self, label=_("&Close"), id=wx.ID_CLOSE)
 		closeButton.Bind(wx.EVT_BUTTON, lambda evt: self.Close())
 		mainSizer.Add(closeButton,border=20,flag=wx.LEFT|wx.RIGHT|wx.BOTTOM|wx.CENTER|wx.ALIGN_RIGHT)
@@ -112,16 +112,16 @@ class PositionsList(wx.Dialog):
 	def onRename(self, event):
 		index = self.listBox.GetFirstSelected()
 		oldName = self.listBox.GetItemText(index)
-		# Translators: The label of a field to enter a new name for a saved position/tag.
+		# Translators: The label of a field to enter a new name for a mouse position/tag.
 		name = wx.GetTextFromUser(_("New name"),
-		# Translators: The title of the dialog to rename a saved position.
+		# Translators: The title of the dialog to rename a mouse position.
 		_("Rename"), oldName)
 		# When escape is pressed, an empty string is returned.
 		if name in ("", oldName): return
 		if name in self.positions:
-			# Translators: An error displayed when renaming a saved position
+			# Translators: An error displayed when renaming a mouse position
 			# and a tag with the new name already exists.
-			gui.messageBox(_("Another saved position has the same name as the new name. Please choose a different name."),
+			gui.messageBox(_("Another mouse position has the same name as the entered name. Please choose a different name."),
 				_("Error"), wx.OK | wx.ICON_ERROR, self)
 			return
 		self.listBox.SetItemText(index, name)
@@ -140,9 +140,9 @@ class PositionsList(wx.Dialog):
 			title = _("Delete position")
 		else:
 			# Translators: The confirmation prompt displayed when the user is about to clear positions.
-			message = _("Are you sure you want to clear saved positions for the current application ({appName})? This cannot be undone.".format(appName= self.appName))
-			# Translators: The title of the confirmation dialog for clearing saved positions.
-			title = _("Clear saved positions")
+			message = _("Are you sure you want to clear mouse positions for the current application ({appName})? This cannot be undone.".format(appName= self.appName))
+			# Translators: The title of the confirmation dialog for clearing mouse positions.
+			title = _("Clear mouse positions")
 		if gui.messageBox(message, title, wx.YES_NO | wx.NO_DEFAULT | wx.ICON_QUESTION, self
 		) == wx.NO:
 			return
@@ -155,9 +155,9 @@ class PositionsList(wx.Dialog):
 			os.remove(self.positions.filename)
 			self.positions.clear()
 			# Translators: A dialog message shown when tags for the application is cleared.
-			gui.messageBox(_("All saved positions for the application {appName} has been deleted.".format(appName = self.appName)),
+			gui.messageBox(_("All mouse positions for the application {appName} has been deleted.".format(appName = self.appName)),
 			# Translators: Title of the tag clear confirmation dialog.
-			_("Saved positions cleared"), wx.OK|wx.ICON_INFORMATION)
+			_("Mouse positions cleared"), wx.OK|wx.ICON_INFORMATION)
 			self.Close()
 
 	def onDelete(self,event):
@@ -249,12 +249,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		except (RuntimeError, AttributeError, wx.PyDeadObjectError):
 			pass
 
-	def script_savedPositionsList(self, gesture):
+	def script_mousePositionsList(self, gesture):
 		# Don't even think about opening this dialog if positions list does not exist.
 		appName = api.getForegroundObject().appModule.appName
-		if not os.path.exists(os.path.join(GCSavedPositions, appName+".gc")):
-			# Translators: message presented when no saved positions are available for the focused app.
-			ui.message(_("No saved positions for %s.")%appName)
+		if not os.path.exists(os.path.join(GCMousePositions, appName+".gc")):
+			# Translators: message presented when no mouse positions are available for the focused app.
+			ui.message(_("No mouse positions for %s.")%appName)
 		else:
 			try:
 				d = PositionsList(gui.mainFrame, appName)
@@ -265,10 +265,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			except RuntimeError:
 				pass
 	# Translators: input help message for a Golden Cursor command.
-	script_savedPositionsList.__doc__ = _("Opens a dialog listing saved positions for the current application")
+	script_mousePositionsList.__doc__ = _("Opens a dialog listing mouse positions for the current application")
 
-	def script_savePosition(self, gesture):
-		d = wx.TextEntryDialog(gui.mainFrame, _("Enter the value for position name you wish to save."), _("save position"))
+	def script_saveMousePosition(self, gesture):
+		d = wx.TextEntryDialog(gui.mainFrame, _("Enter the value for position name you wish to save."), _("save mouse position"))
 		def callback(result):
 			if result == wx.ID_OK:
 				wx.CallLater(100,self.saving, d.GetValue())
@@ -283,14 +283,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		x, y = winUser.getCursorPos()
 		appName = self.getMouse().appModule.appName
 		# If the files path does not exist, create it now.
-		if not os.path.exists(GCSavedPositions): os.mkdir(GCSavedPositions)
-		position = ConfigObj(os.path.join(GCSavedPositions, appName+".gc"), encoding="UTF-8")
+		if not os.path.exists(GCMousePositions): os.mkdir(GCMousePositions)
+		position = ConfigObj(os.path.join(GCMousePositions, appName+".gc"), encoding="UTF-8")
 		position[name] = ",".join([str(x), str(y)])
 		position.write()
 		# Translators: presented when position (tag) has been saved.
 		ui.message(_("Position has been saved in %s.") % position.filename)
 	# Translators: Input help message for a Golden Cursor command.
-	script_savePosition.__doc__ = _("Opens a dialog to label the current mouse position and saves it")
+	script_saveMousePosition.__doc__ = _("Opens a dialog to label the current mouse position and saves it")
 
 	def script_mouseMovementChange (self, gesture):
 		pixelUnits = (1, 5, 10, 20, 50, 100)
@@ -429,8 +429,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		"kb:nvda+windows+p":"sayPosition",
 		"kb:nvda+windows+s":"toggleSpeakPixels",
 		"kb:nvda+windows+r":"toggleMouseRestriction",
-		"kb:nvda+shift+l": "savePosition",
-		"kb:nvda+control+l": "savedPositionsList",
+		"kb:nvda+shift+l": "saveMousePosition",
+		"kb:nvda+control+l": "mousePositionsList",
 	}
 
 # Add-on config database
