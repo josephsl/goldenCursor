@@ -11,11 +11,16 @@ import shutil
 
 def onInstall():
 	# First and second generation positions storage format are incompatible.
-	positions = os.path.join(os.path.dirname(__file__), "..", "goldenCursor", "savedPositions")
+	positions = os.path.join(os.path.dirname(__file__), "..", "goldenCursor", "mousePositions")
+	betaPositions = os.path.join(os.path.dirname(__file__), "..", "goldenCursor", "savedPositions")
 	oldPositions = os.path.join(os.path.dirname(__file__), "..", "goldenCursor", "globalPlugins", "files")
 	# Without importing old positions, saved positions would be lost.
-	newPositions = os.path.join(os.path.dirname(__file__), "savedPositions")
+	newPositions = os.path.join(os.path.dirname(__file__), "mousePositions")
 	# First, migrate second generation positions database.
+	# 2.0 only: migrate beta positions.
+	if os.path.exists(betaPositions):
+		os.rename(betaPositions, positions)
+		# End 2.0 only
 	if os.path.exists(positions):
 		try:
 			shutil.copytree(positions, newPositions)
