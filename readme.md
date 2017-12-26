@@ -33,14 +33,16 @@ Note: these gestures can be reassigned via NVDA's Input Gestures dialog under Go
 
 * Requires NVDA 2017.3 and later.
 * Position file format is incompatible with 1.x versions. If 1.x position format is found, old positions will be migrated to the new format during installation.
-* Various messages from this add-on has changed, including the dialog for saving a mouse position where current mouse coordinates will be shown.
-* Changes to positions list dialog, including new name (now called Mouse Positions) and layout, displaying mouse coordinates for a label, and showing the name of the active app as part of the title.
 * Added a new Golden Cursor settings dialog in NVDA's Preferences menu to configure mouse movement unit and announcement of mouse positions as mouse moves.
+* Various messages from this add-on has changed.
 * When toggling various settings, toggle tone will no longer be heard.
 * You can now enter mouse arrows mode where you can move the mouse by pressing just arrow keys.
+* Changes to positions list dialog, including new name (now called Mouse Positions) and layout, displaying mouse coordinates for a label, and showing the name of the active app as part of the title.
 * From Mouse Positions dialog, pressing Enter on a saved label will move the mouse to the saved location.
 * When renaming a mouse position, an error dialog will be shown if a label with the same name as the new name exists.
 * When deleting or clearing mouse positions, you must now answer Yes before positions are deleted and/or cleared.
+* Changes to mouse jump feature, including a new name (now called New mouse position) and ability to enter X and Y coordinates separately or by using up or down arrow keys.
+* The dialog shown when saving the current mouse position now shows coordinates for current mouse location.
 * When saving positions, resolved an issue where NvDA may play error tones if the positions folder does not exist.
 
 ## Version 1.4
