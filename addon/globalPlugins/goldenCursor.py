@@ -10,14 +10,12 @@
 # Control mouse from the keyboard, including specifying hotspots, different movement units, mouse restrictions and others.
 
 import os
-from threading import Timer
 from configobj import ConfigObj
 import globalPluginHandler
 import gui
 import wx
 import config
 import speech
-import tones
 import globalVars
 import mouseHandler
 import ui
