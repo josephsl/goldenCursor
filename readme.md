@@ -32,9 +32,8 @@ Note: these gestures can be reassigned via NVDA's Input Gestures dialog under Go
 ## Version 2.1
 
 * Fixed unicode decode error when trying to delete tag name.
-* Created a common dialog for jump to position and display the list of the saved mouse positions.
-* Prevent Multiple Instances When Opening the Dialogs.
-* Used the gui.guiHelper module to ensure the good appearance of the dialog box listing the saved positions.
+* Prevent Multiple Instances When Opening various add-on Dialogs.
+* Improved appearance of mouse positions list and jump to position dialogs.
 
 ## Version 2.0
 
