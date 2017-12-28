@@ -49,66 +49,147 @@ def setMousePosition(x, y, announceMousePosition=False):
 	if announceMousePosition:
 		# Announce this half a second later to give the appearance of mouse movement.
 		wx.CallLater(500, reportMousePosition, x=x, y=y)
-	
+
+class EnterPositionName(wx.TextEntryDialog):
+
+	"""
+	This subclass of the wx.TextEntryDialog class was created to prevent multiple instances of the dialog box that propose to give a name to the current mouse position.
+	This dialog can be opened via the script_saveMousePosition accessible with the nvda+shift+l shortcut.
+	"""
+# The following comes from exit dialog class from GUI package (credit: NV Access and Zahari from Bulgaria).
+	_instance = None
+
+	def __new__(cls, parent, *args, **kwargs):
+		inst = cls._instance() if cls._instance else None
+		if not inst:
+			return super(cls, cls).__new__(cls, parent, *args, **kwargs)
+		return inst
+
+	def __init__(self, *args, **kwargs):
+		inst = EnterPositionName._instance() if EnterPositionName._instance else None
+		if inst:
+			return
+		# Use a weakref so the instance can die.
+		import weakref
+		EnterPositionName._instance = weakref.ref(self)
+
+		super (EnterPositionName, self).__init__(*args, **kwargs)
 
 class PositionsList(wx.Dialog):
 
-	def __init__(self, parent, appName):
-		super(PositionsList, self).__init__(parent, title=_("Mouse positions for %s")%(appName), size =(420, 300))
+	"""
+	This common dialogue has been created to facilitate access to the following choices:
+	1. The list of x / y positions proposed by the script_goToPosition, accessible via the nvda+windows+j shortcut.
+	2. The list of mouse positions saved for the current application proposed by the script_mousePositionsList, accessible via the nvda+control+l shortcut.
+	It also prevents multiple instances for these 2 dialogs.
+	"""
+	# The following comes from exit dialog class from GUI package (credit: NV Access and Zahari from Bulgaria).
+	_instance = None
+
+	def __new__(cls, parent, *args, **kwargs):
+		inst = cls._instance() if cls._instance else None
+		if not inst:
+			return super(cls, cls).__new__(cls, parent, *args, **kwargs)
+		return inst
+
+	def __init__(self, parent, appName=None, goto=False):
+		inst = PositionsList._instance() if PositionsList._instance else None
+		if inst:
+			return
+		# Use a weakref so the instance can die.
+		import weakref
+		PositionsList._instance = weakref.ref(self)
+
+		if appName:
+			super(PositionsList, self).__init__(parent, title=_("Mouse positions for %s")%(appName), size =(420, 300))
+			self.mousePositionsList(appName=appName)
+		elif goto:
+			super(PositionsList, self).__init__(parent, title=_("New mouse position"))
+			self.jumpToPosition()
+
+	def mousePositionsList(self, appName):
 		self.appName = appName
 		self.positions = ConfigObj(os.path.join(GCMousePositions, appName+".gc"), encoding="UTF-8")
 		mainSizer = wx.BoxSizer(wx.VERTICAL)
-		listBoxSizer = wx.BoxSizer(wx.VERTICAL)
-		self.listBox = wx.ListCtrl(self,-1,style=wx.LC_REPORT|wx.LC_SINGLE_SEL,size=(550,350))
+		sHelper = gui.guiHelper.BoxSizerHelper(self, orientation=wx.VERTICAL)
+		# Translators: The label for the combo box of the mouse positions in the current application.
+		mousePositionsText=_("&Saved mouse positions")
+		self.mousePositionsList=sHelper.addLabeledControl(mousePositionsText, wx.ListCtrl, style=wx.LC_REPORT|wx.LC_SINGLE_SEL,size=(550,350))
 		# Translators: the column in mouse positions list to identify the position name.
-		self.listBox.InsertColumn(0,_("Name"),width=150)
+		self.mousePositionsList.InsertColumn(0,_("Name"),width=150)
 		# Translators: the column in mouse positions list to identify the X coordinate.
-		self.listBox.InsertColumn(1,_("Position X"),width=50)
+		self.mousePositionsList.InsertColumn(1,_("Position X"),width=50)
 		# Translators: the column in mouse positions list to identify the Y coordinate.
-		self.listBox.InsertColumn(2,_("Position Y"),width=50)
-		self.listBox.Bind(wx.EVT_LIST_ITEM_ACTIVATED, self.onJump)
-		listBoxSizer.Add(self.listBox,proportion=8)
+		self.mousePositionsList.InsertColumn(2,_("Position Y"),width=50)
+		self.mousePositionsList.Bind(wx.EVT_LIST_ITEM_ACTIVATED, self.onJump)
+
 		for entry in sorted(self.positions.keys()):
 			x, y = self.positions[entry].split(",")
-			self.listBox.Append((entry, x, y))
-		self.listBox.Select(0,on=1)
-		self.listBox.SetItemState(0,wx.LIST_STATE_FOCUSED,wx.LIST_STATE_FOCUSED)
-		buttonsSizer = wx.BoxSizer(wx.HORIZONTAL)
+			self.mousePositionsList.Append((entry, x, y))
+		self.mousePositionsList.Select(0,on=1)
+		self.mousePositionsList.SetItemState(0,wx.LIST_STATE_FOCUSED,wx.LIST_STATE_FOCUSED)
+
+		bHelper = gui.guiHelper.ButtonHelper(orientation=wx.HORIZONTAL)
+
+		jumpButtonID = wx.NewId()
 		# Translators: the button to jump to the selected position.
-		jumpButton= wx.Button(self, -1,_("&Jump"))
-		jumpButton.Bind(wx.EVT_BUTTON, self.onJump)
-		buttonsSizer.Add(jumpButton,0, wx.ALL| wx.CENTER| wx.EXPAND,10)
+		bHelper.addButton(self, jumpButtonID, _("&Jump"), wx.DefaultPosition)
+
+		renameButtonID = wx.NewId()
 		# Translators: the button to rename a mouse position.
-		renameButton= wx.Button(self, -1,_("&Rename"))
-		renameButton.Bind(wx.EVT_BUTTON, self.onRename)
-		buttonsSizer.Add(renameButton,0, wx.ALL| wx.CENTER| wx.EXPAND,10)
+		bHelper.addButton(self, renameButtonID, _("&Rename"), wx.DefaultPosition)
+
+		deleteButtonID = wx.NewId()
 		# Translators: the button to delete the selected mouse position.
-		deleteButton = wx.Button(self, -1,_("&Delete"))
-		deleteButton.Bind(wx.EVT_BUTTON, self.onDelete)
-		buttonsSizer.Add(deleteButton, 0, wx.ALL| wx.CENTER| wx.EXPAND,10)
+		bHelper.addButton(self, deleteButtonID, _("&Delete"), wx.DefaultPosition)
+
+		clearButtonID = wx.NewId()
 		# Translators: the button to clear all mouse positions for the focused app.
-		clearButton = wx.Button(self, -1,_("C&lear positions"))
-		clearButton.Bind(wx.EVT_BUTTON, self.onClear)
-		buttonsSizer.Add(clearButton, 0, wx.ALL| wx.CENTER| wx.EXPAND,10)
-		mainSizer.Add(listBoxSizer,1,wx.ALL|wx.EXPAND,20)
-		mainSizer.Add(buttonsSizer)
+		bHelper.addButton(self, clearButtonID, _("C&lear positions"), wx.DefaultPosition)
+
 		# Translators: The label of a button to close the mouse positions dialog.
-		closeButton = wx.Button(self, label=_("&Close"), id=wx.ID_CLOSE)
-		closeButton.Bind(wx.EVT_BUTTON, lambda evt: self.Close())
-		mainSizer.Add(closeButton,border=20,flag=wx.LEFT|wx.RIGHT|wx.BOTTOM|wx.CENTER|wx.ALIGN_RIGHT)
+		bHelper.addButton(self, wx.ID_CLOSE, _("&Close"), wx.DefaultPosition)
+
+		sHelper.addItem(bHelper)
+
+		self.Bind(wx.EVT_BUTTON, self.onJump, id = jumpButtonID)
+		self.Bind(wx.EVT_BUTTON, self.onRename, id = renameButtonID)
+		self.Bind(wx.EVT_BUTTON, self.onDelete, id = deleteButtonID)
+		self.Bind(wx.EVT_BUTTON, self.onClear, id = clearButtonID)
+		self.Bind(wx.EVT_BUTTON, lambda evt: self.Close(), id = wx.ID_CLOSE)
+
+		# Borrowed from NVDA Core (add-ons manager).
+		# To allow the dialog to be closed with the escape key.
 		self.Bind(wx.EVT_CLOSE, self.onClose)
 		self.EscapeId = wx.ID_CLOSE
-		# Borrowed from NVDA Core (add-ons manager).
-		self.listBox.SetFocus()
-		self.Center(wx.BOTH | 6)
+
+		mainSizer.Add(sHelper.sizer, border=gui.guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL)
+		self.Sizer = mainSizer
+		mainSizer.Fit(self)
+		self.mousePositionsList.SetFocus()
+		self.Center(wx.BOTH | wx.Center)
+
+	def jumpToPosition(self):
+		mainSizer = wx.BoxSizer(wx.VERTICAL)
+		mouseJumpHelper = gui.guiHelper.BoxSizerHelper(self, orientation=wx.VERTICAL)
+
+		x, y = winUser.getCursorPos()
+		w,h = api.getDesktopObject().location[2:]
+		self.xPos = mouseJumpHelper.addLabeledControl(_("&X position"), gui.nvdaControls.SelectOnFocusSpinCtrl, min=0, max=w-1, initial=x)
+		self.yPos = mouseJumpHelper.addLabeledControl(_("&Y position"), gui.nvdaControls.SelectOnFocusSpinCtrl, min=0, max=h-1, initial=y)
+
+		mouseJumpHelper.addDialogDismissButtons(self.CreateButtonSizer(wx.OK | wx.CANCEL))
+		self.Bind(wx.EVT_BUTTON, self.onOk, id=wx.ID_OK)
+		self.Bind(wx.EVT_BUTTON, self.onCancel, id=wx.ID_CANCEL)
+		mainSizer.Add(mouseJumpHelper.sizer, border=gui.guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL)
 		mainSizer.Fit(self)
 		self.SetSizer(mainSizer)
-		# 6 = wx.CENTER_ON_SCREEN.
-		self.Center(wx.BOTH | 6)
+		self.Center(wx.BOTH | wx.Center)
+		self.xPos.SetFocus()
 
 	def onRename(self, event):
-		index = self.listBox.GetFirstSelected()
-		oldName = self.listBox.GetItemText(index)
+		index = self.mousePositionsList.GetFirstSelected()
+		oldName = self.mousePositionsList.GetItemText(index)
 		# Translators: The label of a field to enter a new name for a mouse position/tag.
 		name = wx.GetTextFromUser(_("New name"),
 		# Translators: The title of the dialog to rename a mouse position.
@@ -121,15 +202,15 @@ class PositionsList(wx.Dialog):
 			gui.messageBox(_("Another mouse position has the same name as the entered name. Please choose a different name."),
 				_("Error"), wx.OK | wx.ICON_ERROR, self)
 			return
-		self.listBox.SetItemText(index, name)
-		self.listBox.SetFocus()
+		self.mousePositionsList.SetItemText(index, name)
+		self.mousePositionsList.SetFocus()
 		self.positions[name] = self.positions[oldName]
 		del self.positions[oldName]
 
 	def deletePosition(self, clearPositions=False):
 		message, title = "", ""
-		entry = self.listBox.GetFirstSelected()
-		name = self.listBox.GetItemText(entry)
+		entry = self.mousePositionsList.GetFirstSelected()
+		name = self.mousePositionsList.GetItemText(entry)
 		if not clearPositions:
 			# Translators: The confirmation prompt displayed when the user requests to delete the selected tag.
 			message = _(u"Are you sure you want to delete the position named {name}? This cannot be undone.".format(name = name))
@@ -145,10 +226,10 @@ class PositionsList(wx.Dialog):
 			return
 		if not clearPositions:
 			del self.positions[name]
-			self.listBox.DeleteItem(entry)
+			self.mousePositionsList.DeleteItem(entry)
 			self.positions.write()
-			if self.listBox.GetItemCount() > 0: self.listBox.Select(0,on=1)
-		if clearPositions or self.listBox.GetItemCount() == 0:
+			if self.mousePositionsList.GetItemCount() > 0: self.mousePositionsList.Select(0,on=1)
+		if clearPositions or self.mousePositionsList.GetItemCount() == 0:
 			os.remove(self.positions.filename)
 			self.positions.clear()
 			# Translators: A dialog message shown when tags for the application is cleared.
@@ -167,7 +248,7 @@ class PositionsList(wx.Dialog):
 		self.Destroy()
 		self.positions.write()
 		try:
-			x, y= self.positions[self.listBox.GetItemText(self.listBox.GetFirstSelected())].split(",")
+			x, y= self.positions[self.mousePositionsList.GetItemText(self.mousePositionsList.GetFirstSelected())].split(",")
 		except:
 			return
 		self.positions = None
@@ -178,44 +259,6 @@ class PositionsList(wx.Dialog):
 		if len(self.positions): self.positions.write()
 		self.positions = None
 
-
-class PositionJumpDialog(wx.Dialog):
-
-	# The following comes from exit dialog class from GUI package (credit: NV Access and Zahari from Bulgaria).
-	_instance = None
-
-	def __new__(cls, parent, *args, **kwargs):
-		inst = cls._instance() if cls._instance else None
-		if not inst:
-			return super(cls, cls).__new__(cls, parent, *args, **kwargs)
-		return inst
-
-	def __init__(self, parent, level=0):
-		inst = PositionJumpDialog._instance() if PositionJumpDialog._instance else None
-		if inst:
-			return
-		# Use a weakref so the instance can die.
-		import weakref
-		PositionJumpDialog._instance = weakref.ref(self)
-
-		super(PositionJumpDialog, self).__init__(parent, wx.ID_ANY, _("New mouse position"))
-		mainSizer = wx.BoxSizer(wx.VERTICAL)
-		mouseJumpHelper = gui.guiHelper.BoxSizerHelper(self, orientation=wx.VERTICAL)
-
-		x, y = winUser.getCursorPos()
-		w,h = api.getDesktopObject().location[2:]
-		self.xPos = mouseJumpHelper.addLabeledControl(_("&X position"), gui.nvdaControls.SelectOnFocusSpinCtrl, min=0, max=w-1, initial=x)
-		self.yPos = mouseJumpHelper.addLabeledControl(_("&Y position"), gui.nvdaControls.SelectOnFocusSpinCtrl, min=0, max=h-1, initial=y)
-
-		mouseJumpHelper.addDialogDismissButtons(self.CreateButtonSizer(wx.OK | wx.CANCEL))
-		self.Bind(wx.EVT_BUTTON, self.onOk, id=wx.ID_OK)
-		self.Bind(wx.EVT_BUTTON, self.onCancel, id=wx.ID_CANCEL)
-		mainSizer.Add(mouseJumpHelper.sizer, border=gui.guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL)
-		mainSizer.Fit(self)
-		self.SetSizer(mainSizer)
-		self.Center(wx.BOTH | 6)
-		self.xPos.SetFocus()
-
 	def onOk(self, evt):
 		x, y = self.xPos.GetValue(), self.yPos.GetValue()
 		self.Destroy()
@@ -223,7 +266,6 @@ class PositionJumpDialog(wx.Dialog):
 
 	def onCancel(self, evt):
 		self.Destroy()
-
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	scriptCategory = _("Golden Cursor")
@@ -254,7 +296,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			ui.message(_("No mouse positions for %s.")%appName)
 		else:
 			try:
-				d = PositionsList(gui.mainFrame, appName)
+				d = PositionsList(parent=gui.mainFrame, appName=appName)
 				gui.mainFrame.prePopup()
 				d.Raise()
 				d.Show()
@@ -269,7 +311,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Stringify coordinates early.
 		x, y = str(x), str(y)
 		# Translators: edit field label for new mouse position.
-		d = wx.TextEntryDialog(gui.mainFrame, _("Enter the name for the current mouse position (x: {x}, Y: {y}".format(x=x, y=y)),
+		d = EnterPositionName(gui.mainFrame, _("Enter the name for the current mouse position (x: {x}, Y: {y}".format(x=x, y=y)),
 			# Translators: title for save mouse position dialog.
 			_("Save mouse position"))
 		def callback(result):
@@ -364,7 +406,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def script_goToPosition(self,gesture):
 		try:
-			d = PositionJumpDialog(gui.mainFrame)
+			d = PositionsList(parent=gui.mainFrame, goto=True)
 			gui.mainFrame.prePopup()
 			d.Raise()
 			d.Show()
