@@ -29,6 +29,13 @@ Note: these gestures can be reassigned via NVDA's Input Gestures dialog under Go
 * To perform functions that require use of arrow keys, turn off mouse arrows first.
 * When deleting saved positions, if there are no saved positions left, positions for the application will be cleared.
 
+## Version 2.1
+
+* Fixed unicode decode error when trying to delete tag name.
+* Created a common dialog for jump to position and display the list of the saved mouse positions.
+* Prevent Multiple Instances When Opening the Dialogs.
+* Used the gui.guiHelper module to ensure the good appearance of the dialog box listing the saved positions.
+
 ## Version 2.0
 
 * Requires NVDA 2017.3 and later.
