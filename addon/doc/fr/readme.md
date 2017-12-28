@@ -1,6 +1,6 @@
 # Golden Cursor #
 
-* Auteur : salah atair
+* Auteur : salah atair, Joseph Lee
 * Télécharger [version stable][1]
 * Télécharger [version de développement][2]
 
@@ -9,28 +9,84 @@ sauvegarder la position de la souris pour les applications.
 
 ## Touche de commandes
 
-* nvda+maj+L : afficher une liste des positions sauvegardées.
-* nvda+contrôle+l : sauvegarder une position.
-* nvda+win+c : sélectionnez le niveau de mouvement.
-* nvda+win+r : basculer entre activer/désactiver la restriction de la
+* Contrôle+NVDA+L : afficher les positions de la souris sauvegardées pour
+  une application, le cas échéant.
+* Maj+NVDA+l : sauvegarde un tag ou une étiquette pour la position actuelle
+  de la souris dans l'application ayant actuellement le focus.
+* Windows+NVDA+C : changer l'unité de mouvement de la souris.
+* Windows+NVDA+R : basculer entre activer/désactiver la restriction de la
   souris.
-* nvda+win+s : basculer entre activer/désactiver la notification des pixels.
-* nvda+win+j : ouvre une boîte de dialogue pour taper la position X, Y à
-  laquelle vous voulez accéder.
-* nvda+win+p : notification des pixels à la position actuelle du pointeur.
-* nvda+win+touchesFléchées : déplacez la souris dans des directions
-  différentes.
-* Remarque : ces gestes peuvent être réassignées depuis la boîte de dialogue
-  Gestes de commandes dans le menu Préférences de NVDA.
+* Windows+NVDA+S : basculer entre activer/désactiver l'annonce des pixels.
+* Windows+NVDA+J : déplacez la souris vers une position spécifique x et y.
+* Windows+NVDA+P : annoncer la position de la souris.
+* Windows+NVDA+M : basculer les flèches de la souris entre activer ou
+  désactiver.
+* Windows+NVDA+touches fléchées (ou simplement les touches fléchées si les
+  flèches de la souris sont activées) : déplacez la souris.
+
+Remarque : ces gestes peuvent être réassignées via le dialogue Gestes de
+commandes de NVDA sous la catégorie Golden Cursor.
 
 ## Notes
 
-* Lors du partage des positions, chaque partie doit utiliser la même
+* Lors du partage des positions (tags), chaque partie doit utiliser la même
   résolution d'affichage.
 * Pour une compatibilité maximale, vous devriez maximiser les fenêtres en
   appuyant sur Windows+flècheHaut.
 * Lors du partage des positions, les étiquettes des positions existantes
   doivent être renommées.
+* Les formats de position de la souris version 1.x et 2.x sont
+  incompatibles.
+* Pour exécuter les fonctions nécessitant l'utilisation des touches
+  fléchées, désactivez d'abord les flèches de la souris.
+* Lorsque vous supprimez des positions sauvegardées, s'il n'y a plus de
+  positions sauvegardées, les positions de l'application seront effacées.
+
+## Version 2.0
+
+* Nécessite NVDA 2017.3 et versions ultérieures.
+* Le format de fichier de position est incompatible avec les versions
+  1.x. Si le format de position 1.x est trouvé, les anciennes positions
+  seront migrées vers le nouveau format lors de l'installation.
+* Ajout d'une nouvelle boîte de dialogue dans les paramètres Golden Cursor
+  dans le menu Préférences de NVDA pour configurer l'unité de mouvement de
+  la souris et l'annonce des positions de la souris lors des déplacements de
+  la souris.
+* Divers messages de ce module complémentaire ont changé.
+* Lorsque vous basculez entre différents paramètres, la tonalité de
+  basculement ne sera plus entendue.
+* Vous pouvez maintenant entrer dans le mode flèches de la souris où vous
+  pouvez déplacer la souris en appuyant simplement sur les touches fléchées.
+* Changements pour le dialogue de la liste des positions, y compris le
+  nouveau nom (maintenant appelé Positions de la souris) et la disposition,
+  affichant les coordonnées de la souris pour une étiquette et affichant le
+  nom de l'application active dans le titre.
+* À partir du dialogue Positions de la souris, appuyez sur Entrée sur une
+  étiquette sauvegardée pour déplacer la souris vers l'emplacement
+  sauvegardé.
+* Lorsque vous renommez une position de la souris, un dialogue d'erreur
+  s'affiche si une étiquette portant le même nom que le nouveau nom existe.
+* Lorsque vous supprimez ou effacez les positions de la souris, vous devez
+  maintenant répondre Oui avant que les positions ne soient supprimées et/ou
+  effacées.
+* Changements pour la fonction de saut de la souris, y compris un nouveau
+  nom (maintenant appelé Nouvelle position de la souris) et sa capacité à
+  entrer les coordonnées X et Y séparément ou en utilisant les touches
+  flèche haut ou bas.
+* Le dialogue affichée lors de la sauvegarde de la position actuelle de la
+  souris affiche maintenant les coordonnées de l'emplacement actuel de la
+  souris.
+* Lors de la sauvegarde des positions, il a été résolu que NVDA peut émettre
+  des tonalités d'erreur si le dossier des positions n'existe pas.
+
+## Version 1.4
+
+* Suppression de la dépendance win32api pour le rendre compatible avec les
+  versions passées et futures de NVDA.
+
+## Version 1.0
+
+* Première version
 
 [[!tag stable dev]]
 
