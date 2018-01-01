@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #golden cursor
-# Copyright (C) 2015-2017
+# Copyright (C) 2015-2018
 #Version 2.2
 #License GNU GPL
 # Date: 25/12/2015
@@ -385,7 +385,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def script_moveMouseRight(self,gesture):
 		self.moveMouse(GCMouseRight)
-	
 	# Translators: Input help message for a Golden Cursor command.
 	script_moveMouseRight.__doc__ = _("Moves the Mouse pointer to the right")
 
