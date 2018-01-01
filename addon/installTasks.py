@@ -1,5 +1,5 @@
 # Golden Cursor installation tasks
-# Copyright 2016-2017 Joseph Lee and others, released under GPL.
+# Copyright 2016-2018 Joseph Lee and others, released under GPL.
 
 # Provides needed routines during add-on installation and removal.
 # Routines are partly based on other add-ons, particularly Place Markers by Noelia Martinez (thanks add-on authors).
@@ -12,15 +12,10 @@ import shutil
 def onInstall():
 	# First and second generation positions storage format are incompatible.
 	positions = os.path.join(os.path.dirname(__file__), "..", "goldenCursor", "mousePositions")
-	betaPositions = os.path.join(os.path.dirname(__file__), "..", "goldenCursor", "savedPositions")
 	oldPositions = os.path.join(os.path.dirname(__file__), "..", "goldenCursor", "globalPlugins", "files")
 	# Without importing old positions, saved positions would be lost.
 	newPositions = os.path.join(os.path.dirname(__file__), "mousePositions")
 	# First, migrate second generation positions database.
-	# 2.0 only: migrate beta positions.
-	if os.path.exists(betaPositions):
-		os.rename(betaPositions, positions)
-		# End 2.0 only
 	if os.path.exists(positions):
 		try:
 			shutil.copytree(positions, newPositions)
