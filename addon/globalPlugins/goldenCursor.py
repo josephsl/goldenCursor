@@ -311,7 +311,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Stringify coordinates early.
 		x, y = str(x), str(y)
 		# Translators: edit field label for new mouse position.
-		d = EnterPositionName(gui.mainFrame, _("Enter the name for the current mouse position (x: {x}, Y: {y}".format(x=x, y=y)),
+		d = EnterPositionName(gui.mainFrame, _("Enter the name for the current mouse position (x: {x}, Y: {y})".format(x=x, y=y)),
 			# Translators: title for save mouse position dialog.
 			_("Save mouse position"))
 		def callback(result):
