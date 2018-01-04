@@ -7,89 +7,84 @@ msgid ""
 msgstr ""
 "Project-Id-Version: goldenCursor 2.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
-"POT-Creation-Date: 2017-12-26 10:18+0000\n"
-"PO-Revision-Date: 2017-12-26 10:53+0000\n"
-"Last-Translator: Ângelo Miguel Abrantes <ampa4374@gmail.com>\n"
-"Language-Team: Equipa Portuguesa do NVDA <angelomiguelabrantes@gmail.com; "
-"rui.fontes@tiflotecnia.com>\n"
-"Language: pt_PT\n"
+"POT-Creation-Date: 2017-12-22 07:00+1000\n"
+"PO-Revision-Date: 2017-12-31 11:09+0300\n"
+"Last-Translator: Juan C. Buño <oprisniki@gmail.com>\n"
+"Language-Team: turkish\n"
+"Language: tr_TR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 2.0.1\n"
+"X-Generator: Poedit 2.0.4\n"
 "X-Poedit-Basepath: ../../../globalPlugins\n"
 "X-Poedit-SearchPath-0: goldenCursor.py\n"
 
 #, python-format
 msgid "Mouse positions for %s"
-msgstr "Posições do rato para %s."
+msgstr "%s için konum listesi"
 
 msgid "New mouse position"
-msgstr "Nova posição do ratoGuardar posição;"
+msgstr "Yeni fare konumu"
 
 #. Translators: The label for the combo box of the mouse positions in the current application.
-#, fuzzy
 msgid "&Saved mouse positions"
-msgstr "Guardar a posição do rato"
+msgstr "&Kayıtlı fare konumları"
 
 #. Translators: the column in mouse positions list to identify the position name.
 msgid "Name"
-msgstr "Nome"
+msgstr "Ad"
 
 #. Translators: the column in mouse positions list to identify the X coordinate.
 msgid "Position X"
-msgstr "Posição X"
+msgstr "X konumu"
 
 #. Translators: the column in mouse positions list to identify the Y coordinate.
 msgid "Position Y"
-msgstr "Posição YLista de posições"
+msgstr "Y konumu"
 
 #. Translators: the button to jump to the selected position.
 msgid "&Jump"
-msgstr "&Saltar"
+msgstr "Atla"
 
 #. Translators: the button to rename a mouse position.
 msgid "&Rename"
-msgstr "&Renomear"
+msgstr "&Yenidan adlandır"
 
 #. Translators: the button to delete the selected mouse position.
 msgid "&Delete"
-msgstr "&Apagar"
+msgstr "Si&l"
 
 #. Translators: the button to clear all mouse positions for the focused app.
 msgid "C&lear positions"
-msgstr "&Limpar posições"
+msgstr "Konum&ları sil"
 
 #. Translators: The label of a button to close the mouse positions dialog.
 msgid "&Close"
-msgstr "&Fechar"
+msgstr "&Kapat"
 
 msgid "&X position"
-msgstr "Posição &X"
+msgstr "&X konumu"
 
 msgid "&Y position"
-msgstr "Posição &YGuardar posição;"
+msgstr "&Y konumu"
 
 #. Translators: The label of a field to enter a new name for a mouse position/tag.
 msgid "New name"
-msgstr "Novo Nome"
+msgstr "Yeni ad"
 
 #. Translators: The title of the dialog to rename a mouse position.
 msgid "Rename"
-msgstr "Renomear"
+msgstr "Yeniden adlandır"
 
 #. Translators: An error displayed when renaming a mouse position
 #. and a tag with the new name already exists.
 msgid ""
 "Another mouse position has the same name as the entered name. Please choose "
 "a different name."
-msgstr ""
-"Outra posição do mouse tem o mesmo nome que o nome inserido. Escolha um nome "
-"diferente."
+msgstr "Başka bir fare konumu aynı adı taşıyor. Lütfen başka bir ad girin."
 
 msgid "Error"
-msgstr "Erro!"
+msgstr "Hata"
 
 #. Translators: The confirmation prompt displayed when the user requests to delete the selected tag.
 #, python-brace-format
@@ -97,12 +92,12 @@ msgid ""
 "Are you sure you want to delete the position named {name}? This cannot be "
 "undone."
 msgstr ""
-"Tem a certeza que quer apagar a posição chamada {name}? Esta acção não pode "
-"ser desfeita."
+"{name} adlı konumu silmek istediğinizden emin misiniz? Bu işlem geri "
+"alınamaz."
 
 #. Translators: The title of the confirmation dialog for deletion of selected position.
 msgid "Delete position"
-msgstr "Apagar posição"
+msgstr "Konumu sil"
 
 #. Translators: The confirmation prompt displayed when the user is about to clear positions.
 #, python-brace-format
@@ -110,230 +105,237 @@ msgid ""
 "Are you sure you want to clear mouse positions for the current application "
 "({appName})? This cannot be undone."
 msgstr ""
-"Tem a certeza que deseja limpar as posições do rato para o aplicativo actual "
-"({appName})? Isto não pode ser desfeito."
+"Mevcut uygulama ({appName}) için kaydedilmiş fare konumlarını silmek "
+"istediğinizden emin misiniz? Bu işlem geri alınamaz."
 
 #. Translators: The title of the confirmation dialog for clearing mouse positions.
 msgid "Clear mouse positions"
-msgstr "Limpar as posições do rato"
+msgstr "Fare konumlarını sil"
 
 #. Translators: A dialog message shown when tags for the application is cleared.
 #, python-brace-format
 msgid "All mouse positions for the application {appName} has been deleted."
-msgstr "Todas as posições do rato para o aplicativo {appName} foram apagadas."
+msgstr "{appName} uygulaması için oluşturulmuş tüm fare konumları silindi."
 
 #. Translators: Title of the tag clear confirmation dialog.
 msgid "Mouse positions cleared"
-msgstr "Posições do rato limpasGuardar posição;"
+msgstr "Fare konumları silindi"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Golden Cursor"
-msgstr "Cursor Dourado"
+msgstr "Altın İmleç"
 
 msgid "&Golden Cursor..."
-msgstr "&Cursor Dourado..."
+msgstr "&Altın imleç..."
 
 msgid "Golden Cursor add-on settings"
-msgstr "Configurações do Cursor Dourado"
+msgstr "Altın imleç eklenti ayarları"
 
 #. Translators: message presented when no mouse positions are available for the focused app.
 #, python-format
 msgid "No mouse positions for %s."
-msgstr "Não há posições do rato para %s."
+msgstr "%s için konum kaydı bulunamadı."
 
 #. Translators: input help message for a Golden Cursor command.
 msgid "Opens a dialog listing mouse positions for the current application"
-msgstr ""
-"Abre um diálogo com todas as posições do rato para a aplicação corrente"
+msgstr "Mevcut uygulama için daha önce oluşturulmuş fare konum listesini açar"
 
 #. Translators: edit field label for new mouse position.
 #, fuzzy, python-brace-format
 msgid "Enter the name for the current mouse position (x: {x}, Y: {y})"
-msgstr "Escreva um nome para a posição actual do rato (x: {x}, Y: {y}"
+msgstr "Mevcut fare konumu için bir ad girin (x: {x}, Y: {y}"
 
 #. Translators: title for save mouse position dialog.
 msgid "Save mouse position"
-msgstr "Guardar a posição do rato"
+msgstr "Fare konumunu kaydet"
 
 #. Translators: presented when position (tag) has been saved.
 #, python-format
 msgid "Position has been saved in %s."
-msgstr "A posição foi guardada em %s "
+msgstr "Konum %s içine kaydedildi."
 
 #. Translators: Input help message for a Golden Cursor command.
 msgid "Opens a dialog to label the current mouse position and saves it"
-msgstr "Abre um diálogo para etiquetar a posição actual do rato e guarda-a"
+msgstr ""
+"Mevcut fare konumunun etiketlenip kaydedilmesi için bir iletişim kutusu açar"
 
 #. Translators: input help message for a Golden Cursor command.
 msgid "Changes mouse movement unit"
-msgstr "Muda a unidade de movimento do rato"
+msgstr "Fare hareket birimini değiştirir"
 
 #. Translators: reported when new mouse coordinate announcement is on.
 msgid "Report new mouse coordinates on"
-msgstr "Indica que as novas coordenadas do rato estão activas"
+msgstr "Yeni fare konumu bildirimi açık"
 
 #. Translators: reported when new mouse coordinate announcement is on.
 msgid "Report new mouse coordinates off"
-msgstr "Indica que as novas coordenadas do rato estão desactivas"
+msgstr "Yeni fare konumu bildirimi kapalı"
 
 #. Translators: Input help message for a Golden Cursor add-on command.
 msgid "toggles reporting of mouse coordinates in pixels when mouse moves"
 msgstr ""
-"alterna a indicação das coordenadas do rato, em pixels, quando o rato se move"
+"Fare hareket ettiğinde, yeni konumun piksel cinsinden bildirimini açıp "
+"kapatır"
 
 #. Translators: Input help message for a Golden Cursor command.
 msgid "Reports current X and Y mouse position"
-msgstr "Indica a posição actual do rato em coordenadas X e Y"
+msgstr "Mevcut fare konumunu X ve Y olarak söyler"
 
 #. Translators: presented when toggling mouse arrows feature.
 msgid "Mouse arrows on"
-msgstr "Setas do rato activas"
+msgstr "Açık, Yön tuşları fare hareketi için kullanılacak"
 
 #. Translators: presented when toggling mouse arrows feature.
 msgid "Mouse arrows off"
-msgstr "Setas do rato desactivas"
+msgstr "Kapalı, yön tuşları fare hareketi için kullanılmayacak"
 
 #. Translators: input help mode message for a Golden Cursor add-on command.
 msgid "Toggles mouse arrows to move the mouse with the arrow keys"
-msgstr "Alterna as setas do mouse para mover o mouse com as teclas de seta"
+msgstr ""
+"Farenin yön tuşlarıyla hareket ettirilmesiyle ilgili ayarı açıp kapatır"
 
 #. Translators: Input help message for a Golden Cursor command.
 msgid "Moves the Mouse pointer to the right"
-msgstr "Move o ponteiro do rato para a direita"
+msgstr "Fare imlecini sağa taşır"
 
 #. Translators: Input help message for a Golden Cursor command.
 msgid "Moves the Mouse pointer to the left"
-msgstr "Move o ponteiro do rato para a esquerda"
+msgstr "Fare imlecini sola taşır"
 
 #. Translators: Input help message for a Golden Cursor command.
 msgid "Moves the Mouse pointer down"
-msgstr "Move o ponteiro do rato para baixo"
+msgstr "Fare imlecini aşağı taşır"
 
 #. Translators: Input help message for a Golden Cursor command.
 msgid "Moves the Mouse pointer up"
-msgstr "Move o ponteiro do rato para cima"
+msgstr "Fare imlecini yukarı taşır"
 
 #. Translators: Input help message for a Golden Cursor command.
 msgid ""
 "Opens a dialog to enter the X and Y coordinates for the mouse to move to"
 msgstr ""
-"Abre um diálogo para escrever as coordenadas para onde se quer que o rato se "
-"desloque, em X e Y"
+"Fare imlecinin atlaması için X ve Y koordinatının girileceği iletişim "
+"kutusunu açar"
 
 #. Translators: presented when mouse movement is restricted to current application.
 msgid "Mouse movement restricted to current application"
-msgstr "Movimento do rato restrito à aplicação actual"
+msgstr "Kısıtlı, Fare mevcut uygulama içinde hareket eder"
 
 #. Translators: presented when mouse movement is unrestricted.
 msgid "Mouse movement unrestricted"
-msgstr "Movimento do rato sem restrições"
+msgstr "Kısıtlanmamış"
 
 #. Translators: Input help message for a Golden Cursor command.
 msgid ""
 "Toggles mouse movement restriction between current application and "
 "unrestricted"
 msgstr ""
-"Alterna a restrição do movimento do mouse apenas para a aplicação actual e "
-"sem restrições"
+"Fare hareketinin mevcut uygulama ekranıyla sınırlanıp sınırlanmayacağıyla "
+"ilgili ayarı değiştirir"
 
 #. Translators: This is the label for the Golden Cursor settings dialog.
 msgid "Golden Cursor Settings"
-msgstr "Configurações do Cursor dourado"
+msgstr "Altın İmleç Ayarları"
 
 #. Translators: This is the label for a checkbox in the
 #. Golden Cursor settings dialog.
 msgid "&Announce new mouse coordinates when mouse moves"
-msgstr "&Anuncia as novas coordenadas do rato, quando este se move"
+msgstr "F&are hareket ederken yeni koordinatı bildir"
 
 #. Translators: The label for a setting in Golden Cursor settings dialog to change mouse movement units.
 msgid "Mouse movement &unit (in pixels)"
-msgstr "&Unidade de movimento do rato (em pixels)"
+msgstr "Fare hareket &birimi (piksel cinsinden)"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-#, fuzzy
 msgid ""
 "Allows you to control the mouse movement with the keyboard. for further "
 "details please visit the addon guide help."
 msgstr ""
-"Permit o controlo do rato através do teclado. Para mais informações, visite "
-"o guia de ajuda do extra "
+"Fare hareketlerinin klavyeyle kontrolünü sağlar. daha fazla bilgi için "
+"lütfen Eklenti yardımına bakın."
 
 #~ msgid "choose a item of this list"
-#~ msgstr "Escolha um elemento desta lista."
+#~ msgstr "Listeden bir öğe seçin"
 
 #~ msgid "&rename"
-#~ msgstr "&Renomear"
+#~ msgstr "Yeniden adlandır"
 
 #~ msgid "c&lear"
-#~ msgstr "&Limpar"
+#~ msgstr "&Limpiar"
 
 #~ msgid "no selection"
-#~ msgstr "Sem selecção"
+#~ msgstr "no hay selección"
 
 #~ msgid "Edit"
-#~ msgstr "editar"
+#~ msgstr "Editar"
 
 #~ msgid "the position has been deleted."
-#~ msgstr "A posição foi apagada"
+#~ msgstr "La posición ha sido eliminada."
 
 #~ msgid "the list has been cleared."
-#~ msgstr "A lista foi limpa"
+#~ msgstr "La lista ha sido limpiada."
 
 #~ msgid "An NVDA settings dialog is already open. Please close it first."
-#~ msgstr "Está aberto um diálogo do NVDA, Por favor, feche-o, primeiro."
+#~ msgstr ""
+#~ "Está abierto todavía un diálogo de opciones de NVDA. Por favor ciérralo "
+#~ "antes."
 
 #~ msgid ""
 #~ "To open a list showing the points that have already been saved for this "
 #~ "application."
-#~ msgstr "Para mostrar uma lista com as posições guardadas para esta posição."
+#~ msgstr ""
+#~ "Abrir una lista mostrando los puntos que se han guardado ya para esta "
+#~ "aplicación."
 
 #~ msgid "Enter the value for position name you wish to save."
-#~ msgstr "Escreva o nome para a posição que quer guardar."
+#~ msgstr ""
+#~ "Introduce el valor para el nombre de la posición que desees guardar."
 
 #~ msgid "please enter the value for the name of the position."
-#~ msgstr "Por favor, escreva o nome para a posição:"
+#~ msgstr "por favor introduce el valor para el nombre de la posición."
 
 #~ msgid "to save a the current position."
-#~ msgstr "Para guardar a posição actual;"
+#~ msgstr "guardar la posición actual."
 
 #~ msgid "to select a value for mouse movement (1, 10, 20, 50. 100."
 #~ msgstr ""
-#~ "Para seleccionar um valor para o  movimento do rato: (1, 10, 20, 50. 100."
+#~ "seleccionar un valor para el movimiento del ratón (1, 10, 20, 50. 100."
 
 #~ msgid "report pixels off"
-#~ msgstr "Indicar pixels desligado"
+#~ msgstr "anunciar píxeles desactivado"
 
 #~ msgid "report pixels on"
-#~ msgstr "Indicar pixels ligado"
+#~ msgstr "anunciar píxeles activado"
 
 #~ msgid "toggle reporting of pixels"
-#~ msgstr "alternar indicação de pixels"
+#~ msgstr "conmuta el anunciado de los píxeles"
 
 #~ msgid "%d , %d"
 #~ msgstr "%d , %d"
 
 #~ msgid "report the positions of the mouse."
-#~ msgstr "Indicar as posições do rato;"
+#~ msgstr "anuncia las posiciones del ratón."
 
 #~ msgid "Enter the value for position number you wish to jump to"
-#~ msgstr "Entre os valores da posição para onde deseja saltar;"
+#~ msgstr ""
+#~ "Introduce el valor para el número de la posición a la que desees saltar"
 
 #~ msgid "Jump to position"
-#~ msgstr "Saltar para a posição"
+#~ msgstr "Saltar a la posición"
 
 #~ msgid "please enter comma between the first and the second number"
-#~ msgstr "Por favor, escreva uma vírgola entre o primeiro e o segundo número"
+#~ msgstr "por favor introduce coma entre el primero y el segundo número"
 
 #~ msgid "please enter an integer number."
-#~ msgstr "Por favor, escreva um número inteiro;"
+#~ msgstr "por favor introduce un número entero."
 
 #~ msgid "type the x/y value you wish the cursor to jump to"
-#~ msgstr "Escreva o valor de X/y da posição para onde deseja saltar;"
+#~ msgstr "teclea los valores x/y a los que desees que salte el cursor"
 
 #~ msgid "restriction on"
-#~ msgstr "Restrição ligada"
+#~ msgstr "restricción activada"
 
 #~ msgid "restriction off"
-#~ msgstr "Restrição desligada"
+#~ msgstr "restricción desactivada"

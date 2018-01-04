@@ -39,6 +39,13 @@ Syötekomennot-valintaikkunasta Golden Cursor -kategorian alta.
 * Mikäli tallennettuja sijainteja ei ole jäljellä niitä poistettaessa,
   sovelluksen sijainnit tyhjennetään.
 
+## Versio 2.1
+
+* Korjattu Unicode-dekoodausvirhe yritettäessä poistaa tunnisteen nimeä.
+* Estetty lisäosan valintaikkunoiden avaaminen useaan kertaan.
+* Paranneltu hiiren sijaintiluettelo- sekä sijaintiin siirtymisen
+  valintaikkunoiden ulkoasua.
+
 ## Versio 2.0
 
 * Edellyttää NVDA 2017.3:a tai uudempaa.

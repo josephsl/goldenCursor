@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: goldenCursor 1.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2017-02-03 07:00+1000\n"
-"PO-Revision-Date: 2017-07-27 15:42+0100\n"
+"PO-Revision-Date: 2018-01-01 18:15+0100\n"
 "Last-Translator: zvonimir stanecic <zvonimirek222@yandex.com>\n"
 "Language-Team: pl <LL@li.org>\n"
 "Language: pl\n"
@@ -17,135 +17,238 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.6.10\n"
 
-msgid "positions List"
-msgstr "Spis pozycji"
-
 #, python-format
-msgid "there is no any positions for %s."
-msgstr "Nie ma żadnej pozycji dla %s."
+msgid "Mouse positions for %s"
+msgstr "pozycje myszy dla %s"
 
-msgid "choose a item of this list"
-msgstr "Wybierz element z tej listy"
+msgid "New mouse position"
+msgstr "Nowa pozycja myszy"
 
-msgid "&rename"
+#. Translators: The label for the combo box of the mouse positions in the current application.
+msgid "&Saved mouse positions"
+msgstr "&Zachowane pozycje myszy"
+
+#. Translators: the column in mouse positions list to identify the position name.
+msgid "Name"
+msgstr "Nazwa"
+
+#. Translators: the column in mouse positions list to identify the X coordinate.
+msgid "Position X"
+msgstr "pozycja X"
+
+#. Translators: the column in mouse positions list to identify the Y coordinate.
+msgid "Position Y"
+msgstr "pozycja Y"
+
+#. Translators: the button to jump to the selected position.
+msgid "&Jump"
+msgstr "&Przeskocz"
+
+#. Translators: the button to rename a mouse position.
+msgid "&Rename"
 msgstr "&Zmień nazwę"
 
-msgid "&delete"
+#. Translators: the button to delete the selected mouse position.
+msgid "&Delete"
 msgstr "&Usuń"
 
-msgid "c&lear"
-msgstr "&Wyczyść"
+#. Translators: the button to clear all mouse positions for the focused app.
+msgid "C&lear positions"
+msgstr "&Wyczyść pozycje"
 
-msgid "no selection"
-msgstr "nie ma zaznaczenia"
+#. Translators: The label of a button to close the mouse positions dialog.
+msgid "&Close"
+msgstr "&Zamknij"
 
-msgid "Edit"
-msgstr "Edycha"
+msgid "&X position"
+msgstr "&X pozycja"
 
+msgid "&Y position"
+msgstr "&Y pozycja"
+
+#. Translators: The label of a field to enter a new name for a mouse position/tag.
+msgid "New name"
+msgstr "Nowa nazwa"
+
+#. Translators: The title of the dialog to rename a mouse position.
 msgid "Rename"
 msgstr "Zmień nazwę"
 
-msgid "the position has been deleted."
-msgstr "Pozycja była usunięta."
-
-msgid "the list has been cleared."
-msgstr "Spis był wyczyszczony."
-
-msgid "An NVDA settings dialog is already open. Please close it first."
-msgstr "Okno dialogowe ustawień NVDA jest już otwarte. Najpierw go zamknij."
-
+#. Translators: An error displayed when renaming a mouse position
+#. and a tag with the new name already exists.
 msgid ""
-"To open a list showing the points that have already been saved for this "
-"application."
-msgstr "Otwiera listę, która pokazuje punkty dla aktualnie otwartej aplikacji."
-
-msgid "Enter the value for position name you wish to save."
-msgstr "Wpisz wartość dla nazwy pozycji, którą chcesz zapisać."
-
-msgid "save position"
-msgstr "Zapisz pozycję"
-
-msgid "please enter the value for the name of the position."
-msgstr "Proszę wpisać wartość nazwy pozycji."
+"Another mouse position has the same name as the entered name. Please choose "
+"a different name."
+msgstr "Inna pozycja myszy ma taką samą nazwę. Proszę wybrać inną nazwę."
 
 msgid "Error"
 msgstr "błąd"
 
+#. Translators: The confirmation prompt displayed when the user requests to delete the selected tag.
+#, python-brace-format
+msgid ""
+"Are you sure you want to delete the position named {name}? This cannot be "
+"undone."
+msgstr ""
+"Czy chcesz usunąć pozycję nazwaną {name}? ta operacja jest nieodwracalna."
+
+#. Translators: The title of the confirmation dialog for deletion of selected position.
+msgid "Delete position"
+msgstr "Usuń pozycje"
+
+#. Translators: The confirmation prompt displayed when the user is about to clear positions.
+#, python-brace-format
+msgid ""
+"Are you sure you want to clear mouse positions for the current application "
+"({appName})? This cannot be undone."
+msgstr ""
+"Czy chcesz usunąć pozycje myszy dla aktualnej aplikacji ({appName})? Ta "
+"operacja jest nieodwracalna."
+
+#. Translators: The title of the confirmation dialog for clearing mouse positions.
+msgid "Clear mouse positions"
+msgstr "Wyczyść pozycje myszy"
+
+#. Translators: A dialog message shown when tags for the application is cleared.
+#, python-brace-format
+msgid "All mouse positions for the application {appName} has been deleted."
+msgstr "Wszywstkie pozycje dla aplikacji {appName} zostały usunięte."
+
+#. Translators: Title of the tag clear confirmation dialog.
+msgid "Mouse positions cleared"
+msgstr "Pozycje myszy zostały wyczyszczone"
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Golden Cursor"
+msgstr "Golden Cursor"
+
+msgid "&Golden Cursor..."
+msgstr "&Golden Cursor..."
+
+msgid "Golden Cursor add-on settings"
+msgstr "Ustawienia dodatku Golden Cursor"
+
+#. Translators: message presented when no mouse positions are available for the focused app.
 #, python-format
-msgid "the position has been saved in %s."
+msgid "No mouse positions for %s."
+msgstr "Pozycje myszy dla %s nie istnieją."
+
+#. Translators: input help message for a Golden Cursor command.
+msgid "Opens a dialog listing mouse positions for the current application"
+msgstr ""
+"Otwiera dialog pokazujący wszystkie pozycje myszy dla aktualnej aplikacji"
+
+#. Translators: edit field label for new mouse position.
+#, fuzzy, python-brace-format
+msgid "Enter the name for the current mouse position (x: {x}, Y: {y})"
+msgstr "Wpisz nazwę dla aktualnej pozycji myszy (x: {x}, Y: {y}"
+
+#. Translators: title for save mouse position dialog.
+msgid "Save mouse position"
+msgstr "Zapisz pozycje myszy"
+
+#. Translators: presented when position (tag) has been saved.
+#, python-format
+msgid "Position has been saved in %s."
 msgstr "pozycja została zapisana w %s."
 
-msgid "to save a the current position."
-msgstr "aby zapisać aktualną pozycję."
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Opens a dialog to label the current mouse position and saves it"
+msgstr ""
+"Otwiera dialog do nadawania nazwy aktualnej pozycji i zachowuje pozycję."
 
-msgid "to select a value for mouse movement (1, 10, 20, 50. 100."
-msgstr "aby wybrać wartość dla poruszania myszy (1, 10, 20, 50. 100."
+#. Translators: input help message for a Golden Cursor command.
+msgid "Changes mouse movement unit"
+msgstr "zmienia jednostke przemieszczania myszy"
 
-msgid "report pixels off"
-msgstr "Informuj o pikselach wyłączono"
+#. Translators: reported when new mouse coordinate announcement is on.
+msgid "Report new mouse coordinates on"
+msgstr "wypowiadanie nowych współrzędnych myszy włączone"
 
-msgid "report pixels on"
-msgstr "Informuj o pikselach włączono"
+#. Translators: reported when new mouse coordinate announcement is on.
+msgid "Report new mouse coordinates off"
+msgstr "wypowiadanie nowych wspólrzędnych myszy wyłączone"
 
-msgid "toggle reporting of pixels"
-msgstr "włącza i wyłącza powiadamianie o pikselach"
+#. Translators: Input help message for a Golden Cursor add-on command.
+msgid "toggles reporting of mouse coordinates in pixels when mouse moves"
+msgstr ""
+"włącza i wyłącza oznajmianie współrzednych w pikselach przy przemieszczaniu "
+"myszy"
 
-#, python-format
-msgid "%d , %d"
-msgstr "%d , %d"
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Reports current X and Y mouse position"
+msgstr "oznajmia aktualną pozycje myszy x i y"
 
-msgid "report the positions of the mouse."
-msgstr "Powiadamia o pozycji wskaźnika myszy."
+#. Translators: presented when toggling mouse arrows feature.
+msgid "Mouse arrows on"
+msgstr "strzałki myszy włączone"
 
-msgid "Moves the Mouse pointer right."
+#. Translators: presented when toggling mouse arrows feature.
+msgid "Mouse arrows off"
+msgstr "strzałki myszy wyłączone"
+
+#. Translators: input help mode message for a Golden Cursor add-on command.
+msgid "Toggles mouse arrows to move the mouse with the arrow keys"
+msgstr ""
+"włącza i wyłącza strzałki myszy do przemieszczania myszy za pomocą strzałek"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Moves the Mouse pointer to the right"
 msgstr "Przemieszcza wskaźnik myszy w prawo."
 
-msgid "Moves the Mouse pointer left."
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Moves the Mouse pointer to the left"
 msgstr "Przemieszcza wskaźnik myszy w lewo."
 
-msgid "Moves the Mouse pointer up."
-msgstr "Przemieszcza wskaźnik myszy w górę."
-
-msgid "Moves the Mouse pointer down."
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Moves the Mouse pointer down"
 msgstr "Przemieszcza wskaźnik myszy w dół."
 
-msgid "Enter the value for position number you wish to jump to"
-msgstr "Wpisz wartość dla numeru pozycji, do której chcesz przeskoczyć"
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Moves the Mouse pointer up"
+msgstr "Przemieszcza wskaźnik myszy w górę."
 
-msgid "Jump to position"
-msgstr "Przeskoć do pozycji"
-
-msgid "please enter comma between the first and the second number"
-msgstr "Proszę wpisać przecinek pomiędzy pierszą i drugą liczbą"
-
-msgid "please enter an integer number."
-msgstr "Proszę wpisać całkowitą liczbę."
-
-msgid "type the x/y value you wish the cursor to jump to"
-msgstr "Wpisz wartość x/y do której chcesz, żeby kursor przeskoczył"
-
-msgid "restriction on"
-msgstr "Restrykcja włączona"
-
-msgid "restriction off"
-msgstr "restrykcja wyłączona"
-
+#. Translators: Input help message for a Golden Cursor command.
 msgid ""
-"Toggles the restriction between the 2 levels you can toggle between "
-"Application Window restriction and Unrestricted."
+"Opens a dialog to enter the X and Y coordinates for the mouse to move to"
+msgstr ""
+"otwiera okno dialogowe do wpisywania x i y współrzędnych do przemieszczania "
+"do jakiegoś obiektu"
+
+#. Translators: presented when mouse movement is restricted to current application.
+msgid "Mouse movement restricted to current application"
+msgstr "Przenieszczanie myszy ograniczone na aktualną aplikację"
+
+#. Translators: presented when mouse movement is unrestricted.
+msgid "Mouse movement unrestricted"
+msgstr "Nieograniczone przemieszczanie myszy"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid ""
+"Toggles mouse movement restriction between current application and "
+"unrestricted"
 msgstr ""
 "przełącza restrykcje pomiędzy dwoma poziomami okno aplikacji i "
 "nierestrykcyjnie.."
 
-#. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on to be shown on installation and add-on information.
-msgid "Golden Cursor moves the mouse with the keyboard"
-msgstr "Golden Cursor przemieszcza kursor myszy za pomocą klawiatury"
+#. Translators: This is the label for the Golden Cursor settings dialog.
+msgid "Golden Cursor Settings"
+msgstr "Ustawienia Golden Cursor"
+
+#. Translators: This is the label for a checkbox in the
+#. Golden Cursor settings dialog.
+msgid "&Announce new mouse coordinates when mouse moves"
+msgstr "&Oznajmiaj nowe współrzędne myszy przy przemieszczaniu"
+
+#. Translators: The label for a setting in Golden Cursor settings dialog to change mouse movement units.
+msgid "Mouse movement &unit (in pixels)"
+msgstr "&Jednostka przemieszczania myszy (w pikselach)"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
-"Allows you to control the mouse movement with the arrow keys. for further "
+"Allows you to control the mouse movement with the keyboard. for further "
 "details please visit the addon guide help."
 msgstr ""
 "Umożliwia kontrolę myszy za pomocą strzałek. Dla więcej informacji, proszę "

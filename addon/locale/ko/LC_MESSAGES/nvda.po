@@ -8,145 +8,239 @@ msgstr ""
 "Project-Id-Version: goldenCursor 1.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-03-18 05:37+1000\n"
-"PO-Revision-Date: 2016-04-09 08:15+0900\n"
+"PO-Revision-Date: 2018-01-03 20:20-0800\n"
 "Last-Translator: Dong hui Park <hi@aheu.org>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: \n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.1\n"
-
-msgid "positions List"
-msgstr "위치 목록"
+"X-Generator: Poedit 1.8.9\n"
 
 #, python-format
-msgid "there is no any positions for %s."
-msgstr "%s에 위치 없음."
+msgid "Mouse positions for %s"
+msgstr "마우스 위치 목록 (%s)"
 
-msgid "choose a item of this list"
-msgstr "목록에서 항목 선택"
+msgid "New mouse position"
+msgstr "새 마우스 위치"
 
-msgid "&rename"
-msgstr "변경 &r"
+#. Translators: The label for the combo box of the mouse positions in the current application.
+msgid "&Saved mouse positions"
+msgstr "마우스 위치 목록"
 
-msgid "&delete"
-msgstr "삭제 &d"
+#. Translators: the column in mouse positions list to identify the position name.
+msgid "Name"
+msgstr "이름"
 
-msgid "c&lear"
-msgstr "초기화 &l"
+#. Translators: the column in mouse positions list to identify the X coordinate.
+msgid "Position X"
+msgstr "X 위치"
 
-msgid "no selection"
-msgstr "선택되지 않음"
+#. Translators: the column in mouse positions list to identify the Y coordinate.
+msgid "Position Y"
+msgstr "Y 위치"
 
-msgid "Edit"
-msgstr "편집"
+#. Translators: the button to jump to the selected position.
+msgid "&Jump"
+msgstr "이동 (&J)"
 
+#. Translators: the button to rename a mouse position.
+msgid "&Rename"
+msgstr "이름 변경 (&R)"
+
+#. Translators: the button to delete the selected mouse position.
+msgid "&Delete"
+msgstr "삭제 (&D)"
+
+#. Translators: the button to clear all mouse positions for the focused app.
+msgid "C&lear positions"
+msgstr "모두 삭제 (&L)"
+
+#. Translators: The label of a button to close the mouse positions dialog.
+msgid "&Close"
+msgstr "닫기 (&C)"
+
+msgid "&X position"
+msgstr "X 위치 (&X)"
+
+msgid "&Y position"
+msgstr "Y 위치 (&Y)"
+
+#. Translators: The label of a field to enter a new name for a mouse position/tag.
+msgid "New name"
+msgstr "새 이름"
+
+#. Translators: The title of the dialog to rename a mouse position.
 msgid "Rename"
 msgstr "변경"
 
-msgid "the position has been deleted."
-msgstr "위치 삭제됨."
-
-msgid "the list has been cleared."
-msgstr "목록 초기화됨."
-
-msgid "An NVDA settings dialog is already open. Please close it first."
-msgstr ""
-"NVDA 설정 대화상자가 이미 열려 있습니다. 먼저 이전 설정 대화상자를 닫아주"
-"십시오."
-
+#. Translators: An error displayed when renaming a mouse position
+#. and a tag with the new name already exists.
 msgid ""
-"To open a list showing the points that have already been saved for this "
-"application."
-msgstr "응용 프로그램에 저장된 위치 목록을 보기 위한 목록을 엽니다."
-
-msgid "Enter the value for position name you wish to save."
-msgstr "저장하고자 하는 위치 이름 값을 입력합니다."
-
-msgid "save position"
-msgstr "위치 저장"
-
-msgid "please enter the value for the name of the position."
-msgstr "위치 이름 값을 입력하십시오."
+"Another mouse position has the same name as the entered name. Please choose "
+"a different name."
+msgstr "입력된 이름을 가진 아무스 이치가 존재합니다. 다른 이름을 입력하세요."
 
 msgid "Error"
 msgstr "오류"
 
-#, python-format
-msgid "the position has been saved in %s."
-msgstr "%s에 위치 저장됨."
-
-msgid "to save a the current position."
-msgstr "현재 위치를 저장합니다."
-
-msgid "to select a value for mouse movement (1, 10, 20, 50. 100."
-msgstr "마우스 이동 값 (1, 10, 20, 50, 100)를 선택합니다."
-
-msgid "report pixels off"
-msgstr "픽셀 알림 끔"
-
-msgid "report pixels on"
-msgstr "픽셀 알림 켬"
-
-msgid "toggle reporting of pixels"
-msgstr "픽셀 알림을 토글합니다"
-
-#, python-format
-msgid "%d , %d"
-msgstr "%d , %d"
-
-msgid "report the positions of the mouse."
-msgstr "마우스의 위치를 알립니다."
-
-msgid "Moves the Mouse pointer right."
-msgstr "마우스 포인터를 오른쪽으로 이동합니다."
-
-msgid "Moves the Mouse pointer left."
-msgstr "마우스 포인터를 왼쪽으로 이동합니다."
-
-msgid "Moves the Mouse pointer up."
-msgstr "마우스 포인터를 위로 이동합니다."
-
-msgid "Moves the Mouse pointer down."
-msgstr "마우스 포인터를 아래로 이동합니다."
-
-msgid "Enter the value for position number you wish to jump to"
-msgstr "이동하고자 하는 위치 값 입력"
-
-msgid "Jump to position"
-msgstr "위치로 이동"
-
-msgid "please enter comma between the first and the second number"
-msgstr "첫 번째와 두 번째 숫자를 쉼표 사이에 입력하싶시오"
-
-msgid "please enter an integer number."
-msgstr "정수를 입력하싶시오."
-
-msgid "type the x/y value you wish the cursor to jump to"
-msgstr "이동하고자 하는 커서의 x/y 값 입력"
-
-msgid "restriction on"
-msgstr "제한 켬"
-
-msgid "restriction off"
-msgstr "제한 끔"
-
+#. Translators: The confirmation prompt displayed when the user requests to delete the selected tag.
+#, python-brace-format
 msgid ""
-"Toggles the restriction between the 2 levels you can toggle between "
-"Application Window restriction and Unrestricted."
+"Are you sure you want to delete the position named {name}? This cannot be "
+"undone."
+msgstr "{name} 마우스 위치를 삭제하시겠습니까? 삭제시 복원할 수 없습니다."
+
+#. Translators: The title of the confirmation dialog for deletion of selected position.
+msgid "Delete position"
+msgstr "위치 삭제"
+
+#. Translators: The confirmation prompt displayed when the user is about to clear positions.
+#, python-brace-format
+msgid ""
+"Are you sure you want to clear mouse positions for the current application "
+"({appName})? This cannot be undone."
 msgstr ""
+"현재 앱({appName})에 할당된 마우스 위치를 삭제하시겠습니까? 삭제 후 복원할 "
+"수 없습니다."
+
+#. Translators: The title of the confirmation dialog for clearing mouse positions.
+msgid "Clear mouse positions"
+msgstr "마우스 위치 모두 삭제"
+
+#. Translators: A dialog message shown when tags for the application is cleared.
+#, python-brace-format
+msgid "All mouse positions for the application {appName} has been deleted."
+msgstr "{appName}에 할당된 마우스 위치가 모두 삭제되었습니다."
+
+#. Translators: Title of the tag clear confirmation dialog.
+msgid "Mouse positions cleared"
+msgstr "마우스 위치 삭제"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
-msgid "Golden Cursor moves the mouse with the keyboard"
-msgstr "Golden Cursor 키보드를 사용하여 마우스 이동"
+msgid "Golden Cursor"
+msgstr "Golden Cursor"
+
+msgid "&Golden Cursor..."
+msgstr "&Golden Cursor..."
+
+msgid "Golden Cursor add-on settings"
+msgstr "Golden Cursor 추가 기능 설정"
+
+#. Translators: message presented when no mouse positions are available for the focused app.
+#, python-format
+msgid "No mouse positions for %s."
+msgstr "%s에 할당된 마우스 위치 없음"
+
+#. Translators: input help message for a Golden Cursor command.
+msgid "Opens a dialog listing mouse positions for the current application"
+msgstr "현재 사용중인 앱에 할당된 마우스 위치 목록을 보여줍니다"
+
+#. Translators: edit field label for new mouse position.
+#, fuzzy, python-brace-format
+msgid "Enter the name for the current mouse position (x: {x}, Y: {y})"
+msgstr "현재 마우스 위치 (x: {x}, Y: {y} 이름"
+
+#. Translators: title for save mouse position dialog.
+msgid "Save mouse position"
+msgstr "마우스 위치 저장"
+
+#. Translators: presented when position (tag) has been saved.
+#, fuzzy, python-format
+msgid "Position has been saved in %s."
+msgstr "%s에 위치 저장됨."
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Opens a dialog to label the current mouse position and saves it"
+msgstr "현재 마우스 위치 이름을 저장합니다"
+
+#. Translators: input help message for a Golden Cursor command.
+msgid "Changes mouse movement unit"
+msgstr "마우스 탐색 값을 변경합니다"
+
+#. Translators: reported when new mouse coordinate announcement is on.
+msgid "Report new mouse coordinates on"
+msgstr "마우스 위치 자표 알림"
+
+#. Translators: reported when new mouse coordinate announcement is on.
+msgid "Report new mouse coordinates off"
+msgstr "마우스 위치 좌표 알림 해제"
+
+#. Translators: Input help message for a Golden Cursor add-on command.
+msgid "toggles reporting of mouse coordinates in pixels when mouse moves"
+msgstr "마우스 위치 좌표 알림을 설정합니다"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Reports current X and Y mouse position"
+msgstr "현 마우스 자표를 알려줍니다"
+
+#. Translators: presented when toggling mouse arrows feature.
+msgid "Mouse arrows on"
+msgstr "마우스 방향 패드 사용"
+
+#. Translators: presented when toggling mouse arrows feature.
+msgid "Mouse arrows off"
+msgstr "마우스 방향 패드 사용 중지"
+
+#. Translators: input help mode message for a Golden Cursor add-on command.
+msgid "Toggles mouse arrows to move the mouse with the arrow keys"
+msgstr "마우스 방향 패드를 통해 방향키로 마우스 조작 여부를 설정합니다"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Moves the Mouse pointer to the right"
+msgstr "마우스 포인터를 오른쪽으로 이동합니다"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Moves the Mouse pointer to the left"
+msgstr "마우스 포인터를 왼쪽으로 이동합니다"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Moves the Mouse pointer down"
+msgstr "마우스 포인터를 아래로 이동합니다"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Moves the Mouse pointer up"
+msgstr "마우스 포인터를 위로 이동합니다"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid ""
+"Opens a dialog to enter the X and Y coordinates for the mouse to move to"
+msgstr ""
+
+#. Translators: presented when mouse movement is restricted to current application.
+msgid "Mouse movement restricted to current application"
+msgstr ""
+
+#. Translators: presented when mouse movement is unrestricted.
+msgid "Mouse movement unrestricted"
+msgstr ""
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid ""
+"Toggles mouse movement restriction between current application and "
+"unrestricted"
+msgstr ""
+
+#. Translators: This is the label for the Golden Cursor settings dialog.
+msgid "Golden Cursor Settings"
+msgstr "Golden Cursor 설정"
+
+#. Translators: This is the label for a checkbox in the
+#. Golden Cursor settings dialog.
+msgid "&Announce new mouse coordinates when mouse moves"
+msgstr "마우스 조작시 위치 좌표 알림 (&A)"
+
+#. Translators: The label for a setting in Golden Cursor settings dialog to change mouse movement units.
+msgid "Mouse movement &unit (in pixels)"
+msgstr "마우스 이동값 (pixel) (&U)"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#, fuzzy
 msgid ""
-"Allows you to control the mouse movement with the arrow keys. for further "
+"Allows you to control the mouse movement with the keyboard. for further "
 "details please visit the addon guide help."
 msgstr ""
-"화살표 키로 마우스 움직임을 제어할 수 있습니다. 자세한 내용은 추가 기능 도"
-"움말을 참조하싶시오."
+"화살표 키로 마우스 움직임을 제어할 수 있습니다. 자세한 내용은 추가 기능 도움"
+"말을 참조하싶시오."
