@@ -18,7 +18,7 @@ tallentaa hiiren sijainteja sovelluksille.
   se käytöstä.
 * Win+NVDA+J: siirrä hiiri tiettyyn x- ja y-sijaintiin.
 * Win+NVDA+P: ilmoita hiiren sijainti.
-* Win+NVDA+M: ota käyttöön tai poista käytöstä hiirinuolet.
+* Win+NVDA+M: ota hiirinuolet käyttöön tai poista ne käytöstä.
 * Win+NVDA+Nuolinäppäimet (tai pelkät nuolinäppäimet, mikäli hiirinuolet
   ovat käytössä): siirrä hiirtä.
 

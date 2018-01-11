@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: goldenCursor 1.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-03-18 05:37+1000\n"
-"PO-Revision-Date: 2018-01-03 22:57+0100\n"
+"PO-Revision-Date: 2018-01-05 17:49+0100\n"
 "Last-Translator: Juan C. Buño <oprisniki@gmail.com>\n"
 "Language-Team: NVDA add-ons translation team <oprisniki@gmail.com>\n"
 "Language: es\n"
@@ -144,9 +144,9 @@ msgstr ""
 "Abre un diálogo listando posiciones del ratón para la aplicación actual"
 
 #. Translators: edit field label for new mouse position.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Enter the name for the current mouse position (x: {x}, Y: {y})"
-msgstr "Introduce el nombre para la posición actual del ratón (x: {x}, Y: {y}"
+msgstr "Introduce el nombre para la posición actual del ratón (x: {x}, Y: {y})"
 
 #. Translators: title for save mouse position dialog.
 msgid "Save mouse position"

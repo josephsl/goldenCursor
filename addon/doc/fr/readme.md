@@ -20,7 +20,7 @@ sauvegarder la position de la souris pour les applications.
   position de la souris en pixels.
 * Windows+NVDA+J : déplacez la souris vers une position spécifique x et y.
 * Windows+NVDA+P : annoncer la position de la souris.
-* Windows+NVDA+M : basculer les flèches de la souris entre activer ou
+* Windows+NVDA+M : basculer les flèches de souris entre activer ou
   désactiver.
 * Windows+NVDA+touches fléchées (ou simplement les touches fléchées si les
   flèches de la souris sont activées) : déplacez la souris.

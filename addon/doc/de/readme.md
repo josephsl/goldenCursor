@@ -9,17 +9,20 @@ Speichern der gewünschten Mauspositionen für die jeweilige Anwendung.
 
 ## Tastenkombinationen
 
-* Control+NVDA+L: view saved mouse positions for an application if any.
-* Shift+NVDA+l: save a tag or a label for the current mouse position in the
-  currently focused application.
+* Strg+NVDA+L: Zeige gespeicherte Maus-Positionen für eine Anwendung, falls
+  vorhanden.
+* Umschalt+NVDA+l: Speichern eines Tags oder einer Bezeichnung für die
+  aktuelle Mausposition in der aktuell fokussierten Anwendung.
 * Windows+NVDA+C: ändert die Maus-Bewegungseinheit.
-* Windows+NVDA+R: toggle mouse restriction.
-* Windows+NVDA+S: toggle reporting of mouse position in pixels.
+* NVDA+Windows+R: Beschränkung der Maus ein- oder ausschalten.
+* Windows+NVDA+S: Neue Maus-Koordinaten in Pixel ansagen, wenn sich die Maus
+  bewegt
 * Windows+NVDA+J: bewegt die Maus zu einer bestimmten X- und Y-Position.
 * NVDA+Windows+P: Maus-Position ausgeben
-* Windows+NVDA+M: sswitch mouse arrows on or off.
-* Windows+NVDA+arrow keys (or just arrow keys if mouse arrows is on): move
-  mouse.
+* Windows+NVDA+M: Schaltet die Bewegung des Mauszeigers mit Pfeiltasten ein
+  und aus.
+* Windows+NVDA+Pfeiltasten (oder nur Pfeiltasten, wenn die Bewegung des
+  Mauszeigers durch pfeiltasten eingeschaltet ist): Maus bewegen.
 
 Anmerkung: Diese Tastenkombinationen können im NVDA-Menü unter Einstellungen
 im Dialog Eingaben in der Kategorie "goldener Cursor" angepasst werden.
@@ -34,47 +37,53 @@ im Dialog Eingaben in der Kategorie "goldener Cursor" angepasst werden.
   Positionsbeschreibungen umbenennen.
 * Die Versionen 1.x und 2.x der Mauspositions-Formate sind zueinander nicht
   kompatibel.
-* To perform functions that require use of arrow keys, turn off mouse arrows
-  first.
-* When deleting saved positions, if there are no saved positions left,
-  positions for the application will be cleared.
+* Um Funktionen auszuführen, die die Verwendung von Pfeiltasten erfordern,
+  schalten Sie zuerst die Bewegung des Mauszeigers durch Pfeiltasten aus.
+* Wenn beim Löschen gespeicherter Positionen keine gespeicherten Positionen
+  mehr vorhanden sind, werden die Positionen für die Anwendung gelöscht.
 
 ## Version 2.1
 
-* Fixed unicode decode error when trying to delete tag name.
+* Es wurde ein Unicode-Dekodierungsfehler beim Löschen des Tag-Namens
+  behoben.
 * Das öffnen mehrerer Instanzen verschiedener Erweiterungsdialoge ist nun
   nicht mehr möglich.
-* Improved appearance of mouse positions list and jump to position dialogs.
+* Die Darstellung der Liste der Mauspositionen und des Dialogs für das
+  Springen zu  bestimmten Positionen wurde verbessert.
 
 ## Version 2.0
 
 * Benötigt NVDA 2017.3 oder neuer.
-* Position file format is incompatible with 1.x versions. If 1.x position
-  format is found, old positions will be migrated to the new format during
-  installation.
-* Added a new Golden Cursor settings dialog in NVDA's Preferences menu to
-  configure mouse movement unit and announcement of mouse positions as mouse
-  moves.
+* Das neue Dateiformat ist inkompatibel zu 1.x-Versionen. Wenn Dateien der
+  alten Version gefunden werden, werden diese während der Installation in
+  das neue Format umgewandelt.
+* Es wurde ein neuer Goldener-Cursor-Einstellungsdialog im
+  NVDA-Menü/Einstellungen hinzugefügt, um die Mausbewegungseinheit und die
+  Anzeige der Mauspositionen bei Mausbewegungen zu konfigurieren.
 * Mehrere Meldungen dieser Erweiterung haben sich geändert.
-* When toggling various settings, toggle tone will no longer be heard.
-* You can now enter mouse arrows mode where you can move the mouse by
-  pressing just arrow keys.
-* Changes to positions list dialog, including new name (now called Mouse
-  Positions) and layout, displaying mouse coordinates for a label, and
-  showing the name of the active app as part of the title.
-* From Mouse Positions dialog, pressing Enter on a saved label will move the
-  mouse to the saved location.
-* When renaming a mouse position, an error dialog will be shown if a label
-  with the same name as the new name exists.
-* When deleting or clearing mouse positions, you must now answer Yes before
-  positions are deleted and/or cleared.
-* Changes to mouse jump feature, including a new name (now called New mouse
-  position) and ability to enter X and Y coordinates separately or by using
-  up or down arrow keys.
-* The dialog shown when saving the current mouse position now shows
-  coordinates for current mouse location.
-* When saving positions, resolved an issue where NvDA may play error tones
-  if the positions folder does not exist.
+* Beim Umschalten verschiedener Einstellungen ertönt kein Umschaltton mehr.
+* Sie können nun den Mauszeiger einfach mit den Pfeiltasten in Regionen
+  bewegen, in welchen die Maus durch Drücken der Pfeiltasten standardmäßig
+  bewegt werden kann.
+* Änderungen im Positionslistendialog, einschließlich des neuen Namens
+  (jetzt Mauspositionen genannt) und des Layouts. Die Anzeige der
+  Mauskoordinaten für eine Bezeichnung und die Anzeige des Namens der
+  aktiven Anwendung sind nun Teil des Titels.
+* Wenn Sie im Dialogfeld "Mauspositionen" die Eingabetaste auf einer
+  gespeicherten Bezeichnung drücken, wird die Maus an die gespeicherte
+  Position bewegt.
+* Beim Umbenennen einer Mausposition wird ein Fehlerdialog angezeigt, wenn
+  eine Bezeichnung mit dem gleichen Namen wie der neue Name bereits
+  existiert.
+* Beim Löschen von Mauspositionen müssen Sie jetzt mit Ja antworten, bevor
+  Positionen gelöscht werden.
+* Änderungen an der Maussprungfunktion, einschließlich eines neuen Namens
+  (jetzt Neue Mausposition genannt). X- und Y-Koordinaten können jetzt
+  getrennt oder mit den Pfeiltasten nach oben und unten eingegeben werden.
+* Der Dialog, der beim Speichern der aktuellen Mausposition angezeigt wird,
+  zeigt nun die Koordinaten der aktuellen Mausposition an.
+* Beim Speichern von Mauspositionen wurde ein Problem behoben, bei dem NVDA
+  Fehlertöne abspielte, wenn der Positionsordner nicht existiert.
 
 ## Version 1.4
 

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: goldenCursor 1.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-03-18 05:37+1000\n"
-"PO-Revision-Date: 2017-12-29 08:52+0200\n"
+"PO-Revision-Date: 2018-01-05 14:07+0200\n"
 "Last-Translator: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language-Team: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language: fi\n"
@@ -143,9 +143,9 @@ msgstr ""
 "määritetyistä hiiren sijainneista."
 
 #. Translators: edit field label for new mouse position.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Enter the name for the current mouse position (x: {x}, Y: {y})"
-msgstr "Anna nimi hiiren nykyiselle sijainnille (x: {x}, Y: {y})"
+msgstr "Anna nimi hiiren nykyiselle sijainnille (X: {x}, Y: {y})"
 
 #. Translators: title for save mouse position dialog.
 msgid "Save mouse position"

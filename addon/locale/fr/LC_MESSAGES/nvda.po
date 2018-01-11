@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: goldenCursor 1.0\n"
+"Project-Id-Version: goldenCursor Version 2.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-03-18 05:37+1000\n"
-"PO-Revision-Date: 2017-12-31 17:16+0100\n"
+"PO-Revision-Date: 2018-01-05 13:47+0100\n"
 "Last-Translator: Rémy Ruiz <remyruiz@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -145,9 +145,9 @@ msgstr ""
 "cours"
 
 #. Translators: edit field label for new mouse position.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Enter the name for the current mouse position (x: {x}, Y: {y})"
-msgstr "Entrez le nom de la position souris en cours (x: {x}, Y: {y}"
+msgstr "Entrez le nom de la position courante de souris (x: {x}, Y: {y})"
 
 #. Translators: title for save mouse position dialog.
 msgid "Save mouse position"
@@ -197,7 +197,7 @@ msgstr "Flèches souris désactivé"
 msgid "Toggles mouse arrows to move the mouse with the arrow keys"
 msgstr ""
 "Activer/désactiver les flèches souris pour déplacer la souris avec les "
-"touches flèches"
+"touches fléchées"
 
 #. Translators: Input help message for a Golden Cursor command.
 msgid "Moves the Mouse pointer to the right"
