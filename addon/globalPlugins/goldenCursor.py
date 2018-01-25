@@ -233,7 +233,7 @@ class PositionsList(wx.Dialog):
 			os.remove(self.positions.filename)
 			self.positions.clear()
 			# Translators: A dialog message shown when tags for the application is cleared.
-			gui.messageBox(_("All mouse positions for the application {appName} has been deleted.".format(appName = self.appName)),
+			gui.messageBox(_("All mouse positions for the application {appName} have been deleted.".format(appName = self.appName)),
 			# Translators: Title of the tag clear confirmation dialog.
 			_("Mouse positions cleared"), wx.OK|wx.ICON_INFORMATION)
 			self.Close()
@@ -325,7 +325,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				position[name] = ",".join([x, y])
 				position.write()
 				# Translators: presented when position (tag) has been saved.
-				ui.message(_("Position has been saved in %s.") % position.filename)
+				ui.message(_("Position saved in %s.") % position.filename)
 		gui.runScriptModalDialog(d, callback)
 	# Translators: Input help message for a Golden Cursor command.
 	script_saveMousePosition.__doc__ = _("Opens a dialog to label the current mouse position and saves it")
