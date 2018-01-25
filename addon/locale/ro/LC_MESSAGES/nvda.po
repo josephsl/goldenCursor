@@ -8,150 +8,247 @@ msgstr ""
 "Project-Id-Version: goldenCursor 1.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-03-18 05:37+1000\n"
-"PO-Revision-Date: 2016-07-26 00:10+0300\n"
-"Last-Translator: Florian Ionașcu <florianionascu@hotmail.com>\n"
+"PO-Revision-Date: 2018-01-25 18:45+0100\n"
+"Last-Translator: Adriani Botez <adriani.botez@gmail.com>\n"
+"Language-Team: \n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.8\n"
-"Language-Team: \n"
-
-msgid "positions List"
-msgstr "Lista de poziții"
+"X-Generator: Poedit 1.5.7\n"
 
 #, python-format
-msgid "there is no any positions for %s."
-msgstr "nu există orice poziție pentru %s"
+msgid "Mouse positions for %s"
+msgstr "Poziții ale mausului pentru %s"
 
-msgid "choose a item of this list"
-msgstr "alegeți un element al acestei liste"
+msgid "New mouse position"
+msgstr "Poziție maus nouă"
 
-msgid "&rename"
-msgstr "&redenumire"
+#. Translators: The label for the combo box of the mouse positions in the current application.
+msgid "&Saved mouse positions"
+msgstr "&poziții maus salvate"
 
-msgid "&delete"
-msgstr "&ș&tergere"
+#. Translators: the column in mouse positions list to identify the position name.
+msgid "Name"
+msgstr "Nume"
 
-msgid "c&lear"
-msgstr "go&lește"
+#. Translators: the column in mouse positions list to identify the X coordinate.
+msgid "Position X"
+msgstr "Poziția X"
 
-msgid "no selection"
-msgstr "fără selecție"
+#. Translators: the column in mouse positions list to identify the Y coordinate.
+msgid "Position Y"
+msgstr "Poziția Y"
 
-msgid "Edit"
-msgstr "Editare"
+#. Translators: the button to jump to the selected position.
+msgid "&Jump"
+msgstr "&sari"
 
+#. Translators: the button to rename a mouse position.
+msgid "&Rename"
+msgstr "&Redenumire"
+
+#. Translators: the button to delete the selected mouse position.
+msgid "&Delete"
+msgstr "&ștergere"
+
+#. Translators: the button to clear all mouse positions for the focused app.
+msgid "C&lear positions"
+msgstr "Cură&țare poziție"
+
+#. Translators: The label of a button to close the mouse positions dialog.
+msgid "&Close"
+msgstr "&Închide"
+
+msgid "&X position"
+msgstr "&Poziția X"
+
+msgid "&Y position"
+msgstr "&Poziția Y"
+
+#. Translators: The label of a field to enter a new name for a mouse position/tag.
+msgid "New name"
+msgstr "Nume nou"
+
+#. Translators: The title of the dialog to rename a mouse position.
 msgid "Rename"
 msgstr "Redenumire"
 
-msgid "the position has been deleted."
-msgstr "poziția a fost ștearsă."
-
-msgid "the list has been cleared."
-msgstr "lista a fost golită."
-
-msgid "An NVDA settings dialog is already open. Please close it first."
-msgstr ""
-"Un dialog al NVDA cu opțiuni este deja deschis. Închideți-l pe acela mai "
-"întâi."
-
+#. Translators: An error displayed when renaming a mouse position
+#. and a tag with the new name already exists.
 msgid ""
-"To open a list showing the points that have already been saved for this "
-"application."
+"Another mouse position has the same name as the entered name. Please choose "
+"a different name."
 msgstr ""
-"Pentru deschiderea unei liste care arată punctele care au fost deja salvate "
-"pentru această aplicație."
-
-msgid "Enter the value for position name you wish to save."
-msgstr ""
-"Introduceți valoarea pentru numele poziției pe care doriți să o salvați."
-
-msgid "save position"
-msgstr "salvare poziție"
-
-msgid "please enter the value for the name of the position."
-msgstr "introduceți valoarea pentru numele poziției"
+"O altă poziție a mausului are numele identic cu cel care tocmai a fost "
+"introdus. Vă rugăm să alegeți un nume diferit."
 
 msgid "Error"
 msgstr "Eroare"
 
-#, python-format
-msgid "the position has been saved in %s."
-msgstr "poziția a fost salvată în %s"
-
-msgid "to save a the current position."
-msgstr "pentru salvarea poziției curente"
-
-msgid "to select a value for mouse movement (1, 10, 20, 50. 100."
-msgstr ""
-"pentru selectarea unei valori pentru mișcarea mausului (1, 10, 20, 50. 100."
-
-msgid "report pixels off"
-msgstr "anunță pixeli dezactivat"
-
-msgid "report pixels on"
-msgstr "anunță pixeli activat"
-
-msgid "toggle reporting of pixels"
-msgstr "comută anunțul pixelilor"
-
-#, python-format
-msgid "%d , %d"
-msgstr "%d , %d"
-
-msgid "report the positions of the mouse."
-msgstr "anunță poziția mausului"
-
-msgid "Moves the Mouse pointer right."
-msgstr "Mută cursorul mausului dreapta."
-
-msgid "Moves the Mouse pointer left."
-msgstr "Mută cursorul mausului stânga."
-
-msgid "Moves the Mouse pointer up."
-msgstr "Mută cursorul mausului sus."
-
-msgid "Moves the Mouse pointer down."
-msgstr "Mută cursorul mausului jos."
-
-msgid "Enter the value for position number you wish to jump to"
-msgstr "Introduceți valoarea pentru numărul poziției la care doriți să săriți"
-
-msgid "Jump to position"
-msgstr "Salt la poziție"
-
-msgid "please enter comma between the first and the second number"
-msgstr "vă rugăm să introduceți virgulă între primul și cel de-al doilea număr"
-
-msgid "please enter an integer number."
-msgstr "vă rugăm să introduceți un număr întreg"
-
-msgid "type the x/y value you wish the cursor to jump to"
-msgstr "tastați valoarea x/y la care doriți să facă salt cursorul"
-
-msgid "restriction on"
-msgstr "restricție activat"
-
-msgid "restriction off"
-msgstr "restricție dezactivat"
-
+#. Translators: The confirmation prompt displayed when the user requests to delete the selected tag.
 msgid ""
-"Toggles the restriction between the 2 levels you can toggle between "
-"Application Window restriction and Unrestricted."
+"Are you sure you want to delete the position named {name}? This cannot be "
+"undone."
 msgstr ""
-"Comută restricția intre cele două niveluri; puteți comuta între "
-"„Restricționat la fereastra aplicației” și „Nerestricționat”"
+"Sunteți sigur că vreți să ștergeți poziția numită {name}? Acest lucru nu "
+"poate fi anulat."
+
+#. Translators: The title of the confirmation dialog for deletion of selected position.
+msgid "Delete position"
+msgstr "Șterge poziția"
+
+#. Translators: The confirmation prompt displayed when the user is about to clear positions.
+msgid ""
+"Are you sure you want to clear mouse positions for the current application "
+"({appName})? This cannot be undone."
+msgstr ""
+"Sunteți sigur că vreți să ștergeți toate pozițiile mausului pentru aplicația "
+"curentă ({appName})? Acest lucru nu poate fi anulat."
+
+#. Translators: The title of the confirmation dialog for clearing mouse positions.
+msgid "Clear mouse positions"
+msgstr "Șterge pozițiile mausului"
+
+#. Translators: A dialog message shown when tags for the application is cleared.
+msgid "All mouse positions for the application {appName} have been deleted."
+msgstr "Toate pozițiile mausului pentru aplicația {appName} au foșt șterse."
+
+#. Translators: Title of the tag clear confirmation dialog.
+msgid "Mouse positions cleared"
+msgstr "Poziții maus șterse"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
-msgid "Golden Cursor moves the mouse with the keyboard"
-msgstr "Golden Cursor mută mausul împreună cu tastatura"
+msgid "Golden Cursor"
+msgstr "Golden Cursor"
+
+msgid "&Golden Cursor..."
+msgstr "&Golden Cursor..."
+
+msgid "Golden Cursor add-on settings"
+msgstr "Setări"
+
+#. Translators: message presented when no mouse positions are available for the focused app.
+#, python-format
+msgid "No mouse positions for %s."
+msgstr "Nicio poziție maus pentru %s."
+
+#. Translators: input help message for a Golden Cursor command.
+msgid "Opens a dialog listing mouse positions for the current application"
+msgstr ""
+"Deschide un dialog care listează pozițiile mausului pentru aplicația curentă"
+
+#. Translators: edit field label for new mouse position.
+msgid "Enter the name for the current mouse position (x: {x}, Y: {y})"
+msgstr "Introduceți numele pentru poziția curentă a mausului (x: {x}, Y: {y}"
+
+#. Translators: title for save mouse position dialog.
+msgid "Save mouse position"
+msgstr "Salvare poziție maus"
+
+#. Translators: presented when position (tag) has been saved.
+#, python-format
+msgid "Position saved in %s."
+msgstr "Poziția a fost salvată în %s"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Opens a dialog to label the current mouse position and saves it"
+msgstr ""
+"Deschide un dialog pentru a eticheta poziția curentă a mausului și o salvează"
+
+#. Translators: input help message for a Golden Cursor command.
+msgid "Changes mouse movement unit"
+msgstr "Modifică unitatea de mișcare a mausului"
+
+#. Translators: reported when new mouse coordinate announcement is on.
+msgid "Report new mouse coordinates on"
+msgstr "Anunță coordonatele noi ale mausului activat"
+
+#. Translators: reported when new mouse coordinate announcement is on.
+msgid "Report new mouse coordinates off"
+msgstr "Anunță coordonatele noi ale mausului dezactivat"
+
+#. Translators: Input help message for a Golden Cursor add-on command.
+msgid "toggles reporting of mouse coordinates in pixels when mouse moves"
+msgstr ""
+"activează sau dezactivează anunțarea coordonatelor mausului în pixeli când "
+"acesta se mișcă"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Reports current X and Y mouse position"
+msgstr "Raportează coordonatele X și Y ale mausului"
+
+#. Translators: presented when toggling mouse arrows feature.
+msgid "Mouse arrows on"
+msgstr "Săgeți maus activat"
+
+#. Translators: presented when toggling mouse arrows feature.
+msgid "Mouse arrows off"
+msgstr "Săgeți maus dezactivat"
+
+#. Translators: input help mode message for a Golden Cursor add-on command.
+msgid "Toggles mouse arrows to move the mouse with the arrow keys"
+msgstr ""
+"Activează sau dezactivează săgețile mausului pentru a deplasa mausul cu "
+"săgețile"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Moves the Mouse pointer to the right"
+msgstr "Deplasează cursorul mausului spre dreapta"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Moves the Mouse pointer to the left"
+msgstr "Deplasează cursorul mausului spre stânga"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Moves the Mouse pointer down"
+msgstr "Deplasează cursorul mausului în jos."
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Moves the Mouse pointer up"
+msgstr "Deplasează cursorul mausului n sus."
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid ""
+"Opens a dialog to enter the X and Y coordinates for the mouse to move to"
+msgstr ""
+"Deschide un dialog pentru introducerea coordonatelor X și Y la care mausul "
+"să se deplaseze"
+
+#. Translators: presented when mouse movement is restricted to current application.
+msgid "Mouse movement restricted to current application"
+msgstr "Mișcarea mausului este restricționată pentru aplicația curentă"
+
+#. Translators: presented when mouse movement is unrestricted.
+msgid "Mouse movement unrestricted"
+msgstr "Mișcare maus nerestricționată"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid ""
+"Toggles mouse movement restriction between current application and "
+"unrestricted"
+msgstr ""
+"Comută restricționarea mișcării mausului între aplicația curentă și "
+"nerestricționat"
+
+#. Translators: This is the label for the Golden Cursor settings dialog.
+msgid "Golden Cursor Settings"
+msgstr "Setări Golden Cursor"
+
+#. Translators: This is the label for a checkbox in the
+#. Golden Cursor settings dialog.
+msgid "&Announce new mouse coordinates when mouse moves"
+msgstr "&Anunță coordonatele noi ale mausului când acesta se mișcă"
+
+#. Translators: The label for a setting in Golden Cursor settings dialog to change mouse movement units.
+msgid "Mouse movement &unit (in pixels)"
+msgstr "&Unitatea de mișcare a mausului (în pixeli)"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
-"Allows you to control the mouse movement with the arrow keys. for further "
+"Allows you to control the mouse movement with the keyboard. for further "
 "details please visit the addon guide help."
 msgstr ""
 "Vă permite să controlați mișcarea mausului cu tastele săgeată. Pentru "

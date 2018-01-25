@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: goldenCursor 1.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-03-18 05:37+1000\n"
-"PO-Revision-Date: 2018-01-09 13:14+0100\n"
+"PO-Revision-Date: 2018-01-25 18:46+0100\n"
 "Last-Translator: Adriani Botez <adriani.botez@gmail.com>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -111,7 +111,7 @@ msgid "Clear mouse positions"
 msgstr "Maus-Positionen löschen"
 
 #. Translators: A dialog message shown when tags for the application is cleared.
-msgid "All mouse positions for the application {appName} has been deleted."
+msgid "All mouse positions for the application {appName} have been deleted."
 msgstr "Alle Maus-Positionen für die Anwendung {appName} wurde gelöscht."
 
 #. Translators: Title of the tag clear confirmation dialog.
@@ -151,7 +151,7 @@ msgstr "Maus-Position speichern"
 
 #. Translators: presented when position (tag) has been saved.
 #, python-format
-msgid "Position has been saved in %s."
+msgid "Position saved in %s."
 msgstr "Die Maus-Position wurde in %s gespeichert."
 
 #. Translators: Input help message for a Golden Cursor command.

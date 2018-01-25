@@ -113,8 +113,8 @@ msgid "Clear mouse positions"
 msgstr "Effacer les positions de la souris"
 
 #. Translators: A dialog message shown when tags for the application is cleared.
-#, python-brace-format
-msgid "All mouse positions for the application {appName} has been deleted."
+#, fuzzy, python-brace-format
+msgid "All mouse positions for the application {appName} have been deleted."
 msgstr ""
 "Toutes les positions de souris pour l'application {appName} ont été effacées."
 
@@ -154,8 +154,8 @@ msgid "Save mouse position"
 msgstr "sauvegarder la position de la souris"
 
 #. Translators: presented when position (tag) has been saved.
-#, python-format
-msgid "Position has been saved in %s."
+#, fuzzy, python-format
+msgid "Position saved in %s."
 msgstr "La position a été sauvegardée en %s."
 
 #. Translators: Input help message for a Golden Cursor command.
