@@ -9,7 +9,7 @@ rato para cada aplicação, individualmente.
 
 ## Comandos:
 
-* Control+NVDA+L: mostra as posições do mouse guardadas para uma aplicação,
+* Control+NVDA+L: mostra as posições do rato guardadas para uma aplicação,
   se as houver.
 * Shift+NVDA+l: Guarda uma etiqueta ou um nível para a posição actual do
   rato na aplicação actualmente focada.

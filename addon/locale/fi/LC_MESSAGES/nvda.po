@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: goldenCursor 1.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-03-18 05:37+1000\n"
-"PO-Revision-Date: 2018-01-26 07:38+0200\n"
+"PO-Revision-Date: 2018-02-02 12:36+0200\n"
 "Last-Translator: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language-Team: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language: fi\n"
@@ -154,7 +154,7 @@ msgstr "Tallenna hiiren sijainti"
 #. Translators: presented when position (tag) has been saved.
 #, python-format
 msgid "Position saved in %s."
-msgstr "Sijainti tallennettu nimellä %s."
+msgstr "Sijainti tallennettu tiedostoon %s."
 
 #. Translators: Input help message for a Golden Cursor command.
 msgid "Opens a dialog to label the current mouse position and saves it"
