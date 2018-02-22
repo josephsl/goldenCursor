@@ -8,148 +8,246 @@ msgstr ""
 "Project-Id-Version: goldenCursor 1.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-04-22 07:00+1000\n"
-"PO-Revision-Date: 2017-05-23 12:13+0100\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2018-01-16 21:23+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.6.10\n"
 
-msgid "positions List"
-msgstr "Pozíciólista"
-
 #, python-format
-msgid "there is no any positions for %s."
-msgstr "Nincs mentett pozíció az alábbi alkalmazáshoz: %s."
+msgid "Mouse positions for %s"
+msgstr "Egérpozíciók a következőhöz: %s"
 
-msgid "choose a item of this list"
-msgstr "Válasszon egy elemet az alábbi listáról."
+msgid "New mouse position"
+msgstr "Új egérpozíció"
 
-msgid "&rename"
-msgstr "&átnevezés"
+#. Translators: The label for the combo box of the mouse positions in the current application.
+msgid "&Saved mouse positions"
+msgstr "Elmentett egérpozíciók"
 
-msgid "&delete"
-msgstr "&törlés"
+#. Translators: the column in mouse positions list to identify the position name.
+msgid "Name"
+msgstr "Név"
 
-msgid "c&lear"
-msgstr "&ürítés"
+#. Translators: the column in mouse positions list to identify the X coordinate.
+msgid "Position X"
+msgstr "X koordínáta"
 
-msgid "no selection"
-msgstr "nem jelölt ki egyetlen elemet sem."
+#. Translators: the column in mouse positions list to identify the Y coordinate.
+msgid "Position Y"
+msgstr "Y koordináta"
 
-msgid "Edit"
-msgstr "Szerkesztés"
+#. Translators: the button to jump to the selected position.
+msgid "&Jump"
+msgstr "&Ugrás"
 
+#. Translators: the button to rename a mouse position.
+msgid "&Rename"
+msgstr "&Átnevezés"
+
+#. Translators: the button to delete the selected mouse position.
+msgid "&Delete"
+msgstr "&Törlés"
+
+#. Translators: the button to clear all mouse positions for the focused app.
+msgid "C&lear positions"
+msgstr "&Minden pozíció törlése"
+
+#. Translators: The label of a button to close the mouse positions dialog.
+msgid "&Close"
+msgstr "&Bezárás"
+
+msgid "&X position"
+msgstr "&X koordínáta"
+
+msgid "&Y position"
+msgstr "&Y koordináta"
+
+#. Translators: The label of a field to enter a new name for a mouse position/tag.
+msgid "New name"
+msgstr "Új név"
+
+#. Translators: The title of the dialog to rename a mouse position.
 msgid "Rename"
 msgstr "Átnevezés"
 
-msgid "the position has been deleted."
-msgstr "A pozíció törölve."
-
-msgid "the list has been cleared."
-msgstr "A lista kiürítve."
-
-msgid "An NVDA settings dialog is already open. Please close it first."
-msgstr ""
-"Egy NVDA beállítási párbeszédablak már nyitva van, a kívánt ablak megnyitása "
-"előtt azt előbb be kell zárnia."
-
+#. Translators: An error displayed when renaming a mouse position
+#. and a tag with the new name already exists.
 msgid ""
-"To open a list showing the points that have already been saved for this "
-"application."
+"Another mouse position has the same name as the entered name. Please choose "
+"a different name."
 msgstr ""
-"Pozíciólista megnyitása. Az aktív alkalmazáshoz elmentett pozíciókat "
-"tartalmazza."
-
-msgid "Enter the value for position name you wish to save."
-msgstr "Adja meg a menteni kívánt pozíció nevét."
-
-msgid "save position"
-msgstr "pozíció mentése"
-
-msgid "please enter the value for the name of the position."
-msgstr "Kérem írja be a menteni kívánt pozíció nevét."
+"Egy elmentett egérpozíció már létezik ezen a néven, kérem válasszon másik "
+"nevet."
 
 msgid "Error"
 msgstr "hiba"
 
+#. Translators: The confirmation prompt displayed when the user requests to delete the selected tag.
+#, python-brace-format
+msgid ""
+"Are you sure you want to delete the position named {name}? This cannot be "
+"undone."
+msgstr ""
+"Biztosan törölni kívánja a {name} néven elmentett egérpozíciót? A művelet "
+"nem vonható vissza."
+
+#. Translators: The title of the confirmation dialog for deletion of selected position.
+msgid "Delete position"
+msgstr "Pozíció törlése"
+
+#. Translators: The confirmation prompt displayed when the user is about to clear positions.
+#, python-brace-format
+msgid ""
+"Are you sure you want to clear mouse positions for the current application "
+"({appName})? This cannot be undone."
+msgstr ""
+"Biztosan törölni kíván minden mentett egérpozíciót az aktuális alkalmazáshoz "
+"({appName})? A művelet nem vonható vissza."
+
+#. Translators: The title of the confirmation dialog for clearing mouse positions.
+msgid "Clear mouse positions"
+msgstr "Minden egérpozíció törlése"
+
+#. Translators: A dialog message shown when tags for the application is cleared.
+#, fuzzy, python-brace-format
+msgid "All mouse positions for the application {appName} have been deleted."
+msgstr "{appName} alkalmazáshoz mentett egérpozíciók törölve."
+
+#. Translators: Title of the tag clear confirmation dialog.
+msgid "Mouse positions cleared"
+msgstr "Minden egérpozíció törölve"
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Golden Cursor"
+msgstr "Aranykurzor"
+
+msgid "&Golden Cursor..."
+msgstr "Aranykurzor"
+
+msgid "Golden Cursor add-on settings"
+msgstr "Aranykurzor bővítmény beállításai"
+
+#. Translators: message presented when no mouse positions are available for the focused app.
 #, python-format
-msgid "the position has been saved in %s."
+msgid "No mouse positions for %s."
+msgstr "Nincs mentett egérpozíció az alábbi alkalmazáshoz: %s."
+
+#. Translators: input help message for a Golden Cursor command.
+msgid "Opens a dialog listing mouse positions for the current application"
+msgstr "Megnyitja az aktuális alkalmazáshoz elmentett egérpozíciók listáját"
+
+#. Translators: edit field label for new mouse position.
+#, fuzzy, python-brace-format
+msgid "Enter the name for the current mouse position (x: {x}, Y: {y})"
+msgstr "Adja meg a jelenlegi egérpozíció nevét (x: {x}, Y: {y}"
+
+#. Translators: title for save mouse position dialog.
+msgid "Save mouse position"
+msgstr "Egérpozíció mentése"
+
+#. Translators: presented when position (tag) has been saved.
+#, fuzzy, python-format
+msgid "Position saved in %s."
 msgstr "A pozíció elmentve. Mentési hely: %s."
 
-msgid "to save a the current position."
-msgstr "Aktuális pozíció elmentése."
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Opens a dialog to label the current mouse position and saves it"
+msgstr ""
+"Megnyit egy párbeszédpanelt, ahol elnevezheti és elmentheti az egérpozíciókat"
 
-msgid "to select a value for mouse movement (1, 10, 20, 50. 100."
-msgstr "A mozgatás mértékének beállítása (1, 10, 20, 50. 100)."
+#. Translators: input help message for a Golden Cursor command.
+msgid "Changes mouse movement unit"
+msgstr "Megváltoztathatja az egérmutató elmozdulásának mértékét"
 
-msgid "report pixels off"
-msgstr "Pixelek bemondása kikapcsolva."
+#. Translators: reported when new mouse coordinate announcement is on.
+msgid "Report new mouse coordinates on"
+msgstr "Egérhelyzet változásának bemondása bekapcsolva"
 
-msgid "report pixels on"
-msgstr "Pixelek bemondása bekapcsolva."
+#. Translators: reported when new mouse coordinate announcement is on.
+msgid "Report new mouse coordinates off"
+msgstr "Egérhelyzet változásának bemondása kikapcsolva"
 
-msgid "toggle reporting of pixels"
-msgstr "pixelek bemondásának beállítása."
+#. Translators: Input help message for a Golden Cursor add-on command.
+msgid "toggles reporting of mouse coordinates in pixels when mouse moves"
+msgstr "Egérhelyzet változásának bemondása ki és bekapcsolása. "
 
-#, python-format
-msgid "%d , %d"
-msgstr "%d , %d"
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Reports current X and Y mouse position"
+msgstr "Bemondja az egérmutató koordinátáit"
 
-msgid "report the positions of the mouse."
-msgstr "Az egérmutató helyzetének bemondása."
+#. Translators: presented when toggling mouse arrows feature.
+msgid "Mouse arrows on"
+msgstr "Egérmozgató billentyűk bekapcsolva"
 
-msgid "Moves the Mouse pointer right."
+#. Translators: presented when toggling mouse arrows feature.
+msgid "Mouse arrows off"
+msgstr "Egérmozgató billentyűk kikapcsolva"
+
+#. Translators: input help mode message for a Golden Cursor add-on command.
+msgid "Toggles mouse arrows to move the mouse with the arrow keys"
+msgstr "Az egérmozgató billentyűk be- és kikapcsolása"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Moves the Mouse pointer to the right"
 msgstr "Az egérmutató mozgatása jobbra."
 
-msgid "Moves the Mouse pointer left."
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Moves the Mouse pointer to the left"
 msgstr "Az egérmutató mozgatása balra."
 
-msgid "Moves the Mouse pointer up."
-msgstr "Az egérmutató mozgatása felfelé."
-
-msgid "Moves the Mouse pointer down."
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Moves the Mouse pointer down"
 msgstr "Az egérmutató mozgatása lefelé."
 
-msgid "Enter the value for position number you wish to jump to"
-msgstr "Adja meg a kívánt koorrdínátákat vesszővel elválasztva."
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Moves the Mouse pointer up"
+msgstr "Az egérmutató mozgatása felfelé."
 
-msgid "Jump to position"
-msgstr "Ugrás pozícióhoz"
-
-msgid "please enter comma between the first and the second number"
-msgstr "Tegyen vesszőt a két koordináta közé."
-
-msgid "please enter an integer number."
-msgstr "Egész számot adjon meg."
-
-msgid "type the x/y value you wish the cursor to jump to"
-msgstr "megadott koordinátájú pontra ugrás."
-
-msgid "restriction on"
-msgstr "Korlátozás bekapcsolva"
-
-msgid "restriction off"
-msgstr "Korlátozás kikapcsolva"
-
+#. Translators: Input help message for a Golden Cursor command.
 msgid ""
-"Toggles the restriction between the 2 levels you can toggle between "
-"Application Window restriction and Unrestricted."
+"Opens a dialog to enter the X and Y coordinates for the mouse to move to"
+msgstr ""
+"Megnyit egy párbeszédpanelt,ahol megadhatja azokat a koordinátákat,ahová az "
+"egérmutatót mozgatni szeretné."
+
+#. Translators: presented when mouse movement is restricted to current application.
+msgid "Mouse movement restricted to current application"
+msgstr "Mozgatás csak az aktív ablakon belül"
+
+#. Translators: presented when mouse movement is unrestricted.
+msgid "Mouse movement unrestricted"
+msgstr "Mozgatás korlátozás nélkül"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid ""
+"Toggles mouse movement restriction between current application and "
+"unrestricted"
 msgstr ""
 "Mozgástér korlátozása. Két lehetőség közül választhat: mozgatás az aktív "
 "ablak keretein belül, vagy korlátozás nélkül az egész képernyőn."
 
-#. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on to be shown on installation and add-on information.
-msgid "Golden Cursor moves the mouse with the keyboard"
-msgstr "Az aranykurzor a billentyűzettel mozgatja az egérmutatót."
+#. Translators: This is the label for the Golden Cursor settings dialog.
+msgid "Golden Cursor Settings"
+msgstr "Aranykurzor Beállítások"
+
+#. Translators: This is the label for a checkbox in the
+#. Golden Cursor settings dialog.
+msgid "&Announce new mouse coordinates when mouse moves"
+msgstr "Új egérpozíció bemondása az egérmutató elmozdulásakor"
+
+#. Translators: The label for a setting in Golden Cursor settings dialog to change mouse movement units.
+msgid "Mouse movement &unit (in pixels)"
+msgstr "Az egérmutató mozgásának mértéke (képpontban)"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
-"Allows you to control the mouse movement with the arrow keys. for further "
+"Allows you to control the mouse movement with the keyboard. for further "
 "details please visit the addon guide help."
 msgstr ""
 "Lehetővé teszi az egérmutató mozgatását a nyílbillentyűk segítségével. "

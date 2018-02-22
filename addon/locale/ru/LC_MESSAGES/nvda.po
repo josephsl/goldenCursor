@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: goldenCursor 1.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-04-22 07:00+1000\n"
-"PO-Revision-Date: 2018-02-11 17:05+0400\n"
+"PO-Revision-Date: 2018-02-16 14:46+0400\n"
 "Last-Translator: Ruslan Kolodyazhni <eye0@rambler.ru>\n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -113,7 +113,7 @@ msgid "Clear mouse positions"
 msgstr "Очистить положения мыши"
 
 #. Translators: A dialog message shown when tags for the application is cleared.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "All mouse positions for the application {appName} have been deleted."
 msgstr "Все положения мыши для приложения {appName} были удалены."
 
@@ -142,18 +142,18 @@ msgid "Opens a dialog listing mouse positions for the current application"
 msgstr "Открывает диалог со списком положений мыши текущего приложения"
 
 #. Translators: edit field label for new mouse position.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Enter the name for the current mouse position (x: {x}, Y: {y})"
-msgstr "Введите имя для текущего положения мыши (x: {x}, Y: {y}"
+msgstr "Введите имя для текущего положения мыши (x: {x}, Y: {y})"
 
 #. Translators: title for save mouse position dialog.
 msgid "Save mouse position"
 msgstr "Сохранить положение мыши"
 
 #. Translators: presented when position (tag) has been saved.
-#, fuzzy, python-format
+#, python-format
 msgid "Position saved in %s."
-msgstr "Положение мыши было сохранено в %s."
+msgstr "Положение мыши сохранено в %s."
 
 #. Translators: Input help message for a Golden Cursor command.
 msgid "Opens a dialog to label the current mouse position and saves it"

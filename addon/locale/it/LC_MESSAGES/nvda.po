@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: goldenCursor 1.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-03-18 05:37+1000\n"
-"PO-Revision-Date: 2018-02-05 11:55+0100\n"
+"PO-Revision-Date: 2018-02-19 10:44+0100\n"
 "Last-Translator: Simone Dal Maso <simone.dalmaso@gmail.com>\n"
 "Language-Team: Simone Dal Maso <simone.dalmaso@gmail.com>\n"
 "Language: it\n"
@@ -114,7 +114,7 @@ msgid "Clear mouse positions"
 msgstr "Ripulisci posizioni mouse"
 
 #. Translators: A dialog message shown when tags for the application is cleared.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "All mouse positions for the application {appName} have been deleted."
 msgstr ""
 "Tutte le posizioni mouse per l'applicazione {appName} sono state eliminate."
@@ -146,18 +146,18 @@ msgstr ""
 "l'applicazione corrente"
 
 #. Translators: edit field label for new mouse position.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Enter the name for the current mouse position (x: {x}, Y: {y})"
-msgstr "Inserire il nome per la poisizione corrente del mouse (x: {x}, Y: {y}"
+msgstr "Inserire il nome per la posizione corrente del mouse (x: {x}, Y: {y}"
 
 #. Translators: title for save mouse position dialog.
 msgid "Save mouse position"
 msgstr "Salva posizione mouse"
 
 #. Translators: presented when position (tag) has been saved.
-#, fuzzy, python-format
+#, python-format
 msgid "Position saved in %s."
-msgstr "La posizione è stata salvata in %s."
+msgstr "Posizione salvata in %s."
 
 #. Translators: Input help message for a Golden Cursor command.
 msgid "Opens a dialog to label the current mouse position and saves it"
@@ -236,7 +236,7 @@ msgid ""
 "Toggles mouse movement restriction between current application and "
 "unrestricted"
 msgstr ""
-"Passa tra i due livelli di restrizion mouse i consentiti, restrizione alla "
+"Passa tra i due livelli di restrizione mouse consentiti, restrizione alla "
 "finestra dell'applicazione e nessuna restrizione."
 
 #. Translators: This is the label for the Golden Cursor settings dialog.

@@ -1,6 +1,6 @@
 # Golden Cursor #
 
-* Author: salah atair, Joseph Lee
+* Autori: salah atair, Joseph Lee
 * Download [stable version][1]
 * Download [development version][2]
 
@@ -51,26 +51,28 @@ immissione nel menu preferenze di NVDA alla categoria Golden Cursor.
 
 ## Versione 2.0
 
-* Requires NVDA 2017.3 and later.
-* Position file format is incompatible with 1.x versions. If 1.x position
-  format is found, old positions will be migrated to the new format during
-  installation.
-* Added a new Golden Cursor settings dialog in NVDA's Preferences menu to
-  configure mouse movement unit and announcement of mouse positions as mouse
-  moves.
-* Various messages from this add-on has changed.
-* When toggling various settings, toggle tone will no longer be heard.
-* You can now enter mouse arrows mode where you can move the mouse by
-  pressing just arrow keys.
-* Changes to positions list dialog, including new name (now called Mouse
-  Positions) and layout, displaying mouse coordinates for a label, and
-  showing the name of the active app as part of the title.
-* From Mouse Positions dialog, pressing Enter on a saved label will move the
-  mouse to the saved location.
-* When renaming a mouse position, an error dialog will be shown if a label
-  with the same name as the new name exists.
-* When deleting or clearing mouse positions, you must now answer Yes before
-  positions are deleted and/or cleared.
+* Richiede NVDA 2017.3 e successive.
+* Il Formato del file contenente le posizioni è incompatibile con la
+  versione 1.x. Se viene rilevato un formato precedente, le posizioni
+  verranno migrate al nuovo formato durante l'installazione.
+* Aggiunta una nuova finestra di dialogo chiamata Golden Cursor nel menu
+  preferenze di NVDA  per configurare l'unità di movimento del mouse e la
+  lettura della posizione del mouse mentre si sposta.
+* Modificati diversi messaggi di questo componente aggiuntivo
+* Durante la modifica delle impostazioni, non si udirà più il segnale
+  acustico di alternanza delle impostazioni stesse
+* Ora è disponibile una nuova funzione,  modalità frecce per il mouse, in
+  questo modo sarà possibile spostare il puntatore direttamente con i tasti
+  freccia
+* Modifiche all'elenco delle posizioni, che comprendono un nuovo nome (ora
+  chiamato posizioni mouse) ed un nuovo layout, che visualizza le coordinate
+  mouse per un'etichetta, e e il nome dell'app attiva come parte del titolo.
+* Dalle impostazioni posizione mouse, premendo invio su un'etichetta, il
+  mouse si sposterà alla posizione salvata.
+* Quando si rinomina una posizione mouse, verrà mostrato un messaggio di
+  errore nel caso in cui esista già un'etichetta con lo stesso nome.
+* Quando si cancellano o si puliscono i settaggi delle posizioni mouse, sarà
+  necessario confermare con un sì!
 * Cambiamenti alla funzione "vai a", tra cui un nuovo nome (ora si chiama
   Nuova posizione del mouse) e la capacità di inserire le coordinate X e Y
   separatamente o utilizzando i tasti freccia su o giù. 
