@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: goldenCursor 1.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-04-22 07:00+1000\n"
-"PO-Revision-Date: 2018-02-16 14:46+0400\n"
+"PO-Revision-Date: 2018-04-14 13:11+0400\n"
 "Last-Translator: Ruslan Kolodyazhni <eye0@rambler.ru>\n"
 "Language-Team: \n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Poedit 1.8.12\n"
 
 #, python-format
 msgid "Mouse positions for %s"
@@ -181,11 +181,11 @@ msgstr "Объявляет текущие координаты X и Y полож
 
 #. Translators: presented when toggling mouse arrows feature.
 msgid "Mouse arrows on"
-msgstr ""
+msgstr "Мышь стрелками включено"
 
 #. Translators: presented when toggling mouse arrows feature.
 msgid "Mouse arrows off"
-msgstr ""
+msgstr "Мышь стрелками отключено"
 
 #. Translators: input help mode message for a Golden Cursor add-on command.
 msgid "Toggles mouse arrows to move the mouse with the arrow keys"
