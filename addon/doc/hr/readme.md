@@ -11,8 +11,8 @@ pohranjujete pozicije miša za različite aplikacije.
 
 * Control+NVDA+L: pregledajte spremljene pozicije miša za neku aplikaciju
   ako postoje.
-* Shift+NVDA+L: spremite oznaku ili vrijednost za trenutnu poziciju miša u
-  trenutno fokusiranoj aplikaciji.
+* Shift+NVDA+L: save a tag or a label for the current mouse position in the
+  currently focused application.
 * Windows+NVDA+C: promijeni jedinicu kretanja miša.
 * Windows+NVDA+R: toggle mouse restriction.
 * Windows+NVDA+S: toggle reporting of mouse position in pixels.

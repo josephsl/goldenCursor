@@ -11,8 +11,8 @@ posizioni del mouse per le applicazioni.
 
 * Control+NVDA+L: mostra le posizioni salvate per qualsiasi applicazione se
   presenti.
-* Shift+NVDA+l: Salva un tag o un'etichetta della posizione mouse corrente
-  per l'applicazione focalizzata.
+* Shift+NVDA+L: save a tag or a label for the current mouse position in the
+  currently focused application.
 * Windows+NVDA+C: Cambia unità di movimento
 * Windows+NVDA+R: commuta tra le due  restrizioni del mouse.
 * nvda+win+s: attiva/disattiva l'annuncio dei movimenti del mouse in pixel.

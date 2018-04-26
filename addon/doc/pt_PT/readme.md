@@ -11,8 +11,8 @@ rato para cada aplicação, individualmente.
 
 * Control+NVDA+L: mostra as posições do rato guardadas para uma aplicação,
   se as houver.
-* Shift+NVDA+l: Guarda uma etiqueta ou um nível para a posição actual do
-  rato na aplicação actualmente focada.
+* Shift+NVDA+L: save a tag or a label for the current mouse position in the
+  currently focused application.
 * Windows+NVDA+C: altera a unidade de movimento do rato.
 * Windows+NVDA+R: alterna a restrição do rato.
 * Windows+NVDA+S: alterna entre indicação de coordenadas da posição do rato.

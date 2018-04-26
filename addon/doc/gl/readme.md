@@ -11,8 +11,8 @@ posicións do rato para as aplicacións.
 
 * Control+NVDA+L: ver posicións gardadas do rato para unha aplicación se hai
   algunha.
-* Shift+NVDA+l: gardar unha tag ou unha etiqueta para a posición do rato
-  actual na aplicación enfocada actualmente.
+* Shift+NVDA+L: save a tag or a label for the current mouse position in the
+  currently focused application.
 * Windows+NVDA+C: cambiar a unidade de movemento do rato.
 * Windows+NVDA+R: conmuta a restricción do rato.
 * Windows+NVDA+S: conmuta o anunciamento da posición do rato en pixeis.

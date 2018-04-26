@@ -11,8 +11,8 @@ pozițiile mausului pentru aplicații.
 
 * Control+NVDA+L: afișeaza pozițiile maus salvate pentru o anumită
   aplicație.
-* Shift+NVDA+l: salveaza un nume pentru poziția actuală a mausului în
-  aplicația activă.
+* Shift+NVDA+L: save a tag or a label for the current mouse position in the
+  currently focused application.
 * Windows+NVDA+C: schimbă unitatea de mișcare a mausului.
 * NVDA+Win+R: Comută restricționarea mausului.
 * NVDA+Win+S: Comută raportarea pixelilor.
