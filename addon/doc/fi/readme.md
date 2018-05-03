@@ -10,8 +10,8 @@ tallentaa hiiren sijainteja sovelluksille.
 ## Näppäinkomennot
 
 * Ctrl+NVDA+L: näytä sovellukselle tallennetut hiiren sijainnit.
-* Shift+NVDA+L: save a tag or a label for the current mouse position in the
-  currently focused application.
+* Vaihto+NVDA+L: tallenna tunniste tai selite nykyiselle hiiren sijainnille
+  aktiivisena olevassa sovelluksessa.
 * Win+NVDA+C: muuta hiiren siirtämisen yksikköä.
 * Win+NVDA+R: Ota hiiren rajoittaminen käyttöön tai poista se käytöstä.
 * Win+NVDA+S: Ota hiiren sijainnin puhuminen pikseleinä käyttöön tai poista
