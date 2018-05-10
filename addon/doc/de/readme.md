@@ -11,8 +11,8 @@ Speichern der gewünschten Mauspositionen für die jeweilige Anwendung.
 
 * Strg+NVDA+L: Zeige gespeicherte Maus-Positionen für eine Anwendung, falls
   vorhanden.
-* Shift+NVDA+L: save a tag or a label for the current mouse position in the
-  currently focused application.
+* Umschalt+NVDA+l: Speichern eines Tags oder einer Bezeichnung für die
+  aktuelle Mausposition in der aktuell fokussierten Anwendung.
 * Windows+NVDA+C: ändert die Maus-Bewegungseinheit.
 * NVDA+Windows+R: Beschränkung der Maus ein- oder ausschalten.
 * Windows+NVDA+S: Neue Maus-Koordinaten in Pixel ansagen, wenn sich die Maus
