@@ -51,12 +51,11 @@ def setMousePosition(x, y, announceMousePosition=False):
 		wx.CallLater(500, reportMousePosition, x=x, y=y)
 
 class EnterPositionName(wx.TextEntryDialog):
-
 	"""
 	This subclass of the wx.TextEntryDialog class was created to prevent multiple instances of the dialog box that propose to give a name to the current mouse position.
 	This dialog can be opened via the script_saveMousePosition accessible with the nvda+shift+l shortcut.
 	"""
-# The following comes from exit dialog class from GUI package (credit: NV Access and Zahari from Bulgaria).
+	# The following comes from exit dialog class from GUI package (credit: NV Access and Zahari from Bulgaria).
 	_instance = None
 
 	def __new__(cls, parent, *args, **kwargs):
@@ -76,7 +75,6 @@ class EnterPositionName(wx.TextEntryDialog):
 		super (EnterPositionName, self).__init__(*args, **kwargs)
 
 class PositionsList(wx.Dialog):
-
 	"""
 	This common dialogue has been created to facilitate access to the following choices:
 	1. The list of x / y positions proposed by the script_goToPosition, accessible via the nvda+windows+j shortcut.
@@ -112,7 +110,7 @@ class PositionsList(wx.Dialog):
 		self.positions = ConfigObj(os.path.join(GCMousePositions, appName+".gc"), encoding="UTF-8")
 		mainSizer = wx.BoxSizer(wx.VERTICAL)
 		sHelper = gui.guiHelper.BoxSizerHelper(self, orientation=wx.VERTICAL)
-		# Translators: The label for the combo box of the mouse positions in the current application.
+		# Translators: The label for the list view of the mouse positions in the current application.
 		mousePositionsText=_("&Saved mouse positions")
 		self.mousePositionsList=sHelper.addLabeledControl(mousePositionsText, wx.ListCtrl, style=wx.LC_REPORT|wx.LC_SINGLE_SEL,size=(550,350))
 		# Translators: the column in mouse positions list to identify the position name.
