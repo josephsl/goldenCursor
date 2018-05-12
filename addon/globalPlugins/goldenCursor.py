@@ -275,9 +275,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.getAppRestriction = None
 		self.restriction = False
 		self.mouseArrows = False
-		self.prefsMenu = gui.mainFrame.sysTrayIcon.preferencesMenu
-		self.gcSettings = self.prefsMenu.Append(wx.ID_ANY, _("&Golden Cursor..."), _("Golden Cursor add-on settings"))
-		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onConfigDialog, self.gcSettings)
+		# Dialog or the panel.
+		if hasattr(gui.settingsDialogs, "SettingsPanel"):
+			gui.settingsDialogs.NVDASettingsDialog.categoryClasses.append(GoldenCursorSettings)
+		else:
+			self.prefsMenu = gui.mainFrame.sysTrayIcon.preferencesMenu
+			self.gcSettings = self.prefsMenu.Append(wx.ID_ANY, _("&Golden Cursor..."), _("Golden Cursor add-on settings"))
+			gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onConfigDialog, self.gcSettings)
 
 	def onConfigDialog(self, evt):
 		gui.mainFrame._popupSettingsDialog(GoldenCursorSettings)
@@ -478,23 +482,43 @@ confspec = {
 }
 config.conf.spec["goldenCursor"] = confspec
 
-class GoldenCursorSettings(gui.SettingsDialog):
-	# Translators: This is the label for the Golden Cursor settings dialog.
-	title = _("Golden Cursor Settings")
+# Present either the old settings dialog or a settings panel.
+if hasattr(gui.settingsDialogs, "SettingsPanel"):
+	class GoldenCursorSettings(gui.settingsDialogs.SettingsPanel):
+		# Translators: This is the label for the Golden Cursor settings category in NVDA Settings screen.
+		title = _("Golden Cursor")
 
-	def makeSettings(self, settingsSizer):
-		gcHelper = gui.guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
-		# Translators: This is the label for a checkbox in the
-		# Golden Cursor settings dialog.
-		self.mouseCoordinatesCheckBox=gcHelper.addItem(wx.CheckBox(self, label=_("&Announce new mouse coordinates when mouse moves")))
-		self.mouseCoordinatesCheckBox.SetValue(config.conf["goldenCursor"]["reportNewMouseCoordinates"])
-		# Translators: The label for a setting in Golden Cursor settings dialog to change mouse movement units.
-		self.mouseMovementUnit=gcHelper.addLabeledControl(_("Mouse movement &unit (in pixels)"), gui.nvdaControls.SelectOnFocusSpinCtrl, min=1, max=100, initial=config.conf["goldenCursor"]["mouseMovementUnit"])
+		def makeSettings(self, settingsSizer):
+			gcHelper = gui.guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
+			# Translators: This is the label for a checkbox in the
+			# Golden Cursor settings dialog.
+			self.mouseCoordinatesCheckBox=gcHelper.addItem(wx.CheckBox(self, label=_("&Announce new mouse coordinates when mouse moves")))
+			self.mouseCoordinatesCheckBox.SetValue(config.conf["goldenCursor"]["reportNewMouseCoordinates"])
+			# Translators: The label for a setting in Golden Cursor settings dialog to change mouse movement units.
+			self.mouseMovementUnit=gcHelper.addLabeledControl(_("Mouse movement &unit (in pixels)"), gui.nvdaControls.SelectOnFocusSpinCtrl, min=1, max=100, initial=config.conf["goldenCursor"]["mouseMovementUnit"])
 
-	def postInit(self):
-		self.mouseCoordinatesCheckBox.SetFocus()
+		def onSave(self,evt):
+			config.conf["goldenCursor"]["reportNewMouseCoordinates"] = self.mouseCoordinatesCheckBox.IsChecked()
+			config.conf["goldenCursor"]["mouseMovementUnit"] = self.mouseMovementUnit.Value
 
-	def onOk(self,evt):
-		config.conf["goldenCursor"]["reportNewMouseCoordinates"] = self.mouseCoordinatesCheckBox.IsChecked()
-		config.conf["goldenCursor"]["mouseMovementUnit"] = self.mouseMovementUnit.Value
-		super(GoldenCursorSettings, self).onOk(evt)
+else:
+	class GoldenCursorSettings(gui.SettingsDialog):
+		# Translators: This is the label for the Golden Cursor settings dialog.
+		title = _("Golden Cursor Settings")
+
+		def makeSettings(self, settingsSizer):
+			gcHelper = gui.guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
+			# Translators: This is the label for a checkbox in the
+			# Golden Cursor settings dialog.
+			self.mouseCoordinatesCheckBox=gcHelper.addItem(wx.CheckBox(self, label=_("&Announce new mouse coordinates when mouse moves")))
+			self.mouseCoordinatesCheckBox.SetValue(config.conf["goldenCursor"]["reportNewMouseCoordinates"])
+			# Translators: The label for a setting in Golden Cursor settings dialog to change mouse movement units.
+			self.mouseMovementUnit=gcHelper.addLabeledControl(_("Mouse movement &unit (in pixels)"), gui.nvdaControls.SelectOnFocusSpinCtrl, min=1, max=100, initial=config.conf["goldenCursor"]["mouseMovementUnit"])
+
+		def postInit(self):
+			self.mouseCoordinatesCheckBox.SetFocus()
+
+		def onOk(self,evt):
+			config.conf["goldenCursor"]["reportNewMouseCoordinates"] = self.mouseCoordinatesCheckBox.IsChecked()
+			config.conf["goldenCursor"]["mouseMovementUnit"] = self.mouseMovementUnit.Value
+			super(GoldenCursorSettings, self).onOk(evt)
