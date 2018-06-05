@@ -11,8 +11,8 @@ las posiciones del ratón para las aplicaciones.
 
 * Control+NVDA+L: ver posiciones guardadas del ratón para una aplicación si
   hay alguna.
-* Shift+NVDA+L: save a tag or a label for the current mouse position in the
-  currently focused application.
+* Shift+NVDA+l: guarda una tag o una etiqueta para la posición del ratón
+  actual en la aplicación enfocada actualmente.
 * Windows+NVDA+C: cambiar la unidad de movimiento del ratón.
 * Windows*NVDA+R: conmuta la restricción del ratón.
 * Windows+NVDA+S: conmuta el anunciado del ratón en píxeles.

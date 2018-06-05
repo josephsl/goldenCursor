@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: goldenCursor 1.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-03-18 05:37+1000\n"
-"PO-Revision-Date: 2018-01-09 13:14+0100\n"
-"Last-Translator: Robert Hänggi, <aarjay.robert@gmail.com\n"
+"PO-Revision-Date: 2018-01-25 18:46+0100\n"
+"Last-Translator: Adriani Botez <adriani.botez@gmail.com>\n"
 "Language-Team: \n"
 "Language: de_CH\n"
 "MIME-Version: 1.0\n"
@@ -87,7 +87,6 @@ msgid "Error"
 msgstr "Fehler"
 
 #. Translators: The confirmation prompt displayed when the user requests to delete the selected tag.
-#, python-brace-format
 msgid ""
 "Are you sure you want to delete the position named {name}? This cannot be "
 "undone."
@@ -100,7 +99,6 @@ msgid "Delete position"
 msgstr "Position löschen"
 
 #. Translators: The confirmation prompt displayed when the user is about to clear positions.
-#, python-brace-format
 msgid ""
 "Are you sure you want to clear mouse positions for the current application "
 "({appName})? This cannot be undone."
@@ -113,7 +111,6 @@ msgid "Clear mouse positions"
 msgstr "Maus-Positionen löschen"
 
 #. Translators: A dialog message shown when tags for the application is cleared.
-#, fuzzy, python-brace-format
 msgid "All mouse positions for the application {appName} have been deleted."
 msgstr "Alle Maus-Positionen für die Anwendung {appName} wurde gelöscht."
 
@@ -144,7 +141,6 @@ msgstr ""
 "auf."
 
 #. Translators: edit field label for new mouse position.
-#, python-brace-format
 msgid "Enter the name for the current mouse position (x: {x}, Y: {y})"
 msgstr ""
 "Geben Sie einen Namen für die aktuelle Maus-Position (x: {x}, Y: {y} ein"
@@ -154,7 +150,7 @@ msgid "Save mouse position"
 msgstr "Maus-Position speichern"
 
 #. Translators: presented when position (tag) has been saved.
-#, fuzzy, python-format
+#, python-format
 msgid "Position saved in %s."
 msgstr "Die Maus-Position wurde in %s gespeichert."
 
