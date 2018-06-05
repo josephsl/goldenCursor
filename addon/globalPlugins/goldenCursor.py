@@ -287,7 +287,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def terminate(self):
 		try:
 			self.prefsMenu.RemoveItem(self.gcSettings)
-		except (RuntimeError, AttributeError, wx.PyDeadObjectError):
+		except:
 			pass
 
 	def script_mousePositionsList(self, gesture):
@@ -495,7 +495,7 @@ if hasattr(gui.settingsDialogs, "SettingsPanel"):
 			# Translators: The label for a setting in Golden Cursor settings dialog to change mouse movement units.
 			self.mouseMovementUnit=gcHelper.addLabeledControl(_("Mouse movement &unit (in pixels)"), gui.nvdaControls.SelectOnFocusSpinCtrl, min=1, max=100, initial=config.conf["goldenCursor"]["mouseMovementUnit"])
 
-		def onSave(self,evt):
+		def onSave(self):
 			config.conf["goldenCursor"]["reportNewMouseCoordinates"] = self.mouseCoordinatesCheckBox.IsChecked()
 			config.conf["goldenCursor"]["mouseMovementUnit"] = self.mouseMovementUnit.Value
 
