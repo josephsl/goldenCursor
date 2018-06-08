@@ -285,10 +285,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gui.mainFrame._popupSettingsDialog(GoldenCursorSettings)
 
 	def terminate(self):
-		try:
-			self.prefsMenu.RemoveItem(self.gcSettings)
-		except:
-			pass
+		if hasattr(gui.settingsDialogs, "SettingsPanel"):
+			gui.settingsDialogs.NVDASettingsDialog.categoryClasses.remove(GoldenCursorSettings)
+		else:
+			try:
+				self.prefsMenu.RemoveItem(self.gcSettings)
+			except:
+				pass
 
 	def script_mousePositionsList(self, gesture):
 		# Don't even think about opening this dialog if positions list does not exist.
