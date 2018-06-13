@@ -29,6 +29,10 @@ Note: these gestures can be reassigned via NVDA's Input Gestures dialog under Go
 * To perform functions that require use of arrow keys, turn off mouse arrows first.
 * When deleting saved positions, if there are no saved positions left, positions for the application will be cleared.
 
+## Version 3.0
+
+* If using NVDA 2018.2, add-on settings will be found in new multi-category settings screen under "Golden Cursor" category.
+
 ## Version 2.1
 
 * Fixed unicode decode error when trying to delete tag name.
