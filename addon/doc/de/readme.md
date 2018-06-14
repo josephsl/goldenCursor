@@ -19,8 +19,7 @@ Speichern der gewünschten Mauspositionen für die jeweilige Anwendung.
   bewegt
 * Windows+NVDA+J: bewegt die Maus zu einer bestimmten X- und Y-Position.
 * NVDA+Windows+P: Maus-Position ausgeben
-* Windows+NVDA+M: Schaltet die Bewegung des Mauszeigers mit Pfeiltasten ein
-  und aus.
+* Windows+NVDA+M: sswitch mouse arrows on or off.
 * Windows+NVDA+Pfeiltasten (oder nur Pfeiltasten, wenn die Bewegung des
   Mauszeigers durch pfeiltasten eingeschaltet ist): Maus bewegen.
 
@@ -41,6 +40,11 @@ im Dialog Eingaben in der Kategorie "goldener Cursor" angepasst werden.
   schalten Sie zuerst die Bewegung des Mauszeigers durch Pfeiltasten aus.
 * Wenn beim Löschen gespeicherter Positionen keine gespeicherten Positionen
   mehr vorhanden sind, werden die Positionen für die Anwendung gelöscht.
+
+## Version 3.0
+
+* If using NVDA 2018.2, add-on settings will be found in new multi-category
+  settings screen under "Golden Cursor" category.
 
 ## Version 2.1
 

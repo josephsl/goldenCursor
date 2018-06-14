@@ -1,0 +1,241 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the goldenCursor package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: goldenCursor 3.0\n"
+"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"POT-Creation-Date: 2018-02-09 07:00+1000\n"
+"PO-Revision-Date: 2018-06-11 05:51+0800\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: dingpengyu <dingpengyu06@gmail.com>\n"
+"Language-Team: \n"
+"X-Generator: Poedit 2.0.8\n"
+
+#, python-format
+msgid "Mouse positions for %s"
+msgstr "鼠标位置%s"
+
+msgid "New mouse position"
+msgstr "新的鼠标位置"
+
+#. Translators: The label for the combo box of the mouse positions in the current application.
+msgid "&Saved mouse positions"
+msgstr "保存的鼠标位置"
+
+#. Translators: the column in mouse positions list to identify the position name.
+msgid "Name"
+msgstr "名称"
+
+#. Translators: the column in mouse positions list to identify the X coordinate.
+msgid "Position X"
+msgstr "位置X"
+
+#. Translators: the column in mouse positions list to identify the Y coordinate.
+msgid "Position Y"
+msgstr "位置Y"
+
+#. Translators: the button to jump to the selected position.
+msgid "&Jump"
+msgstr "&跳过"
+
+#. Translators: the button to rename a mouse position.
+msgid "&Rename"
+msgstr "&重命名"
+
+#. Translators: the button to delete the selected mouse position.
+msgid "&Delete"
+msgstr "&删除"
+
+#. Translators: the button to clear all mouse positions for the focused app.
+msgid "C&lear positions"
+msgstr "&清除位置"
+
+#. Translators: The label of a button to close the mouse positions dialog.
+msgid "&Close"
+msgstr "&关闭"
+
+msgid "&X position"
+msgstr "&X位置"
+
+msgid "&Y position"
+msgstr "&Y位置"
+
+#. Translators: The label of a field to enter a new name for a mouse position/tag.
+msgid "New name"
+msgstr "新名称"
+
+#. Translators: The title of the dialog to rename a mouse position.
+msgid "Rename"
+msgstr "重命名"
+
+#. Translators: An error displayed when renaming a mouse position
+#. and a tag with the new name already exists.
+msgid ""
+"Another mouse position has the same name as the entered name. Please choose "
+"a different name."
+msgstr "另一个鼠标位置与输入的名称具有相同的名称。请输入一个不同的名称。"
+
+msgid "Error"
+msgstr "错误"
+
+#. Translators: The confirmation prompt displayed when the user requests to delete the selected tag.
+#, python-brace-format
+msgid ""
+"Are you sure you want to delete the position named {name}? This cannot be "
+"undone."
+msgstr "您确定要删除名称为{name}的位置吗？确定后不能被撤消。"
+
+#. Translators: The title of the confirmation dialog for deletion of selected position.
+msgid "Delete position"
+msgstr "删除位置"
+
+#. Translators: The confirmation prompt displayed when the user is about to clear positions.
+#, python-brace-format
+msgid ""
+"Are you sure you want to clear mouse positions for the current application "
+"({appName})? This cannot be undone."
+msgstr "您确定要清除当前应用程序（{appName}）的鼠标位置吗？确定后不能被撤消。"
+
+#. Translators: The title of the confirmation dialog for clearing mouse positions.
+msgid "Clear mouse positions"
+msgstr "清除鼠标位置"
+
+#. Translators: A dialog message shown when tags for the application is cleared.
+#, python-brace-format
+msgid "All mouse positions for the application {appName} have been deleted."
+msgstr "应用程序{appName}的所有鼠标位置已被删除。"
+
+#. Translators: Title of the tag clear confirmation dialog.
+msgid "Mouse positions cleared"
+msgstr "鼠标位置已清除"
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Golden Cursor"
+msgstr "金色光标"
+
+msgid "&Golden Cursor..."
+msgstr "金色光标..."
+
+msgid "Golden Cursor add-on settings"
+msgstr "金色光标附加设置"
+
+#. Translators: message presented when no mouse positions are available for the focused app.
+#, python-format
+msgid "No mouse positions for %s."
+msgstr "没有鼠标位置%s."
+
+#. Translators: input help message for a Golden Cursor command.
+msgid "Opens a dialog listing mouse positions for the current application"
+msgstr "打开一个对话框，列出当前应用程序的鼠标位置"
+
+#. Translators: edit field label for new mouse position.
+#, python-brace-format
+msgid "Enter the name for the current mouse position (x: {x}, Y: {y})"
+msgstr "输入当前鼠标位置的名称 (x: {x}, Y: {y})"
+
+#. Translators: title for save mouse position dialog.
+msgid "Save mouse position"
+msgstr "保存鼠标位置"
+
+#. Translators: presented when position (tag) has been saved.
+#, python-format
+msgid "Position saved in %s."
+msgstr "位置保存在%s."
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Opens a dialog to label the current mouse position and saves it"
+msgstr "打开一个对话框来标记当前鼠标位置并保存"
+
+#. Translators: input help message for a Golden Cursor command.
+msgid "Changes mouse movement unit"
+msgstr "更改鼠标移动单位"
+
+#. Translators: reported when new mouse coordinate announcement is on.
+msgid "Report new mouse coordinates on"
+msgstr "报告新的鼠标坐标开"
+
+#. Translators: reported when new mouse coordinate announcement is on.
+msgid "Report new mouse coordinates off"
+msgstr "报告新的鼠标坐标关"
+
+#. Translators: Input help message for a Golden Cursor add-on command.
+msgid "toggles reporting of mouse coordinates in pixels when mouse moves"
+msgstr "当鼠标移动时报告移动鼠标坐标"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Reports current X and Y mouse position"
+msgstr "报告当前X和Y的鼠标位置"
+
+#. Translators: presented when toggling mouse arrows feature.
+msgid "Mouse arrows on"
+msgstr "鼠标箭头开"
+
+#. Translators: presented when toggling mouse arrows feature.
+msgid "Mouse arrows off"
+msgstr "鼠标箭头关"
+
+#. Translators: input help mode message for a Golden Cursor add-on command.
+msgid "Toggles mouse arrows to move the mouse with the arrow keys"
+msgstr "切换鼠标箭头使用箭头键移动鼠标"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Moves the Mouse pointer to the right"
+msgstr "将鼠标指针移到右侧"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Moves the Mouse pointer to the left"
+msgstr "将鼠标指针移到左侧"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Moves the Mouse pointer down"
+msgstr "向下移动鼠标指针"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Moves the Mouse pointer up"
+msgstr "向上移动鼠标指针"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid ""
+"Opens a dialog to enter the X and Y coordinates for the mouse to move to"
+msgstr "打开一个对话框输入鼠标移动的X和Y坐标"
+
+#. Translators: presented when mouse movement is restricted to current application.
+msgid "Mouse movement restricted to current application"
+msgstr "鼠标移动仅限于当前应用"
+
+#. Translators: presented when mouse movement is unrestricted.
+msgid "Mouse movement unrestricted"
+msgstr "鼠标移动无限制"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid ""
+"Toggles mouse movement restriction between current application and "
+"unrestricted"
+msgstr "切换当前应用程序和不受限制的鼠标"
+
+#. Translators: This is the label for the Golden Cursor settings dialog.
+msgid "Golden Cursor Settings"
+msgstr "金色光标设置"
+
+#. Translators: This is the label for a checkbox in the
+#. Golden Cursor settings dialog.
+msgid "&Announce new mouse coordinates when mouse moves"
+msgstr "鼠标移动时发现新的鼠标坐标"
+
+#. Translators: The label for a setting in Golden Cursor settings dialog to change mouse movement units.
+msgid "Mouse movement &unit (in pixels)"
+msgstr "鼠标移动（以像素为单位）"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid ""
+"Allows you to control the mouse movement with the keyboard. for further "
+"details please visit the addon guide help."
+msgstr "允许您使用键盘控制鼠标移动。有关更多详细信息，请查看插件帮助指南。"

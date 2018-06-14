@@ -39,6 +39,11 @@ Syötekomennot-valintaikkunasta Golden Cursor -kategorian alta.
 * Mikäli tallennettuja sijainteja ei ole jäljellä niitä poistettaessa,
   sovelluksen sijainnit tyhjennetään.
 
+## Versio 3.0
+
+* NVDA 2018.2:ta käytettäessä lisäosan asetukset löytyvät uudesta
+  monikategoriaisesta asetusruudusta kohdasta "Golden Cursor".
+
 ## Versio 2.1
 
 * Korjattu Unicode-dekoodausvirhe yritettäessä poistaa tunnisteen nimeä.

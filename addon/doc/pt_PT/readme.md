@@ -18,7 +18,7 @@ rato para cada aplicação, individualmente.
 * Windows+NVDA+S: alterna entre indicação de coordenadas da posição do rato.
 * Windows+NVDA+J: move o rato para uma posição específica x e y.
 * Windows+NVDA+P: informa a posição do rato.
-* Windows+NVDA+M: activa ou desactiva as setas do rato.
+* Windows+NVDA+M: activa ou desactiva o rato.
 * Windows+NVDA+teclas de seta (ou apenas teclas de seta se as setas do rato
   estiverem activadas): move o rato.
 
@@ -38,6 +38,12 @@ comandos do NVDA sob a categoria Cursor Dourado.
   primeiro, as setas do rato.
 * Ao apagar posições guardadas, se não houver quaisquer outras para a mesma
   aplicação, o respectivo ficheiro de posições será excluído.
+
+## Versão 3.0
+
+* Se estiver a usar o NVDA 2018.2, configurações adicionais serão
+  encontradas no novo ecrã de configurações de várias categorias na
+  categoria "Golden Cursor".
 
 ## Versão 2.1
 

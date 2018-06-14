@@ -18,7 +18,7 @@ pozycji myszy dla danej aplikacji.
 * Windows+NVDA+S: Przełącz odczytywanie pozycji myszy w pikselach.
 * Windows+NVDA+J: Przesuń mysz do konkretnej pozycji x y.
 * Windows+NVDA+P: Odczytaj pozycję myszy.
-* Windows+NVDA+M: włącz lub wyłącz strzałki myszy.
+* Windows+NVDA+M: sswitch mouse arrows on or off.
 * Windows+NVDA+klawisze strzałek (lub tylko klawisze strzałek, jeśli
   strzałki myszy są włączone): ruszaj myszą.
 
@@ -38,6 +38,11 @@ kategorii Golden Cursor.
   należy wyłączyć strzałki myszy.
 * Jeżeli wszystkie zapisane w dodatku pozycje zostaną usunięte, lista
   pozycji dla danej aplikacji zostanie wyczyszczona.
+
+## Version 3.0
+
+* If using NVDA 2018.2, add-on settings will be found in new multi-category
+  settings screen under "Golden Cursor" category.
 
 ## Wersja 2.1
 

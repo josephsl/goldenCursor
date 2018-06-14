@@ -18,7 +18,7 @@ pohranjujete pozicije miša za različite aplikacije.
 * Windows+NVDA+S: toggle reporting of mouse position in pixels.
 * Windows+NVDA+J: premjesti poziciju miša na određeni položaj x y.
 * Windows+NVDA+P: izvijesti o poziciji miša.
-* Windows+NVDA+M: switch mouse arrows on or off.
+* Windows+NVDA+M: sswitch mouse arrows on or off.
 * Windows+NVDA+navigacijske strelice (ili samo navigacijske strelice ako je
   uključena strelica miša): pomakni miš.
 
@@ -38,6 +38,11 @@ under Golden Cursor category.
   strelicu miša.
 * Tijekom brisanja spremljenih pozicija, ako više nema spremljenih pozicija,
   pozicije će za tu aplikaciju bit će obrisane.
+
+## Version 3.0
+
+* If using NVDA 2018.2, add-on settings will be found in new multi-category
+  settings screen under "Golden Cursor" category.
 
 ## Inačica 2.1
 

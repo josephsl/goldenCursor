@@ -18,7 +18,7 @@ las posiciones del ratón para las aplicaciones.
 * Windows+NVDA+S: conmuta el anunciado del ratón en píxeles.
 * Windows+NVDA+J: mover el ratón a una posición x e y específica.
 * Windows+NVDA+P: anunciar la posición del ratón.
-* Windows+NVDA+M: activar o desactivar flechas del ratón.
+* Windows+NVDA+M: sswitch mouse arrows on or off.
 * Windows+NVDA+teclas de flechas (o solo teclas de flechas si flechas de
   ratón está activado): mover ratón.
 
@@ -39,6 +39,11 @@ el menú Preferencias de NVDA en la categoría  Golden Cursor.
   desactiva flechas del ratón.
 * Al eliminar posiciones guardadas, si no quedan más posiciones guardadas,
   se limpiarán las de la aplicación.
+
+## Version 3.0
+
+* If using NVDA 2018.2, add-on settings will be found in new multi-category
+  settings screen under "Golden Cursor" category.
 
 ## Versión 2.1
 

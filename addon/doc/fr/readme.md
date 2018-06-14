@@ -24,8 +24,7 @@ sauvegarder la position de la souris pour les applications.
   position de la souris en pixels.
 * Windows+NVDA+J : déplacez la souris vers une position spécifique x et y.
 * Windows+NVDA+P : annoncer la position de la souris.
-* Windows+NVDA+M : basculer les flèches de souris entre activer ou
-  désactiver.
+* Windows+NVDA+M: sswitch mouse arrows on or off.
 * Windows+NVDA+touches fléchées (ou simplement les touches fléchées si les
   flèches de la souris sont activées) : déplacez la souris.
 
@@ -46,6 +45,11 @@ commandes de NVDA sous la catégorie Golden Cursor.
   fléchées, désactivez d'abord les flèches de la souris.
 * Lorsque vous supprimez des positions sauvegardées, s'il n'y a plus de
   positions sauvegardées, les positions de l'application seront effacées.
+
+## Version 3.0
+
+* If using NVDA 2018.2, add-on settings will be found in new multi-category
+  settings screen under "Golden Cursor" category.
 
 ## Version 2.1
 

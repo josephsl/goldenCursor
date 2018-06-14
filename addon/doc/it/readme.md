@@ -18,8 +18,7 @@ posizioni del mouse per le applicazioni.
 * nvda+win+s: attiva/disattiva l'annuncio dei movimenti del mouse in pixel.
 * Windows+NVDA+J: Sposta il mouse ad una coordinata specifica X Y.
 * Windows+NVDA+P: Annuncia posizione mouse.
-* Windows+NVDA+M: attiva o disattiva il movimento del mouse tramite i tasti
-  freccia.
+* Windows+NVDA+M: sswitch mouse arrows on or off.
 * Windows+NVDA+frecce (o solo frecce se è attiva la funzione tasti freccia
   per il mouse: sposta il puntatore.
 
@@ -40,6 +39,11 @@ immissione nel menu preferenze di NVDA alla categoria Golden Cursor.
   disattivare la funzione tasti freccia per il mouse.
 * Quando si cancellano le posizioni memorizzate, se non sono rimaste
   posizioni salvate, verranno eliminate le posizioni per l'applicazione.
+
+## Version 3.0
+
+* If using NVDA 2018.2, add-on settings will be found in new multi-category
+  settings screen under "Golden Cursor" category.
 
 ## Versione 2.1
 
