@@ -11,14 +11,15 @@ posizioni del mouse per le applicazioni.
 
 * Control+NVDA+L: mostra le posizioni salvate per qualsiasi applicazione se
   presenti.
-* Shift+NVDA+L: save a tag or a label for the current mouse position in the
-  currently focused application.
+* Shift+NVDA+l: Salva un tag o un'etichetta della posizione mouse corrente
+  per l'applicazione focalizzata.
 * Windows+NVDA+C: Cambia unità di movimento
 * Windows+NVDA+R: commuta tra le due  restrizioni del mouse.
 * nvda+win+s: attiva/disattiva l'annuncio dei movimenti del mouse in pixel.
 * Windows+NVDA+J: Sposta il mouse ad una coordinata specifica X Y.
 * Windows+NVDA+P: Annuncia posizione mouse.
-* Windows+NVDA+M: sswitch mouse arrows on or off.
+* Windows+NVDA+M: attiva o disattiva il movimento del mouse tramite i tasti
+  freccia.
 * Windows+NVDA+frecce (o solo frecce se è attiva la funzione tasti freccia
   per il mouse: sposta il puntatore.
 
@@ -40,10 +41,11 @@ immissione nel menu preferenze di NVDA alla categoria Golden Cursor.
 * Quando si cancellano le posizioni memorizzate, se non sono rimaste
   posizioni salvate, verranno eliminate le posizioni per l'applicazione.
 
-## Version 3.0
+## Versione 3.0
 
-* If using NVDA 2018.2, add-on settings will be found in new multi-category
-  settings screen under "Golden Cursor" category.
+* Se si utilizza NVDA 2018.2, le impostazioni del componente aggiuntivo si
+  trovano nella nuova schermata multicategoria delle impostazioni di NVDA,
+  alla voce Golden Cursor.
 
 ## Versione 2.1
 

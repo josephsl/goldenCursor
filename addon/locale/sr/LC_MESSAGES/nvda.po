@@ -8,144 +8,249 @@ msgstr ""
 "Project-Id-Version: goldenCursor 1.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2017-02-03 07:00+1000\n"
-"PO-Revision-Date: 2017-05-03 17:37+0100\n"
+"PO-Revision-Date: 2018-06-16 16:35+0100\n"
 "Last-Translator: Nikola Jović <wwenikola123@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: \n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.6.10\n"
 
-msgid "positions List"
-msgstr "Lista pozicija"
-
 #, python-format
-msgid "there is no any positions for %s."
-msgstr "Nema pozicija za %s."
+msgid "Mouse positions for %s"
+msgstr "Pozicije miša za %s"
 
-msgid "choose a item of this list"
-msgstr "Izaberi stavku liste"
+msgid "New mouse position"
+msgstr "Nova pozicija miša"
 
-msgid "&rename"
+#. Translators: The label for the list view of the mouse positions in the current application.
+msgid "&Saved mouse positions"
+msgstr "&Sačuvane pozicije miša"
+
+#. Translators: the column in mouse positions list to identify the position name.
+msgid "Name"
+msgstr "Ime"
+
+#. Translators: the column in mouse positions list to identify the X coordinate.
+msgid "Position X"
+msgstr "Pozicija X"
+
+#. Translators: the column in mouse positions list to identify the Y coordinate.
+msgid "Position Y"
+msgstr "Pozicija Y"
+
+#. Translators: the button to jump to the selected position.
+msgid "&Jump"
+msgstr "&Skoči"
+
+#. Translators: the button to rename a mouse position.
+msgid "&Rename"
 msgstr "&Preimenuj"
 
-msgid "&delete"
+#. Translators: the button to delete the selected mouse position.
+msgid "&Delete"
 msgstr "&Obriši"
 
-msgid "c&lear"
-msgstr "Oč&isti"
+#. Translators: the button to clear all mouse positions for the focused app.
+msgid "C&lear positions"
+msgstr "&Obriši pozicije"
 
-msgid "no selection"
-msgstr "Nema izbora"
+#. Translators: The label of a button to close the mouse positions dialog.
+msgid "&Close"
+msgstr "&Zatvori"
 
-msgid "Edit"
-msgstr "Uredi"
+msgid "&X position"
+msgstr "&X pozicija"
 
+msgid "&Y position"
+msgstr "&Y pozicija"
+
+#. Translators: The label of a field to enter a new name for a mouse position/tag.
+msgid "New name"
+msgstr "Novo ime"
+
+#. Translators: The title of the dialog to rename a mouse position.
 msgid "Rename"
 msgstr "Preimenuj"
 
-msgid "the position has been deleted."
-msgstr "Pozicija je obrisana."
-
-msgid "the list has been cleared."
-msgstr "Lista je očišćena."
-
-msgid "An NVDA settings dialog is already open. Please close it first."
-msgstr "Neki dijalog NVDA podešavanja je već otvoren. Molimo prvo ga zatvorite"
-
+#. Translators: An error displayed when renaming a mouse position
+#. and a tag with the new name already exists.
 msgid ""
-"To open a list showing the points that have already been saved for this "
-"application."
-msgstr "Da otvorite listu sačuvanih tačaka za ovu aplikaciju"
-
-msgid "Enter the value for position name you wish to save."
-msgstr "Upišite vrednost za ime pozicije koju želite da sačuvate"
-
-msgid "save position"
-msgstr "Sačuvaj poziciju"
-
-msgid "please enter the value for the name of the position."
-msgstr "Molimo upišite vrednost za ime pozicije"
+"Another mouse position has the same name as the entered name. Please choose "
+"a different name."
+msgstr ""
+"Druga pozicija miša ima isto ime kao i ova. Molimo izaberite drugo ime."
 
 msgid "Error"
 msgstr "Greška"
 
-#, python-format
-msgid "the position has been saved in %s."
-msgstr "Pozicija je sačuvana u %s."
-
-msgid "to save a the current position."
-msgstr "Da sačuvate trenutnu poziciju"
-
-msgid "to select a value for mouse movement (1, 10, 20, 50. 100."
-msgstr "Da izaberete vrednost pomeranja miša(1, 10, 20, 50. 100."
-
-msgid "report pixels off"
-msgstr "Isključeno prijavljivanje piksela"
-
-msgid "report pixels on"
-msgstr "Uključeno prijavljivanje piksela"
-
-msgid "toggle reporting of pixels"
-msgstr "Uključuje i isključuje prijavljivanje piksela"
-
-#, python-format
-msgid "%d , %d"
-msgstr "%d , %d"
-
-msgid "report the positions of the mouse."
-msgstr "Prijavljuje poziciju miša"
-
-msgid "Moves the Mouse pointer right."
-msgstr "Pomera pokazivač miša desno"
-
-msgid "Moves the Mouse pointer left."
-msgstr "Pomera pokazivač miša levo"
-
-msgid "Moves the Mouse pointer up."
-msgstr "Pomera pokazivač miša gore"
-
-msgid "Moves the Mouse pointer down."
-msgstr "Pomera pokazivač miša dole"
-
-msgid "Enter the value for position number you wish to jump to"
-msgstr "Upišite vrednost za broj pozicije na koju želite da skočite"
-
-msgid "Jump to position"
-msgstr "Skoči na poziciju"
-
-msgid "please enter comma between the first and the second number"
-msgstr "Molimo upišite zarez između prvog i drugog broja"
-
-msgid "please enter an integer number."
-msgstr "Molimo upišite ceo broj"
-
-msgid "type the x/y value you wish the cursor to jump to"
-msgstr "Upišite x/y vrednost na koju želite da kursor skoči"
-
-msgid "restriction on"
-msgstr "Zabrana uključena"
-
-msgid "restriction off"
-msgstr "Zabrana isključena"
-
+#. Translators: The confirmation prompt displayed when the user requests to delete the selected tag.
+#, python-brace-format
 msgid ""
-"Toggles the restriction between the 2 levels you can toggle between "
-"Application Window restriction and Unrestricted."
+"Are you sure you want to delete the position named {name}? This cannot be "
+"undone."
 msgstr ""
-"Uključuje i isključuje zabranu koja kada je uključena vam dozvoljava "
-"pomeranje kursora miša samo u prozoru trenutne aplikacije"
+"Da li ste sigurni da želite da obrišete poziciju {name}? Ovo se nemože "
+"poništiti."
 
+#. Translators: The title of the confirmation dialog for deletion of selected position.
+msgid "Delete position"
+msgstr "Obriši poziciju"
+
+#. Translators: The confirmation prompt displayed when the user is about to clear positions.
+#, python-brace-format
+msgid ""
+"Are you sure you want to clear mouse positions for the current application "
+"({appName})? This cannot be undone."
+msgstr ""
+"Da li ste sigurni da želite da obrišete pozicije za aplikaciju ({appName})? "
+"Ovo se nemože poništiti."
+
+#. Translators: The title of the confirmation dialog for clearing mouse positions.
+msgid "Clear mouse positions"
+msgstr "Obriši pozicije miša"
+
+#. Translators: A dialog message shown when tags for the application is cleared.
+#, fuzzy, python-brace-format
+msgid "All mouse positions for the application {appName} have been deleted."
+msgstr "Sve pozicije miša za aplikaciju {appName} su obrisane."
+
+#. Translators: Title of the tag clear confirmation dialog.
+msgid "Mouse positions cleared"
+msgstr "Pozicije miša obrisane"
+
+#. Translators: This is the label for the Golden Cursor settings category in NVDA Settings screen.
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
-msgid "Golden Cursor moves the mouse with the keyboard"
-msgstr "Golden Cursor pomera miš sa tastaturom"
+msgid "Golden Cursor"
+msgstr "Golden Cursor"
+
+msgid "&Golden Cursor..."
+msgstr "&Golden Cursor..."
+
+msgid "Golden Cursor add-on settings"
+msgstr "Podešavanja dodatka Golden cursor"
+
+#. Translators: message presented when no mouse positions are available for the focused app.
+#, python-format
+msgid "No mouse positions for %s."
+msgstr "Nema pozicija miša za %s."
+
+#. Translators: input help message for a Golden Cursor command.
+msgid "Opens a dialog listing mouse positions for the current application"
+msgstr "Otvara dijalog sa svim sačuvanim pozicijama za trenutnu aplikaciju"
+
+#. Translators: edit field label for new mouse position.
+#, fuzzy, python-brace-format
+msgid "Enter the name for the current mouse position (x: {x}, Y: {y})"
+msgstr "Upišite ime za trenutnu poziciju miša (x: {x}, Y: {y}"
+
+#. Translators: title for save mouse position dialog.
+msgid "Save mouse position"
+msgstr "Sačuvaj poziciju miša"
+
+#. Translators: presented when position (tag) has been saved.
+#, fuzzy, python-format
+msgid "Position saved in %s."
+msgstr "Pozicija je sačuvana u %s."
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Opens a dialog to label the current mouse position and saves it"
+msgstr ""
+"Otvara dijalog za dodeljivanje oznake za trenutnu poziciju miša i čuvanje "
+"pozicije"
+
+#. Translators: input help message for a Golden Cursor command.
+msgid "Changes mouse movement unit"
+msgstr "Menja jedinicu za pomeranje miša"
+
+#. Translators: reported when new mouse coordinate announcement is on.
+msgid "Report new mouse coordinates on"
+msgstr "Uključeno prijavljivanje novih koordinata miša"
+
+#. Translators: reported when new mouse coordinate announcement is on.
+msgid "Report new mouse coordinates off"
+msgstr "Isključeno prijavljivanje novih koordinata miša"
+
+#. Translators: Input help message for a Golden Cursor add-on command.
+msgid "toggles reporting of mouse coordinates in pixels when mouse moves"
+msgstr ""
+"Uključuje i isključuje prijavljivanje koordinata miša u pikselima kada se "
+"miš pomera"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Reports current X and Y mouse position"
+msgstr "Prijavljuje trenutnu X i Y poziciju miša"
+
+#. Translators: presented when toggling mouse arrows feature.
+msgid "Mouse arrows on"
+msgstr "Strelice miša uključene"
+
+#. Translators: presented when toggling mouse arrows feature.
+msgid "Mouse arrows off"
+msgstr "Strelice miša isključene"
+
+#. Translators: input help mode message for a Golden Cursor add-on command.
+msgid "Toggles mouse arrows to move the mouse with the arrow keys"
+msgstr ""
+"Uključuje i isključuje opciju strelice miša, koja služi za pomeranje miša "
+"pomoću strelica na tastaturi"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Moves the Mouse pointer to the right"
+msgstr "Pomera pokazivač miša desno"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Moves the Mouse pointer to the left"
+msgstr "Pomera pokazivač miša levo"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Moves the Mouse pointer down"
+msgstr "Pomera pokazivač miša dole"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Moves the Mouse pointer up"
+msgstr "Pomera pokazivač miša gore"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid ""
+"Opens a dialog to enter the X and Y coordinates for the mouse to move to"
+msgstr "Otvara dijalog za upisivanje X i Y pozicije za pomeranje miša"
+
+#. Translators: presented when mouse movement is restricted to current application.
+msgid "Mouse movement restricted to current application"
+msgstr "Pomeranje miša ograničeno na trenutnu aplikaciju"
+
+#. Translators: presented when mouse movement is unrestricted.
+msgid "Mouse movement unrestricted"
+msgstr "Pomeranje miša neograničeno"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid ""
+"Toggles mouse movement restriction between current application and "
+"unrestricted"
+msgstr ""
+"Uključuje i isključuje zabranu koja vam  kada je uključena dozvoljava "
+"pomeranje kursora miša samo u prozoru trenutne aplikacije"
+
+#. Translators: This is the label for a checkbox in the
+#. Golden Cursor settings dialog.
+msgid "&Announce new mouse coordinates when mouse moves"
+msgstr "&Izgovori nove koordinate miša kada se miš pomera"
+
+#. Translators: The label for a setting in Golden Cursor settings dialog to change mouse movement units.
+msgid "Mouse movement &unit (in pixels)"
+msgstr "&Jedinica pomeranja miša (u pikselima)"
+
+#. Translators: This is the label for the Golden Cursor settings dialog.
+msgid "Golden Cursor Settings"
+msgstr "Podešavanja dodatka Golden cursor"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
-"Allows you to control the mouse movement with the arrow keys. for further "
+"Allows you to control the mouse movement with the keyboard. for further "
 "details please visit the addon guide help."
 msgstr ""
 "Dozvoljava vam da birate pokretanje miša sa strelicama. Za dodatne detalje "

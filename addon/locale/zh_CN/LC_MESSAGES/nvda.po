@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: goldenCursor 3.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2018-02-09 07:00+1000\n"
-"PO-Revision-Date: 2018-06-11 05:51+0800\n"
+"PO-Revision-Date: 2018-06-17 07:08+0800\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -124,7 +124,7 @@ msgid "&Golden Cursor..."
 msgstr "金色光标..."
 
 msgid "Golden Cursor add-on settings"
-msgstr "金色光标附加设置"
+msgstr "金色光标插件设置"
 
 #. Translators: message presented when no mouse positions are available for the focused app.
 #, python-format
