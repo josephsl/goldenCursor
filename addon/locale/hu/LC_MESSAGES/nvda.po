@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: goldenCursor 1.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-04-22 07:00+1000\n"
-"PO-Revision-Date: 2018-01-16 21:23+0100\n"
+"PO-Revision-Date: 2018-06-26 05:52+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Poedit 1.6.4\n"
 
 #, python-format
 msgid "Mouse positions for %s"
@@ -26,7 +26,7 @@ msgstr "Új egérpozíció"
 
 #. Translators: The label for the combo box of the mouse positions in the current application.
 msgid "&Saved mouse positions"
-msgstr "Elmentett egérpozíciók"
+msgstr "&Elmentett egérpozíciók"
 
 #. Translators: the column in mouse positions list to identify the position name.
 msgid "Name"
@@ -151,9 +151,9 @@ msgid "Save mouse position"
 msgstr "Egérpozíció mentése"
 
 #. Translators: presented when position (tag) has been saved.
-#, fuzzy, python-format
+#, python-format
 msgid "Position saved in %s."
-msgstr "A pozíció elmentve. Mentési hely: %s."
+msgstr "A pozíció elmentve %s helyen."
 
 #. Translators: Input help message for a Golden Cursor command.
 msgid "Opens a dialog to label the current mouse position and saves it"
@@ -174,7 +174,7 @@ msgstr "Egérhelyzet változásának bemondása kikapcsolva"
 
 #. Translators: Input help message for a Golden Cursor add-on command.
 msgid "toggles reporting of mouse coordinates in pixels when mouse moves"
-msgstr "Egérhelyzet változásának bemondása ki és bekapcsolása. "
+msgstr "Egérhelyzet változásának bemondása ki és bekapcsolása pixelben."
 
 #. Translators: Input help message for a Golden Cursor command.
 msgid "Reports current X and Y mouse position"
@@ -190,7 +190,7 @@ msgstr "Egérmozgató billentyűk kikapcsolva"
 
 #. Translators: input help mode message for a Golden Cursor add-on command.
 msgid "Toggles mouse arrows to move the mouse with the arrow keys"
-msgstr "Az egérmozgató billentyűk be- és kikapcsolása"
+msgstr "Az egér nyilakkal való mozgásának beállítási gombja"
 
 #. Translators: Input help message for a Golden Cursor command.
 msgid "Moves the Mouse pointer to the right"

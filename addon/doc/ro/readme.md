@@ -18,14 +18,15 @@ pozițiile mausului pentru aplicații.
 * NVDA+Win+S: Comută raportarea pixelilor.
 * Windows+NVDA+J: mișca mausul la o poziție x,y specifică.
 * Windows+NVDA+P: anunță poziția mausului.
-* Windows+NVDA+M: sswitch mouse arrows on or off.
+* NVDA+Win+M: Comută între activarea și dezactivarea mișcării mausului prin
+  apăsarea săgeților.
 * Windows+NVDA+săgeți (sau doar săgeți daca săgețile maus sunt activate):
   mișcă mausul.
 
 Notă: Aceste gesturi pot fi re-definite din dialogul Gesturi de intrare în
 meniul NVDA, preferințe.
 
-## Note.
+## Note
 
 * Când distribui poziții, toată echipa trebuie să utilizeze aceiași
   rezoluție.
@@ -39,10 +40,10 @@ meniul NVDA, preferințe.
 * Atunci când ștergeți ultima poziție salvată, pozițiile aplicației vor fi
   curățate .
 
-## Version 3.0
+## Versiunea 3.0
 
-* If using NVDA 2018.2, add-on settings will be found in new multi-category
-  settings screen under "Golden Cursor" category.
+* Dacă se utilizează NVDA 2018.2, setările suplimentului vor fi găsite în
+  noul ecran al multicategoriei de setări, sub categoria „Golden Cursor”.
 
 ## Versiunea 2.1
 
@@ -90,7 +91,7 @@ meniul NVDA, preferințe.
 
 ## Versiunea 1.0
 
-* Versiunea inițială
+* Versiunea inițială.
 
 [[!tag stable dev]]
 

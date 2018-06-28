@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: goldenCursor 1.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2017-02-03 07:00+1000\n"
-"PO-Revision-Date: 2018-06-16 16:35+0100\n"
+"PO-Revision-Date: 2018-06-22 11:52+0100\n"
 "Last-Translator: Nikola Jović <wwenikola123@gmail.com>\n"
 "Language-Team: \n"
 "Language: sr\n"
@@ -112,7 +112,7 @@ msgid "Clear mouse positions"
 msgstr "Obriši pozicije miša"
 
 #. Translators: A dialog message shown when tags for the application is cleared.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "All mouse positions for the application {appName} have been deleted."
 msgstr "Sve pozicije miša za aplikaciju {appName} su obrisane."
 
@@ -142,9 +142,9 @@ msgid "Opens a dialog listing mouse positions for the current application"
 msgstr "Otvara dijalog sa svim sačuvanim pozicijama za trenutnu aplikaciju"
 
 #. Translators: edit field label for new mouse position.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Enter the name for the current mouse position (x: {x}, Y: {y})"
-msgstr "Upišite ime za trenutnu poziciju miša (x: {x}, Y: {y}"
+msgstr "Upišite ime za trenutnu poziciju miša (x: {x}, Y: {y})"
 
 #. Translators: title for save mouse position dialog.
 msgid "Save mouse position"

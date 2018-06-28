@@ -18,7 +18,7 @@ posicións do rato para as aplicacións.
 * Windows+NVDA+S: conmuta o anunciamento da posición do rato en pixeis.
 * Windows+NVDA+J: mover o rato a unha posición x e y específica.
 * Windows+NVDA+P: anunciar a posición do rato.
-* Windows+NVDA+M: sswitch mouse arrows on or off.
+* Windows+NVDA+M: activar ou desactivar frechas do rato.
 * Windows+NVDA+teclas de frechas (ou so teclas de frechas se frechas do rato
   está aceso): mover o rato.
 
@@ -39,10 +39,10 @@ menú Preferencias do NVDA na categoría Golden Cursor.
 * Ao se borrar posicións gardadas, se non quedan máis posicións gardadas,
   limparanse as da aplicación.
 
-## Version 3.0
+## Versión 3.0
 
-* If using NVDA 2018.2, add-on settings will be found in new multi-category
-  settings screen under "Golden Cursor" category.
+* Se se usa o NVDA 2018.2, a configuración do complemento atoparase na nova
+  pantalla multicategoría Opcións na categoría "Golden Cursor".
 
 ## Versión 2.1
 
