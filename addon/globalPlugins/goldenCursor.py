@@ -129,19 +129,19 @@ class PositionsList(wx.Dialog):
 
 		bHelper = gui.guiHelper.ButtonHelper(orientation=wx.HORIZONTAL)
 
-		jumpButtonID = wx.NewId()
+		jumpButtonID = wx.NewIdRef() if wx.version().startswith("4") else wx.NewId()
 		# Translators: the button to jump to the selected position.
 		bHelper.addButton(self, jumpButtonID, _("&Jump"), wx.DefaultPosition)
 
-		renameButtonID = wx.NewId()
+		renameButtonID = wx.NewIdRef() if wx.version().startswith("4") else wx.NewId()
 		# Translators: the button to rename a mouse position.
 		bHelper.addButton(self, renameButtonID, _("&Rename"), wx.DefaultPosition)
 
-		deleteButtonID = wx.NewId()
+		deleteButtonID = wx.NewIdRef() if wx.version().startswith("4") else wx.NewId()
 		# Translators: the button to delete the selected mouse position.
 		bHelper.addButton(self, deleteButtonID, _("&Delete"), wx.DefaultPosition)
 
-		clearButtonID = wx.NewId()
+		clearButtonID = wx.NewIdRef() if wx.version().startswith("4") else wx.NewId()
 		# Translators: the button to clear all mouse positions for the focused app.
 		bHelper.addButton(self, clearButtonID, _("C&lear positions"), wx.DefaultPosition)
 
