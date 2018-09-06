@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: goldenCursor 1.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2017-02-03 07:00+1000\n"
-"PO-Revision-Date: 2018-06-22 11:52+0100\n"
+"PO-Revision-Date: 2018-09-03 02:08+0100\n"
 "Last-Translator: Nikola Jović <wwenikola123@gmail.com>\n"
 "Language-Team: \n"
 "Language: sr\n"
@@ -151,7 +151,7 @@ msgid "Save mouse position"
 msgstr "Sačuvaj poziciju miša"
 
 #. Translators: presented when position (tag) has been saved.
-#, fuzzy, python-format
+#, python-format
 msgid "Position saved in %s."
 msgstr "Pozicija je sačuvana u %s."
 
