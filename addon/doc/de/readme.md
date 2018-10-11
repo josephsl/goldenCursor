@@ -1,8 +1,8 @@
 # Goldener Cursor #
 
 * Autor: Salah Atair, Joseph Lee
-* Herunterladen der [stabilen Version][1]
-* Herunterladen der [Entwicklerversion][2]
+* [Stabile Version herunterladen][1]
+* [Testversion herunterladen][2]
 
 Diese Erweiterung ermöglicht das Ziehen der Maus mit der Tastatur und das
 Speichern der gewünschten Mauspositionen für die jeweilige Anwendung.
