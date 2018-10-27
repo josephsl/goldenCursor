@@ -25,7 +25,7 @@ addon_info = {
 	# URL for the add-on documentation support
 	"addon_url" : "https://addons.nvda-project.org",
 	# File name for the add-on help file.
-	"addon_docFileName" : "readme.html"
+	"addon_docFileName" : "readme.html",
 	# Minimum NVDA version supported
 	"addon_minimumNVDAVersion" : "2017.3",
 }
