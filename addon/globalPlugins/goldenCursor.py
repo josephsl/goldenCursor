@@ -289,7 +289,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			gui.settingsDialogs.NVDASettingsDialog.categoryClasses.remove(GoldenCursorSettings)
 		else:
 			try:
-				self.prefsMenu.RemoveItem(self.gcSettings)
+				if wx.version().startswith("4"):
+					self.prefsMenu.Remove(self.gcSettings)
+				else:
+					self.prefsMenu.RemoveItem(self.gcSettings)
 			except:
 				pass
 
