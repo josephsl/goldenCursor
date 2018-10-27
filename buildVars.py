@@ -19,13 +19,15 @@ addon_info = {
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 	"addon_description" : _("Allows you to control the mouse movement with the keyboard. for further details please visit the addon guide help."),
 	# version
-	"addon_version" : "3.1",
+	"addon_version" : "3.2",
 	# Author(s)
 	"addon_author" : u"Salah Atair <atair1978@gmail.com>, Wafeeq Taher, Joseph Lee <joseph.lee22590@gmail.com>, Abdel <abdelkrim.bensaid@gmail.com>",
 	# URL for the add-on documentation support
 	"addon_url" : "https://addons.nvda-project.org",
 	# File name for the add-on help file.
 	"addon_docFileName" : "readme.html"
+	# Minimum NVDA version supported
+	"addon_minimumNVDAVersion" : "2017.3",
 }
 
 
