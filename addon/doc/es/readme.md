@@ -11,7 +11,7 @@ las posiciones del ratón para las aplicaciones.
 
 * Control+NVDA+L: ver posiciones guardadas del ratón para una aplicación si
   hay alguna.
-* Shift+NVDA+l: guarda una tag o una etiqueta para la posición del ratón
+* Shift+NVDA+l: guarda una marca o una etiqueta para la posición del ratón
   actual en la aplicación enfocada actualmente.
 * Windows+NVDA+C: cambiar la unidad de movimiento del ratón.
 * Windows*NVDA+R: conmuta la restricción del ratón.
@@ -39,6 +39,10 @@ el menú Preferencias de NVDA en la categoría  Golden Cursor.
   desactiva flechas del ratón.
 * Al eliminar posiciones guardadas, si no quedan más posiciones guardadas,
   se limpiarán las de la aplicación.
+
+## Versión 3.2
+
+* El complemento es compatible con NVDA 2018.3 (WXPython 4).
 
 ## Versión 3.0
 

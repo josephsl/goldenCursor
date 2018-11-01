@@ -2,7 +2,7 @@
 
 * Autor: Salah Atair, Joseph Lee
 * [Stabile Version herunterladen][1]
-* [Testversion herunterladen][2]
+* [Entwicklungsversion herunterladen][2]
 
 Diese Erweiterung ermöglicht das Ziehen der Maus mit der Tastatur und das
 Speichern der gewünschten Mauspositionen für die jeweilige Anwendung.
@@ -40,6 +40,10 @@ im Dialog Eingaben in der Kategorie "goldener Cursor" angepasst werden.
   schalten Sie zuerst die Bewegung des Mauszeigers durch Pfeiltasten aus.
 * Wenn beim Löschen gespeicherter Positionen keine gespeicherten Positionen
   mehr vorhanden sind, werden die Positionen für die Anwendung gelöscht.
+
+## Version 3.2
+
+* Die Erweiterung ist kompatibel mit NVDA 2018.3 (wxPython 4).
 
 ## Version 3.0
 

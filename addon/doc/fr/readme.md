@@ -12,11 +12,7 @@ sauvegarder la position de la souris pour les applications.
 * Contrôle+NVDA+L : afficher les positions de la souris sauvegardées pour
   une application, le cas échéant.
 * Maj+NVDA+l : sauvegarde un tag ou une étiquette pour la position actuelle
-  de la souris dans l'application ayant actuellement le focus. Dans la boîte
-  de dialogue pour configurer les fonctionnalités Émuler copier et Émuler
-  couper à l'installation, si vous choisissez non, les commandes pour ces
-  fonctionnalités seront supprimées, de sorte que vous pouvez restaurer le
-  comportement normal pour contrôle+c et contrôle+x.
+  de la souris dans l'application ayant actuellement le focus.
 * Windows+NVDA+C : changer l'unité de mouvement de la souris.
 * Windows+NVDA+R : basculer entre activer/désactiver la restriction de la
   souris.
@@ -46,6 +42,10 @@ commandes de NVDA sous la catégorie Golden Cursor.
   fléchées, désactivez d'abord les flèches de la souris.
 * Lorsque vous supprimez des positions sauvegardées, s'il n'y a plus de
   positions sauvegardées, les positions de l'application seront effacées.
+
+## Version 3.2
+
+* Le module complémentaire est compatible avec NVDA 2018.3 (wxPython 4).
 
 ## Version 3.0
 

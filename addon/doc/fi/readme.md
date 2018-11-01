@@ -11,7 +11,7 @@ tallentaa hiiren sijainteja sovelluksille.
 
 * Ctrl+NVDA+L: näytä sovellukselle tallennetut hiiren sijainnit.
 * Vaihto+NVDA+L: tallenna tunniste tai selite nykyiselle hiiren sijainnille
-  aktiivisena olevassa sovelluksessa.
+  aktiivisessa sovelluksessa.
 * Win+NVDA+C: muuta hiiren siirtämisen yksikköä.
 * Win+NVDA+R: Ota hiiren rajoittaminen käyttöön tai poista se käytöstä.
 * Win+NVDA+S: Ota hiiren sijainnin puhuminen pikseleinä käyttöön tai poista
@@ -38,6 +38,10 @@ Syötekomennot-valintaikkunasta Golden Cursor -kategorian alta.
   hiirinuolet käytöstä.
 * Mikäli tallennettuja sijainteja ei ole jäljellä niitä poistettaessa,
   sovelluksen sijainnit tyhjennetään.
+
+## Versio 3.2
+
+* Lisäosa on NVDA 2018.3 (wxPython 4) -yhteensopiva.
 
 ## Versio 3.0
 

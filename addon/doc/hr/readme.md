@@ -11,7 +11,7 @@ pohranjujete pozicije miša za različite aplikacije.
 
 * Control+NVDA+L: pregledajte spremljene pozicije miša za neku aplikaciju
   ako postoje.
-* Shift+NVDA+L: save a tag or a label for the current mouse position in the
+* Shift+NVDA+l: save a tag or a label for the current mouse position in the
   currently focused application.
 * Windows+NVDA+C: promijeni jedinicu kretanja miša.
 * Windows+NVDA+R: toggle mouse restriction.
@@ -38,6 +38,10 @@ under Golden Cursor category.
   strelicu miša.
 * Tijekom brisanja spremljenih pozicija, ako više nema spremljenih pozicija,
   pozicije će za tu aplikaciju bit će obrisane.
+
+## Version 3.2
+
+* Add-on is compatible with NVDA 2018.3 (wxPython 4).
 
 ## Version 3.0
 

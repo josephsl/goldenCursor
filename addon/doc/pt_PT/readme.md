@@ -12,7 +12,7 @@ rato para cada aplicação, individualmente.
 * Control+NVDA+L: mostra as posições do rato guardadas para uma aplicação,
   se as houver.
 * Shift+NVDA+l: Guarda uma etiqueta ou um nível para a posição actual do
-  rato na aplicação actualmente focada. 
+  rato, na aplicação actualmente focada. 
 * Windows+NVDA+C: altera a unidade de movimento do rato.
 * Windows+NVDA+R: alterna a restrição do rato.
 * Windows+NVDA+S: alterna entre indicação de coordenadas da posição do rato.
@@ -38,6 +38,10 @@ comandos do NVDA sob a categoria Cursor Dourado.
   primeiro, as setas do rato.
 * Ao apagar posições guardadas, se não houver quaisquer outras para a mesma
   aplicação, o respectivo ficheiro de posições será excluído.
+
+## Versão 3.2
+
+* O Extra é compatível com o  NVDA 2018.3 (wxPython 4).
 
 ## Versão 3.0
 

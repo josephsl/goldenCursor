@@ -11,8 +11,8 @@ posizioni del mouse per le applicazioni.
 
 * Control+NVDA+L: mostra le posizioni salvate per qualsiasi applicazione se
   presenti.
-* Shift+NVDA+l: Salva un tag o un'etichetta della posizione mouse corrente
-  per l'applicazione focalizzata.
+* Shift+NVDA+l: save a tag or a label for the current mouse position in the
+  currently focused application.
 * Windows+NVDA+C: Cambia unità di movimento
 * Windows+NVDA+R: commuta tra le due  restrizioni del mouse.
 * nvda+win+s: attiva/disattiva l'annuncio dei movimenti del mouse in pixel.
@@ -40,6 +40,10 @@ immissione nel menu preferenze di NVDA alla categoria Golden Cursor.
   disattivare la funzione tasti freccia per il mouse.
 * Quando si cancellano le posizioni memorizzate, se non sono rimaste
   posizioni salvate, verranno eliminate le posizioni per l'applicazione.
+
+## Version 3.2
+
+* Add-on is compatible with NVDA 2018.3 (wxPython 4).
 
 ## Versione 3.0
 

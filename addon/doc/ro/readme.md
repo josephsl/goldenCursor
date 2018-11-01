@@ -11,8 +11,8 @@ pozițiile mausului pentru aplicații.
 
 * Control+NVDA+L: afișeaza pozițiile maus salvate pentru o anumită
   aplicație.
-* Shift+NVDA+l: salveaza o etichetă pentru poziția actuală a mausului în
-  aplicația activă.
+* Shift+NVDA+l: save a tag or a label for the current mouse position in the
+  currently focused application.
 * Windows+NVDA+C: schimbă unitatea de mișcare a mausului.
 * NVDA+Win+R: Comută restricționarea mausului.
 * NVDA+Win+S: Comută raportarea pixelilor.
@@ -39,6 +39,10 @@ meniul NVDA, preferințe.
   standard, dezactivați mai întâi săgețile maus.
 * Atunci când ștergeți ultima poziție salvată, pozițiile aplicației vor fi
   curățate .
+
+## Version 3.2
+
+* Add-on is compatible with NVDA 2018.3 (wxPython 4).
 
 ## Versiunea 3.0
 

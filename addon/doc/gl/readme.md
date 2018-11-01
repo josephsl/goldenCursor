@@ -39,6 +39,10 @@ menú Preferencias do NVDA na categoría Golden Cursor.
 * Ao se borrar posicións gardadas, se non quedan máis posicións gardadas,
   limparanse as da aplicación.
 
+## Versión 3.2
+
+* O complemento é compatible con NVDA 2018.3 (WxPython 4).
+
 ## Versión 3.0
 
 * Se se usa o NVDA 2018.2, a configuración do complemento atoparase na nova

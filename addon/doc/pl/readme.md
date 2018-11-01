@@ -11,8 +11,8 @@ pozycji myszy dla danej aplikacji.
 
 * Control+NVDA+L: przeglądaj zapisane pozycje myszy dla danej aplikacji,
   jeśli jakieś zostały wcześniej zapisane.
-* Shift+NVDA+L: Zapisz tag lub oznaczenie dla aktualnej pozycji myszy w
-  aktualnie otwartej aplikacji.
+* Shift+NVDA+l: save a tag or a label for the current mouse position in the
+  currently focused application.
 * Windows+NVDA+C: Zmień jednostkę ruchu myszy.
 * Windows+NVDA+R: Przełącz ograniczenie myszy.
 * Windows+NVDA+S: Przełącz odczytywanie pozycji myszy w pikselach.
@@ -38,6 +38,10 @@ kategorii Golden Cursor.
   należy wyłączyć strzałki myszy.
 * Jeżeli wszystkie zapisane w dodatku pozycje zostaną usunięte, lista
   pozycji dla danej aplikacji zostanie wyczyszczona.
+
+## Version 3.2
+
+* Add-on is compatible with NVDA 2018.3 (wxPython 4).
 
 ## Version 3.0
 

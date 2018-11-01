@@ -11,7 +11,7 @@ posições do mouse em aplicativos.
 
 * Control+NVDA+L: ver as posições salvas do mouse para um aplicativo, se
   houver.
-* Shift+NVDA+L: salva uma tag ou um rótulo para a posição atual do mouse no
+* Shift+NVDA+l: salva uma tag ou um rótulo para a posição atual do mouse no
   aplicativo atualmente focalizado.
 * Windows+NVDA+C: muda a unidade de movimento do mouse.
 * Windows+NVDA+R: Alterna a restrição do mouse.
@@ -38,6 +38,10 @@ Definir comandos — do NVDA na categoria Cursor Dourado.
   setas do mouse primeiro.
 * Ao excluir posições salvas, se não houver posições salvas, as posições do
   aplicativo serão apagadas.
+
+## Versão 3.2
+
+* Complemento é compatível com o NVDA 2018.3 (wxPython 4).
 
 ## Versão 3.0
 
