@@ -29,6 +29,10 @@ Note: these gestures can be reassigned via NVDA's Input Gestures dialog under Go
 * To perform functions that require use of arrow keys, turn off mouse arrows first.
 * When deleting saved positions, if there are no saved positions left, positions for the application will be cleared.
 
+## Version 3.3
+
+* Internal changes to support future NVDA releases.
+
 ## Version 3.2
 
 * Add-on is compatible with NVDA 2018.3 (wxPython 4).
