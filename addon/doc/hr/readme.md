@@ -3,6 +3,7 @@
 * Author: salah atair, Joseph Lee
 * Preuzmi [stable version][1]
 * Preuzmi [development version][2]
+* NVDA compatibility: 2017.3 to 2019.1
 
 Ovaj dodatak dozvoljava vam da pomičete strelicu miša koristeći tipkovnicu i
 pohranjujete pozicije miša za različite aplikacije.

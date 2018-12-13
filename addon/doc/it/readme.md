@@ -3,6 +3,7 @@
 * Autori: salah atair, Joseph Lee
 * Download [stable version][1]
 * Download [development version][2]
+* NVDA compatibility: 2017.3 to 2019.1
 
 Questo add-on permette di spostare il mouse con la tastiera e di salvare le
 posizioni del mouse per le applicazioni. 

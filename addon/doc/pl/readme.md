@@ -3,6 +3,7 @@
 * Autorzy: salah atair, Joseph Lee
 * Pobierz [wersja stabilna][1]
 * Pobierz [wersja rozwojowa][2]
+* NVDA compatibility: 2017.3 to 2019.1
 
 Ten dodatek umożliwia ruszanie myszą za pomocą klawiatury i zapisywanie
 pozycji myszy dla danej aplikacji.

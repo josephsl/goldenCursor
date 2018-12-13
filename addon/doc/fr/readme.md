@@ -3,6 +3,7 @@
 * Auteur : salah atair, Joseph Lee
 * Télécharger [version stable][1]
 * Télécharger [version de développement][2]
+* Compatibilité NVDA: 2017.3 à 2019.1
 
 Ce module vous permet de déplacer la souris à l'aide du clavier et de
 sauvegarder la position de la souris pour les applications.

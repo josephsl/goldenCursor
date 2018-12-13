@@ -3,6 +3,7 @@
 * Autores: salah atair, Joseph Lee
 * Descargar [versión de desenvolvemento][1]
 * Descargar [versión de desenvolvemento][2]
+* Compatibilidade con NVDA: da 2017.3 á 2019.1
 
 Este complemento permíteche mover o rato usando un teclado e gardar as
 posicións do rato para as aplicacións.
