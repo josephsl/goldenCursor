@@ -3,7 +3,7 @@
 * Autori: salah atair, Joseph Lee
 * Descarcă [versiunea stabilă][1]
 * Descarcă [versiunea în dezvoltare][2]
-* NVDA compatibility: 2017.3 to 2019.1
+* Compatibilitate NVDA: 2017.3 - 2019.1
 
 Acest supliment îți permite să muți mausul folosind tastatura și să salvezi
 pozițiile mausului pentru aplicații.
@@ -12,8 +12,8 @@ pozițiile mausului pentru aplicații.
 
 * Control+NVDA+L: afișeaza pozițiile maus salvate pentru o anumită
   aplicație.
-* Shift+NVDA+l: save a tag or a label for the current mouse position in the
-  currently focused application.
+* Shift+NVDA+l: salveaza o etichetă pentru poziția actuală a mausului în
+  aplicația activă.
 * Windows+NVDA+C: schimbă unitatea de mișcare a mausului.
 * NVDA+Win+R: Comută restricționarea mausului.
 * NVDA+Win+S: Comută raportarea pixelilor.
@@ -41,9 +41,9 @@ meniul NVDA, preferințe.
 * Atunci când ștergeți ultima poziție salvată, pozițiile aplicației vor fi
   curățate .
 
-## Version 3.2
+## Versiunea 3.2
 
-* Add-on is compatible with NVDA 2018.3 (wxPython 4).
+* Suplimentul este compatibil cu NVDA 2018.3 (wxPython 4).
 
 ## Versiunea 3.0
 
