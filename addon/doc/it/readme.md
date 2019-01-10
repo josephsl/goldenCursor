@@ -1,19 +1,19 @@
 # Golden Cursor #
 
 * Autori: salah atair, Joseph Lee
-* Download [stable version][1]
-* Download [development version][2]
-* NVDA compatibility: 2017.3 to 2019.1
+* Scarica la [versione stabile][1]
+* Scarica la [versione in sviluppo][2]
+* Compatibilità con NVDA: dalla 2017.3 alla 2019.1
 
 Questo add-on permette di spostare il mouse con la tastiera e di salvare le
 posizioni del mouse per le applicazioni. 
 
 ## Comandi disponibili
 
-* Control+NVDA+L: mostra le posizioni salvate per qualsiasi applicazione se
-  presenti.
-* Shift+NVDA+l: save a tag or a label for the current mouse position in the
-  currently focused application.
+* Control+NVDA+L: Visualizza le posizioni del mouse salvate per
+  l'applicazione corrente se disponibili.
+* Shift+NVDA+l: Apre una finestra di dialogo per etichettare e salvare la
+  posizione corrente del mouse.
 * Windows+NVDA+C: Cambia unità di movimento
 * Windows+NVDA+R: commuta tra le due  restrizioni del mouse.
 * nvda+win+s: attiva/disattiva l'annuncio dei movimenti del mouse in pixel.
@@ -44,7 +44,7 @@ immissione nel menu preferenze di NVDA alla categoria Golden Cursor.
 
 ## Version 3.2
 
-* Add-on is compatible with NVDA 2018.3 (wxPython 4).
+* Compatibile con NVDA 2018.3 (wxPython 4).
 
 ## Versione 3.0
 
