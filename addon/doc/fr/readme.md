@@ -5,7 +5,7 @@
 * Télécharger [version de développement][2]
 * Compatibilité NVDA: 2017.3 à 2019.1
 
-Ce module vous permet de déplacer la souris à l'aide du clavier et de
+Cette extension vous permet de déplacer la souris à l'aide du clavier et de
 sauvegarder la position de la souris pour les applications.
 
 ## Touche de commandes
@@ -46,22 +46,22 @@ commandes de NVDA sous la catégorie Golden Cursor.
 
 ## Version 3.2
 
-* Le module complémentaire est compatible avec NVDA 2018.3 (wxPython 4).
+* Cette extension est compatible avec NVDA 2018.3 (wxPython 4).
 
 ## Version 3.0
 
-* Si vous utilisez NVDA 2018.2, les paramètres du module tcomplémentaire
-  seront trouvés dans le nouvel écran de paramètres multi-catégories sous la
-  catégorie "Golden Cursor".
+* Si vous utilisez NVDA 2018.2, les paramètres de l'extension seront trouvés
+  dans le nouvel écran de paramètres multi-catégories sous la catégorie
+  "Golden Cursor".
 
 ## Version 2.1
 
 * Correction d'une erreur de décodage Unicode lors de la tentative de
   suppression du nom du tag.
 * Empêcher plusieurs instances lors de l'ouverture de diverses boîtes de
-  dialogue du module complémentaire.
-* Amélioration de l'apparence de la liste des positions de la souris et saut
-  de position dans les dialogues.
+  dialogue de l'extension.
+* Amélioration de l'apparence de la liste des positions de la souris et des
+  dialogues Sauter à la position.
 
 ## Version 2.0
 
@@ -71,9 +71,9 @@ commandes de NVDA sous la catégorie Golden Cursor.
   seront migrées vers le nouveau format lors de l'installation.
 * Ajout d'une nouvelle boîte de dialogue dans les paramètres Golden Cursor
   dans le menu Préférences de NVDA pour configurer l'unité de mouvement de
-  la souris et l'annonce des positions de la souris lors des déplacements de
-  la souris.
-* Divers messages de ce module complémentaire ont changé.
+  la souris et l'annonce des positions de la souris lors de ses
+  déplacements.
+* Divers messages de cette extension ont changé.
 * Lorsque vous basculez entre différents paramètres, la tonalité de
   basculement ne sera plus entendue.
 * Vous pouvez maintenant entrer dans le mode flèches de la souris où vous
