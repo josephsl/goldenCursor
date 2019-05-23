@@ -2,7 +2,7 @@
 
 * Autor: Salah Atair, Joseph Lee
 * [Stabile Version herunterladen][1]
-* [Entwicklungsversion herunterladen][2]
+* [Entwicklerversion herunterladen][2]
 * NVDA-Kompatibilität: 2017.3 bis 2019.1
 
 Diese Erweiterung ermöglicht das Ziehen der Maus mit der Tastatur und das
