@@ -3,7 +3,7 @@
 * Autores: salah atair, Joseph Lee
 * Descargar [versión de desarrollo][1]
 * Descargar [versión de desarrollo][2]
-* Compatibilidad con NVDA: de 2017.3 a 2019.1
+* NVDA compatibility: 2017.3 to 2019.2
 
 Este complemento te permite mover el ratón utilizando un teclado y guardar
 las posiciones del ratón para las aplicaciones.
