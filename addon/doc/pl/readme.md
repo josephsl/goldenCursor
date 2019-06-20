@@ -3,7 +3,7 @@
 * Autorzy: salah atair, Joseph Lee
 * Pobierz [wersja stabilna][1]
 * Pobierz [wersja rozwojowa][2]
-* NVDA compatibility: 2017.3 to 2019.2
+* Zgodność z wersjami NVDA: 2017.3 do 2019.2
 
 Ten dodatek umożliwia ruszanie myszą za pomocą klawiatury i zapisywanie
 pozycji myszy dla danej aplikacji.
@@ -12,14 +12,14 @@ pozycji myszy dla danej aplikacji.
 
 * Control+NVDA+L: przeglądaj zapisane pozycje myszy dla danej aplikacji,
   jeśli jakieś zostały wcześniej zapisane.
-* Shift+NVDA+l: save a tag or a label for the current mouse position in the
-  currently focused application.
+* Shift+NVDA+L: Zapisz tag lub oznaczenie dla aktualnej pozycji myszy w
+  aktualnie otwartej aplikacji.
 * Windows+NVDA+C: Zmień jednostkę ruchu myszy.
 * Windows+NVDA+R: Przełącz ograniczenie myszy.
 * Windows+NVDA+S: Przełącz odczytywanie pozycji myszy w pikselach.
 * Windows+NVDA+J: Przesuń mysz do konkretnej pozycji x y.
 * Windows+NVDA+P: Odczytaj pozycję myszy.
-* Windows+NVDA+M: sswitch mouse arrows on or off.
+* Windows+NVDA+M: włącz lub wyłącz strzałki myszy.
 * Windows+NVDA+klawisze strzałek (lub tylko klawisze strzałek, jeśli
   strzałki myszy są włączone): ruszaj myszą.
 
@@ -40,14 +40,14 @@ kategorii Golden Cursor.
 * Jeżeli wszystkie zapisane w dodatku pozycje zostaną usunięte, lista
   pozycji dla danej aplikacji zostanie wyczyszczona.
 
-## Version 3.2
+## Wersja 3.2
 
-* Add-on is compatible with NVDA 2018.3 (wxPython 4).
+* Dodatek jest zgodny z NVDA 2018.3 (wxPython 4).
 
-## Version 3.0
+## Wersja 3.0
 
-* If using NVDA 2018.2, add-on settings will be found in new multi-category
-  settings screen under "Golden Cursor" category.
+* Jeżeli państwo używają NVDA 2018.2, ustawienia dodatku można znaleść w
+  nowym wielopanelowym  dialogu ustawień w kategorii "Golden Cursor".
 
 ## Wersja 2.1
 
@@ -80,18 +80,18 @@ kategorii Golden Cursor.
   istnieje, pojawi się okno błędu.
 * Aby usunąć lub wyczyścić pozycje myszy, musisz potwierdzić swój zamiar
   przyciskiem Tak. Dopiero wtedy pozycje zostaną usunięte lub wyczyszczone.
-* Changes to mouse jump feature, including a new name (now called New mouse
-  position) and ability to enter X and Y coordinates separately or by using
-  up or down arrow keys.
+* Zmiana do funkcji przeskakiwania miszy, włączając w to nową nazwę (od
+  teraz się nazywa nowa pozycja myszy) a także możliwość wpisywania
+  współrzędnych x i y oddzielnie lub używając strzałek.
 * The dialog shown when saving the current mouse position now shows
   coordinates for current mouse location.
 * When saving positions, resolved an issue where NvDA may play error tones
   if the positions folder does not exist.
 
-## Version 1.4
+## Wersja 1.4
 
-* Removed win32api dependency to make it compatible with past and future
-  versions of NVDA.
+* Usunięto zależność win32api, aby uzgodnić dodatek z starymi i nowymi
+  wersjami NVDA.
 
 ## Wersja 1.0
 
