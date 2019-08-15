@@ -3,7 +3,7 @@
 * Autori: salah atair, Joseph Lee
 * Descarcă [versiunea stabilă][1]
 * Descarcă [versiunea în dezvoltare][2]
-* NVDA compatibility: 2017.3 to 2019.2
+* Compatibilitate NVDA: 2017.3 - 2019.2
 
 Acest supliment îți permite să muți mausul folosind tastatura și să salvezi
 pozițiile mausului pentru aplicații.
