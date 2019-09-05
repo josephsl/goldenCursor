@@ -3,7 +3,7 @@
 * Tekijät: Salah Atair ja Joseph Lee
 * Lataa [vakaa versio][1]
 * Lataa [kehitysversio][2]
-* NVDA compatibility: 2017.3 to 2019.2
+* Yhteensopivuus: NVDA 2017.3-2019.2
 
 Tämän lisäosan avulla voit siirtää hiirtä näppäimistöä käyttäen sekä
 tallentaa hiiren sijainteja sovelluksille.
