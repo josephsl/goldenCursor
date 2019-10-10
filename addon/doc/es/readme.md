@@ -15,7 +15,7 @@ las posiciones del ratón para las aplicaciones.
 * Shift+NVDA+l: guarda una marca o una etiqueta para la posición del ratón
   actual en la aplicación enfocada actualmente.
 * Windows+NVDA+C: cambiar la unidad de movimiento del ratón.
-* Windows*NVDA+R: conmuta la restricción del ratón.
+* Windows+NVDA+R: conmuta la restricción del ratón.
 * Windows+NVDA+S: conmuta el anunciado del ratón en píxeles.
 * Windows+NVDA+J: mover el ratón a una posición x e y específica.
 * Windows+NVDA+P: anunciar la posición del ratón.
