@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #golden cursor
-# Copyright (C) 2015-2018
+# Copyright (C) 2015-2019
 #Version 2.2
 #License GNU GPL
 # Date: 25/12/2015
