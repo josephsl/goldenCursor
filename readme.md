@@ -2,7 +2,7 @@
 
 * Author: salah atair, Joseph Lee
 * Download [stable version][1]
-* Download [development version][2]
+* NVDA compatibility: 2019.3 and beyond
 
 This add-on allows you to move the mouse using a keyboard and save mouse positions for applications.
 
@@ -28,6 +28,11 @@ Note: these gestures can be reassigned via NVDA's Input Gestures dialog under Go
 * Version 1.x and 2.x mouse position formats are incompatible.
 * To perform functions that require use of arrow keys, turn off mouse arrows first.
 * When deleting saved positions, if there are no saved positions left, positions for the application will be cleared.
+
+## Version 4.0
+
+* Requires NVDA 2019.3 or later.
+* Golden Cursor settings dialog has been replaced by Golden Cursor settings panel.
 
 ## Version 3.3
 
