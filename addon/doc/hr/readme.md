@@ -1,99 +1,100 @@
-# Golden Cursor #
+# Zlatni kursor (Golden Cursor) #
 
-* Author: salah atair, Joseph Lee
-* Preuzmi [stable version][1]
-* Preuzmi [development version][2]
-* NVDA compatibility: 2017.3 to 2019.2
+* Autor: Salah Atair, Joseph Lee
+* Preuzmi [stabilnu verziju][1]
+* Preuzmi [razvojnu verziju][2]
+* NVDA kompatibilnost: 2017.3 do 2019.2
 
-Ovaj dodatak dozvoljava vam da pomičete strelicu miša koristeći tipkovnicu i
-pohranjujete pozicije miša za različite aplikacije.
+Ovaj dodatak dozvoljava pomicati strelicu miša koristeći tipkovnicu i
+spremanje pozicije miša za programe.
 
-## Tipkovničke kratice 
+## Tipkovnički prečaci
 
-* Control+NVDA+L: pregledajte spremljene pozicije miša za neku aplikaciju
-  ako postoje.
-* Shift+NVDA+l: save a tag or a label for the current mouse position in the
-  currently focused application.
-* Windows+NVDA+C: promijeni jedinicu kretanja miša.
-* Windows+NVDA+R: toggle mouse restriction.
-* Windows+NVDA+S: toggle reporting of mouse position in pixels.
+* Control+NVDA+L: pogledaj spremljene pozicije miša za neku aplikaciju, ako
+  ih ima.
+* Shift+NVDA+l: spremi oznaku ili vrijednost za trenutačnu poziciju miša u
+  trenutačno fokusiranoj aplikaciji.
+* Windows+NVDA+C: promijeni jedinicu pomicanja miša.
+* Windows+NVDA+R: promijeni ograničenje pomicanja miša.
+* Windows+NVDA+S: uključi ili isključi izvještavanje o poziciji miša u
+  pikselima.
 * Windows+NVDA+J: premjesti poziciju miša na određeni položaj x y.
 * Windows+NVDA+P: izvijesti o poziciji miša.
-* Windows+NVDA+M: sswitch mouse arrows on or off.
-* Windows+NVDA+navigacijske strelice (ili samo navigacijske strelice ako je
-  uključena strelica miša): pomakni miš.
+* Windows+NVDA+M: uključi ili isključi pomicanje miša strelicama.
+* Windows+NVDA+tipke strelica (ili samo tipke strelica, ako je uključeno
+  pomicanje miša strelicama): pomakni miša.
 
-Note: these gestures can be reassigned via NVDA's Input Gestures dialog
-under Golden Cursor category.
+Napomena: Ove geste je moguće promijeniti u dijaloškom okviru „Ulazne geste”
+pod kategorijom „Zlatni kursor”.
 
 ## Napomene
 
-* When sharing positions (tags), each party should use same display
-  resolution.
+* Kad se pozicije (oznake) dijele, svatko treba koristiti istu rezoluciju
+  zaslona.
 * Za maksimalnu kompatibilnost, trebate maksimizirati prozore pritiskom
   kombinacije tipaka Windows+Strelica gore.
-* Kada dijelite pozicije, trebate preimenovati postojeće vrijednosti
+* Kad se pozicije dijele, potrebno je preimenovati postojeće vrijednosti
   pozicija.
 * Formati verzije 1 x i 2 x pozicije miša nisu kompatibilni.
-* Za izvođenje funkcija koje zahtijevaju korištenje strelica, prvo uključite
-  strelicu miša.
+* Za izvođenje funkcija koje zahtijevaju korištenje tipki strelica, najprije
+  isključi strelice miša.
 * Tijekom brisanja spremljenih pozicija, ako više nema spremljenih pozicija,
-  pozicije će za tu aplikaciju bit će obrisane.
+  uklonit će se pozicije za aplikaciju.
 
-## Version 3.2
+## Verzija 3.2
 
-* Add-on is compatible with NVDA 2018.3 (wxPython 4).
+* Dodatak je kompatibilan s NVDA 2018.3 (wxPython 4).
 
-## Version 3.0
+## Verzija 3.0
 
-* If using NVDA 2018.2, add-on settings will be found in new multi-category
-  settings screen under "Golden Cursor" category.
+* U NVDA 2018.2, postavke dodatka se nalaze u novom višekategorijskom
+  prozoru postavki  pod kategorijom „Zlatni kursor”.
 
-## Inačica 2.1
+## Verzija 2.1
 
-* Ispravljena greška dekodiranja Unicode-a tijekom pokušaja brisanja naziva
+* Ispravljena greška dekodiranja unikoda tijekom pokušaja brisanja naziva
   oznake.
-* Sprječava višestruke instance prilikom otvaranja različitih dijaloških
-  okvira dodatka.
+* Sprečavanje višestrukih instanci prilikom otvaranja dijaloških okvira
+  raznih dodatka.
 * Poboljšan izgled popisa pozicija miša i skok na dijaloške okvire pozicija.
 
-## Inačica 2.0
+## Verzija 2.0
 
 * Zahtijeva NVDA 2017.3 i noviji.
-* Format datoteke pozicije nije kompatibilan s 1.x inačicama. Ako je
+* Format datoteke pozicije nije kompatibilan s 1.x verzijama. Ako je
   pronađen format pozicije u 1.x formatu, pozicije u starom formatu bit će
   pretvorene u novi format tijekom instalacije.
-* Dodan je novi dijaloški okvir postavki Golden Cursor dodatka u
-  podizborniku postavki NVDA za definiranje jedinice pokreta miša i
-  obavijesti o pozicijama miša kao pokretima miša.
-* Različite poruke ovog dodatka su promijenjene.
-* Dok uključujete i isključujete različite postavke, više nećete čuti
-  odgovarajući zvuk.
-* Sada možete ući u način strelice miša gdje možete pomicati miša samo
-  pritišćući tipke sa strelicama.
-* Promjene u dijaloškom okviru popisa pozicija,uključujući novo ime (sada se
-  naziva Pozicije Miša) i raspored, sada se prikazuju koordinate miša i ime
-  trenutne aplikacije kao dio naslova.
-* Iz dijaloškog okvira Pozicije miša, pritisnete li Enter na spremljenu
-  vrijednost pomaknut će miša na spremljenu lokaciju.
-* Ako preiimenujete poziciju miša, pojavit će se dijaloški okvir greške ako
-  postoji vrijednost s istim imenom. 
-* Ako brišete pozicije miša, sada morate odgovoriti sa Da prije nego što se
-  pozicije obrišu.
-* Promjene u značajki Skok na poziciju miša, uključujući novo ime (sada se
-  naziva Nova pozicija miša) i mogućnost unošenja X i Y koordinata odvojeno,
-  ili korištenja tipki sa strelicama gore i dolje.
+* U NVDA izborniku postavki je dodan novi dijaloški okvir „Postavke dodatka
+  Zlatni kursor” za definiranje jedinice pomicanja miša i za obavještavanje
+  o pozicijama miša prilikom pomicanja miša.
+* Promijenjene su različite poruke ovog dodatka.
+* Prilikom uključivanja i isključivanja različitih postavki, više se neće
+  čuti odgovarajući zvuk.
+* Sad je moguće pokrenuti modus pomicanje miša strelicama, u kojem je moguće
+  pomicati miša pomoću tipki sa strelicama.
+* Promjene u dijaloškom okviru Popis pozicija uključuju novo ime (sad se
+  zove „Pozicije miša”) i raspored, prikaz koordinata miša za vrijednost i
+  prikaz imena trenutačnog programa kao dio naslova.
+* U dijaloškom okviru „Pozicije miša”, pritiskom tipke Enter na spremljenu
+  vrijednost, miš će se pomaknuti na spremljenu lokaciju.
+* Ako se pozicija miša preimenuje, pojavit će se dijaloški okvir greške ako
+  postoji vrijednost s istim imenom.
+* Prilikom brisanja ili uklanjanja pozicija miša, sad je potrebno odgovoriti
+  s „Da”, prije samog brisanja ili uklanjanja.
+* Promjene u značajki Skok na poziciju miša uključuju novo ime (sad se zove
+  „Nova pozicija miša”) i mogućnost unošenja X i Y koordinata odvojeno ili
+  korištenja tipki sa strelicama gore ili dolje.
 * Dijaloški okvir koji se prikazuje tijekom spremanja trenutne pozicije miša
-  sada prikazuje koordinate za trenutnu lokaciju miša. 
+  sada prikazuje koordinate za trenutnu lokaciju miša.
 * Tijekom spremanja pozicija, ispravljena je greška gdje je NVDA ponekad
   reproducirao zvukove pogreške ako mapa pozicija nije postojala.
 
-## Inačica 1.4
+## Verzija 1.4
 
-* Uklonjena je ovisnost od win32api kbko bi dodatak bio kompatibilan s
-  prošlim i budućim inačicama NVDA.
+* Uklonjena je ovisnost od win32api kako bi dodatak bio kompatibilan s
+  prošlim i budućim verzijama NVDA čitača.
 
-## Inačica 1.0
+## Verzija 1.0
 
 * Inicijalno izdanje.
 

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: goldenCursor 3.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2018-02-09 07:00+1000\n"
-"PO-Revision-Date: 2019-11-12 09:46+0800\n"
+"PO-Revision-Date: 2019-11-15 08:09+0800\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -43,7 +43,7 @@ msgstr "位置Y"
 
 #. Translators: the button to jump to the selected position.
 msgid "&Jump"
-msgstr "转到(&G)..."
+msgstr "转到(&G)"
 
 #. Translators: the button to rename a mouse position.
 msgid "&Rename"
@@ -152,7 +152,7 @@ msgstr "位置保存在%s."
 
 #. Translators: Input help message for a Golden Cursor command.
 msgid "Opens a dialog to label the current mouse position and saves it"
-msgstr "打开一个对话框标记当前鼠标的位置并保存。"
+msgstr "打开一个对话框标记当前鼠标的位置并保存"
 
 #. Translators: input help message for a Golden Cursor command.
 msgid "Changes mouse movement unit"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: goldenCursor 1.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-03-18 05:37+1000\n"
-"PO-Revision-Date: 2016-03-18 02:23+0330\n"
+"PO-Revision-Date: 2019-11-15 17:33+0330\n"
 "Last-Translator: Mohammadreza Rashad <mohammadreza5712@gmail.com>\n"
 "Language-Team: NVDA Translation Team <nvda-translations@freelists.org>\n"
 "Language: fa\n"
@@ -20,138 +20,224 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,-1,-1,-1,5,-1,-1\n"
 
-msgid "positions List"
-msgstr "فهرستِ موقعیت‌ها"
-
 #, python-format
-msgid "there is no any positions for %s."
-msgstr "موقعیتِ ذخیره‌شده‌ای برای %s موجود نیست."
+msgid "Mouse positions for %s"
+msgstr "موقعیت‌های موس برای %s"
 
-msgid "choose a item of this list"
-msgstr "موردی را از این فهرست انتخاب کنید"
+msgid "New mouse position"
+msgstr "موقعیتِ جدیدِ موس"
 
-msgid "&rename"
-msgstr "تغییرِ &نام"
+#. Translators: The label for the list view of the mouse positions in the current application.
+msgid "&Saved mouse positions"
+msgstr "موقعیت‌های موسِ &ذخیره‌شده"
 
-msgid "&delete"
+#. Translators: the column in mouse positions list to identify the position name.
+msgid "Name"
+msgstr "نام"
+
+#. Translators: the column in mouse positions list to identify the X coordinate.
+msgid "Position X"
+msgstr "موقعیتِ X"
+
+#. Translators: the column in mouse positions list to identify the Y coordinate.
+msgid "Position Y"
+msgstr "موقعیتِ Y"
+
+#. Translators: the button to jump to the selected position.
+msgid "&Jump"
+msgstr "&پریدن"
+
+#. Translators: the button to rename a mouse position.
+msgid "&Rename"
+msgstr "&تغییرِ نام دادن"
+
+#. Translators: the button to delete the selected mouse position.
+msgid "&Delete"
 msgstr "&حذف کردن"
 
-msgid "c&lear"
-msgstr "&پاک کردن"
+#. Translators: the button to clear all mouse positions for the focused app.
+msgid "C&lear positions"
+msgstr "&پاک کردنِ موقعیت‌ها"
 
-msgid "no selection"
-msgstr "چیزی انتخاب نشده است."
+#. Translators: The label of a button to close the mouse positions dialog.
+msgid "&Close"
+msgstr "&بستن"
 
-msgid "Edit"
-msgstr "ویرایش"
+msgid "&X position"
+msgstr "موقعیتِ &X"
 
+msgid "&Y position"
+msgstr "موقعیتِ &Y"
+
+#. Translators: The label of a field to enter a new name for a mouse position/tag.
+msgid "New name"
+msgstr "نامِ جدید"
+
+#. Translators: The title of the dialog to rename a mouse position.
 msgid "Rename"
 msgstr "تغییرِ نام"
 
-msgid "the position has been deleted."
-msgstr "موقعیت حذف شده است."
-
-msgid "the list has been cleared."
-msgstr "فهرست پاک شده است."
-
-msgid "An NVDA settings dialog is already open. Please close it first."
-msgstr "یک پنجره‌ی تنظیماتِ NVDA باز مانده است. لطفا اول آن‌را ببندید."
-
+#. Translators: An error displayed when renaming a mouse position
+#. and a tag with the new name already exists.
 msgid ""
-"To open a list showing the points that have already been saved for this "
-"application."
-msgstr "برای باز کردنِ فهرستی که نقاطِ ذخیره‌شده برای این برنامه را نشان میدهد."
-
-msgid "Enter the value for position name you wish to save."
-msgstr "نامِ موقعیتی را که میخواهید ذخیره کنید وارد کنید."
-
-msgid "save position"
-msgstr "ذخیره کردنِ موقعیت"
-
-msgid "please enter the value for the name of the position."
-msgstr "لطفا نامِ موقعیت را وارد کنید."
+"Another mouse position has the same name as the entered name. Please choose "
+"a different name."
+msgstr "موقعیتِ موسِ دیگری هم‌نام با نامِ واردشده است. لطفا نامِ دیگری انتخاب کنید."
 
 msgid "Error"
 msgstr "خطا"
 
-#, python-format
-msgid "the position has been saved in %s."
-msgstr "موقعیت در %s ذخیره شده است."
-
-msgid "to save a the current position."
-msgstr "برای ذخیره کردنِ موقعیتِ جاری."
-
-msgid "to select a value for mouse movement (1, 10, 20, 50. 100."
-msgstr ""
-"جهتِ انتخاب یک مقدار برای حرکت موس از میانِ مقادیرِ ۱، ۵، ۱۰، ۲۰، ۵۰ و ۱۰۰ "
-"پیکْسِل."
-
-msgid "report pixels off"
-msgstr "پیکْسِل‌ها اعلام نمیشوند."
-
-msgid "report pixels on"
-msgstr "پیکْسِل‌ها اعلام میشوند."
-
-msgid "toggle reporting of pixels"
-msgstr "اعلام شدنِ پیکْسِل‌ها را فعال یا غیرِ فعال میکند."
-
-#, python-format
-msgid "%d , %d"
-msgstr "%d , %d"
-
-msgid "report the positions of the mouse."
-msgstr "موقعیتِ موس را اعلام میکند."
-
-msgid "Moves the Mouse pointer right."
-msgstr "اشاره‌گرِ موس را به راست میبَرَد."
-
-msgid "Moves the Mouse pointer left."
-msgstr "اشاره‌گرِ موس را به چپ میبَرَد."
-
-msgid "Moves the Mouse pointer up."
-msgstr "اشاره‌گرِ موس را بالا میبَرَد."
-
-msgid "Moves the Mouse pointer down."
-msgstr "اشاره‌گرِ موس را پایین میبَرَد."
-
-msgid "Enter the value for position number you wish to jump to"
-msgstr "شماره‌ی موقعیتی را که میخواهید به آنجا بروید وارد کنید."
-
-msgid "Jump to position"
-msgstr "پریدن به موقعیت"
-
-msgid "please enter comma between the first and the second number"
-msgstr "لطفا بینِ شماره‌ی اول و دوم کاما بگذارید."
-
-msgid "please enter an integer number."
-msgstr "لطفا یک عددِ صحیح وارد کنید."
-
-msgid "type the x/y value you wish the cursor to jump to"
-msgstr "مقدار X و Yِ موردِ نظرتان را که میخواهید اشاره‌گر به آنجا بپرد وارد کنید."
-
-msgid "restriction on"
-msgstr "موس محدود شد."
-
-msgid "restriction off"
-msgstr "موس محدود نیست."
-
+#. Translators: The confirmation prompt displayed when the user requests to delete the selected tag.
+#, python-brace-format
 msgid ""
-"Toggles the restriction between the 2 levels you can toggle between "
-"Application Window restriction and Unrestricted."
+"Are you sure you want to delete the position named {name}? This cannot be "
+"undone."
 msgstr ""
-"محدودیتِ موس را بینِ دو سطح تغییر میدهد. شما میتوانید اشاره‌گرِ موس را محدود به "
-"پنجره‌ی جاری کنید یا محدودیتِ موس را بردارید."
+"آیا مطمينید که میخواهید موقعیتِ {name} را حذف کنید? این کار برگشت‌پذیر نخواهد "
+"بود."
 
+#. Translators: The title of the confirmation dialog for deletion of selected position.
+msgid "Delete position"
+msgstr "حذفِ موقعیت"
+
+#. Translators: The confirmation prompt displayed when the user is about to clear positions.
+#, python-brace-format
+msgid ""
+"Are you sure you want to clear mouse positions for the current application "
+"({appName})? This cannot be undone."
+msgstr ""
+"آیا مطمينید که میخواهید موقعیت‌های موسِ برنامه‌ی جاری ({appName}) را حذف کنید? "
+"این کار برگشت‌پذیر نخواهد بود."
+
+#. Translators: The title of the confirmation dialog for clearing mouse positions.
+msgid "Clear mouse positions"
+msgstr "پاک کردنِ موقعیت‌های موس"
+
+#. Translators: A dialog message shown when tags for the application is cleared.
+#, python-brace-format
+msgid "All mouse positions for the application {appName} have been deleted."
+msgstr "همه‌ی موقعیت‌های موس برای برنامه‌ی {appName} حذف شد."
+
+#. Translators: Title of the tag clear confirmation dialog.
+msgid "Mouse positions cleared"
+msgstr "موقعیت‌های موس پاک شدند."
+
+#. Translators: This is the label for the Golden Cursor settings category in NVDA Settings screen.
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
-msgid "Golden Cursor moves the mouse with the keyboard"
-msgstr "مکان‌نمای طلایی موس را با صفحه‌کلید حرکت میدهد."
+msgid "Golden Cursor"
+msgstr "مکان‌نمای طلایی"
+
+#. Translators: message presented when no mouse positions are available for the focused app.
+#, python-format
+msgid "No mouse positions for %s."
+msgstr "موقعیتِ موس برای %s موجود نیست."
+
+#. Translators: input help message for a Golden Cursor command.
+msgid "Opens a dialog listing mouse positions for the current application"
+msgstr "پنجره‌ای را برای فهرست کردنِ موقعیت‌های موس برای برنامه‌ی جاری باز میکند."
+
+#. Translators: edit field label for new mouse position.
+#, python-brace-format
+msgid "Enter the name for the current mouse position (x: {x}, Y: {y})"
+msgstr "برای موقعیتِ جاریِ موس یک نام وارد کنید (x: {x}, Y: {y})"
+
+#. Translators: title for save mouse position dialog.
+msgid "Save mouse position"
+msgstr "ذخیره‌ی موقعیتِ موس"
+
+#. Translators: presented when position (tag) has been saved.
+#, python-format
+msgid "Position saved in %s."
+msgstr "موقعیت در %s ذخیره شد."
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Opens a dialog to label the current mouse position and saves it"
+msgstr ""
+"پنجره‌ای را برای برچسب گذاشتن روی موقعیتِ جاریِ موس و ذخیره کردنِ آن باز میکند."
+
+#. Translators: input help message for a Golden Cursor command.
+msgid "Changes mouse movement unit"
+msgstr "واحدِ حرکتِ موس را تغییر میدهد."
+
+#. Translators: reported when new mouse coordinate announcement is on.
+msgid "Report new mouse coordinates on"
+msgstr "اعلامِ مختصاتِ جدیدِ موس، روشن"
+
+#. Translators: reported when new mouse coordinate announcement is on.
+msgid "Report new mouse coordinates off"
+msgstr "اعلامِ مختصاتِ جدیدِ موس، خاموش"
+
+#. Translators: Input help message for a Golden Cursor add-on command.
+msgid "toggles reporting of mouse coordinates in pixels when mouse moves"
+msgstr "اعلامِ مختصات را هنگامِ حرکت موس به پیکسل فعال یا غیرفعال میکند."
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Reports current X and Y mouse position"
+msgstr "موقعیتِ جاریِ موس را به شکلِ X و Y اعلام میکند."
+
+#. Translators: presented when toggling mouse arrows feature.
+msgid "Mouse arrows on"
+msgstr "جهت‌نماهای موس، روشن"
+
+#. Translators: presented when toggling mouse arrows feature.
+msgid "Mouse arrows off"
+msgstr "جهت‌نماهای موس، خاموش"
+
+#. Translators: input help mode message for a Golden Cursor add-on command.
+msgid "Toggles mouse arrows to move the mouse with the arrow keys"
+msgstr "جهت‌نماهای موس را برای حرکت دادَنِ موس با صفحه‌کلید فعال یا غیرفعال میکند."
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Moves the Mouse pointer to the right"
+msgstr "نشانگرِ موس را به راست میبَرَد."
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Moves the Mouse pointer to the left"
+msgstr "نشانگرِ موس را به چپ میبَرَد."
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Moves the Mouse pointer down"
+msgstr "نشانگرِ موس را به پایین میبَرَد."
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Moves the Mouse pointer up"
+msgstr "نشان‌گرِ موس را به بالا میبَرَد."
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid ""
+"Opens a dialog to enter the X and Y coordinates for the mouse to move to"
+msgstr ""
+"پنجره‌ای را جهتِ ورودِ مختصات X و Y برای بُردنِ موس به نقطه‌ی موردِ نظر باز میکند."
+
+#. Translators: presented when mouse movement is restricted to current application.
+msgid "Mouse movement restricted to current application"
+msgstr "حرکتِ موس به برنامه‌ی جاری محدود شد."
+
+#. Translators: presented when mouse movement is unrestricted.
+msgid "Mouse movement unrestricted"
+msgstr "حرکتِ موس نامحدود شد."
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid ""
+"Toggles mouse movement restriction between current application and "
+"unrestricted"
+msgstr "محدودیتِ حرکتِ موس را بینِ برنامه‌ی جاری و نامحدود تغییر میدهد."
+
+#. Translators: This is the label for a checkbox in the
+#. Golden Cursor settings dialog.
+msgid "&Announce new mouse coordinates when mouse moves"
+msgstr "&اعلامِ مختصاتِ جدید هنگامِ حرکتِ موس"
+
+#. Translators: The label for a setting in Golden Cursor settings dialog to change mouse movement units.
+msgid "Mouse movement &unit (in pixels)"
+msgstr "&واحدِ حرکتِ موس به پیکسل"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
-"Allows you to control the mouse movement with the arrow keys. for further "
+"Allows you to control the mouse movement with the keyboard. for further "
 "details please visit the addon guide help."
 msgstr ""
-"به شما امکان میدهد حرکتِ اشاره‌گرِ موس را با جهت‌نماها کنترل کنید. برای جزئیات "
+"به شما امکان میدهد حرکتِ نشان‌گرِ موس را با جهت‌نماها کنترل کنید. برای جزئیاتِ "
 "بیشتر راهنمای افزونه را ببینید."
