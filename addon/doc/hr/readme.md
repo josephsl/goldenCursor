@@ -30,7 +30,7 @@ pod kategorijom „Zlatni kursor”.
 ## Napomene
 
 * Kad se pozicije (oznake) dijele, svatko treba koristiti istu rezoluciju
-  zaslona.
+  ekrana.
 * Za maksimalnu kompatibilnost, trebate maksimizirati prozore pritiskom
   kombinacije tipaka Windows+Strelica gore.
 * Kad se pozicije dijele, potrebno je preimenovati postojeće vrijednosti
