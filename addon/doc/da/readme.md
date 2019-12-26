@@ -2,8 +2,8 @@
 
 * Forfatter: Salah Atair, Joseph Lee
 * Download [stabil version][1]
-* Download [udviklingsversion][2]
-* NVDA compatibility: 2017.3 to 2019.2
+* NVDA compatibility: 2019.3 and beyond
+* Download [older version][3] compatible with NVDA 2019.2.1 and earlier
 
 Denne tilføjelse giver dig mulighed for at flytte musen ved hjælp af et
 tastatur og gemme musepositioner til applikationer.
@@ -38,6 +38,16 @@ Bemærk: Disse kommandoer kan ændres ved brug af NVDA-dialogen
   slå musepilene fra.
 * Når der slettes gemte positioner, vil alle positioner for den aktuelle
   applikation ryddes, hvis der ikke længere eksistere gemte positioner.
+
+## Version 4.0
+
+* Requires NVDA 2019.3 or later.
+* Golden Cursor settings dialog has been replaced by Golden Cursor settings
+  panel.
+
+## Version 3.3
+
+* Internal changes to support future NVDA releases.
 
 ## Version 3.2
 
@@ -99,3 +109,5 @@ Bemærk: Disse kommandoer kan ændres ved brug af NVDA-dialogen
 [1]: https://addons.nvda-project.org/files/get.php?file=gc
 
 [2]: https://addons.nvda-project.org/files/get.php?file=gc-dev
+
+[3]: https://addons.nvda-project.org/files/get.php?file=gc-2019

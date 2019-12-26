@@ -2,8 +2,8 @@
 
 * Автори: Salah Atair, Joseph Lee
 * Изтегляне на [стабилна версия][1]
-* Изтегляне на [тестова версия][2]
-* NVDA compatibility: 2017.3 to 2019.2
+* NVDA compatibility: 2019.3 and beyond
+* Download [older version][3] compatible with NVDA 2019.2.1 and earlier
 
 Тази добавка ви позволява да местите курсора на мишката посредством
 клавиатурата и да запазвате позиции на мишката за конкретни приложения.
@@ -43,6 +43,16 @@
   стрелки, първо изключете стрелките за мишката.
 * При изтриване на запаметени позиции, ако няма останали запаметени позиции,
   позициите за приложението ще бъдат изчистени.
+
+## Version 4.0
+
+* Requires NVDA 2019.3 or later.
+* Golden Cursor settings dialog has been replaced by Golden Cursor settings
+  panel.
+
+## Version 3.3
+
+* Internal changes to support future NVDA releases.
 
 ## Версия 3.2
 
@@ -110,3 +120,5 @@
 [1]: https://addons.nvda-project.org/files/get.php?file=gc
 
 [2]: https://addons.nvda-project.org/files/get.php?file=gc-dev
+
+[3]: https://addons.nvda-project.org/files/get.php?file=gc-2019

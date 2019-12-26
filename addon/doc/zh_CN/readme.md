@@ -2,8 +2,8 @@
 
 * 作者: salah atair, Joseph Lee
 * 下载[稳定版][1]
-* 下载[开发板][2]
-* NVDA兼容版本: 2017.3至2019.2
+* NVDA compatibility: 2019.3 and beyond
+* Download [older version][3] compatible with NVDA 2019.2.1 and earlier
 
 该附加插件允许您使用键盘移动鼠标并为应用程序保存鼠标位置。
 
@@ -29,6 +29,16 @@
 * * 版本1.x和2.x鼠标位置格式不兼容。
 * 要执行需要使用箭头键的功能，请先关闭鼠标箭头。
 * 删除保存的位置时，如果没有保存的位置，应用程序的位置将被清除。
+
+## Version 4.0
+
+* Requires NVDA 2019.3 or later.
+* Golden Cursor settings dialog has been replaced by Golden Cursor settings
+  panel.
+
+## Version 3.3
+
+* Internal changes to support future NVDA releases.
 
 ## 版本3.2
 
@@ -73,3 +83,5 @@
 [1]: https://addons.nvda-project.org/files/get.php?file=gc
 
 [2]: https://addons.nvda-project.org/files/get.php?file=gc-dev
+
+[3]: https://addons.nvda-project.org/files/get.php?file=gc-2019

@@ -2,8 +2,8 @@
 
 * Autor: Salah Atair, Joseph Lee
 * [Stabile Version herunterladen][1]
-* [Entwicklerversion herunterladen][2]
-* NVDA-Kompatibilität: 2017.3 bis 2019.2
+* NVDA compatibility: 2019.3 and beyond
+* Download [older version][3] compatible with NVDA 2019.2.1 and earlier
 
 Diese Erweiterung ermöglicht das Ziehen der Maus mit der Tastatur und das
 Speichern der gewünschten Mauspositionen für die jeweilige Anwendung.
@@ -41,6 +41,16 @@ im Dialog Eingaben in der Kategorie "goldener Cursor" angepasst werden.
   schalten Sie zuerst die Bewegung des Mauszeigers durch Pfeiltasten aus.
 * Wenn beim Löschen gespeicherter Positionen keine gespeicherten Positionen
   mehr vorhanden sind, werden die Positionen für die Anwendung gelöscht.
+
+## Version 4.0
+
+* Requires NVDA 2019.3 or later.
+* Golden Cursor settings dialog has been replaced by Golden Cursor settings
+  panel.
+
+## Version 3.3
+
+* Internal changes to support future NVDA releases.
 
 ## Version 3.2
 
@@ -109,3 +119,5 @@ im Dialog Eingaben in der Kategorie "goldener Cursor" angepasst werden.
 [1]: https://addons.nvda-project.org/files/get.php?file=gc
 
 [2]: https://addons.nvda-project.org/files/get.php?file=gc-dev
+
+[3]: https://addons.nvda-project.org/files/get.php?file=gc-2019

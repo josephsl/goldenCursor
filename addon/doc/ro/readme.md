@@ -2,8 +2,8 @@
 
 * Autori: salah atair, Joseph Lee
 * Descarcă [versiunea stabilă][1]
-* Descarcă [versiunea în dezvoltare][2]
-* Compatibilitate NVDA: 2017.3 - 2019.2
+* NVDA compatibility: 2019.3 and beyond
+* Download [older version][3] compatible with NVDA 2019.2.1 and earlier
 
 Acest supliment îți permite să muți mausul folosind tastatura și să salvezi
 pozițiile mausului pentru aplicații.
@@ -40,6 +40,16 @@ meniul NVDA, preferințe.
   standard, dezactivați mai întâi săgețile maus.
 * Atunci când ștergeți ultima poziție salvată, pozițiile aplicației vor fi
   curățate .
+
+## Version 4.0
+
+* Requires NVDA 2019.3 or later.
+* Golden Cursor settings dialog has been replaced by Golden Cursor settings
+  panel.
+
+## Version 3.3
+
+* Internal changes to support future NVDA releases.
 
 ## Versiunea 3.2
 
@@ -103,3 +113,5 @@ meniul NVDA, preferințe.
 [1]: https://addons.nvda-project.org/files/get.php?file=gc
 
 [2]: https://addons.nvda-project.org/files/get.php?file=gc-dev
+
+[3]: https://addons.nvda-project.org/files/get.php?file=gc-2019

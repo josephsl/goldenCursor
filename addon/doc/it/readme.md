@@ -2,8 +2,8 @@
 
 * Autori: salah atair, Joseph Lee
 * Scarica la [versione stabile][1]
-* Scarica la [versione in sviluppo][2]
-* Compatibilità con NVDA: dalla 2017.3 alla 2019.2
+* NVDA compatibility: 2019.3 and beyond
+* Download [older version][3] compatible with NVDA 2019.2.1 and earlier
 
 Questo add-on permette di spostare il mouse con la tastiera e di salvare le
 posizioni del mouse per le applicazioni. 
@@ -41,6 +41,16 @@ immissione nel menu preferenze di NVDA alla categoria Golden Cursor.
   disattivare la funzione tasti freccia per il mouse.
 * Quando si cancellano le posizioni memorizzate, se non sono rimaste
   posizioni salvate, verranno eliminate le posizioni per l'applicazione.
+
+## Version 4.0
+
+* Requires NVDA 2019.3 or later.
+* Golden Cursor settings dialog has been replaced by Golden Cursor settings
+  panel.
+
+## Version 3.3
+
+* Internal changes to support future NVDA releases.
 
 ## Version 3.2
 
@@ -107,3 +117,5 @@ immissione nel menu preferenze di NVDA alla categoria Golden Cursor.
 [1]: https://addons.nvda-project.org/files/get.php?file=gc
 
 [2]: https://addons.nvda-project.org/files/get.php?file=gc-dev
+
+[3]: https://addons.nvda-project.org/files/get.php?file=gc-2019

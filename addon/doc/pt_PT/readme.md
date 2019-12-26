@@ -2,8 +2,8 @@
 
 * Autores: salah atair, Joseph Lee
 * Baixar [versão estável] [1]
-* Baixar [versão de desenvolvimento] [2]
-* NVDA compatibility: 2017.3 to 2019.2
+* NVDA compatibility: 2019.3 and beyond
+* Download [older version][3] compatible with NVDA 2019.2.1 and earlier
 
 Este extra permite mover o rato usando um teclado e guardar as posições do
 rato para cada aplicação, individualmente.
@@ -39,6 +39,16 @@ comandos do NVDA sob a categoria Cursor Dourado.
   primeiro, as setas do rato.
 * Ao apagar posições guardadas, se não houver quaisquer outras para a mesma
   aplicação, o respectivo ficheiro de posições será excluído.
+
+## Version 4.0
+
+* Requires NVDA 2019.3 or later.
+* Golden Cursor settings dialog has been replaced by Golden Cursor settings
+  panel.
+
+## Version 3.3
+
+* Internal changes to support future NVDA releases.
 
 ## Versão 3.2
 
@@ -104,3 +114,5 @@ comandos do NVDA sob a categoria Cursor Dourado.
 [1]: https://addons.nvda-project.org/files/get.php?file=gc
 
 [2]: https://addons.nvda-project.org/files/get.php?file=gc-dev
+
+[3]: https://addons.nvda-project.org/files/get.php?file=gc-2019
