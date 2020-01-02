@@ -2,8 +2,9 @@
 
 * Tekijät: Salah Atair ja Joseph Lee
 * Lataa [vakaa versio][1]
-* NVDA compatibility: 2019.3 and beyond
-* Download [older version][3] compatible with NVDA 2019.2.1 and earlier
+* Yhteensopivuus: NVDA 2019.3 ja uudemmat
+* Lataa [vanhempi versio,][3] joka on yhteensopiva NVDA 2019.2.1:n ja sitä
+  vanhempien kanssa
 
 Tämän lisäosan avulla voit siirtää hiirtä näppäimistöä käyttäen sekä
 tallentaa hiiren sijainteja sovelluksille.
@@ -40,15 +41,14 @@ Syötekomennot-valintaikkunasta Golden Cursor -kategorian alta.
 * Mikäli tallennettuja sijainteja ei ole jäljellä niitä poistettaessa,
   sovelluksen sijainnit tyhjennetään.
 
-## Version 4.0
+## Versio 4.0
 
-* Requires NVDA 2019.3 or later.
-* Golden Cursor settings dialog has been replaced by Golden Cursor settings
-  panel.
+* Vaatii NVDA 2019.3:n tai uudemman.
+* Lisäosan asetusvalintaikkuna on korvattu asetuspaneelilla.
 
-## Version 3.3
+## Versio 3.3
 
-* Internal changes to support future NVDA releases.
+* Sisäisiä muutoksia tulevien NVDA-versioiden tukemiseksi.
 
 ## Versio 3.2
 

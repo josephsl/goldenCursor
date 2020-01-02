@@ -2,8 +2,8 @@
 
 * Autorzy: salah atair, Joseph Lee
 * Pobierz [wersja stabilna][1]
-* NVDA compatibility: 2019.3 and beyond
-* Download [older version][3] compatible with NVDA 2019.2.1 and earlier
+* Zgodność z wersjami NVDA: 2019.3 and beyond
+* Pobierz [starszą wersję][3] zgodną z NVDA 2019.2.1 i starszych
 
 Ten dodatek umożliwia ruszanie myszą za pomocą klawiatury i zapisywanie
 pozycji myszy dla danej aplikacji.
@@ -40,15 +40,14 @@ kategorii Golden Cursor.
 * Jeżeli wszystkie zapisane w dodatku pozycje zostaną usunięte, lista
   pozycji dla danej aplikacji zostanie wyczyszczona.
 
-## Version 4.0
+## Wersja 4.0
 
-* Requires NVDA 2019.3 or later.
-* Golden Cursor settings dialog has been replaced by Golden Cursor settings
-  panel.
+* Wymaga NVDA 2019.3 lub nowszej.
+* Dialogowe okno ustawień Golden Cursor zostało zmienione na panel.
 
-## Version 3.3
+## Wersja 3.3
 
-* Internal changes to support future NVDA releases.
+* Zmiany wewnętrzne do wsparcia nowszych wersji NVDA.
 
 ## Wersja 3.2
 
