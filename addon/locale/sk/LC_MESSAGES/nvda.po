@@ -1,0 +1,234 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the goldenCursor package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: goldenCursor 3.3\n"
+"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"POT-Creation-Date: 2018-12-14 07:00+1000\n"
+"PO-Revision-Date: 2020-01-13 12:38+0100\n"
+"Last-Translator: Ondrej Rosík <ondrej.rosik@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.11\n"
+
+#, python-format
+msgid "Mouse positions for %s"
+msgstr "Zapamätané pozície pre %s"
+
+msgid "New mouse position"
+msgstr "Nová pozícia"
+
+#. Translators: The label for the list view of the mouse positions in the current application.
+msgid "&Saved mouse positions"
+msgstr "&Uložené pozície"
+
+#. Translators: the column in mouse positions list to identify the position name.
+msgid "Name"
+msgstr "Názov"
+
+#. Translators: the column in mouse positions list to identify the X coordinate.
+msgid "Position X"
+msgstr "Pozícia X"
+
+#. Translators: the column in mouse positions list to identify the Y coordinate.
+msgid "Position Y"
+msgstr "Pozícia Y"
+
+#. Translators: the button to jump to the selected position.
+msgid "&Jump"
+msgstr "&Skočiť"
+
+#. Translators: the button to rename a mouse position.
+msgid "&Rename"
+msgstr "&Premenovať"
+
+#. Translators: the button to delete the selected mouse position.
+msgid "&Delete"
+msgstr "&Vymazať"
+
+#. Translators: the button to clear all mouse positions for the focused app.
+msgid "C&lear positions"
+msgstr "vyma&zať pozície"
+
+#. Translators: The label of a button to close the mouse positions dialog.
+msgid "&Close"
+msgstr "Za&vrieť"
+
+msgid "&X position"
+msgstr "Pozícia &X"
+
+msgid "&Y position"
+msgstr "Pozícia &Y"
+
+#. Translators: The label of a field to enter a new name for a mouse position/tag.
+msgid "New name"
+msgstr "Nový názov"
+
+#. Translators: The title of the dialog to rename a mouse position.
+msgid "Rename"
+msgstr "premenovať"
+
+#. Translators: An error displayed when renaming a mouse position
+#. and a tag with the new name already exists.
+msgid ""
+"Another mouse position has the same name as the entered name. Please choose "
+"a different name."
+msgstr "Pozícia s týmto názvom už existuje. Zvoľte iné meno."
+
+msgid "Error"
+msgstr "Chyba"
+
+#. Translators: The confirmation prompt displayed when the user requests to delete the selected tag.
+#, python-brace-format
+msgid ""
+"Are you sure you want to delete the position named {name}? This cannot be "
+"undone."
+msgstr "Naozaj chcete odstrániť pozíciu {name}?"
+
+#. Translators: The title of the confirmation dialog for deletion of selected position.
+msgid "Delete position"
+msgstr "Vymazať pozíciu"
+
+#. Translators: The confirmation prompt displayed when the user is about to clear positions.
+#, python-brace-format
+msgid ""
+"Are you sure you want to clear mouse positions for the current application "
+"({appName})? This cannot be undone."
+msgstr "Naozaj chcete odstrániť uložené pozície pre ({appName})?"
+
+#. Translators: The title of the confirmation dialog for clearing mouse positions.
+msgid "Clear mouse positions"
+msgstr "Vymazať pozície"
+
+#. Translators: A dialog message shown when tags for the application is cleared.
+#, python-brace-format
+msgid "All mouse positions for the application {appName} have been deleted."
+msgstr "Všetky pozície pre {appName} odstránené."
+
+#. Translators: Title of the tag clear confirmation dialog.
+msgid "Mouse positions cleared"
+msgstr "Pozície odstránené"
+
+#. Translators: This is the label for the Golden Cursor settings category in NVDA Settings screen.
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Golden Cursor"
+msgstr "Pokročilý kurzor myši"
+
+#. Translators: message presented when no mouse positions are available for the focused app.
+#, python-format
+msgid "No mouse positions for %s."
+msgstr "Nenašli sa žiadne pozície pre %s."
+
+#. Translators: input help message for a Golden Cursor command.
+msgid "Opens a dialog listing mouse positions for the current application"
+msgstr "Otvorí zoznam s uloženými pozíciami pre aktuálnu aplikáciu"
+
+#. Translators: edit field label for new mouse position.
+#, python-brace-format
+msgid "Enter the name for the current mouse position (x: {x}, Y: {y})"
+msgstr "Zadajte názov pre pozíciu myši (x: {x}, Y: {y})"
+
+#. Translators: title for save mouse position dialog.
+msgid "Save mouse position"
+msgstr "Uložiť pozíciu"
+
+#. Translators: presented when position (tag) has been saved.
+#, python-format
+msgid "Position saved in %s."
+msgstr "Pozícia uložená v %s."
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Opens a dialog to label the current mouse position and saves it"
+msgstr "Otvorí dialóg na pomenovanie a uloženie pozície"
+
+#. Translators: input help message for a Golden Cursor command.
+msgid "Changes mouse movement unit"
+msgstr "Zmení jednotku na pohyb myši"
+
+#. Translators: reported when new mouse coordinate announcement is on.
+msgid "Report new mouse coordinates on"
+msgstr "Oznamovať pozíciu myši"
+
+#. Translators: reported when new mouse coordinate announcement is on.
+msgid "Report new mouse coordinates off"
+msgstr "Neoznamovať pozíciu myši"
+
+#. Translators: Input help message for a Golden Cursor add-on command.
+msgid "toggles reporting of mouse coordinates in pixels when mouse moves"
+msgstr "Zapína a vypína oznamovanie pozície kurzora v pixeloch"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Reports current X and Y mouse position"
+msgstr "Oznámy pozíciu myši"
+
+#. Translators: presented when toggling mouse arrows feature.
+msgid "Mouse arrows on"
+msgstr "Ovládanie myši šípkami zapnuté"
+
+#. Translators: presented when toggling mouse arrows feature.
+msgid "Mouse arrows off"
+msgstr "Ovládanie myši šípkami vypnuté"
+
+#. Translators: input help mode message for a Golden Cursor add-on command.
+msgid "Toggles mouse arrows to move the mouse with the arrow keys"
+msgstr "Zapína a vypína ovládanie myši šípkami"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Moves the Mouse pointer to the right"
+msgstr "Posunie ukazovateľ myši doprava"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Moves the Mouse pointer to the left"
+msgstr "Posunie ukazovateľ myši doľava"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Moves the Mouse pointer down"
+msgstr "Posunie ukazovateľ myši dole"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Moves the Mouse pointer up"
+msgstr "Posunie ukazovateľ myši hore"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid ""
+"Opens a dialog to enter the X and Y coordinates for the mouse to move to"
+msgstr "Otvorí dialóg na ručné zadanie pozície myši"
+
+#. Translators: presented when mouse movement is restricted to current application.
+msgid "Mouse movement restricted to current application"
+msgstr "Pohyb myši obmedzený na aktuálne okno"
+
+#. Translators: presented when mouse movement is unrestricted.
+msgid "Mouse movement unrestricted"
+msgstr "Obmedzenie myši vypnuté"
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid ""
+"Toggles mouse movement restriction between current application and "
+"unrestricted"
+msgstr ""
+"Zapína a vypína obmedzenie pohybu kurzora myši na okno aktuálnej aplikácie"
+
+#. Translators: This is the label for a checkbox in the
+#. Golden Cursor settings dialog.
+msgid "&Announce new mouse coordinates when mouse moves"
+msgstr "&Oznamovať pozíciu myši pri pohybe kurzora"
+
+#. Translators: The label for a setting in Golden Cursor settings dialog to change mouse movement units.
+msgid "Mouse movement &unit (in pixels)"
+msgstr "Jednotka na pohyb k&urzora myši (v pixeloch)"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid ""
+"Allows you to control the mouse movement with the keyboard. for further "
+"details please visit the addon guide help."
+msgstr ""
+"Umožňuje ovládať myš z klávesnice. Podrobnosti nájdete v návode k doplnku."
