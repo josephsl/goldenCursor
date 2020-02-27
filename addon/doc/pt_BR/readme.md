@@ -2,8 +2,8 @@
 
 * Autor: salah atair, Joseph Lee
 * Baixe a [versão estável][1]
-* NVDA compatibility: 2019.3 and beyond
-* Download [older version][3] compatible with NVDA 2019.2.1 and earlier
+* Compatibilidade com NVDA: 2019.3 e posteriores
+* Baixe a [versão mais velha][3], compatível com NVDA 2019.2.1 e anteriores
 
 Este complemento possibilita mover o mouse usando o teclado e salvar
 posições do mouse em aplicativos.
@@ -40,15 +40,15 @@ Definir comandos — do NVDA na categoria Cursor Dourado.
 * Ao excluir posições salvas, se não houver posições salvas, as posições do
   aplicativo serão apagadas.
 
-## Version 4.0
+## Versão 4.0
 
-* Requires NVDA 2019.3 or later.
-* Golden Cursor settings dialog has been replaced by Golden Cursor settings
-  panel.
+* Requer NVDA 2019.3 ou posteriores.
+* O diálogo de configurações do Cursor de Ouro foi substituído pelo Painel
+  de Configurações do Cursor de Ouro.
 
-## Version 3.3
+## Versão 3.3
 
-* Internal changes to support future NVDA releases.
+* Alterações internas para suportar futuras versões do NVDA.
 
 ## Versão 3.2
 
