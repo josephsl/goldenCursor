@@ -3,7 +3,6 @@
 * Autor: salah atair, Joseph Lee
 * Baixe a [versão estável][1]
 * Compatibilidade com NVDA: 2019.3 e posteriores
-* Baixe a [versão mais velha][3], compatível com NVDA 2019.2.1 e anteriores
 
 Este complemento possibilita mover o mouse usando o teclado e salvar
 posições do mouse em aplicativos.
@@ -97,8 +96,8 @@ Definir comandos — do NVDA na categoria Cursor Dourado.
   separadamente ou usando as teclas de seta para cima ou para baixo.
 * A caixa de diálogo mostrada ao salvar a posição atual do mouse agora
   mostra as coordenadas da localização atual do mouse.
-* Ao salvar posições, resolveu um problema em que o NvDA pode reproduzir
-  tons de erro se a pasta de posições não existir.
+* Ao salvar posições, foi resolvido um problema em que o NVDA podia
+  reproduzir tons de erro se a pasta de posições não existir.
 
 ## Versão 1.4
 
@@ -114,5 +113,3 @@ Definir comandos — do NVDA na categoria Cursor Dourado.
 [1]: https://addons.nvda-project.org/files/get.php?file=gc
 
 [2]: https://addons.nvda-project.org/files/get.php?file=gc-dev
-
-[3]: https://addons.nvda-project.org/files/get.php?file=gc-2019

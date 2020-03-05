@@ -3,8 +3,6 @@
 * Autores: salah atair, Joseph Lee
 * Descargar [versión de desarrollo][1]
 * Compatibilidad con NVDA: 2019.3 y versiones posteriores
-* Descargar [versión más antigua][3] compatible con NVDA 2019.2.1 y
-  versiones anteriores
 
 Este complemento te permite mover el ratón utilizando un teclado y guardar
 las posiciones del ratón para las aplicaciones.
@@ -117,5 +115,3 @@ el menú Preferencias de NVDA en la categoría  Golden Cursor.
 [1]: https://addons.nvda-project.org/files/get.php?file=gc
 
 [2]: https://addons.nvda-project.org/files/get.php?file=gc-dev
-
-[3]: https://addons.nvda-project.org/files/get.php?file=gc-2019

@@ -3,7 +3,6 @@
 * Autor: Salah Atair, Joseph Lee
 * Preuzmi [stabilnu verziju][1]
 * NVDA compatibility: 2019.3 and beyond
-* Download [older version][3] compatible with NVDA 2019.2.1 and earlier
 
 Ovaj dodatak dozvoljava pomicati strelicu miša koristeći tipkovnicu i
 spremanje pozicije miša za programe.
@@ -96,8 +95,8 @@ pod kategorijom „Zlatni kursor”.
   korištenja tipki sa strelicama gore ili dolje.
 * Dijaloški okvir koji se prikazuje tijekom spremanja trenutne pozicije miša
   sada prikazuje koordinate za trenutnu lokaciju miša.
-* Tijekom spremanja pozicija, ispravljena je greška gdje je NVDA ponekad
-  reproducirao zvukove pogreške ako mapa pozicija nije postojala.
+* When saving positions, resolved an issue where NVDA may play error tones
+  if the positions folder does not exist.
 
 ## Verzija 1.4
 
@@ -113,5 +112,3 @@ pod kategorijom „Zlatni kursor”.
 [1]: https://addons.nvda-project.org/files/get.php?file=gc
 
 [2]: https://addons.nvda-project.org/files/get.php?file=gc-dev
-
-[3]: https://addons.nvda-project.org/files/get.php?file=gc-2019

@@ -3,7 +3,6 @@
 * Auteur : salah atair, Joseph Lee
 * Télécharger [version stable][1]
 * NVDA compatibility: 2019.3 and beyond
-* Download [older version][3] compatible with NVDA 2019.2.1 and earlier
 
 Cette extension vous permet de déplacer la souris à l'aide du clavier et de
 sauvegarder la position de la souris pour les applications.
@@ -107,8 +106,8 @@ commandes de NVDA sous la catégorie Golden Cursor.
 * Le dialogue affichée lors de la sauvegarde de la position actuelle de la
   souris affiche maintenant les coordonnées de l'emplacement actuel de la
   souris.
-* Lors de la sauvegarde des positions, il a été résolu que NVDA peut émettre
-  des tonalités d'erreur si le dossier des positions n'existe pas.
+* When saving positions, resolved an issue where NVDA may play error tones
+  if the positions folder does not exist.
 
 ## Version 1.4
 
@@ -124,5 +123,3 @@ commandes de NVDA sous la catégorie Golden Cursor.
 [1]: https://addons.nvda-project.org/files/get.php?file=gc
 
 [2]: https://addons.nvda-project.org/files/get.php?file=gc-dev
-
-[3]: https://addons.nvda-project.org/files/get.php?file=gc-2019

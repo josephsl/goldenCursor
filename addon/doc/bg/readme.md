@@ -3,7 +3,6 @@
 * Автори: Salah Atair, Joseph Lee
 * Изтегляне на [стабилна версия][1]
 * NVDA compatibility: 2019.3 and beyond
-* Download [older version][3] compatible with NVDA 2019.2.1 and earlier
 
 Тази добавка ви позволява да местите курсора на мишката посредством
 клавиатурата и да запазвате позиции на мишката за конкретни приложения.
@@ -103,8 +102,8 @@
   използване на клавишите със стрелки за нагоре или надолу.
 * Диалоговият прозорец, извеждан при запазването на текущата позиция на
   мишката, показва координатите за текущото местоположение на мишката.
-* Разрешен е проблем, при който при записване на позиции NVDA може да
-  възпроизвежда сигнали за грешка, ако папката за позициите не съществува.
+* When saving positions, resolved an issue where NVDA may play error tones
+  if the positions folder does not exist.
 
 ## Версия 1.4
 
@@ -120,5 +119,3 @@
 [1]: https://addons.nvda-project.org/files/get.php?file=gc
 
 [2]: https://addons.nvda-project.org/files/get.php?file=gc-dev
-
-[3]: https://addons.nvda-project.org/files/get.php?file=gc-2019

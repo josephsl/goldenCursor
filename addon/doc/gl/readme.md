@@ -3,8 +3,6 @@
 * Autores: salah atair, Joseph Lee
 * Descargar [versión de desenvolvemento][1]
 * Compatibilidade con NVDA: 2019.3 en diante
-* Descargar [versión máis antiga][3] compatible con NVDA 2019.2.1 e
-  anteriores
 
 Este complemento permíteche mover o rato usando un teclado e gardar as
 posicións do rato para as aplicacións.
@@ -96,7 +94,7 @@ menú Preferencias do NVDA na categoría Golden Cursor.
   e Y separadamente ou usando as teclas de frecha arriba ou abaixo.
 * O diálogo amosado ao se gardar a posición actual do rato agora amosa as
   coordenadas para a posición actual do rato.
-* Ao se gardar posicións, resolviuse un problema onde o NVDA podería
+* Ao se gardar posicións, resolveuse un problema onde o NVDA podería
   reproducir tons de erro se o cartafol de posicións non existe.
 
 ## Versión 1.4
@@ -113,5 +111,3 @@ menú Preferencias do NVDA na categoría Golden Cursor.
 [1]: https://addons.nvda-project.org/files/get.php?file=gc
 
 [2]: https://addons.nvda-project.org/files/get.php?file=gc-dev
-
-[3]: https://addons.nvda-project.org/files/get.php?file=gc-2019

@@ -3,7 +3,6 @@
 * Autores: salah atair, Joseph Lee
 * Baixar [versão estável] [1]
 * NVDA compatibility: 2019.3 and beyond
-* Download [older version][3] compatible with NVDA 2019.2.1 and earlier
 
 Este extra permite mover o rato usando um teclado e guardar as posições do
 rato para cada aplicação, individualmente.
@@ -97,8 +96,8 @@ comandos do NVDA sob a categoria Cursor Dourado.
   e Y separadamente ou usando as teclas de seta para cima ou para baixo.
 * A caixa de diálogo mostrada ao guardar a posição actual do rato agora
   mostra as coordenadas para a localização atual do rato.
-* Ao guardar posições, resolveu-se  um problema que levava o NVDA a
-  reproduzir tons de erro se a pasta de posições não existisse.
+* When saving positions, resolved an issue where NVDA may play error tones
+  if the positions folder does not exist.
 
 ## Versão 1.4
 
@@ -114,5 +113,3 @@ comandos do NVDA sob a categoria Cursor Dourado.
 [1]: https://addons.nvda-project.org/files/get.php?file=gc
 
 [2]: https://addons.nvda-project.org/files/get.php?file=gc-dev
-
-[3]: https://addons.nvda-project.org/files/get.php?file=gc-2019

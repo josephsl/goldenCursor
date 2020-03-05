@@ -3,7 +3,6 @@
 * Autorzy: salah atair, Joseph Lee
 * Pobierz [wersja stabilna][1]
 * Zgodność z wersjami NVDA: 2019.3 and beyond
-* Pobierz [starszą wersję][3] zgodną z NVDA 2019.2.1 i starszych
 
 Ten dodatek umożliwia ruszanie myszą za pomocą klawiatury i zapisywanie
 pozycji myszy dla danej aplikacji.
@@ -94,9 +93,8 @@ kategorii Golden Cursor.
   współrzędnych x i y oddzielnie lub używając strzałek.
 * Dialog do zapisywania aktualnej pozycji myszy teraz pokazuje współrzędne
   dla aktualnej pozycji myszy.
-* Gdy pozycję są zachowywane, naprawiono błąd, przy którym NVDA odtwarzała
-  dźwięk błędu z powodu nieznalezionego folderu do zachowywania pozycji
-  myszy.
+* When saving positions, resolved an issue where NVDA may play error tones
+  if the positions folder does not exist.
 
 ## Wersja 1.4
 
@@ -112,5 +110,3 @@ kategorii Golden Cursor.
 [1]: https://addons.nvda-project.org/files/get.php?file=gc
 
 [2]: https://addons.nvda-project.org/files/get.php?file=gc-dev
-
-[3]: https://addons.nvda-project.org/files/get.php?file=gc-2019

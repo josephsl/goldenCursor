@@ -3,7 +3,6 @@
 * Autor: Salah Atair, Joseph Lee
 * [Stabile Version herunterladen][1]
 * NVDA compatibility: 2019.3 and beyond
-* Download [older version][3] compatible with NVDA 2019.2.1 and earlier
 
 Diese Erweiterung ermöglicht das Ziehen der Maus mit der Tastatur und das
 Speichern der gewünschten Mauspositionen für die jeweilige Anwendung.
@@ -102,8 +101,8 @@ im Dialog Eingaben in der Kategorie "goldener Cursor" angepasst werden.
   getrennt oder mit den Pfeiltasten nach oben und unten eingegeben werden.
 * Der Dialog, der beim Speichern der aktuellen Mausposition angezeigt wird,
   zeigt nun die Koordinaten der aktuellen Mausposition an.
-* Beim Speichern von Mauspositionen wurde ein Problem behoben, bei dem NVDA
-  Fehlertöne abspielte, wenn der Positionsordner nicht existiert.
+* When saving positions, resolved an issue where NVDA may play error tones
+  if the positions folder does not exist.
 
 ## Version 1.4
 
@@ -119,5 +118,3 @@ im Dialog Eingaben in der Kategorie "goldener Cursor" angepasst werden.
 [1]: https://addons.nvda-project.org/files/get.php?file=gc
 
 [2]: https://addons.nvda-project.org/files/get.php?file=gc-dev
-
-[3]: https://addons.nvda-project.org/files/get.php?file=gc-2019

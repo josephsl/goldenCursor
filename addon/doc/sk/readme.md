@@ -3,7 +3,6 @@
 * Autori: salah atair, Joseph Lee
 * Stiahnuť [stabilnú verziu][1]
 * Funguje s NVDA od verzie 2019.3
-* Stiahnuť [staršiu verziu][3] pre NVDA do verzie 2019.2.1
 
 Umožňuje pohybovať kurzorom myši z klávesnice a uložiť pozície myši pre
 klikanie v aplikáciách.
@@ -103,5 +102,3 @@ Klávesové skratky môžete zmeniť v dialógu klávesové skratky.
 [1]: https://addons.nvda-project.org/files/get.php?file=gc
 
 [2]: https://addons.nvda-project.org/files/get.php?file=gc-dev
-
-[3]: https://addons.nvda-project.org/files/get.php?file=gc-2019

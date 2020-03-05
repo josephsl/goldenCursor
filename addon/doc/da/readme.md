@@ -3,7 +3,6 @@
 * Forfatter: Salah Atair, Joseph Lee
 * Download [stabil version][1]
 * NVDA compatibility: 2019.3 and beyond
-* Download [older version][3] compatible with NVDA 2019.2.1 and earlier
 
 Denne tilføjelse giver dig mulighed for at flytte musen ved hjælp af et
 tastatur og gemme musepositioner til applikationer.
@@ -92,8 +91,8 @@ Bemærk: Disse kommandoer kan ændres ved brug af NVDA-dialogen
   eller ved hjælp af pilene op og ned.
 * Dialogboksen, der vises, når du gemmer den aktuelle museposition, viser nu
   koordinater for den aktuelle museplacering.
-* Løst et problem der udløste en fejltone, når du gemmer positioner, hvis
-  positionsmappen ikke findes.
+* When saving positions, resolved an issue where NVDA may play error tones
+  if the positions folder does not exist.
 
 ## Version 1.4
 
@@ -109,5 +108,3 @@ Bemærk: Disse kommandoer kan ændres ved brug af NVDA-dialogen
 [1]: https://addons.nvda-project.org/files/get.php?file=gc
 
 [2]: https://addons.nvda-project.org/files/get.php?file=gc-dev
-
-[3]: https://addons.nvda-project.org/files/get.php?file=gc-2019

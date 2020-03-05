@@ -3,8 +3,6 @@
 * Tekijät: Salah Atair ja Joseph Lee
 * Lataa [vakaa versio][1]
 * Yhteensopivuus: NVDA 2019.3 ja uudemmat
-* Lataa [vanhempi versio,][3] joka on yhteensopiva NVDA 2019.2.1:n ja sitä
-  vanhempien kanssa
 
 Tämän lisäosan avulla voit siirtää hiirtä näppäimistöä käyttäen sekä
 tallentaa hiiren sijainteja sovelluksille.
@@ -93,8 +91,8 @@ Syötekomennot-valintaikkunasta Golden Cursor -kategorian alta.
   erikseen tai Nuoli ylös/alas-näppäimiä käyttäen.
 * Nykyistä hiiren sijaintia tallennettaessa näytettävä valintaikkuna näyttää
   nyt sijainnin koordinaatit.
-* Ratkaistu ongelma, jossa NVDA saattoi toistaa virheääniä sijainteja
-  tallennettaessa, mikäli sijaintien kansiota ei ollut olemassa.
+* Ratkaistu ongelma, jossa NVDA saattaa toistaa virheääniä sijainteja
+  tallennettaessa, mikäli sijaintien kansiota ei ole olemassa.
 
 ## Versio 1.4
 
@@ -110,5 +108,3 @@ Syötekomennot-valintaikkunasta Golden Cursor -kategorian alta.
 [1]: https://addons.nvda-project.org/files/get.php?file=gc
 
 [2]: https://addons.nvda-project.org/files/get.php?file=gc-dev
-
-[3]: https://addons.nvda-project.org/files/get.php?file=gc-2019

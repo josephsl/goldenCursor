@@ -3,8 +3,6 @@
 * Autori: salah atair, Joseph Lee
 * Descarcă [versiunea stabilă][1]
 * Compatibilitate NVDA: 2019.3 și mai nou
-* Descărcați [versiunea mai veche][3], compatibilă cu NVDA 2019.3 și cu
-  versiunile mai vechi ale acestuia
 
 Acest supliment îți permite să muți mausul folosind tastatura și să salvezi
 pozițiile mausului pentru aplicații.
@@ -97,8 +95,8 @@ meniul NVDA, preferințe.
   jos.
 * Dialogul afișat atunci când salvați poziția actuală a mouse-ului afișează
   acum coordonatele pentru locația actuală a mouse-ului.
-* A fost rezolvată o problemă la salvarea pozițiilor prin care NVDA poate
-  reda tonuri de eroare dacă folderul de poziții nu există.
+* When saving positions, resolved an issue where NVDA may play error tones
+  if the positions folder does not exist.
 
 ## Versiunea 1.4
 
@@ -114,5 +112,3 @@ meniul NVDA, preferințe.
 [1]: https://addons.nvda-project.org/files/get.php?file=gc
 
 [2]: https://addons.nvda-project.org/files/get.php?file=gc-dev
-
-[3]: https://addons.nvda-project.org/files/get.php?file=gc-2019
