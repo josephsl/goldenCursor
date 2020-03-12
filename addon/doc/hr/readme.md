@@ -2,7 +2,7 @@
 
 * Autor: Salah Atair, Joseph Lee
 * Preuzmi [stabilnu verziju][1]
-* NVDA compatibility: 2019.3 and beyond
+* NVDA kompatibilnost: 2019.3 i novija
 
 Ovaj dodatak dozvoljava pomicati strelicu miša koristeći tipkovnicu i
 spremanje pozicije miša za programe.
@@ -34,21 +34,21 @@ pod kategorijom „Zlatni kursor”.
   kombinacije tipaka Windows+Strelica gore.
 * Kad se pozicije dijele, potrebno je preimenovati postojeće vrijednosti
   pozicija.
-* Formati verzije 1 x i 2 x pozicije miša nisu kompatibilni.
+* Formati verzije 1.x i 2.x pozicije miša nisu kompatibilni.
 * Za izvođenje funkcija koje zahtijevaju korištenje tipki strelica, najprije
   isključi strelice miša.
 * Tijekom brisanja spremljenih pozicija, ako više nema spremljenih pozicija,
   uklonit će se pozicije za aplikaciju.
 
-## Version 4.0
+## Verzija 4.0
 
-* Requires NVDA 2019.3 or later.
-* Golden Cursor settings dialog has been replaced by Golden Cursor settings
-  panel.
+* Zahtijeva NVDA 2019.3 ili noviju verziju.
+* Dijaloški okvir za Golden Cursor postavke, zamijenjen je s pločom za
+  Golden Cursor postavke.
 
-## Version 3.3
+## Verzija 3.3
 
-* Internal changes to support future NVDA releases.
+* Unutarnje promjene, kako bi se podržala buduća NVDA izdanja.
 
 ## Verzija 3.2
 
@@ -95,8 +95,8 @@ pod kategorijom „Zlatni kursor”.
   korištenja tipki sa strelicama gore ili dolje.
 * Dijaloški okvir koji se prikazuje tijekom spremanja trenutne pozicije miša
   sada prikazuje koordinate za trenutnu lokaciju miša.
-* When saving positions, resolved an issue where NVDA may play error tones
-  if the positions folder does not exist.
+* Tijekom spremanja pozicija, ispravljena je greška gdje je NVDA ponekad
+  reproducirao zvukove pogreške ako mapa pozicija nije postojala.
 
 ## Verzija 1.4
 

@@ -93,8 +93,9 @@ kategorii Golden Cursor.
   współrzędnych x i y oddzielnie lub używając strzałek.
 * Dialog do zapisywania aktualnej pozycji myszy teraz pokazuje współrzędne
   dla aktualnej pozycji myszy.
-* When saving positions, resolved an issue where NVDA may play error tones
-  if the positions folder does not exist.
+* Gdy pozycję są zachowywane, naprawiono błąd, przy którym NVDA odtwarzała
+  dźwięk błędu z powodu nieznalezionego folderu do zachowywania pozycji
+  myszy.
 
 ## Wersja 1.4
 
