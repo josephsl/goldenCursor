@@ -9,9 +9,9 @@ spremanje pozicije miša za programe.
 
 ## Tipkovnički prečaci
 
-* Control+NVDA+L: pogledaj spremljene pozicije miša za neku aplikaciju, ako
+* Kontrol+NVDA+L: pogledaj spremljene pozicije miša za neku aplikaciju, ako
   ih ima.
-* Shift+NVDA+l: spremi oznaku ili vrijednost za trenutačnu poziciju miša u
+* Šift+NVDA+l: spremi oznaku ili vrijednost za trenutačnu poziciju miša u
   trenutačno fokusiranoj aplikaciji.
 * Windows+NVDA+C: promijeni jedinicu pomicanja miša.
 * Windows+NVDA+R: promijeni ograničenje pomicanja miša.

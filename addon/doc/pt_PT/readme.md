@@ -2,7 +2,7 @@
 
 * Autores: salah atair, Joseph Lee
 * Baixar [versão estável] [1]
-* NVDA compatibility: 2019.3 and beyond
+* Compatibilidade com NVDA: 2017.3 a 2019.2
 
 Este extra permite mover o rato usando um teclado e guardar as posições do
 rato para cada aplicação, individualmente.
