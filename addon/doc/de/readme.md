@@ -2,7 +2,7 @@
 
 * Autor: Salah Atair, Joseph Lee
 * [Stabile Version herunterladen][1]
-* NVDA compatibility: 2019.3 and beyond
+* NVDA-Kompatibilität: 2019.3 und neuer
 
 Diese Erweiterung ermöglicht das Ziehen der Maus mit der Tastatur und das
 Speichern der gewünschten Mauspositionen für die jeweilige Anwendung.
@@ -15,10 +15,9 @@ Speichern der gewünschten Mauspositionen für die jeweilige Anwendung.
   aktuelle Mausposition in der aktuell fokussierten Anwendung.
 * Windows+NVDA+C: ändert die Maus-Bewegungseinheit.
 * NVDA+Windows+R: Beschränkung der Maus ein- oder ausschalten.
-* Windows+NVDA+S: Neue Maus-Koordinaten in Pixel ansagen, wenn sich die Maus
-  bewegt
+* Windows+NVDA+S: Neue Maus-Koordinaten in Pixel ansagen.
 * Windows+NVDA+J: bewegt die Maus zu einer bestimmten X- und Y-Position.
-* NVDA+Windows+P: Maus-Position ausgeben
+* NVDA+Windows+P: Maus-Position ausgeben.
 * Windows+NVDA+M: Mauszeiger ein- oder ausschalten.
 * Windows+NVDA+Pfeiltasten (oder nur Pfeiltasten, wenn die Bewegung des
   Mauszeigers durch pfeiltasten eingeschaltet ist): Maus bewegen.
@@ -43,13 +42,13 @@ im Dialog Eingaben in der Kategorie "goldener Cursor" angepasst werden.
 
 ## Version 4.0
 
-* Requires NVDA 2019.3 or later.
-* Golden Cursor settings dialog has been replaced by Golden Cursor settings
-  panel.
+* Erfordert NVDA 2019.3 oder höher.
+* Das Dialogfeld "GoldenCursor-Einstellungen" wurde durch das
+  Einstellungsfenster "GoldenCursor" ersetzt.
 
 ## Version 3.3
 
-* Internal changes to support future NVDA releases.
+* Interne Änderungen zur Unterstützung zukünftiger NVDA-Versionen.
 
 ## Version 3.2
 
@@ -101,8 +100,8 @@ im Dialog Eingaben in der Kategorie "goldener Cursor" angepasst werden.
   getrennt oder mit den Pfeiltasten nach oben und unten eingegeben werden.
 * Der Dialog, der beim Speichern der aktuellen Mausposition angezeigt wird,
   zeigt nun die Koordinaten der aktuellen Mausposition an.
-* When saving positions, resolved an issue where NVDA may play error tones
-  if the positions folder does not exist.
+* Beim Speichern von Mauspositionen wurde ein Problem behoben, bei dem NVDA
+  Fehlertöne abspielte, wenn der Positionsordner nicht existiert.
 
 ## Version 1.4
 
