@@ -1,4 +1,4 @@
-# Cursor de ouro #
+# Cursor Dourado (Golden Cursor) #
 
 * Autor: salah atair, Joseph Lee
 * Baixe a [versão estável][1]
@@ -22,13 +22,13 @@ posições do mouse em aplicativos.
 * Windows+NVDA+setas (ou apenas as teclas de seta se as setas do mouse
   estiverem ativadas): move o mouse.
 
-Nota: Estes gestos podem ser reatribuídos via diálogo de Gestos de Entrada —
-Definir comandos — do NVDA na categoria Cursor Dourado.
+Nota: Estes gestos podem ser reatribuídos via diálogo Definir Comandos
+(Gestos de Entrada) do NVDA na categoria Cursor Dourado.
 
 ## Notas
 
-* Ao compartilhar posições (tags), cada parte — usuário — deve usar a mesma
-  resolução de tela.
+* Ao compartilhar posições (etiquetas), cada parte (usuário) deve usar a
+  mesma resolução de tela.
 * Para maior compatibilidade, deve-se maximizar a janela pressionando
   Windows+seta acima.
 * Ao compartilhar posições, os rótulos de posições existentes devem ser
@@ -42,8 +42,8 @@ Definir comandos — do NVDA na categoria Cursor Dourado.
 ## Versão 4.0
 
 * Requer NVDA 2019.3 ou posteriores.
-* O diálogo de configurações do Cursor de Ouro foi substituído pelo Painel
-  de Configurações do Cursor de Ouro.
+* O diálogo de configurações do Cursor Dourado foi substituído pelo Painel
+  de Configurações do Cursor Dourado.
 
 ## Versão 3.3
 
@@ -62,7 +62,7 @@ Definir comandos — do NVDA na categoria Cursor Dourado.
 ## Versão 2.1
 
 * Corrigido erro de decodificação de unicode ao tentar excluir o nome da
-  tag.
+  etiqueta.
 * Impede várias instâncias ao abrir várias caixas de diálogo de complemento.
 * Melhor aparência da lista de posições do mouse e saltar para diálogos de
   posição.
@@ -85,7 +85,7 @@ Definir comandos — do NVDA na categoria Cursor Dourado.
   (agora chamado de Posições do Mouse) e leiaute, exibindo as coordenadas do
   mouse para um rótulo e mostrando o nome do aplicativo ativo como parte do
   título.
-* Na caixa de diálogo Mouse Positions, pressionar Enter em um rótulo salvo
+* Na caixa de diálogo Posições do Mouse, pressionar Enter em um rótulo salvo
   moverá o mouse para o local salvo.
 * Ao renomear a posição do mouse, uma caixa de diálogo de erro será mostrada
   se houver um rótulo com o mesmo nome do novo nome.
