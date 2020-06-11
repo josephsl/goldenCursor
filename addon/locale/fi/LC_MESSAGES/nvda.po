@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: goldenCursor 1.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-03-18 05:37+1000\n"
-"PO-Revision-Date: 2018-02-02 12:36+0200\n"
+"PO-Revision-Date: 2020-06-06 16:50+0200\n"
 "Last-Translator: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language-Team: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language: fi\n"
@@ -177,8 +177,8 @@ msgstr "Uusia hiirikoordinaatteja ei ilmoiteta"
 #. Translators: Input help message for a Golden Cursor add-on command.
 msgid "toggles reporting of mouse coordinates in pixels when mouse moves"
 msgstr ""
-"Ottaa käyttöön tai poistaa käytöstä koordinaattien ilmoittamisen hiirtä "
-"siirrettäessä."
+"Ottaa käyttöön tai poistaa käytöstä koordinaattien ilmoittamisen "
+"kuvapisteinä hiirtä siirrettäessä."
 
 #. Translators: Input help message for a Golden Cursor command.
 msgid "Reports current X and Y mouse position"
@@ -248,7 +248,7 @@ msgstr "Ilmoita &uudet koordinaatit hiirtä siirrettäessä"
 
 #. Translators: The label for a setting in Golden Cursor settings dialog to change mouse movement units.
 msgid "Mouse movement &unit (in pixels)"
-msgstr "Hiiren siirtämisen &yksikkö (pikseleinä)"
+msgstr "Hiiren siirtämisen &yksikkö (kuvapisteinä)"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
@@ -256,5 +256,5 @@ msgid ""
 "Allows you to control the mouse movement with the keyboard. for further "
 "details please visit the addon guide help."
 msgstr ""
-"Mahdollistaa hiiren siirtämisen nuolinäppäinten avulla. Lisätietoja saat "
-"lisäosan ohjeesta."
+"Mahdollistaa hiiren siirtämisen nuolinäppäinten avulla. Lisätietoja on "
+"lisäosan ohjeessa."
