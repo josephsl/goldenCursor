@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: goldenCursor 1.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-04-22 07:00+1000\n"
-"PO-Revision-Date: 2018-06-26 05:52+0100\n"
+"PO-Revision-Date: 2020-07-29 13:01+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.4\n"
+"X-Generator: Poedit 1.6.10\n"
 
 #, python-format
 msgid "Mouse positions for %s"
@@ -105,7 +105,7 @@ msgid ""
 "Are you sure you want to clear mouse positions for the current application "
 "({appName})? This cannot be undone."
 msgstr ""
-"Biztosan törölni kíván minden mentett egérpozíciót az aktuális alkalmazáshoz "
+"Biztosan törölni kíván minden mentett egérpozíciót az aktív alkalmazáshoz "
 "({appName})? A művelet nem vonható vissza."
 
 #. Translators: The title of the confirmation dialog for clearing mouse positions.
@@ -113,7 +113,7 @@ msgid "Clear mouse positions"
 msgstr "Minden egérpozíció törlése"
 
 #. Translators: A dialog message shown when tags for the application is cleared.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "All mouse positions for the application {appName} have been deleted."
 msgstr "{appName} alkalmazáshoz mentett egérpozíciók törölve."
 
@@ -127,7 +127,7 @@ msgid "Golden Cursor"
 msgstr "Aranykurzor"
 
 msgid "&Golden Cursor..."
-msgstr "Aranykurzor"
+msgstr "&Aranykurzor"
 
 msgid "Golden Cursor add-on settings"
 msgstr "Aranykurzor bővítmény beállításai"
@@ -139,12 +139,12 @@ msgstr "Nincs mentett egérpozíció az alábbi alkalmazáshoz: %s."
 
 #. Translators: input help message for a Golden Cursor command.
 msgid "Opens a dialog listing mouse positions for the current application"
-msgstr "Megnyitja az aktuális alkalmazáshoz elmentett egérpozíciók listáját"
+msgstr "Megnyitja az aktív alkalmazáshoz elmentett egérpozíciók listáját."
 
 #. Translators: edit field label for new mouse position.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Enter the name for the current mouse position (x: {x}, Y: {y})"
-msgstr "Adja meg a jelenlegi egérpozíció nevét (x: {x}, Y: {y}"
+msgstr "Adja meg a jelenlegi egérpozíció nevét (x: {x}, Y: {y})"
 
 #. Translators: title for save mouse position dialog.
 msgid "Save mouse position"
@@ -153,7 +153,7 @@ msgstr "Egérpozíció mentése"
 #. Translators: presented when position (tag) has been saved.
 #, python-format
 msgid "Position saved in %s."
-msgstr "A pozíció elmentve %s helyen."
+msgstr "A pozíció elmentve %s alkalmazáshoz."
 
 #. Translators: Input help message for a Golden Cursor command.
 msgid "Opens a dialog to label the current mouse position and saves it"
@@ -162,7 +162,7 @@ msgstr ""
 
 #. Translators: input help message for a Golden Cursor command.
 msgid "Changes mouse movement unit"
-msgstr "Megváltoztathatja az egérmutató elmozdulásának mértékét"
+msgstr "Megváltoztatja az egérmutató elmozdulásának mértékét"
 
 #. Translators: reported when new mouse coordinate announcement is on.
 msgid "Report new mouse coordinates on"
@@ -174,23 +174,25 @@ msgstr "Egérhelyzet változásának bemondása kikapcsolva"
 
 #. Translators: Input help message for a Golden Cursor add-on command.
 msgid "toggles reporting of mouse coordinates in pixels when mouse moves"
-msgstr "Egérhelyzet változásának bemondása ki és bekapcsolása pixelben."
+msgstr ""
+"Egérhelyzet változásának bemondása ki és bekapcsolása, az értékek képpontban "
+"értendők."
 
 #. Translators: Input help message for a Golden Cursor command.
 msgid "Reports current X and Y mouse position"
-msgstr "Bemondja az egérmutató koordinátáit"
+msgstr "Bemondja az egérmutató x és y koordinátáit"
 
 #. Translators: presented when toggling mouse arrows feature.
 msgid "Mouse arrows on"
-msgstr "Egérmozgató billentyűk bekapcsolva"
+msgstr "Egérmozgatás nyílbillentyűkkel bekapcsolva"
 
 #. Translators: presented when toggling mouse arrows feature.
 msgid "Mouse arrows off"
-msgstr "Egérmozgató billentyűk kikapcsolva"
+msgstr "Egérmozgatás nyílbillentyűkkel kikapcsolva"
 
 #. Translators: input help mode message for a Golden Cursor add-on command.
 msgid "Toggles mouse arrows to move the mouse with the arrow keys"
-msgstr "Az egér nyilakkal való mozgásának beállítási gombja"
+msgstr "Egérmozgatás nyílbillentyűkkel opció be- és kikapcsolása"
 
 #. Translators: Input help message for a Golden Cursor command.
 msgid "Moves the Mouse pointer to the right"
@@ -212,8 +214,8 @@ msgstr "Az egérmutató mozgatása felfelé."
 msgid ""
 "Opens a dialog to enter the X and Y coordinates for the mouse to move to"
 msgstr ""
-"Megnyit egy párbeszédpanelt,ahol megadhatja azokat a koordinátákat,ahová az "
-"egérmutatót mozgatni szeretné."
+"Megnyit egy párbeszédpanelt,ahol megadhatja azokat az X és Y koordinátákat,"
+"ahová az egérmutatót mozgatni szeretné."
 
 #. Translators: presented when mouse movement is restricted to current application.
 msgid "Mouse movement restricted to current application"
@@ -233,16 +235,16 @@ msgstr ""
 
 #. Translators: This is the label for the Golden Cursor settings dialog.
 msgid "Golden Cursor Settings"
-msgstr "Aranykurzor Beállítások"
+msgstr "Az Aranykurzor Beállításai"
 
 #. Translators: This is the label for a checkbox in the
 #. Golden Cursor settings dialog.
 msgid "&Announce new mouse coordinates when mouse moves"
-msgstr "Új egérpozíció bemondása az egérmutató elmozdulásakor"
+msgstr "&Egérhelyzet változásának bemondása"
 
 #. Translators: The label for a setting in Golden Cursor settings dialog to change mouse movement units.
 msgid "Mouse movement &unit (in pixels)"
-msgstr "Az egérmutató mozgásának mértéke (képpontban)"
+msgstr "Az egérmutató elmozdulásának &mértéke (képpontban)"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
@@ -250,5 +252,5 @@ msgid ""
 "Allows you to control the mouse movement with the keyboard. for further "
 "details please visit the addon guide help."
 msgstr ""
-"Lehetővé teszi az egérmutató mozgatását a nyílbillentyűk segítségével. "
-"további részletekért olvassa el a kiegészítő súgóját."
+"Az egérmutató mozgatása billentyűparancsok segítségével. További "
+"részletekért kérdezze a bővítmény súgóját!"
