@@ -26,7 +26,7 @@ msgstr "Hiiren sijainnit sovellukselle %s"
 msgid "New mouse position"
 msgstr "Uusi hiiren sijainti"
 
-#. Translators: The label for the combo box of the mouse positions in the current application.
+#. Translators: The label for the list view of the mouse positions in the current application.
 msgid "&Saved mouse positions"
 msgstr "Ta&llennetut hiiren sijainnit"
 
@@ -120,16 +120,11 @@ msgstr "Kaikki hiiren sijainnit on poistettu sovellukselta {appName}."
 msgid "Mouse positions cleared"
 msgstr "Hiiren sijainnit tyhjennetty"
 
+#. Translators: This is the label for the Golden Cursor settings category in NVDA Settings screen.
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Golden Cursor"
 msgstr "Golden Cursor"
-
-msgid "&Golden Cursor..."
-msgstr "&Golden Cursor..."
-
-msgid "Golden Cursor add-on settings"
-msgstr "Golden Cursor -lisäosan asetukset"
 
 #. Translators: message presented when no mouse positions are available for the focused app.
 #, python-format
@@ -237,10 +232,6 @@ msgstr ""
 "Vaihtaa hiiren siirtämisen rajoitusta kahden vaihtoehdon välillä, jotka ovat "
 "nykyinen sovellus ja ei rajoitusta."
 
-#. Translators: This is the label for the Golden Cursor settings dialog.
-msgid "Golden Cursor Settings"
-msgstr "Golden Cursorin asetukset"
-
 #. Translators: This is the label for a checkbox in the
 #. Golden Cursor settings dialog.
 msgid "&Announce new mouse coordinates when mouse moves"
@@ -258,3 +249,12 @@ msgid ""
 msgstr ""
 "Mahdollistaa hiiren siirtämisen nuolinäppäinten avulla. Lisätietoja on "
 "lisäosan ohjeessa."
+
+#~ msgid "&Golden Cursor..."
+#~ msgstr "&Golden Cursor..."
+
+#~ msgid "Golden Cursor add-on settings"
+#~ msgstr "Golden Cursor -lisäosan asetukset"
+
+#~ msgid "Golden Cursor Settings"
+#~ msgstr "Golden Cursorin asetukset"
