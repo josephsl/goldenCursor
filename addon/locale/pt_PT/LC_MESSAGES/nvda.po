@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Cursor Dourado 2.2\n"
-"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2017-12-26 10:18+0000\n"
 "PO-Revision-Date: 2020-06-23 20:50+0100\n"
 "Last-Translator: Ângelo Abrantes <ampa4374@gmail.com>\n"

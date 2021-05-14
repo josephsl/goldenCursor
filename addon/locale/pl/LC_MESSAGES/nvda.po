@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: goldenCursor 1.2\n"
-"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2017-02-03 07:00+1000\n"
 "PO-Revision-Date: 2018-02-03 21:36+0100\n"
 "Last-Translator: zvonimir stanecic <zvonimirek222@yandex.com>\n"
