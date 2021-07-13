@@ -33,6 +33,7 @@ GCMouseLeft = 1
 GCMouseDown = 2
 GCMouseUp = 3
 
+
 # Reports mouse position, used in various places.
 def reportMousePosition(x=None, y=None):
 	# The coordinates are keywords so specific position can be announced if needed.
@@ -43,6 +44,7 @@ def reportMousePosition(x=None, y=None):
 		y = cursorPos[1]
 	ui.message("{0}, {1}".format(x, y))
 
+
 def setMousePosition(x, y, announceMousePosition=False):
 	# Setter version of report mouse position function.
 	# The new position announcement is to be used if needed.
@@ -51,6 +53,7 @@ def setMousePosition(x, y, announceMousePosition=False):
 	if announceMousePosition:
 		# Announce this half a second later to give the appearance of mouse movement.
 		wx.CallLater(500, reportMousePosition, x=x, y=y)
+
 
 class EnterPositionName(wx.TextEntryDialog):
 	"""
@@ -75,6 +78,7 @@ class EnterPositionName(wx.TextEntryDialog):
 		EnterPositionName._instance = weakref.ref(self)
 
 		super(EnterPositionName, self).__init__(*args, **kwargs)
+
 
 class PositionsList(wx.Dialog):
 	"""
@@ -101,7 +105,7 @@ class PositionsList(wx.Dialog):
 		PositionsList._instance = weakref.ref(self)
 
 		if appName:
-			super(PositionsList, self).__init__(parent, title=_("Mouse positions for %s")%(appName), size =(420, 300))
+			super(PositionsList, self).__init__(parent, title=_("Mouse positions for %s") % (appName), size =(420, 300))
 			self.mousePositionsList(appName=appName)
 		elif goto:
 			super(PositionsList, self).__init__(parent, title=_("New mouse position"))
@@ -270,6 +274,7 @@ class PositionsList(wx.Dialog):
 	def onCancel(self, evt):
 		self.Destroy()
 
+
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	scriptCategory = _("Golden Cursor")
 
@@ -288,7 +293,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		appName = api.getForegroundObject().appModule.appName
 		if not os.path.exists(os.path.join(GCMousePositions, appName + ".gc")):
 			# Translators: message presented when no mouse positions are available for the focused app.
-			ui.message(_("No mouse positions for %s.")%appName)
+			ui.message(_("No mouse positions for %s.") % appName)
 		else:
 			try:
 				d = PositionsList(parent=gui.mainFrame, appName=appName)
@@ -309,6 +314,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		d = EnterPositionName(gui.mainFrame, _("Enter the name for the current mouse position (x: {x}, Y: {y})".format(x=x, y=y)),
 			# Translators: title for save mouse position dialog.
 			_("Save mouse position"))
+
 		def callback(result):
 			if result == wx.ID_OK:
 				name = d.GetValue().rstrip()
@@ -471,6 +477,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		"kb:nvda+control+l": "mousePositionsList",
 	}
 
+
 # Add-on config database
 # Borrowed from Enhanced Touch Gestures by Joseph Lee
 confspec = {
@@ -478,6 +485,7 @@ confspec = {
 	"mouseMovementUnit": "integer(min=1, max=100, default=5)",
 }
 config.conf.spec["goldenCursor"] = confspec
+
 
 class GoldenCursorSettings(gui.settingsDialogs.SettingsPanel):
 	# Translators: This is the label for the Golden Cursor settings category in NVDA Settings screen.

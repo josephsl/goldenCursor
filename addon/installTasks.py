@@ -8,6 +8,7 @@
 import os
 import shutil
 
+
 def onInstall():
 	positions = os.path.join(os.path.dirname(__file__), "..", "goldenCursor", "mousePositions")
 	# Without importing old positions, saved positions would be lost.
