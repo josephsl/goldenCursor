@@ -5,7 +5,6 @@
 # Routines are partly based on other add-ons, particularly Place Markers by Noelia Martinez (thanks add-on authors).
 # File copying operation comes from StationPlaylist Studio add-on by Joseph Lee.
 
-import addonHandler
 import os
 import shutil
 
