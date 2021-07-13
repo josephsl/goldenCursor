@@ -109,7 +109,7 @@ class PositionsList(wx.Dialog):
 
 	def mousePositionsList(self, appName):
 		self.appName = appName
-		self.positions = ConfigObj(os.path.join(GCMousePositions, appName+".gc"), encoding="UTF-8")
+		self.positions = ConfigObj(os.path.join(GCMousePositions, appName + ".gc"), encoding="UTF-8")
 		mainSizer = wx.BoxSizer(wx.VERTICAL)
 		sHelper = gui.guiHelper.BoxSizerHelper(self, orientation=wx.VERTICAL)
 		# Translators: The label for the list view of the mouse positions in the current application.
@@ -175,8 +175,8 @@ class PositionsList(wx.Dialog):
 
 		x, y = winUser.getCursorPos()
 		w,h = api.getDesktopObject().location[2:]
-		self.xPos = mouseJumpHelper.addLabeledControl(_("&X position"), gui.nvdaControls.SelectOnFocusSpinCtrl, min=0, max=w-1, initial=x)
-		self.yPos = mouseJumpHelper.addLabeledControl(_("&Y position"), gui.nvdaControls.SelectOnFocusSpinCtrl, min=0, max=h-1, initial=y)
+		self.xPos = mouseJumpHelper.addLabeledControl(_("&X position"), gui.nvdaControls.SelectOnFocusSpinCtrl, min=0, max=w - 1, initial=x)
+		self.yPos = mouseJumpHelper.addLabeledControl(_("&Y position"), gui.nvdaControls.SelectOnFocusSpinCtrl, min=0, max=h - 1, initial=y)
 
 		mouseJumpHelper.addDialogDismissButtons(self.CreateButtonSizer(wx.OK | wx.CANCEL))
 		self.Bind(wx.EVT_BUTTON, self.onOk, id=wx.ID_OK)
@@ -286,7 +286,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def script_mousePositionsList(self, gesture):
 		# Don't even think about opening this dialog if positions list does not exist.
 		appName = api.getForegroundObject().appModule.appName
-		if not os.path.exists(os.path.join(GCMousePositions, appName+".gc")):
+		if not os.path.exists(os.path.join(GCMousePositions, appName + ".gc")):
 			# Translators: message presented when no mouse positions are available for the focused app.
 			ui.message(_("No mouse positions for %s.")%appName)
 		else:
@@ -318,7 +318,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				# If the files path does not exist, create it now.
 				if not os.path.exists(GCMousePositions):
 					os.mkdir(GCMousePositions)
-				position = ConfigObj(os.path.join(GCMousePositions, appName+".gc"), encoding="UTF-8")
+				position = ConfigObj(os.path.join(GCMousePositions, appName + ".gc"), encoding="UTF-8")
 				position[name] = ",".join([x, y])
 				position.write()
 				# Translators: presented when position (tag) has been saved.
@@ -333,7 +333,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		pixelUnitChoices = len(pixelUnits)
 		try:
 			index = pixelUnits.index(movementUnit)
-			movementUnit = pixelUnits[(index+1) % pixelUnitChoices]
+			movementUnit = pixelUnits[(index + 1) % pixelUnitChoices]
 		except ValueError:
 			for unit in pixelUnits:
 				# No need to check for equality because the try block does this already.
