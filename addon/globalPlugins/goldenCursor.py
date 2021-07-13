@@ -37,8 +37,10 @@ GCMouseUp = 3
 def reportMousePosition(x=None, y=None):
 	# The coordinates are keywords so specific position can be announced if needed.
 	cursorPos = winUser.getCursorPos()
-	if x is None: x = cursorPos[0]
-	if y is None: y = cursorPos[1]
+	if x is None:
+		x = cursorPos[0]
+	if y is None:
+		y = cursorPos[1]
 	ui.message("{0}, {1}".format(x, y))
 
 def setMousePosition(x, y, announceMousePosition=False):
@@ -193,7 +195,8 @@ class PositionsList(wx.Dialog):
 		# Translators: The title of the dialog to rename a mouse position.
 		_("Rename"), oldName)
 		# When escape is pressed, an empty string is returned.
-		if name in ("", oldName): return
+		if name in ("", oldName):
+			return
 		if name in self.positions:
 			# Translators: An error displayed when renaming a mouse position
 			# and a tag with the new name already exists.
@@ -226,7 +229,8 @@ class PositionsList(wx.Dialog):
 			del self.positions[name]
 			self.mousePositionsList.DeleteItem(entry)
 			self.positions.write()
-			if self.mousePositionsList.GetItemCount() > 0: self.mousePositionsList.Select(0,on=1)
+			if self.mousePositionsList.GetItemCount() > 0:
+				self.mousePositionsList.Select(0,on=1)
 		if clearPositions or self.mousePositionsList.GetItemCount() == 0:
 			os.remove(self.positions.filename)
 			self.positions.clear()
@@ -254,7 +258,8 @@ class PositionsList(wx.Dialog):
 
 	def onClose(self,evt):
 		self.Destroy()
-		if len(self.positions): self.positions.write()
+		if len(self.positions):
+			self.positions.write()
 		self.positions = None
 
 	def onOk(self, evt):
@@ -307,10 +312,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		def callback(result):
 			if result == wx.ID_OK:
 				name = d.GetValue().rstrip()
-				if name == "": return
+				if name == "":
+					return
 				appName = self.getMouse().appModule.appName
 				# If the files path does not exist, create it now.
-				if not os.path.exists(GCMousePositions): os.mkdir(GCMousePositions)
+				if not os.path.exists(GCMousePositions):
+					os.mkdir(GCMousePositions)
 				position = ConfigObj(os.path.join(GCMousePositions, appName+".gc"), encoding="UTF-8")
 				position[name] = ",".join([x, y])
 				position.write()
@@ -422,10 +429,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		x, y= winUser.getCursorPos()
 		oldX, oldY = x, y
 		pixelMoving = config.conf["goldenCursor"]["mouseMovementUnit"]
-		if direction == GCMouseRight: x+=pixelMoving
-		elif direction == GCMouseLeft: x-=pixelMoving
-		elif direction == GCMouseDown: y+=pixelMoving
-		elif direction == GCMouseUp: y-=pixelMoving
+		if direction == GCMouseRight:
+			x+=pixelMoving
+		elif direction == GCMouseLeft:
+			x-=pixelMoving
+		elif direction == GCMouseDown:
+			y+=pixelMoving
+		elif direction == GCMouseUp:
+			y-=pixelMoving
 		# Just do a chain comparison, as it is a lot faster.
 		if 0 <= x < w and 0 <= y < h:
 			setMousePosition(x, y)
