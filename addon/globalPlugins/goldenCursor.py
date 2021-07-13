@@ -255,7 +255,7 @@ class PositionsList(wx.Dialog):
 		self.positions.write()
 		try:
 			x, y = self.positions[self.mousePositionsList.GetItemText(self.mousePositionsList.GetFirstSelected())].split(",")
-		except:
+		except Exception:
 			return
 		self.positions = None
 		wx.CallLater(500, setMousePosition, int(x), int(y))
