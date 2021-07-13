@@ -118,20 +118,20 @@ class PositionsList(wx.Dialog):
 		sHelper = gui.guiHelper.BoxSizerHelper(self, orientation=wx.VERTICAL)
 		# Translators: The label for the list view of the mouse positions in the current application.
 		mousePositionsText = _("&Saved mouse positions")
-		self.mousePositionsList = sHelper.addLabeledControl(mousePositionsText, wx.ListCtrl, style=wx.LC_REPORT | wx.LC_SINGLE_SEL,size=(550,350))
+		self.mousePositionsList = sHelper.addLabeledControl(mousePositionsText, wx.ListCtrl, style=wx.LC_REPORT | wx.LC_SINGLE_SEL, size=(550, 350))
 		# Translators: the column in mouse positions list to identify the position name.
-		self.mousePositionsList.InsertColumn(0,_("Name"),width=150)
+		self.mousePositionsList.InsertColumn(0, _("Name"), width=150)
 		# Translators: the column in mouse positions list to identify the X coordinate.
-		self.mousePositionsList.InsertColumn(1,_("Position X"),width=50)
+		self.mousePositionsList.InsertColumn(1, _("Position X"), width=50)
 		# Translators: the column in mouse positions list to identify the Y coordinate.
-		self.mousePositionsList.InsertColumn(2,_("Position Y"),width=50)
+		self.mousePositionsList.InsertColumn(2, _("Position Y"), width=50)
 		self.mousePositionsList.Bind(wx.EVT_LIST_ITEM_ACTIVATED, self.onJump)
 
 		for entry in sorted(self.positions.keys()):
 			x, y = self.positions[entry].split(",")
 			self.mousePositionsList.Append((entry, x, y))
-		self.mousePositionsList.Select(0,on=1)
-		self.mousePositionsList.SetItemState(0,wx.LIST_STATE_FOCUSED,wx.LIST_STATE_FOCUSED)
+		self.mousePositionsList.Select(0, on=1)
+		self.mousePositionsList.SetItemState(0, wx.LIST_STATE_FOCUSED, wx.LIST_STATE_FOCUSED)
 
 		bHelper = gui.guiHelper.ButtonHelper(orientation=wx.HORIZONTAL)
 
@@ -178,7 +178,7 @@ class PositionsList(wx.Dialog):
 		mouseJumpHelper = gui.guiHelper.BoxSizerHelper(self, orientation=wx.VERTICAL)
 
 		x, y = winUser.getCursorPos()
-		w,h = api.getDesktopObject().location[2:]
+		w, h = api.getDesktopObject().location[2:]
 		self.xPos = mouseJumpHelper.addLabeledControl(_("&X position"), gui.nvdaControls.SelectOnFocusSpinCtrl, min=0, max=w - 1, initial=x)
 		self.yPos = mouseJumpHelper.addLabeledControl(_("&Y position"), gui.nvdaControls.SelectOnFocusSpinCtrl, min=0, max=h - 1, initial=y)
 
@@ -239,7 +239,7 @@ class PositionsList(wx.Dialog):
 			self.mousePositionsList.DeleteItem(entry)
 			self.positions.write()
 			if self.mousePositionsList.GetItemCount() > 0:
-				self.mousePositionsList.Select(0,on=1)
+				self.mousePositionsList.Select(0, on=1)
 		if clearPositions or self.mousePositionsList.GetItemCount() == 0:
 			os.remove(self.positions.filename)
 			self.positions.clear()
@@ -251,7 +251,7 @@ class PositionsList(wx.Dialog):
 			)
 			self.Close()
 
-	def onDelete(self,event):
+	def onDelete(self, event):
 		self.deletePosition()
 
 	def onClear(self, event):
@@ -267,7 +267,7 @@ class PositionsList(wx.Dialog):
 		self.positions = None
 		wx.CallLater(500, setMousePosition, int(x), int(y))
 
-	def onClose(self,evt):
+	def onClose(self, evt):
 		self.Destroy()
 		if len(self.positions):
 			self.positions.write()
@@ -373,7 +373,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Translators: Input help message for a Golden Cursor add-on command.
 	script_toggleSpeakPixels.__doc__ = _("toggles reporting of mouse coordinates in pixels when mouse moves")
 
-	def script_sayPosition(self,gesture):
+	def script_sayPosition(self, gesture):
 		reportMousePosition()
 	# Translators: Input help message for a Golden Cursor command.
 	script_sayPosition.__doc__ = _("Reports current X and Y mouse position")
@@ -395,27 +395,27 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Translators: input help mode message for a Golden Cursor add-on command.
 	script_toggleMouseArrows.__doc__ = _("Toggles mouse arrows to move the mouse with the arrow keys")
 
-	def script_moveMouseRight(self,gesture):
+	def script_moveMouseRight(self, gesture):
 		self.moveMouse(GCMouseRight)
 	# Translators: Input help message for a Golden Cursor command.
 	script_moveMouseRight.__doc__ = _("Moves the Mouse pointer to the right")
 
-	def script_moveMouseLeft(self,gesture):
+	def script_moveMouseLeft(self, gesture):
 		self.moveMouse(GCMouseLeft)
 	# Translators: Input help message for a Golden Cursor command.
 	script_moveMouseLeft.__doc__ = _("Moves the Mouse pointer to the left")
 
-	def script_moveMouseDown(self,gesture):
+	def script_moveMouseDown(self, gesture):
 		self.moveMouse(GCMouseDown)
 	# Translators: Input help message for a Golden Cursor command.
 	script_moveMouseDown.__doc__ = _("Moves the Mouse pointer down")
 
-	def script_moveMouseUp(self,gesture):
+	def script_moveMouseUp(self, gesture):
 		self.moveMouse(GCMouseUp)
 	# Translators: Input help message for a Golden Cursor command.
 	script_moveMouseUp.__doc__ = _("Moves the Mouse pointer up")
 
-	def script_goToPosition(self,gesture):
+	def script_goToPosition(self, gesture):
 		try:
 			d = PositionsList(parent=gui.mainFrame, goto=True)
 			gui.mainFrame.prePopup()
@@ -427,7 +427,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Translators: Input help message for a Golden Cursor command.
 	script_goToPosition.__doc__ = _("Opens a dialog to enter the X and Y coordinates for the mouse to move to")
 
-	def script_toggleMouseRestriction(self,gesture):
+	def script_toggleMouseRestriction(self, gesture):
 		self.getAppRestriction = self.getMouse()
 		self.restriction = not self.restriction
 		if self.restriction:
@@ -440,7 +440,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	script_toggleMouseRestriction.__doc__ = _("Toggles mouse movement restriction between current application and unrestricted")
 
 	def moveMouse(self, direction):
-		w,h = api.getDesktopObject().location[2:]
+		w, h = api.getDesktopObject().location[2:]
 		x, y = winUser.getCursorPos()
 		oldX, oldY = x, y
 		pixelMoving = config.conf["goldenCursor"]["mouseMovementUnit"]
@@ -460,9 +460,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			return
 		if self.restriction and self.getAppRestriction.appModule.appName != self.getMouse().appModule.appName:
 			wx.Bell()
-			setMousePosition(oldX,oldY)
+			setMousePosition(oldX, oldY)
 			if self.getAppRestriction.appModule.appName != self.getMouse().appModule.appName:
-				x,y, w, h = self.getAppRestriction.location
+				x, y, w, h = self.getAppRestriction.location
 				setMousePosition(x, y)
 			return
 		if config.conf["goldenCursor"]["reportNewMouseCoordinates"]:
@@ -472,16 +472,16 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		return api.getDesktopObject().objectFromPoint(*winUser.getCursorPos())
 
 	__gestures = {
-		"kb:nvda+windows+c":"mouseMovementChange",
-		"kb:nvda+windows+m":"toggleMouseArrows",
-		"kb:nvda+windows+rightArrow":"moveMouseRight",
-		"kb:nvda+windows+leftArrow":"moveMouseLeft",
-		"kb:nvda+windows+downArrow":"moveMouseDown",
-		"kb:nvda+windows+upArrow":"moveMouseUp",
-		"kb:nvda+windows+j":"goToPosition",
-		"kb:nvda+windows+p":"sayPosition",
-		"kb:nvda+windows+s":"toggleSpeakPixels",
-		"kb:nvda+windows+r":"toggleMouseRestriction",
+		"kb:nvda+windows+c": "mouseMovementChange",
+		"kb:nvda+windows+m": "toggleMouseArrows",
+		"kb:nvda+windows+rightArrow": "moveMouseRight",
+		"kb:nvda+windows+leftArrow": "moveMouseLeft",
+		"kb:nvda+windows+downArrow": "moveMouseDown",
+		"kb:nvda+windows+upArrow": "moveMouseUp",
+		"kb:nvda+windows+j": "goToPosition",
+		"kb:nvda+windows+p": "sayPosition",
+		"kb:nvda+windows+s": "toggleSpeakPixels",
+		"kb:nvda+windows+r": "toggleMouseRestriction",
 		"kb:nvda+shift+l": "saveMousePosition",
 		"kb:nvda+control+l": "mousePositionsList",
 	}
