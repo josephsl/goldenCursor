@@ -114,7 +114,7 @@ class PositionsList(wx.Dialog):
 		sHelper = gui.guiHelper.BoxSizerHelper(self, orientation=wx.VERTICAL)
 		# Translators: The label for the list view of the mouse positions in the current application.
 		mousePositionsText = _("&Saved mouse positions")
-		self.mousePositionsList = sHelper.addLabeledControl(mousePositionsText, wx.ListCtrl, style=wx.LC_REPORT|wx.LC_SINGLE_SEL,size=(550,350))
+		self.mousePositionsList = sHelper.addLabeledControl(mousePositionsText, wx.ListCtrl, style=wx.LC_REPORT | wx.LC_SINGLE_SEL,size=(550,350))
 		# Translators: the column in mouse positions list to identify the position name.
 		self.mousePositionsList.InsertColumn(0,_("Name"),width=150)
 		# Translators: the column in mouse positions list to identify the X coordinate.
@@ -237,7 +237,7 @@ class PositionsList(wx.Dialog):
 			# Translators: A dialog message shown when tags for the application is cleared.
 			gui.messageBox(_("All mouse positions for the application {appName} have been deleted.".format(appName = self.appName)),
 			# Translators: Title of the tag clear confirmation dialog.
-			_("Mouse positions cleared"), wx.OK|wx.ICON_INFORMATION)
+			_("Mouse positions cleared"), wx.OK | wx.ICON_INFORMATION)
 			self.Close()
 
 	def onDelete(self,event):
