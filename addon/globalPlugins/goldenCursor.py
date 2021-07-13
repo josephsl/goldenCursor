@@ -72,7 +72,7 @@ class EnterPositionName(wx.TextEntryDialog):
 		import weakref
 		EnterPositionName._instance = weakref.ref(self)
 
-		super (EnterPositionName, self).__init__(*args, **kwargs)
+		super(EnterPositionName, self).__init__(*args, **kwargs)
 
 class PositionsList(wx.Dialog):
 	"""
@@ -320,7 +320,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Translators: Input help message for a Golden Cursor command.
 	script_saveMousePosition.__doc__ = _("Opens a dialog to label the current mouse position and saves it")
 
-	def script_mouseMovementChange (self, gesture):
+	def script_mouseMovementChange(self, gesture):
 		pixelUnits = (1, 5, 10, 20, 50, 100)
 		movementUnit = config.conf["goldenCursor"]["mouseMovementUnit"]
 		pixelUnitChoices = len(pixelUnits)
@@ -419,7 +419,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def moveMouse(self, direction):
 		w,h = api.getDesktopObject().location[2:]
-		x , y= winUser.getCursorPos()
+		x, y= winUser.getCursorPos()
 		oldX, oldY = x, y
 		pixelMoving = config.conf["goldenCursor"]["mouseMovementUnit"]
 		if direction == GCMouseRight: x+=pixelMoving
