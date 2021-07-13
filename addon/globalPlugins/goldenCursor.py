@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-#golden cursor
-# Copyright (C) 2015-2020
-#Version 2.2
-#License GNU GPL
+# golden cursor
+# Copyright (C) 2015-2021
+# Version 2.2
+# License GNU GPL
 # Date: 25/12/2015
-#team work: author : salah atair, translation and keycommands are made by wafeeq taher
+# team work: author : salah atair, translation and keycommands are made by wafeeq taher
 # Additional tweaking done by Joseph Lee and contributors, resetting version to 1.0.
 
 # Control mouse from the keyboard, including specifying hotspots, different movement units, mouse restrictions and others.
