@@ -7,7 +7,8 @@
 # team work: author : salah atair, translation and keycommands are made by wafeeq taher
 # Additional tweaking done by Joseph Lee and contributors, resetting version to 1.0.
 
-# Control mouse from the keyboard, including specifying hotspots, different movement units, mouse restrictions and others.
+# Control mouse from the keyboard,
+# including specifying hotspots, different movement units, mouse restrictions and others.
 
 import os
 from configobj import ConfigObj
@@ -57,7 +58,8 @@ def setMousePosition(x, y, announceMousePosition=False):
 
 class EnterPositionName(wx.TextEntryDialog):
 	"""
-	This subclass of the wx.TextEntryDialog class was created to prevent multiple instances of the dialog box that propose to give a name to the current mouse position.
+	This subclass of the wx.TextEntryDialog class was created to
+	prevent multiple instances of the dialog box that propose to give a name to the current mouse position.
 	This dialog can be opened via the script_saveMousePosition accessible with the nvda+shift+l shortcut.
 	"""
 	# The following comes from exit dialog class from GUI package (credit: NV Access and Zahari from Bulgaria).
@@ -83,8 +85,10 @@ class EnterPositionName(wx.TextEntryDialog):
 class PositionsList(wx.Dialog):
 	"""
 	This common dialogue has been created to facilitate access to the following choices:
-	1. The list of x / y positions proposed by the script_goToPosition, accessible via the nvda+windows+j shortcut.
-	2. The list of mouse positions saved for the current application proposed by the script_mousePositionsList, accessible via the nvda+control+l shortcut.
+	1. The list of x / y positions proposed by the script_goToPosition,
+	accessible via the nvda+windows+j shortcut.
+	2. The list of mouse positions saved for the current application proposed by the script_mousePositionsList,
+	accessible via the nvda+control+l shortcut.
 	It also prevents multiple instances for these 2 dialogs.
 	"""
 	# The following comes from exit dialog class from GUI package (credit: NV Access and Zahari from Bulgaria).

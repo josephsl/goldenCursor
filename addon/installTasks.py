@@ -1,8 +1,9 @@
 # Golden Cursor installation tasks
-# Copyright 2016-2020 Joseph Lee and others, released under GPL.
+# Copyright 2016-2021 Joseph Lee and others, released under GPL.
 
 # Provides needed routines during add-on installation and removal.
-# Routines are partly based on other add-ons, particularly Place Markers by Noelia Martinez (thanks add-on authors).
+# Routines are partly based on other add-ons,
+# particularly Place Markers by Noelia Martinez (thanks add-on authors).
 # File copying operation comes from StationPlaylist Studio add-on by Joseph Lee.
 
 import os
