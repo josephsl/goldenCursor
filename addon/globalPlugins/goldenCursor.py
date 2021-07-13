@@ -194,18 +194,22 @@ class PositionsList(wx.Dialog):
 	def onRename(self, event):
 		index = self.mousePositionsList.GetFirstSelected()
 		oldName = self.mousePositionsList.GetItemText(index)
-		# Translators: The label of a field to enter a new name for a mouse position/tag.
-		name = wx.GetTextFromUser(_("New name"),
-		# Translators: The title of the dialog to rename a mouse position.
-		_("Rename"), oldName)
+		name = wx.GetTextFromUser(
+			# Translators: The label of a field to enter a new name for a mouse position/tag.
+			_("New name"),
+			# Translators: The title of the dialog to rename a mouse position.
+			_("Rename"), oldName
+		)
 		# When escape is pressed, an empty string is returned.
 		if name in ("", oldName):
 			return
 		if name in self.positions:
-			# Translators: An error displayed when renaming a mouse position
-			# and a tag with the new name already exists.
-			gui.messageBox(_("Another mouse position has the same name as the entered name. Please choose a different name."),
-				_("Error"), wx.OK | wx.ICON_ERROR, self)
+			gui.messageBox(
+				# Translators: An error displayed when renaming a mouse position
+				# and a tag with the new name already exists.
+				_("Another mouse position has the same name as the entered name. Please choose a different name."),
+				_("Error"), wx.OK | wx.ICON_ERROR, self
+			)
 			return
 		self.mousePositionsList.SetItemText(index, name)
 		self.mousePositionsList.SetFocus()
@@ -226,7 +230,8 @@ class PositionsList(wx.Dialog):
 			message = _("Are you sure you want to clear mouse positions for the current application ({appName})? This cannot be undone.".format(appName=self.appName))
 			# Translators: The title of the confirmation dialog for clearing mouse positions.
 			title = _("Clear mouse positions")
-		if gui.messageBox(message, title, wx.YES_NO | wx.NO_DEFAULT | wx.ICON_QUESTION, self
+		if gui.messageBox(
+			message, title, wx.YES_NO | wx.NO_DEFAULT | wx.ICON_QUESTION, self
 		) == wx.NO:
 			return
 		if not clearPositions:
@@ -238,10 +243,12 @@ class PositionsList(wx.Dialog):
 		if clearPositions or self.mousePositionsList.GetItemCount() == 0:
 			os.remove(self.positions.filename)
 			self.positions.clear()
-			# Translators: A dialog message shown when tags for the application is cleared.
-			gui.messageBox(_("All mouse positions for the application {appName} have been deleted.".format(appName=self.appName)),
-			# Translators: Title of the tag clear confirmation dialog.
-			_("Mouse positions cleared"), wx.OK | wx.ICON_INFORMATION)
+			gui.messageBox(
+				# Translators: A dialog message shown when tags for the application is cleared.
+				_("All mouse positions for the application {appName} have been deleted.".format(appName=self.appName)),
+				# Translators: Title of the tag clear confirmation dialog.
+				_("Mouse positions cleared"), wx.OK | wx.ICON_INFORMATION
+			)
 			self.Close()
 
 	def onDelete(self,event):
@@ -310,10 +317,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		x, y = winUser.getCursorPos()
 		# Stringify coordinates early.
 		x, y = str(x), str(y)
-		# Translators: edit field label for new mouse position.
-		d = EnterPositionName(gui.mainFrame, _("Enter the name for the current mouse position (x: {x}, Y: {y})".format(x=x, y=y)),
+		d = EnterPositionName(
+			# Translators: edit field label for new mouse position.
+			gui.mainFrame, _("Enter the name for the current mouse position (x: {x}, Y: {y})".format(x=x, y=y)),
 			# Translators: title for save mouse position dialog.
-			_("Save mouse position"))
+			_("Save mouse position")
+		)
 
 		def callback(result):
 			if result == wx.ID_OK:
