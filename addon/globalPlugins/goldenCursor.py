@@ -105,7 +105,7 @@ class PositionsList(wx.Dialog):
 		PositionsList._instance = weakref.ref(self)
 
 		if appName:
-			super(PositionsList, self).__init__(parent, title=_("Mouse positions for %s") % (appName), size =(420, 300))
+			super(PositionsList, self).__init__(parent, title=_("Mouse positions for %s") % (appName), size=(420, 300))
 			self.mousePositionsList(appName=appName)
 		elif goto:
 			super(PositionsList, self).__init__(parent, title=_("New mouse position"))
@@ -156,11 +156,11 @@ class PositionsList(wx.Dialog):
 
 		sHelper.addItem(bHelper)
 
-		self.Bind(wx.EVT_BUTTON, self.onJump, id = jumpButtonID)
-		self.Bind(wx.EVT_BUTTON, self.onRename, id = renameButtonID)
-		self.Bind(wx.EVT_BUTTON, self.onDelete, id = deleteButtonID)
-		self.Bind(wx.EVT_BUTTON, self.onClear, id = clearButtonID)
-		self.Bind(wx.EVT_BUTTON, lambda evt: self.Close(), id = wx.ID_CLOSE)
+		self.Bind(wx.EVT_BUTTON, self.onJump, id=jumpButtonID)
+		self.Bind(wx.EVT_BUTTON, self.onRename, id=renameButtonID)
+		self.Bind(wx.EVT_BUTTON, self.onDelete, id=deleteButtonID)
+		self.Bind(wx.EVT_BUTTON, self.onClear, id=clearButtonID)
+		self.Bind(wx.EVT_BUTTON, lambda evt: self.Close(), id=wx.ID_CLOSE)
 
 		# Borrowed from NVDA Core (add-ons manager).
 		# To allow the dialog to be closed with the escape key.
@@ -218,12 +218,12 @@ class PositionsList(wx.Dialog):
 		name = self.mousePositionsList.GetItemText(entry)
 		if not clearPositions:
 			# Translators: The confirmation prompt displayed when the user requests to delete the selected tag.
-			message = _(u"Are you sure you want to delete the position named {name}? This cannot be undone.".format(name = name))
+			message = _("Are you sure you want to delete the position named {name}? This cannot be undone.".format(name=name))
 			# Translators: The title of the confirmation dialog for deletion of selected position.
 			title = _("Delete position")
 		else:
 			# Translators: The confirmation prompt displayed when the user is about to clear positions.
-			message = _("Are you sure you want to clear mouse positions for the current application ({appName})? This cannot be undone.".format(appName= self.appName))
+			message = _("Are you sure you want to clear mouse positions for the current application ({appName})? This cannot be undone.".format(appName=self.appName))
 			# Translators: The title of the confirmation dialog for clearing mouse positions.
 			title = _("Clear mouse positions")
 		if gui.messageBox(message, title, wx.YES_NO | wx.NO_DEFAULT | wx.ICON_QUESTION, self
@@ -239,7 +239,7 @@ class PositionsList(wx.Dialog):
 			os.remove(self.positions.filename)
 			self.positions.clear()
 			# Translators: A dialog message shown when tags for the application is cleared.
-			gui.messageBox(_("All mouse positions for the application {appName} have been deleted.".format(appName = self.appName)),
+			gui.messageBox(_("All mouse positions for the application {appName} have been deleted.".format(appName=self.appName)),
 			# Translators: Title of the tag clear confirmation dialog.
 			_("Mouse positions cleared"), wx.OK | wx.ICON_INFORMATION)
 			self.Close()
