@@ -113,8 +113,8 @@ class PositionsList(wx.Dialog):
 		mainSizer = wx.BoxSizer(wx.VERTICAL)
 		sHelper = gui.guiHelper.BoxSizerHelper(self, orientation=wx.VERTICAL)
 		# Translators: The label for the list view of the mouse positions in the current application.
-		mousePositionsText=_("&Saved mouse positions")
-		self.mousePositionsList=sHelper.addLabeledControl(mousePositionsText, wx.ListCtrl, style=wx.LC_REPORT|wx.LC_SINGLE_SEL,size=(550,350))
+		mousePositionsText = _("&Saved mouse positions")
+		self.mousePositionsList = sHelper.addLabeledControl(mousePositionsText, wx.ListCtrl, style=wx.LC_REPORT|wx.LC_SINGLE_SEL,size=(550,350))
 		# Translators: the column in mouse positions list to identify the position name.
 		self.mousePositionsList.InsertColumn(0,_("Name"),width=150)
 		# Translators: the column in mouse positions list to identify the X coordinate.
@@ -250,7 +250,7 @@ class PositionsList(wx.Dialog):
 		self.Destroy()
 		self.positions.write()
 		try:
-			x, y= self.positions[self.mousePositionsList.GetItemText(self.mousePositionsList.GetFirstSelected())].split(",")
+			x, y = self.positions[self.mousePositionsList.GetItemText(self.mousePositionsList.GetFirstSelected())].split(",")
 		except:
 			return
 		self.positions = None
@@ -378,7 +378,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Translators: presented when toggling mouse arrows feature.
 			ui.message(_("Mouse arrows off"))
 	# Translators: input help mode message for a Golden Cursor add-on command.
-	script_toggleMouseArrows.__doc__=_("Toggles mouse arrows to move the mouse with the arrow keys")
+	script_toggleMouseArrows.__doc__ = _("Toggles mouse arrows to move the mouse with the arrow keys")
 
 	def script_moveMouseRight(self,gesture):
 		self.moveMouse(GCMouseRight)
@@ -426,17 +426,17 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def moveMouse(self, direction):
 		w,h = api.getDesktopObject().location[2:]
-		x, y= winUser.getCursorPos()
+		x, y = winUser.getCursorPos()
 		oldX, oldY = x, y
 		pixelMoving = config.conf["goldenCursor"]["mouseMovementUnit"]
 		if direction == GCMouseRight:
-			x+=pixelMoving
+			x += pixelMoving
 		elif direction == GCMouseLeft:
-			x-=pixelMoving
+			x -= pixelMoving
 		elif direction == GCMouseDown:
-			y+=pixelMoving
+			y += pixelMoving
 		elif direction == GCMouseUp:
-			y-=pixelMoving
+			y -= pixelMoving
 		# Just do a chain comparison, as it is a lot faster.
 		if 0 <= x < w and 0 <= y < h:
 			setMousePosition(x, y)
@@ -487,10 +487,10 @@ class GoldenCursorSettings(gui.settingsDialogs.SettingsPanel):
 		gcHelper = gui.guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
 		# Translators: This is the label for a checkbox in the
 		# Golden Cursor settings dialog.
-		self.mouseCoordinatesCheckBox=gcHelper.addItem(wx.CheckBox(self, label=_("&Announce new mouse coordinates when mouse moves")))
+		self.mouseCoordinatesCheckBox = gcHelper.addItem(wx.CheckBox(self, label=_("&Announce new mouse coordinates when mouse moves")))
 		self.mouseCoordinatesCheckBox.SetValue(config.conf["goldenCursor"]["reportNewMouseCoordinates"])
 		# Translators: The label for a setting in Golden Cursor settings dialog to change mouse movement units.
-		self.mouseMovementUnit=gcHelper.addLabeledControl(_("Mouse movement &unit (in pixels)"), gui.nvdaControls.SelectOnFocusSpinCtrl, min=1, max=100, initial=config.conf["goldenCursor"]["mouseMovementUnit"])
+		self.mouseMovementUnit = gcHelper.addLabeledControl(_("Mouse movement &unit (in pixels)"), gui.nvdaControls.SelectOnFocusSpinCtrl, min=1, max=100, initial=config.conf["goldenCursor"]["mouseMovementUnit"])
 
 	def onSave(self):
 		config.conf["goldenCursor"]["reportNewMouseCoordinates"] = self.mouseCoordinatesCheckBox.IsChecked()
