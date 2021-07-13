@@ -122,7 +122,9 @@ class PositionsList(wx.Dialog):
 		sHelper = gui.guiHelper.BoxSizerHelper(self, orientation=wx.VERTICAL)
 		# Translators: The label for the list view of the mouse positions in the current application.
 		mousePositionsText = _("&Saved mouse positions")
-		self.mousePositionsList = sHelper.addLabeledControl(mousePositionsText, wx.ListCtrl, style=wx.LC_REPORT | wx.LC_SINGLE_SEL, size=(550, 350))
+		self.mousePositionsList = sHelper.addLabeledControl(
+			mousePositionsText, wx.ListCtrl, style=wx.LC_REPORT | wx.LC_SINGLE_SEL, size=(550, 350)
+		)
 		# Translators: the column in mouse positions list to identify the position name.
 		self.mousePositionsList.InsertColumn(0, _("Name"), width=150)
 		# Translators: the column in mouse positions list to identify the X coordinate.
@@ -183,8 +185,12 @@ class PositionsList(wx.Dialog):
 
 		x, y = winUser.getCursorPos()
 		w, h = api.getDesktopObject().location[2:]
-		self.xPos = mouseJumpHelper.addLabeledControl(_("&X position"), gui.nvdaControls.SelectOnFocusSpinCtrl, min=0, max=w - 1, initial=x)
-		self.yPos = mouseJumpHelper.addLabeledControl(_("&Y position"), gui.nvdaControls.SelectOnFocusSpinCtrl, min=0, max=h - 1, initial=y)
+		self.xPos = mouseJumpHelper.addLabeledControl(
+			_("&X position"), gui.nvdaControls.SelectOnFocusSpinCtrl, min=0, max=w - 1, initial=x
+		)
+		self.yPos = mouseJumpHelper.addLabeledControl(
+			_("&Y position"), gui.nvdaControls.SelectOnFocusSpinCtrl, min=0, max=h - 1, initial=y
+		)
 
 		mouseJumpHelper.addDialogDismissButtons(self.CreateButtonSizer(wx.OK | wx.CANCEL))
 		self.Bind(wx.EVT_BUTTON, self.onOk, id=wx.ID_OK)
@@ -225,13 +231,18 @@ class PositionsList(wx.Dialog):
 		entry = self.mousePositionsList.GetFirstSelected()
 		name = self.mousePositionsList.GetItemText(entry)
 		if not clearPositions:
-			# Translators: The confirmation prompt displayed when the user requests to delete the selected tag.
-			message = _("Are you sure you want to delete the position named {name}? This cannot be undone.".format(name=name))
+			message = _(
+				# Translators: The confirmation prompt displayed when the user requests to delete the selected tag.
+				"Are you sure you want to delete the position named {name}? This cannot be undone."
+			).format(name=name)
 			# Translators: The title of the confirmation dialog for deletion of selected position.
 			title = _("Delete position")
 		else:
-			# Translators: The confirmation prompt displayed when the user is about to clear positions.
-			message = _("Are you sure you want to clear mouse positions for the current application ({appName})? This cannot be undone.".format(appName=self.appName))
+			message = _(
+				# Translators: The confirmation prompt displayed when the user is about to clear positions.
+				"Are you sure you want to clear mouse positions for the current application ({appName})? "
+				"This cannot be undone."
+			).format(appName=self.appName)
 			# Translators: The title of the confirmation dialog for clearing mouse positions.
 			title = _("Clear mouse positions")
 		if gui.messageBox(
@@ -265,7 +276,9 @@ class PositionsList(wx.Dialog):
 		self.Destroy()
 		self.positions.write()
 		try:
-			x, y = self.positions[self.mousePositionsList.GetItemText(self.mousePositionsList.GetFirstSelected())].split(",")
+			x, y = self.positions[self.mousePositionsList.GetItemText(
+				self.mousePositionsList.GetFirstSelected()
+			)].split(",")
 		except Exception:
 			return
 		self.positions = None
@@ -440,8 +453,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		else:
 			# Translators: presented when mouse movement is unrestricted.
 			ui.message(_("Mouse movement unrestricted"))
-	# Translators: Input help message for a Golden Cursor command.
-	script_toggleMouseRestriction.__doc__ = _("Toggles mouse movement restriction between current application and unrestricted")
+	script_toggleMouseRestriction.__doc__ = _(
+		# Translators: Input help message for a Golden Cursor command.
+		"Toggles mouse movement restriction between current application and unrestricted"
+	)
 
 	def moveMouse(self, direction):
 		w, h = api.getDesktopObject().location[2:]
@@ -506,12 +521,17 @@ class GoldenCursorSettings(gui.settingsDialogs.SettingsPanel):
 
 	def makeSettings(self, settingsSizer):
 		gcHelper = gui.guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
-		# Translators: This is the label for a checkbox in the
-		# Golden Cursor settings dialog.
-		self.mouseCoordinatesCheckBox = gcHelper.addItem(wx.CheckBox(self, label=_("&Announce new mouse coordinates when mouse moves")))
+		self.mouseCoordinatesCheckBox = gcHelper.addItem(
+			# Translators: This is the label for a checkbox in the
+			# Golden Cursor settings dialog.
+			wx.CheckBox(self, label=_("&Announce new mouse coordinates when mouse moves"))
+		)
 		self.mouseCoordinatesCheckBox.SetValue(config.conf["goldenCursor"]["reportNewMouseCoordinates"])
-		# Translators: The label for a setting in Golden Cursor settings dialog to change mouse movement units.
-		self.mouseMovementUnit = gcHelper.addLabeledControl(_("Mouse movement &unit (in pixels)"), gui.nvdaControls.SelectOnFocusSpinCtrl, min=1, max=100, initial=config.conf["goldenCursor"]["mouseMovementUnit"])
+		self.mouseMovementUnit = gcHelper.addLabeledControl(
+			# Translators: The label for a setting in Golden Cursor settings dialog to change mouse movement units.
+			_("Mouse movement &unit (in pixels)"), gui.nvdaControls.SelectOnFocusSpinCtrl,
+			min=1, max=100, initial=config.conf["goldenCursor"]["mouseMovementUnit"]
+		)
 
 	def onSave(self):
 		config.conf["goldenCursor"]["reportNewMouseCoordinates"] = self.mouseCoordinatesCheckBox.IsChecked()
