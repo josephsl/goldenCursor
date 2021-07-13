@@ -16,18 +16,18 @@ def _(arg):
 # Add-on information variables
 addon_info = {
 	# add-on Name/identifier, internal for NVDA
-	"addon_name" : "goldenCursor",
+	"addon_name": "goldenCursor",
 	# Add-on summary, usually the user visible name of the addon.
 	# Translators: Summary for this add-on
 	# to be shown on installation and add-on information found in Add-ons Manager.
-	"addon_summary" : _("Golden Cursor"),
+	"addon_summary": _("Golden Cursor"),
 	# Add-on description
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-	"addon_description" : _("Allows you to control the mouse movement with the keyboard. for further details please visit the addon guide help."),
+	"addon_description": _("Allows you to control the mouse movement with the keyboard. for further details please visit the addon guide help."),
 	# version
 	"addon_version": "4.0",
 	# Author(s)
-	"addon_author" : "Salah Atair <atair1978@gmail.com>, Wafeeq Taher, Joseph Lee <joseph.lee22590@gmail.com>, Abdel <abdelkrim.bensaid@gmail.com>",
+	"addon_author": "Salah Atair <atair1978@gmail.com>, Wafeeq Taher, Joseph Lee <joseph.lee22590@gmail.com>, Abdel <abdelkrim.bensaid@gmail.com>",
 	# URL for the add-on documentation support
 	"addon_url": "https://addons.nvda-project.org/",
 	# Documentation file name
