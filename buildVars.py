@@ -25,7 +25,7 @@ addon_info = {
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 	"addon_description": _("Allows you to control the mouse movement with the keyboard. for further details please visit the addon guide help."),
 	# version
-	"addon_version": "4.0",
+	"addon_version": "5.0",
 	# Author(s)
 	"addon_author": "Salah Atair <atair1978@gmail.com>, Wafeeq Taher, Joseph Lee <joseph.lee22590@gmail.com>, Abdel <abdelkrim.bensaid@gmail.com>",
 	# URL for the add-on documentation support
