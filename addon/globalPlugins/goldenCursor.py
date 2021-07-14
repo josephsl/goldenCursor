@@ -178,7 +178,7 @@ class PositionsList(wx.Dialog):
 		self.Sizer = mainSizer
 		mainSizer.Fit(self)
 		self.mousePositionsList.SetFocus()
-		self.Center(wx.BOTH | wx.Center)
+		self.CenterOnScreen()
 
 	def jumpToPosition(self):
 		mainSizer = wx.BoxSizer(wx.VERTICAL)
@@ -199,7 +199,7 @@ class PositionsList(wx.Dialog):
 		mainSizer.Add(mouseJumpHelper.sizer, border=gui.guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL)
 		mainSizer.Fit(self)
 		self.SetSizer(mainSizer)
-		self.Center(wx.BOTH | wx.Center)
+		self.CenterOnScreen()
 		self.xPos.SetFocus()
 
 	def onRename(self, event):
