@@ -29,6 +29,11 @@ Note: these gestures can be reassigned via NVDA's Input Gestures dialog under Go
 * To perform functions that require use of arrow keys, turn off mouse arrows first.
 * When deleting saved positions, if there are no saved positions left, positions for the application will be cleared.
 
+## Version 5.0
+
+* Modernized add-on source code to make it compatible with NVDA 2021.1.
+* Resolved many coding style issues and potential bugs with Flake8.
+
 ## Version 4.0
 
 * Requires NVDA 2019.3 or later.
