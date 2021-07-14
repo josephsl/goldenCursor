@@ -17,6 +17,7 @@ import gui
 import wx
 import config
 import globalVars
+import scriptHandler
 import mouseHandler
 import ui
 import api
@@ -312,6 +313,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def terminate(self):
 		gui.settingsDialogs.NVDASettingsDialog.categoryClasses.remove(GoldenCursorSettings)
 
+	@scriptHandler.script(
+		# Translators: input help message for a Golden Cursor command.
+		description=_("Opens a dialog listing mouse positions for the current application"),
+		gesture="kb:nvda+control+l"
+	)
 	def script_mousePositionsList(self, gesture):
 		# Don't even think about opening this dialog if positions list does not exist.
 		appName = api.getForegroundObject().appModule.appName
@@ -327,9 +333,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				gui.mainFrame.postPopup()
 			except RuntimeError:
 				pass
-	# Translators: input help message for a Golden Cursor command.
-	script_mousePositionsList.__doc__ = _("Opens a dialog listing mouse positions for the current application")
 
+	@scriptHandler.script(
+		# Translators: Input help message for a Golden Cursor command.
+		description=_("Opens a dialog to label the current mouse position and saves it"),
+		gesture="kb:nvda+shift+l"
+	)
 	def script_saveMousePosition(self, gesture):
 		x, y = winUser.getCursorPos()
 		# Stringify coordinates early.
@@ -356,9 +365,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				# Translators: presented when position (tag) has been saved.
 				ui.message(_("Position saved in %s.") % position.filename)
 		gui.runScriptModalDialog(d, callback)
-	# Translators: Input help message for a Golden Cursor command.
-	script_saveMousePosition.__doc__ = _("Opens a dialog to label the current mouse position and saves it")
 
+	@scriptHandler.script(
+		# Translators: input help message for a Golden Cursor command.
+		description=_("Changes mouse movement unit"),
+		gesture="kb:nvda+windows+c"
+	)
 	def script_mouseMovementChange(self, gesture):
 		pixelUnits = (1, 5, 10, 20, 50, 100)
 		movementUnit = config.conf["goldenCursor"]["mouseMovementUnit"]
@@ -374,9 +386,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 					break
 		config.conf["goldenCursor"]["mouseMovementUnit"] = movementUnit
 		ui.message(str(movementUnit))
-	# Translators: input help message for a Golden Cursor command.
-	script_mouseMovementChange.__doc__ = _("Changes mouse movement unit")
 
+	@scriptHandler.script(
+		# Translators: Input help message for a Golden Cursor add-on command.
+		description=_("toggles reporting of mouse coordinates in pixels when mouse moves"),
+		gesture="kb:nvda+windows+s"
+	)
 	def script_toggleSpeakPixels(self, gesture):
 		sayPixel = config.conf["goldenCursor"]["reportNewMouseCoordinates"]
 		sayPixel = not sayPixel
@@ -387,14 +402,20 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Translators: reported when new mouse coordinate announcement is on.
 			ui.message(_("Report new mouse coordinates off"))
 		config.conf["goldenCursor"]["reportNewMouseCoordinates"] = sayPixel
-	# Translators: Input help message for a Golden Cursor add-on command.
-	script_toggleSpeakPixels.__doc__ = _("toggles reporting of mouse coordinates in pixels when mouse moves")
 
+	@scriptHandler.script(
+		# Translators: Input help message for a Golden Cursor command.
+		description=_("Reports current X and Y mouse position"),
+		gesture="kb:nvda+windows+p"
+	)
 	def script_sayPosition(self, gesture):
 		reportMousePosition()
-	# Translators: Input help message for a Golden Cursor command.
-	script_sayPosition.__doc__ = _("Reports current X and Y mouse position")
 
+	@scriptHandler.script(
+		# Translators: input help mode message for a Golden Cursor add-on command.
+		description=_("Toggles mouse arrows to move the mouse with the arrow keys"),
+		gesture="kb:nvda+windows+m"
+	)
 	def script_toggleMouseArrows(self, gesture):
 		self.mouseArrows = not self.mouseArrows
 		if self.mouseArrows:
@@ -409,29 +430,44 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			self.bindGestures(self.__gestures)
 			# Translators: presented when toggling mouse arrows feature.
 			ui.message(_("Mouse arrows off"))
-	# Translators: input help mode message for a Golden Cursor add-on command.
-	script_toggleMouseArrows.__doc__ = _("Toggles mouse arrows to move the mouse with the arrow keys")
 
+	@scriptHandler.script(
+		# Translators: Input help message for a Golden Cursor command.
+		description=_("Moves the Mouse pointer to the right"),
+		gesture="kb:nvda+windows+rightArrow"
+	)
 	def script_moveMouseRight(self, gesture):
 		self.moveMouse(GCMouseRight)
-	# Translators: Input help message for a Golden Cursor command.
-	script_moveMouseRight.__doc__ = _("Moves the Mouse pointer to the right")
 
+	@scriptHandler.script(
+		# Translators: Input help message for a Golden Cursor command.
+		description=_("Moves the Mouse pointer to the left"),
+		gesture="kb:nvda+windows+leftArrow"
+	)
 	def script_moveMouseLeft(self, gesture):
 		self.moveMouse(GCMouseLeft)
-	# Translators: Input help message for a Golden Cursor command.
-	script_moveMouseLeft.__doc__ = _("Moves the Mouse pointer to the left")
 
+	@scriptHandler.script(
+		# Translators: Input help message for a Golden Cursor command.
+		description=_("Moves the Mouse pointer down"),
+		gesture="kb:nvda+windows+downArrow"
+	)
 	def script_moveMouseDown(self, gesture):
 		self.moveMouse(GCMouseDown)
-	# Translators: Input help message for a Golden Cursor command.
-	script_moveMouseDown.__doc__ = _("Moves the Mouse pointer down")
 
+	@scriptHandler.script(
+		# Translators: Input help message for a Golden Cursor command.
+		description=_("Moves the Mouse pointer up"),
+		gesture="kb:nvda+windows+upArrow"
+	)
 	def script_moveMouseUp(self, gesture):
 		self.moveMouse(GCMouseUp)
-	# Translators: Input help message for a Golden Cursor command.
-	script_moveMouseUp.__doc__ = _("Moves the Mouse pointer up")
 
+	@scriptHandler.script(
+		# Translators: Input help message for a Golden Cursor command.
+		description=_("Opens a dialog to enter the X and Y coordinates for the mouse to move to"),
+		gesture="kb:nvda+windows+j"
+	)
 	def script_goToPosition(self, gesture):
 		try:
 			d = PositionsList(parent=gui.mainFrame, goto=True)
@@ -441,9 +477,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			gui.mainFrame.postPopup()
 		except RuntimeError:
 			pass
-	# Translators: Input help message for a Golden Cursor command.
-	script_goToPosition.__doc__ = _("Opens a dialog to enter the X and Y coordinates for the mouse to move to")
 
+	@scriptHandler.script(
+		# Translators: Input help message for a Golden Cursor command.
+		description=_("Toggles mouse movement restriction between current application and unrestricted"),
+		gesture="kb:nvda+windows+r"
+	)
 	def script_toggleMouseRestriction(self, gesture):
 		self.getAppRestriction = self.getMouse()
 		self.restriction = not self.restriction
@@ -453,10 +492,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		else:
 			# Translators: presented when mouse movement is unrestricted.
 			ui.message(_("Mouse movement unrestricted"))
-	script_toggleMouseRestriction.__doc__ = _(
-		# Translators: Input help message for a Golden Cursor command.
-		"Toggles mouse movement restriction between current application and unrestricted"
-	)
 
 	def moveMouse(self, direction):
 		w, h = api.getDesktopObject().location[2:]
@@ -489,21 +524,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def getMouse(self):
 		return api.getDesktopObject().objectFromPoint(*winUser.getCursorPos())
-
-	__gestures = {
-		"kb:nvda+windows+c": "mouseMovementChange",
-		"kb:nvda+windows+m": "toggleMouseArrows",
-		"kb:nvda+windows+rightArrow": "moveMouseRight",
-		"kb:nvda+windows+leftArrow": "moveMouseLeft",
-		"kb:nvda+windows+downArrow": "moveMouseDown",
-		"kb:nvda+windows+upArrow": "moveMouseUp",
-		"kb:nvda+windows+j": "goToPosition",
-		"kb:nvda+windows+p": "sayPosition",
-		"kb:nvda+windows+s": "toggleSpeakPixels",
-		"kb:nvda+windows+r": "toggleMouseRestriction",
-		"kb:nvda+shift+l": "saveMousePosition",
-		"kb:nvda+control+l": "mousePositionsList",
-	}
 
 
 # Add-on config database
