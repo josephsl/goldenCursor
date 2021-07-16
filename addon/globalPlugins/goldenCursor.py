@@ -261,7 +261,7 @@ class PositionsList(wx.Dialog):
 			self.positions.clear()
 			gui.messageBox(
 				# Translators: A dialog message shown when tags for the application is cleared.
-				_("All mouse positions for the application {appName} have been deleted.".format(appName=self.appName)),
+				_("All mouse positions for the application {appName} have been deleted.").format(appName=self.appName),
 				# Translators: Title of the tag clear confirmation dialog.
 				_("Mouse positions cleared"), wx.OK | wx.ICON_INFORMATION
 			)
@@ -345,7 +345,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		x, y = str(x), str(y)
 		d = EnterPositionName(
 			# Translators: edit field label for new mouse position.
-			gui.mainFrame, _("Enter the name for the current mouse position (x: {x}, Y: {y})".format(x=x, y=y)),
+			gui.mainFrame, _("Enter the name for the current mouse position (x: {positionX}, Y: {positionY}").format(
+				positionX=x, positionY=y
+			),
 			# Translators: title for save mouse position dialog.
 			_("Save mouse position")
 		)
