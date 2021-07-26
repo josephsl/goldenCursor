@@ -39,15 +39,21 @@ comandos do NVDA sob a categoria Cursor Dourado.
 * Ao apagar posições guardadas, se não houver quaisquer outras para a mesma
   aplicação, o respectivo ficheiro de posições será excluído.
 
-## Version 4.0
+## Versão 5.0
 
-* Requires NVDA 2019.3 or later.
-* Golden Cursor settings dialog has been replaced by Golden Cursor settings
-  panel.
+* Código-fonte modernizado para o tornar compatível com o NVDA 2021.1.
+* Resolvidos vários problemas de estilo de codificação e potenciais bugs com
+  Flake8.
 
-## Version 3.3
+## Versão 4.0
 
-* Internal changes to support future NVDA releases.
+* Requer o NVDA 2019.3 ou posterior.
+* O diálogo de configurações do Cursor Dourado foi substituído pelo painel
+  de configurações do Cursor Dourado.
+
+## Versão 3.3
+
+* Alterações internas para apoiar futuros lançamentos do NVDA.
 
 ## Versão 3.2
 
@@ -96,8 +102,8 @@ comandos do NVDA sob a categoria Cursor Dourado.
   e Y separadamente ou usando as teclas de seta para cima ou para baixo.
 * A caixa de diálogo mostrada ao guardar a posição actual do rato agora
   mostra as coordenadas para a localização atual do rato.
-* When saving positions, resolved an issue where NVDA may play error tones
-  if the positions folder does not exist.
+* Ao guardar as posições, resolveu-se  um problema em que o NVDA reproduzia
+  tons de erro se a pasta de posições não existisse.
 
 ## Versão 1.4
 

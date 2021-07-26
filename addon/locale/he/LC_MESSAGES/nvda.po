@@ -25,7 +25,7 @@ msgstr "לא זוהו מיקומים עבור %s"
 msgid "New mouse position"
 msgstr "מיקום סמן חדש"
 
-#. Translators: The label for the combo box of the mouse positions in the current application.
+#. Translators: The label for the list view of the mouse positions in the current application.
 msgid "&Saved mouse positions"
 msgstr "שמירת המיקום"
 
@@ -118,29 +118,30 @@ msgstr "כל מיקומי הסמן עבור היישום {appName} נמחקו."
 msgid "Mouse positions cleared"
 msgstr "מיקום הסמן נמחק"
 
+#. Translators: This is the label for the Golden Cursor settings category in NVDA Settings screen.
 #. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on to be shown on installation and add-on information.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information found in Add-ons Manager.
 msgid "Golden Cursor"
 msgstr "הסמן"
 
-msgid "&Golden Cursor..."
-msgstr "&הסמן..."
-
-msgid "Golden Cursor add-on settings"
-msgstr "הגדרות התוסף של הסמן"
+#. Translators: input help message for a Golden Cursor command.
+msgid "Opens a dialog listing mouse positions for the current application"
+msgstr "פתיחת תיבת דו-שיח המציינת מיקומי עכבר ליישום הנוכחי"
 
 #. Translators: message presented when no mouse positions are available for the focused app.
 #, python-format
 msgid "No mouse positions for %s."
 msgstr "לא זוהו מיקומים עבור %s."
 
-#. Translators: input help message for a Golden Cursor command.
-msgid "Opens a dialog listing mouse positions for the current application"
-msgstr "פתיחת תיבת דו-שיח המציינת מיקומי עכבר ליישום הנוכחי"
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Opens a dialog to label the current mouse position and saves it"
+msgstr "פותח תיבת דו-שיח כדי לסמן את מיקום הסמן הנוכחי ושומר אותו"
 
 #. Translators: edit field label for new mouse position.
-#, python-brace-format
-msgid "Enter the name for the current mouse position (x: {x}, Y: {y})"
+#, fuzzy, python-brace-format
+msgid ""
+"Enter the name for the current mouse position (x: {positionX}, Y: {positionY}"
 msgstr "הזן את השם עבור מיקום הסמן הנוכחי (x: {x}, Y: {y}"
 
 #. Translators: title for save mouse position dialog.
@@ -152,13 +153,13 @@ msgstr "שמירת המיקום"
 msgid "Position saved in %s."
 msgstr "המיקום נשמר ב%s."
 
-#. Translators: Input help message for a Golden Cursor command.
-msgid "Opens a dialog to label the current mouse position and saves it"
-msgstr "פותח תיבת דו-שיח כדי לסמן את מיקום הסמן הנוכחי ושומר אותו"
-
 #. Translators: input help message for a Golden Cursor command.
 msgid "Changes mouse movement unit"
 msgstr "שינוי יחידת תנועת הסמן"
+
+#. Translators: Input help message for a Golden Cursor add-on command.
+msgid "toggles reporting of mouse coordinates in pixels when mouse moves"
+msgstr "שינוי דיווח על קואורדינטות הסמן בפיקסלים כאשר הסמן זז"
 
 #. Translators: reported when new mouse coordinate announcement is on.
 msgid "Report new mouse coordinates on"
@@ -168,13 +169,13 @@ msgstr "דווח על קואורדינטות סמן חדשות פעיל"
 msgid "Report new mouse coordinates off"
 msgstr "דווח על קואורדינטות סמן חדשות כבוי"
 
-#. Translators: Input help message for a Golden Cursor add-on command.
-msgid "toggles reporting of mouse coordinates in pixels when mouse moves"
-msgstr "שינוי דיווח על קואורדינטות הסמן בפיקסלים כאשר הסמן זז"
-
 #. Translators: Input help message for a Golden Cursor command.
 msgid "Reports current X and Y mouse position"
 msgstr "דיווח מיקום הסמן הנוכחי ב X ו- Y"
+
+#. Translators: input help mode message for a Golden Cursor add-on command.
+msgid "Toggles mouse arrows to move the mouse with the arrow keys"
+msgstr "מחליף את חצי הסמןן כדי להזיז את הסמן עם מקשי החצים"
 
 #. Translators: presented when toggling mouse arrows feature.
 msgid "Mouse arrows on"
@@ -183,10 +184,6 @@ msgstr "חיצי הסמן פעיל"
 #. Translators: presented when toggling mouse arrows feature.
 msgid "Mouse arrows off"
 msgstr "חיצי הסמן כבוי"
-
-#. Translators: input help mode message for a Golden Cursor add-on command.
-msgid "Toggles mouse arrows to move the mouse with the arrow keys"
-msgstr "מחליף את חצי הסמןן כדי להזיז את הסמן עם מקשי החצים"
 
 #. Translators: Input help message for a Golden Cursor command.
 msgid "Moves the Mouse pointer to the right"
@@ -209,14 +206,6 @@ msgid ""
 "Opens a dialog to enter the X and Y coordinates for the mouse to move to"
 msgstr "פותח תיבת דו-שיח כדי להזין את הקואורדינטות X ו- Y שהסמן יעבור אליו"
 
-#. Translators: presented when mouse movement is restricted to current application.
-msgid "Mouse movement restricted to current application"
-msgstr "תנועת הסמן מוגבלת ליישום הנוכחי"
-
-#. Translators: presented when mouse movement is unrestricted.
-msgid "Mouse movement unrestricted"
-msgstr "תנועת הסמן ללא הגבלה"
-
 #. Translators: Input help message for a Golden Cursor command.
 msgid ""
 "Toggles mouse movement restriction between current application and "
@@ -225,9 +214,13 @@ msgstr ""
 "מיתוג בין שני מצבי המגבלה. ניתן להבחין בין יישומים שעליהם חלה מגבלה לבין אלה "
 "שלא חלה עליהם מגבלה שכזאת"
 
-#. Translators: This is the label for the Golden Cursor settings dialog.
-msgid "Golden Cursor Settings"
-msgstr "הגדות תוסף הסמן"
+#. Translators: presented when mouse movement is restricted to current application.
+msgid "Mouse movement restricted to current application"
+msgstr "תנועת הסמן מוגבלת ליישום הנוכחי"
+
+#. Translators: presented when mouse movement is unrestricted.
+msgid "Mouse movement unrestricted"
+msgstr "תנועת הסמן ללא הגבלה"
 
 #. Translators: This is the label for a checkbox in the
 #. Golden Cursor settings dialog.
@@ -245,3 +238,12 @@ msgid ""
 "details please visit the addon guide help."
 msgstr ""
 "מאפשר לשלוט על תנועת העכבר בעזרת החיצים. למידע נוסף, נא לעיין בעזרה של התוסף."
+
+#~ msgid "&Golden Cursor..."
+#~ msgstr "&הסמן..."
+
+#~ msgid "Golden Cursor add-on settings"
+#~ msgstr "הגדרות התוסף של הסמן"
+
+#~ msgid "Golden Cursor Settings"
+#~ msgstr "הגדות תוסף הסמן"

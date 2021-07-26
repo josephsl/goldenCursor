@@ -43,6 +43,11 @@ commandes de NVDA sous la catégorie Golden Cursor.
 * Lorsque vous supprimez des positions sauvegardées, s'il n'y a plus de
   positions sauvegardées, les positions de l'application seront effacées.
 
+## Version 5.0
+
+* Modernized add-on source code to make it compatible with NVDA 2021.1.
+* Resolved many coding style issues and potential bugs with Flake8.
+
 ## Version 4.0
 
 * Requires NVDA 2019.3 or later.

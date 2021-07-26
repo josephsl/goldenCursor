@@ -24,7 +24,7 @@ msgstr "Poziții ale mausului pentru %s"
 msgid "New mouse position"
 msgstr "Poziție maus nouă"
 
-#. Translators: The label for the combo box of the mouse positions in the current application.
+#. Translators: The label for the list view of the mouse positions in the current application.
 msgid "&Saved mouse positions"
 msgstr "&poziții maus salvate"
 
@@ -87,6 +87,7 @@ msgid "Error"
 msgstr "Eroare"
 
 #. Translators: The confirmation prompt displayed when the user requests to delete the selected tag.
+#, python-brace-format
 msgid ""
 "Are you sure you want to delete the position named {name}? This cannot be "
 "undone."
@@ -99,6 +100,7 @@ msgid "Delete position"
 msgstr "Șterge poziția"
 
 #. Translators: The confirmation prompt displayed when the user is about to clear positions.
+#, python-brace-format
 msgid ""
 "Are you sure you want to clear mouse positions for the current application "
 "({appName})? This cannot be undone."
@@ -111,6 +113,7 @@ msgid "Clear mouse positions"
 msgstr "Șterge pozițiile mausului"
 
 #. Translators: A dialog message shown when tags for the application is cleared.
+#, python-brace-format
 msgid "All mouse positions for the application {appName} have been deleted."
 msgstr "Toate pozițiile mausului pentru aplicația {appName} au foșt șterse."
 
@@ -118,29 +121,32 @@ msgstr "Toate pozițiile mausului pentru aplicația {appName} au foșt șterse."
 msgid "Mouse positions cleared"
 msgstr "Poziții maus șterse"
 
+#. Translators: This is the label for the Golden Cursor settings category in NVDA Settings screen.
 #. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on to be shown on installation and add-on information.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information found in Add-ons Manager.
 msgid "Golden Cursor"
 msgstr "Golden Cursor"
-
-msgid "&Golden Cursor..."
-msgstr "&Golden Cursor..."
-
-msgid "Golden Cursor add-on settings"
-msgstr "Setări"
-
-#. Translators: message presented when no mouse positions are available for the focused app.
-#, python-format
-msgid "No mouse positions for %s."
-msgstr "Nicio poziție maus pentru %s."
 
 #. Translators: input help message for a Golden Cursor command.
 msgid "Opens a dialog listing mouse positions for the current application"
 msgstr ""
 "Deschide un dialog care listează pozițiile mausului pentru aplicația curentă"
 
+#. Translators: message presented when no mouse positions are available for the focused app.
+#, python-format
+msgid "No mouse positions for %s."
+msgstr "Nicio poziție maus pentru %s."
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Opens a dialog to label the current mouse position and saves it"
+msgstr ""
+"Deschide un dialog pentru a eticheta poziția curentă a mausului și o salvează"
+
 #. Translators: edit field label for new mouse position.
-msgid "Enter the name for the current mouse position (x: {x}, Y: {y})"
+#, fuzzy, python-brace-format
+msgid ""
+"Enter the name for the current mouse position (x: {positionX}, Y: {positionY}"
 msgstr "Introduceți numele pentru poziția curentă a mausului (x: {x}, Y: {y}"
 
 #. Translators: title for save mouse position dialog.
@@ -152,14 +158,15 @@ msgstr "Salvare poziție maus"
 msgid "Position saved in %s."
 msgstr "Poziția a fost salvată în %s"
 
-#. Translators: Input help message for a Golden Cursor command.
-msgid "Opens a dialog to label the current mouse position and saves it"
-msgstr ""
-"Deschide un dialog pentru a eticheta poziția curentă a mausului și o salvează"
-
 #. Translators: input help message for a Golden Cursor command.
 msgid "Changes mouse movement unit"
 msgstr "Modifică unitatea de mișcare a mausului"
+
+#. Translators: Input help message for a Golden Cursor add-on command.
+msgid "toggles reporting of mouse coordinates in pixels when mouse moves"
+msgstr ""
+"activează sau dezactivează anunțarea coordonatelor mausului în pixeli când "
+"acesta se mișcă"
 
 #. Translators: reported when new mouse coordinate announcement is on.
 msgid "Report new mouse coordinates on"
@@ -169,15 +176,15 @@ msgstr "Anunță coordonatele noi ale mausului activat"
 msgid "Report new mouse coordinates off"
 msgstr "Anunță coordonatele noi ale mausului dezactivat"
 
-#. Translators: Input help message for a Golden Cursor add-on command.
-msgid "toggles reporting of mouse coordinates in pixels when mouse moves"
-msgstr ""
-"activează sau dezactivează anunțarea coordonatelor mausului în pixeli când "
-"acesta se mișcă"
-
 #. Translators: Input help message for a Golden Cursor command.
 msgid "Reports current X and Y mouse position"
 msgstr "Raportează coordonatele X și Y ale mausului"
+
+#. Translators: input help mode message for a Golden Cursor add-on command.
+msgid "Toggles mouse arrows to move the mouse with the arrow keys"
+msgstr ""
+"Activează sau dezactivează săgețile mausului pentru a deplasa mausul cu "
+"săgețile"
 
 #. Translators: presented when toggling mouse arrows feature.
 msgid "Mouse arrows on"
@@ -186,12 +193,6 @@ msgstr "Săgeți maus activat"
 #. Translators: presented when toggling mouse arrows feature.
 msgid "Mouse arrows off"
 msgstr "Săgeți maus dezactivat"
-
-#. Translators: input help mode message for a Golden Cursor add-on command.
-msgid "Toggles mouse arrows to move the mouse with the arrow keys"
-msgstr ""
-"Activează sau dezactivează săgețile mausului pentru a deplasa mausul cu "
-"săgețile"
 
 #. Translators: Input help message for a Golden Cursor command.
 msgid "Moves the Mouse pointer to the right"
@@ -216,14 +217,6 @@ msgstr ""
 "Deschide un dialog pentru introducerea coordonatelor X și Y la care mausul "
 "să se deplaseze"
 
-#. Translators: presented when mouse movement is restricted to current application.
-msgid "Mouse movement restricted to current application"
-msgstr "Mișcarea mausului este restricționată pentru aplicația curentă"
-
-#. Translators: presented when mouse movement is unrestricted.
-msgid "Mouse movement unrestricted"
-msgstr "Mișcare maus nerestricționată"
-
 #. Translators: Input help message for a Golden Cursor command.
 msgid ""
 "Toggles mouse movement restriction between current application and "
@@ -232,9 +225,13 @@ msgstr ""
 "Comută restricționarea mișcării mausului între aplicația curentă și "
 "nerestricționat"
 
-#. Translators: This is the label for the Golden Cursor settings dialog.
-msgid "Golden Cursor Settings"
-msgstr "Setări Golden Cursor"
+#. Translators: presented when mouse movement is restricted to current application.
+msgid "Mouse movement restricted to current application"
+msgstr "Mișcarea mausului este restricționată pentru aplicația curentă"
+
+#. Translators: presented when mouse movement is unrestricted.
+msgid "Mouse movement unrestricted"
+msgstr "Mișcare maus nerestricționată"
 
 #. Translators: This is the label for a checkbox in the
 #. Golden Cursor settings dialog.
@@ -253,3 +250,12 @@ msgid ""
 msgstr ""
 "Vă permite să controlați mișcarea mausului cu tastele săgeată. Pentru "
 "detalii suplimentare vizitați ghidul de ajutor al add-onului."
+
+#~ msgid "&Golden Cursor..."
+#~ msgstr "&Golden Cursor..."
+
+#~ msgid "Golden Cursor add-on settings"
+#~ msgstr "Setări"
+
+#~ msgid "Golden Cursor Settings"
+#~ msgstr "Setări Golden Cursor"

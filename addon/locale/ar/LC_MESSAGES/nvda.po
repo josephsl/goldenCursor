@@ -20,7 +20,7 @@ msgstr "المواضع المحفوظة في%s"
 msgid "New mouse position"
 msgstr "إنتقل إلى"
 
-#. Translators: The label for the combo box of the mouse positions in the current application.
+#. Translators: The label for the list view of the mouse positions in the current application.
 msgid "&Saved mouse positions"
 msgstr "مواضع المؤشر المحفوظة"
 
@@ -116,29 +116,30 @@ msgstr "جميع مواضع التطبيق {appName} تم حذفها."
 msgid "Mouse positions cleared"
 msgstr "تم مسح المواضع"
 
+#. Translators: This is the label for the Golden Cursor settings category in NVDA Settings screen.
 #. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on to be shown on installation and add-on information.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information found in Add-ons Manager.
 msgid "Golden Cursor"
 msgstr "المؤشر الذهبي"
 
-msgid "&Golden Cursor..."
-msgstr "المؤشر ال&ذهبي"
-
-msgid "Golden Cursor add-on settings"
-msgstr "إعدادات إضافة المؤشر الذهبي"
+#. Translators: input help message for a Golden Cursor command.
+msgid "Opens a dialog listing mouse positions for the current application"
+msgstr "يفتح قائمة بمربع الحوار الخاص بالتطبيق الحالي"
 
 #. Translators: message presented when no mouse positions are available for the focused app.
 #, python-format
 msgid "No mouse positions for %s."
 msgstr "لا توجد مواضع محفوطة لتطبيق %s."
 
-#. Translators: input help message for a Golden Cursor command.
-msgid "Opens a dialog listing mouse positions for the current application"
-msgstr "يفتح قائمة بمربع الحوار الخاص بالتطبيق الحالي"
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Opens a dialog to label the current mouse position and saves it"
+msgstr "يفتح مربع حوار لحفظ وتسمية الموضع الحالي"
 
 #. Translators: edit field label for new mouse position.
-#, python-brace-format
-msgid "Enter the name for the current mouse position (x: {x}, Y: {y})"
+#, fuzzy, python-brace-format
+msgid ""
+"Enter the name for the current mouse position (x: {positionX}, Y: {positionY}"
 msgstr "أدخل إسم لموضع (x: {x}, Y: {y})"
 
 #. Translators: title for save mouse position dialog.
@@ -150,13 +151,13 @@ msgstr "حفظ موضع جديد"
 msgid "Position saved in %s."
 msgstr "تم حفظ الموضع في %s."
 
-#. Translators: Input help message for a Golden Cursor command.
-msgid "Opens a dialog to label the current mouse position and saves it"
-msgstr "يفتح مربع حوار لحفظ وتسمية الموضع الحالي"
-
 #. Translators: input help message for a Golden Cursor command.
 msgid "Changes mouse movement unit"
 msgstr "وحدة تغييرات حركة المؤشر"
+
+#. Translators: Input help message for a Golden Cursor add-on command.
+msgid "toggles reporting of mouse coordinates in pixels when mouse moves"
+msgstr "تبديل الإبلاغ عن إحداثيات الماوس في بكسل عندما تحرك الماوس "
 
 #. Translators: reported when new mouse coordinate announcement is on.
 msgid "Report new mouse coordinates on"
@@ -166,13 +167,13 @@ msgstr "الإعلان عن موضع المؤشر الحالي تشغيل"
 msgid "Report new mouse coordinates off"
 msgstr "الإعلان عن موضع المؤشر الحالي إيقاف"
 
-#. Translators: Input help message for a Golden Cursor add-on command.
-msgid "toggles reporting of mouse coordinates in pixels when mouse moves"
-msgstr "تبديل الإبلاغ عن إحداثيات الماوس في بكسل عندما تحرك الماوس "
-
 #. Translators: Input help message for a Golden Cursor command.
 msgid "Reports current X and Y mouse position"
 msgstr "الإعلان عن موضع  x y لموضع المؤشر الحالي"
+
+#. Translators: input help mode message for a Golden Cursor add-on command.
+msgid "Toggles mouse arrows to move the mouse with the arrow keys"
+msgstr "التبديل بين تحرك المؤشر بالأسهم"
 
 #. Translators: presented when toggling mouse arrows feature.
 msgid "Mouse arrows on"
@@ -181,10 +182,6 @@ msgstr "التحريك بالأسهم تشغيل"
 #. Translators: presented when toggling mouse arrows feature.
 msgid "Mouse arrows off"
 msgstr "التحريك بالأسهم تعطيل"
-
-#. Translators: input help mode message for a Golden Cursor add-on command.
-msgid "Toggles mouse arrows to move the mouse with the arrow keys"
-msgstr "التبديل بين تحرك المؤشر بالأسهم"
 
 #. Translators: Input help message for a Golden Cursor command.
 msgid "Moves the Mouse pointer to the right"
@@ -207,6 +204,12 @@ msgid ""
 "Opens a dialog to enter the X and Y coordinates for the mouse to move to"
 msgstr "يفتح مربع حوار لإدخال قيمة X و Y للإنتقال لهم"
 
+#. Translators: Input help message for a Golden Cursor command.
+msgid ""
+"Toggles mouse movement restriction between current application and "
+"unrestricted"
+msgstr "تبديل  لحَصر المؤشر في نافذة التطبيق النشط"
+
 #. Translators: presented when mouse movement is restricted to current application.
 msgid "Mouse movement restricted to current application"
 msgstr "حركة المؤشر  تقتصر على التطبيق الحالي "
@@ -214,16 +217,6 @@ msgstr "حركة المؤشر  تقتصر على التطبيق الحالي "
 #. Translators: presented when mouse movement is unrestricted.
 msgid "Mouse movement unrestricted"
 msgstr "حركة المؤشر غير مقيدة"
-
-#. Translators: Input help message for a Golden Cursor command.
-msgid ""
-"Toggles mouse movement restriction between current application and "
-"unrestricted"
-msgstr "تبديل  لحَصر المؤشر في نافذة التطبيق النشط"
-
-#. Translators: This is the label for the Golden Cursor settings dialog.
-msgid "Golden Cursor Settings"
-msgstr "إعدادات المؤشر الذهبي"
 
 #. Translators: This is the label for a checkbox in the
 #. Golden Cursor settings dialog.
@@ -242,3 +235,12 @@ msgid ""
 msgstr ""
 "يسمح لك للسيطرة على حركة الماوس مع لوحة المفاتيح. لمزيد من التفاصيل يرجى "
 "زيارة الملحق دليل المساعدة. "
+
+#~ msgid "&Golden Cursor..."
+#~ msgstr "المؤشر ال&ذهبي"
+
+#~ msgid "Golden Cursor add-on settings"
+#~ msgstr "إعدادات إضافة المؤشر الذهبي"
+
+#~ msgid "Golden Cursor Settings"
+#~ msgstr "إعدادات المؤشر الذهبي"

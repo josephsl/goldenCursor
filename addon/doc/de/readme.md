@@ -40,6 +40,13 @@ im Dialog Eingaben in der Kategorie "goldener Cursor" angepasst werden.
 * Wenn beim Löschen gespeicherter Positionen keine gespeicherten Positionen
   mehr vorhanden sind, werden die Positionen für die Anwendung gelöscht.
 
+## Version 5.0
+
+* Modernisierter Quellcode der Erweiterung, um ihn mit NVDA 2021.1
+  kompatibel zu machen.
+* Viele Probleme mit dem Code-Stil und potenzielle Fehler mit Flake8
+  behoben.
+
 ## Version 4.0
 
 * Erfordert NVDA 2019.3 oder höher.
@@ -100,8 +107,9 @@ im Dialog Eingaben in der Kategorie "goldener Cursor" angepasst werden.
   getrennt oder mit den Pfeiltasten nach oben und unten eingegeben werden.
 * Der Dialog, der beim Speichern der aktuellen Mausposition angezeigt wird,
   zeigt nun die Koordinaten der aktuellen Mausposition an.
-* Beim Speichern von Mauspositionen wurde ein Problem behoben, bei dem NVDA
-  Fehlertöne abspielte, wenn der Positionsordner nicht existiert.
+* Beim Speichern von Positionen wurde ein Problem behoben, bei dem NVDA
+  möglicherweise Fehlertöne ausgibt, wenn der Positionsordner nicht
+  existiert.
 
 ## Version 1.4
 

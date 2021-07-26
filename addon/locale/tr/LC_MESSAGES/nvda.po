@@ -26,7 +26,7 @@ msgstr "%s için konum listesi"
 msgid "New mouse position"
 msgstr "Yeni fare konumu"
 
-#. Translators: The label for the combo box of the mouse positions in the current application.
+#. Translators: The label for the list view of the mouse positions in the current application.
 msgid "&Saved mouse positions"
 msgstr "&Kayıtlı fare konumları"
 
@@ -121,29 +121,31 @@ msgstr "{appName} uygulaması için oluşturulmuş tüm fare konumları silindi.
 msgid "Mouse positions cleared"
 msgstr "Fare konumları silindi"
 
+#. Translators: This is the label for the Golden Cursor settings category in NVDA Settings screen.
 #. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on to be shown on installation and add-on information.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information found in Add-ons Manager.
 msgid "Golden Cursor"
 msgstr "Altın İmleç"
 
-msgid "&Golden Cursor..."
-msgstr "&Altın imleç..."
-
-msgid "Golden Cursor add-on settings"
-msgstr "Altın imleç eklenti ayarları"
+#. Translators: input help message for a Golden Cursor command.
+msgid "Opens a dialog listing mouse positions for the current application"
+msgstr "Mevcut uygulama için daha önce oluşturulmuş fare konum listesini açar"
 
 #. Translators: message presented when no mouse positions are available for the focused app.
 #, python-format
 msgid "No mouse positions for %s."
 msgstr "%s için konum kaydı bulunamadı."
 
-#. Translators: input help message for a Golden Cursor command.
-msgid "Opens a dialog listing mouse positions for the current application"
-msgstr "Mevcut uygulama için daha önce oluşturulmuş fare konum listesini açar"
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Opens a dialog to label the current mouse position and saves it"
+msgstr ""
+"Mevcut fare konumunun etiketlenip kaydedilmesi için bir iletişim kutusu açar"
 
 #. Translators: edit field label for new mouse position.
-#, python-brace-format
-msgid "Enter the name for the current mouse position (x: {x}, Y: {y})"
+#, fuzzy, python-brace-format
+msgid ""
+"Enter the name for the current mouse position (x: {positionX}, Y: {positionY}"
 msgstr "Mevcut fare konumu için bir ad girin (x: {x}, Y: {y})"
 
 #. Translators: title for save mouse position dialog.
@@ -155,14 +157,15 @@ msgstr "Fare konumunu kaydet"
 msgid "Position saved in %s."
 msgstr "Konum %s içine kaydedildi."
 
-#. Translators: Input help message for a Golden Cursor command.
-msgid "Opens a dialog to label the current mouse position and saves it"
-msgstr ""
-"Mevcut fare konumunun etiketlenip kaydedilmesi için bir iletişim kutusu açar"
-
 #. Translators: input help message for a Golden Cursor command.
 msgid "Changes mouse movement unit"
 msgstr "Fare hareket birimini değiştirir"
+
+#. Translators: Input help message for a Golden Cursor add-on command.
+msgid "toggles reporting of mouse coordinates in pixels when mouse moves"
+msgstr ""
+"Fare hareket ettiğinde, yeni konumun piksel cinsinden bildirimini açıp "
+"kapatır"
 
 #. Translators: reported when new mouse coordinate announcement is on.
 msgid "Report new mouse coordinates on"
@@ -172,15 +175,14 @@ msgstr "Yeni fare konumu bildirimi açık"
 msgid "Report new mouse coordinates off"
 msgstr "Yeni fare konumu bildirimi kapalı"
 
-#. Translators: Input help message for a Golden Cursor add-on command.
-msgid "toggles reporting of mouse coordinates in pixels when mouse moves"
-msgstr ""
-"Fare hareket ettiğinde, yeni konumun piksel cinsinden bildirimini açıp "
-"kapatır"
-
 #. Translators: Input help message for a Golden Cursor command.
 msgid "Reports current X and Y mouse position"
 msgstr "Mevcut fare konumunu X ve Y olarak söyler"
+
+#. Translators: input help mode message for a Golden Cursor add-on command.
+msgid "Toggles mouse arrows to move the mouse with the arrow keys"
+msgstr ""
+"Farenin yön tuşlarıyla hareket ettirilmesiyle ilgili ayarı açıp kapatır"
 
 #. Translators: presented when toggling mouse arrows feature.
 msgid "Mouse arrows on"
@@ -189,11 +191,6 @@ msgstr "Açık, Yön tuşları fare hareketi için kullanılacak"
 #. Translators: presented when toggling mouse arrows feature.
 msgid "Mouse arrows off"
 msgstr "Kapalı, yön tuşları fare hareketi için kullanılmayacak"
-
-#. Translators: input help mode message for a Golden Cursor add-on command.
-msgid "Toggles mouse arrows to move the mouse with the arrow keys"
-msgstr ""
-"Farenin yön tuşlarıyla hareket ettirilmesiyle ilgili ayarı açıp kapatır"
 
 #. Translators: Input help message for a Golden Cursor command.
 msgid "Moves the Mouse pointer to the right"
@@ -218,14 +215,6 @@ msgstr ""
 "Fare imlecinin atlaması için X ve Y koordinatının girileceği iletişim "
 "kutusunu açar"
 
-#. Translators: presented when mouse movement is restricted to current application.
-msgid "Mouse movement restricted to current application"
-msgstr "Kısıtlı, Fare mevcut uygulama içinde hareket eder"
-
-#. Translators: presented when mouse movement is unrestricted.
-msgid "Mouse movement unrestricted"
-msgstr "Kısıtlanmamış"
-
 #. Translators: Input help message for a Golden Cursor command.
 msgid ""
 "Toggles mouse movement restriction between current application and "
@@ -234,9 +223,13 @@ msgstr ""
 "Fare hareketinin mevcut uygulama ekranıyla sınırlanıp sınırlanmayacağıyla "
 "ilgili ayarı değiştirir"
 
-#. Translators: This is the label for the Golden Cursor settings dialog.
-msgid "Golden Cursor Settings"
-msgstr "Altın İmleç Ayarları"
+#. Translators: presented when mouse movement is restricted to current application.
+msgid "Mouse movement restricted to current application"
+msgstr "Kısıtlı, Fare mevcut uygulama içinde hareket eder"
+
+#. Translators: presented when mouse movement is unrestricted.
+msgid "Mouse movement unrestricted"
+msgstr "Kısıtlanmamış"
 
 #. Translators: This is the label for a checkbox in the
 #. Golden Cursor settings dialog.
@@ -255,6 +248,15 @@ msgid ""
 msgstr ""
 "Fare hareketlerinin klavyeyle kontrolünü sağlar. daha fazla bilgi için "
 "lütfen Eklenti yardımına bakın."
+
+#~ msgid "&Golden Cursor..."
+#~ msgstr "&Altın imleç..."
+
+#~ msgid "Golden Cursor add-on settings"
+#~ msgstr "Altın imleç eklenti ayarları"
+
+#~ msgid "Golden Cursor Settings"
+#~ msgstr "Altın İmleç Ayarları"
 
 #~ msgid "choose a item of this list"
 #~ msgstr "Listeden bir öğe seçin"

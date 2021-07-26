@@ -40,6 +40,11 @@ meniul NVDA, preferințe.
 * Atunci când ștergeți ultima poziție salvată, pozițiile aplicației vor fi
   curățate .
 
+## Version 5.0
+
+* Modernized add-on source code to make it compatible with NVDA 2021.1.
+* Resolved many coding style issues and potential bugs with Flake8.
+
 ## Versiunea 4.0
 
 * Necesită NVDA 2019.3 sau mai nou.

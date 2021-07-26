@@ -39,6 +39,11 @@ kategorii Golden Cursor.
 * Jeżeli wszystkie zapisane w dodatku pozycje zostaną usunięte, lista
   pozycji dla danej aplikacji zostanie wyczyszczona.
 
+## Version 5.0
+
+* Modernized add-on source code to make it compatible with NVDA 2021.1.
+* Resolved many coding style issues and potential bugs with Flake8.
+
 ## Wersja 4.0
 
 * Wymaga NVDA 2019.3 lub nowszej.
@@ -93,9 +98,8 @@ kategorii Golden Cursor.
   współrzędnych x i y oddzielnie lub używając strzałek.
 * Dialog do zapisywania aktualnej pozycji myszy teraz pokazuje współrzędne
   dla aktualnej pozycji myszy.
-* Gdy pozycję są zachowywane, naprawiono błąd, przy którym NVDA odtwarzała
-  dźwięk błędu z powodu nieznalezionego folderu do zachowywania pozycji
-  myszy.
+* When saving positions, resolved an issue where NVDA may play error tones
+  if the positions folder does not exist.
 
 ## Wersja 1.4
 

@@ -39,6 +39,13 @@ menú Preferencias do NVDA na categoría Golden Cursor.
 * Ao se borrar posicións gardadas, se non quedan máis posicións gardadas,
   limparanse as da aplicación.
 
+## Versión 5.0
+
+* ´Modernizado o código fonte do complemento para facelo compatible con NVDA
+  2021.1.
+* Resoltos varios problemas e erros potenciais no estilo do código con
+  flake8.
+
 ## Versión 4.0
 
 * Require do NVDA 2019.3 ou posterior.

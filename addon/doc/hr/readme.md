@@ -40,6 +40,11 @@ pod kategorijom „Zlatni kursor”.
 * Tijekom brisanja spremljenih pozicija, ako više nema spremljenih pozicija,
   uklonit će se pozicije za aplikaciju.
 
+## Version 5.0
+
+* Modernized add-on source code to make it compatible with NVDA 2021.1.
+* Resolved many coding style issues and potential bugs with Flake8.
+
 ## Verzija 4.0
 
 * Zahtijeva NVDA 2019.3 ili noviju verziju.
@@ -95,8 +100,8 @@ pod kategorijom „Zlatni kursor”.
   korištenja tipki sa strelicama gore ili dolje.
 * Dijaloški okvir koji se prikazuje tijekom spremanja trenutne pozicije miša
   sada prikazuje koordinate za trenutnu lokaciju miša.
-* Tijekom spremanja pozicija, ispravljena je greška gdje je NVDA ponekad
-  reproducirao zvukove pogreške ako mapa pozicija nije postojala.
+* When saving positions, resolved an issue where NVDA may play error tones
+  if the positions folder does not exist.
 
 ## Verzija 1.4
 

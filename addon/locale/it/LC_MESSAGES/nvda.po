@@ -25,7 +25,7 @@ msgstr "Posizioni mouse per %s"
 msgid "New mouse position"
 msgstr "Nuova posizione mouse"
 
-#. Translators: The label for the combo box of the mouse positions in the current application.
+#. Translators: The label for the list view of the mouse positions in the current application.
 msgid "&Saved mouse positions"
 msgstr "Posizioni mouse &salvate"
 
@@ -123,21 +123,12 @@ msgstr ""
 msgid "Mouse positions cleared"
 msgstr "Posizioni mouse ripulite"
 
+#. Translators: This is the label for the Golden Cursor settings category in NVDA Settings screen.
 #. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on to be shown on installation and add-on information.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information found in Add-ons Manager.
 msgid "Golden Cursor"
 msgstr "Golden Cursor"
-
-msgid "&Golden Cursor..."
-msgstr "&Golden Cursor..."
-
-msgid "Golden Cursor add-on settings"
-msgstr "Impostazioni componente aggiuntivo Golden Cursor"
-
-#. Translators: message presented when no mouse positions are available for the focused app.
-#, python-format
-msgid "No mouse positions for %s."
-msgstr "Non esiste alcuna posizione mouse per %s."
 
 #. Translators: input help message for a Golden Cursor command.
 msgid "Opens a dialog listing mouse positions for the current application"
@@ -145,9 +136,21 @@ msgstr ""
 "Apre una finestra di dialogo contenente l'elenco delle posizioni mouse per "
 "l'applicazione corrente"
 
+#. Translators: message presented when no mouse positions are available for the focused app.
+#, python-format
+msgid "No mouse positions for %s."
+msgstr "Non esiste alcuna posizione mouse per %s."
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Opens a dialog to label the current mouse position and saves it"
+msgstr ""
+"Apre una finestra di dialogo per etichettare la posizione corrente del mouse "
+"e poi salvarla"
+
 #. Translators: edit field label for new mouse position.
-#, python-brace-format
-msgid "Enter the name for the current mouse position (x: {x}, Y: {y})"
+#, fuzzy, python-brace-format
+msgid ""
+"Enter the name for the current mouse position (x: {positionX}, Y: {positionY}"
 msgstr "Inserire il nome per la posizione corrente del mouse (x: {x}, Y: {y}"
 
 #. Translators: title for save mouse position dialog.
@@ -159,15 +162,15 @@ msgstr "Salva posizione mouse"
 msgid "Position saved in %s."
 msgstr "Posizione salvata in %s."
 
-#. Translators: Input help message for a Golden Cursor command.
-msgid "Opens a dialog to label the current mouse position and saves it"
-msgstr ""
-"Apre una finestra di dialogo per etichettare la posizione corrente del mouse "
-"e poi salvarla"
-
 #. Translators: input help message for a Golden Cursor command.
 msgid "Changes mouse movement unit"
 msgstr "Cambia l'unità di movimento per il mouse"
+
+#. Translators: Input help message for a Golden Cursor add-on command.
+msgid "toggles reporting of mouse coordinates in pixels when mouse moves"
+msgstr ""
+"Attiva/disattiva l'annuncio delle coordinate del mouse in pixel quando il "
+"puntatore si sposta"
 
 #. Translators: reported when new mouse coordinate announcement is on.
 msgid "Report new mouse coordinates on"
@@ -177,15 +180,14 @@ msgstr "Lettura nuove corrdinate mouse attivata"
 msgid "Report new mouse coordinates off"
 msgstr "Lettura nuove corrdinate mouse disattivata"
 
-#. Translators: Input help message for a Golden Cursor add-on command.
-msgid "toggles reporting of mouse coordinates in pixels when mouse moves"
-msgstr ""
-"Attiva/disattiva l'annuncio delle coordinate del mouse in pixel quando il "
-"puntatore si sposta"
-
 #. Translators: Input help message for a Golden Cursor command.
 msgid "Reports current X and Y mouse position"
 msgstr "Fornisce le coordinate x e y della posizione corrente del mouse"
+
+#. Translators: input help mode message for a Golden Cursor add-on command.
+msgid "Toggles mouse arrows to move the mouse with the arrow keys"
+msgstr ""
+"Attiva o disattiva la possibilità di spostare il mouse con i tasti freccia"
 
 #. Translators: presented when toggling mouse arrows feature.
 msgid "Mouse arrows on"
@@ -194,11 +196,6 @@ msgstr "Spostamento mouse con frecce attivato"
 #. Translators: presented when toggling mouse arrows feature.
 msgid "Mouse arrows off"
 msgstr "Spostamento mouse con frecce disattivato"
-
-#. Translators: input help mode message for a Golden Cursor add-on command.
-msgid "Toggles mouse arrows to move the mouse with the arrow keys"
-msgstr ""
-"Attiva o disattiva la possibilità di spostare il mouse con i tasti freccia"
 
 #. Translators: Input help message for a Golden Cursor command.
 msgid "Moves the Mouse pointer to the right"
@@ -223,14 +220,6 @@ msgstr ""
 "Apre una finestra di dialogo per immettere le coordinate X e Y verso cui "
 "spostare il mouse"
 
-#. Translators: presented when mouse movement is restricted to current application.
-msgid "Mouse movement restricted to current application"
-msgstr "Movimento mouse limitato all'applicazione corrente"
-
-#. Translators: presented when mouse movement is unrestricted.
-msgid "Mouse movement unrestricted"
-msgstr "Movimento mouse illimitato"
-
 #. Translators: Input help message for a Golden Cursor command.
 msgid ""
 "Toggles mouse movement restriction between current application and "
@@ -239,9 +228,13 @@ msgstr ""
 "Passa tra i due livelli di restrizione mouse consentiti, restrizione alla "
 "finestra dell'applicazione e nessuna restrizione."
 
-#. Translators: This is the label for the Golden Cursor settings dialog.
-msgid "Golden Cursor Settings"
-msgstr "Impostazioni Golden Cursor"
+#. Translators: presented when mouse movement is restricted to current application.
+msgid "Mouse movement restricted to current application"
+msgstr "Movimento mouse limitato all'applicazione corrente"
+
+#. Translators: presented when mouse movement is unrestricted.
+msgid "Mouse movement unrestricted"
+msgstr "Movimento mouse illimitato"
 
 #. Translators: This is the label for a checkbox in the
 #. Golden Cursor settings dialog.
@@ -260,3 +253,12 @@ msgid ""
 msgstr ""
 "Consente di controllare i movimenti del mouse con la tastiera. Per maggiori "
 "informazioni consulta l'aiuto di questo componente aggiuntivo."
+
+#~ msgid "&Golden Cursor..."
+#~ msgstr "&Golden Cursor..."
+
+#~ msgid "Golden Cursor add-on settings"
+#~ msgstr "Impostazioni componente aggiuntivo Golden Cursor"
+
+#~ msgid "Golden Cursor Settings"
+#~ msgstr "Impostazioni Golden Cursor"

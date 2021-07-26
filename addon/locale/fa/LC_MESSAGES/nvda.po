@@ -124,22 +124,29 @@ msgstr "موقعیت‌های موس پاک شدند."
 
 #. Translators: This is the label for the Golden Cursor settings category in NVDA Settings screen.
 #. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on to be shown on installation and add-on information.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information found in Add-ons Manager.
 msgid "Golden Cursor"
 msgstr "مکان‌نمای طلایی"
+
+#. Translators: input help message for a Golden Cursor command.
+msgid "Opens a dialog listing mouse positions for the current application"
+msgstr "پنجره‌ای را برای فهرست کردنِ موقعیت‌های موس برای برنامه‌ی جاری باز میکند."
 
 #. Translators: message presented when no mouse positions are available for the focused app.
 #, python-format
 msgid "No mouse positions for %s."
 msgstr "موقعیتِ موس برای %s موجود نیست."
 
-#. Translators: input help message for a Golden Cursor command.
-msgid "Opens a dialog listing mouse positions for the current application"
-msgstr "پنجره‌ای را برای فهرست کردنِ موقعیت‌های موس برای برنامه‌ی جاری باز میکند."
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Opens a dialog to label the current mouse position and saves it"
+msgstr ""
+"پنجره‌ای را برای برچسب گذاشتن روی موقعیتِ جاریِ موس و ذخیره کردنِ آن باز میکند."
 
 #. Translators: edit field label for new mouse position.
-#, python-brace-format
-msgid "Enter the name for the current mouse position (x: {x}, Y: {y})"
+#, fuzzy, python-brace-format
+msgid ""
+"Enter the name for the current mouse position (x: {positionX}, Y: {positionY}"
 msgstr "برای موقعیتِ جاریِ موس یک نام وارد کنید (x: {x}, Y: {y})"
 
 #. Translators: title for save mouse position dialog.
@@ -151,14 +158,13 @@ msgstr "ذخیره‌ی موقعیتِ موس"
 msgid "Position saved in %s."
 msgstr "موقعیت در %s ذخیره شد."
 
-#. Translators: Input help message for a Golden Cursor command.
-msgid "Opens a dialog to label the current mouse position and saves it"
-msgstr ""
-"پنجره‌ای را برای برچسب گذاشتن روی موقعیتِ جاریِ موس و ذخیره کردنِ آن باز میکند."
-
 #. Translators: input help message for a Golden Cursor command.
 msgid "Changes mouse movement unit"
 msgstr "واحدِ حرکتِ موس را تغییر میدهد."
+
+#. Translators: Input help message for a Golden Cursor add-on command.
+msgid "toggles reporting of mouse coordinates in pixels when mouse moves"
+msgstr "اعلامِ مختصات را هنگامِ حرکت موس به پیکسل فعال یا غیرفعال میکند."
 
 #. Translators: reported when new mouse coordinate announcement is on.
 msgid "Report new mouse coordinates on"
@@ -168,13 +174,13 @@ msgstr "اعلامِ مختصاتِ جدیدِ موس، روشن"
 msgid "Report new mouse coordinates off"
 msgstr "اعلامِ مختصاتِ جدیدِ موس، خاموش"
 
-#. Translators: Input help message for a Golden Cursor add-on command.
-msgid "toggles reporting of mouse coordinates in pixels when mouse moves"
-msgstr "اعلامِ مختصات را هنگامِ حرکت موس به پیکسل فعال یا غیرفعال میکند."
-
 #. Translators: Input help message for a Golden Cursor command.
 msgid "Reports current X and Y mouse position"
 msgstr "موقعیتِ جاریِ موس را به شکلِ X و Y اعلام میکند."
+
+#. Translators: input help mode message for a Golden Cursor add-on command.
+msgid "Toggles mouse arrows to move the mouse with the arrow keys"
+msgstr "جهت‌نماهای موس را برای حرکت دادَنِ موس با صفحه‌کلید فعال یا غیرفعال میکند."
 
 #. Translators: presented when toggling mouse arrows feature.
 msgid "Mouse arrows on"
@@ -183,10 +189,6 @@ msgstr "جهت‌نماهای موس، روشن"
 #. Translators: presented when toggling mouse arrows feature.
 msgid "Mouse arrows off"
 msgstr "جهت‌نماهای موس، خاموش"
-
-#. Translators: input help mode message for a Golden Cursor add-on command.
-msgid "Toggles mouse arrows to move the mouse with the arrow keys"
-msgstr "جهت‌نماهای موس را برای حرکت دادَنِ موس با صفحه‌کلید فعال یا غیرفعال میکند."
 
 #. Translators: Input help message for a Golden Cursor command.
 msgid "Moves the Mouse pointer to the right"
@@ -210,6 +212,12 @@ msgid ""
 msgstr ""
 "پنجره‌ای را جهتِ ورودِ مختصات X و Y برای بُردنِ موس به نقطه‌ی موردِ نظر باز میکند."
 
+#. Translators: Input help message for a Golden Cursor command.
+msgid ""
+"Toggles mouse movement restriction between current application and "
+"unrestricted"
+msgstr "محدودیتِ حرکتِ موس را بینِ برنامه‌ی جاری و نامحدود تغییر میدهد."
+
 #. Translators: presented when mouse movement is restricted to current application.
 msgid "Mouse movement restricted to current application"
 msgstr "حرکتِ موس به برنامه‌ی جاری محدود شد."
@@ -217,12 +225,6 @@ msgstr "حرکتِ موس به برنامه‌ی جاری محدود شد."
 #. Translators: presented when mouse movement is unrestricted.
 msgid "Mouse movement unrestricted"
 msgstr "حرکتِ موس نامحدود شد."
-
-#. Translators: Input help message for a Golden Cursor command.
-msgid ""
-"Toggles mouse movement restriction between current application and "
-"unrestricted"
-msgstr "محدودیتِ حرکتِ موس را بینِ برنامه‌ی جاری و نامحدود تغییر میدهد."
 
 #. Translators: This is the label for a checkbox in the
 #. Golden Cursor settings dialog.

@@ -86,6 +86,7 @@ msgid "Error"
 msgstr "错误"
 
 #. Translators: The confirmation prompt displayed when the user requests to delete the selected tag.
+#, python-brace-format
 msgid ""
 "Are you sure you want to delete the position named {name}? This cannot be "
 "undone."
@@ -96,6 +97,7 @@ msgid "Delete position"
 msgstr "删除位置"
 
 #. Translators: The confirmation prompt displayed when the user is about to clear positions.
+#, python-brace-format
 msgid ""
 "Are you sure you want to clear mouse positions for the current application "
 "({appName})? This cannot be undone."
@@ -106,6 +108,7 @@ msgid "Clear mouse positions"
 msgstr "清除鼠标位置"
 
 #. Translators: A dialog message shown when tags for the application is cleared.
+#, python-brace-format
 msgid "All mouse positions for the application {appName} have been deleted."
 msgstr "已清除 {appName} 的所有鼠标位置。"
 
@@ -115,21 +118,28 @@ msgstr "鼠标位置已清除"
 
 #. Translators: This is the label for the Golden Cursor settings category in NVDA Settings screen.
 #. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on to be shown on installation and add-on information.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information found in Add-ons Manager.
 msgid "Golden Cursor"
 msgstr "金色光标"
+
+#. Translators: input help message for a Golden Cursor command.
+msgid "Opens a dialog listing mouse positions for the current application"
+msgstr "打开显示当前应用程序鼠标位置的对话框"
 
 #. Translators: message presented when no mouse positions are available for the focused app.
 #, python-format
 msgid "No mouse positions for %s."
 msgstr "%s 没有已保存的鼠标位置"
 
-#. Translators: input help message for a Golden Cursor command.
-msgid "Opens a dialog listing mouse positions for the current application"
-msgstr "打开显示当前应用程序鼠标位置的对话框"
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Opens a dialog to label the current mouse position and saves it"
+msgstr "打开保存当前鼠标位置的对话框"
 
 #. Translators: edit field label for new mouse position.
-msgid "Enter the name for the current mouse position (x: {x}, Y: {y})"
+#, fuzzy, python-brace-format
+msgid ""
+"Enter the name for the current mouse position (x: {positionX}, Y: {positionY}"
 msgstr "输入要保存当前鼠标位置的名称（x：{x}，Y：{y}）"
 
 #. Translators: title for save mouse position dialog.
@@ -141,13 +151,13 @@ msgstr "保存鼠标位置"
 msgid "Position saved in %s."
 msgstr "位置保存在 %s."
 
-#. Translators: Input help message for a Golden Cursor command.
-msgid "Opens a dialog to label the current mouse position and saves it"
-msgstr "打开保存当前鼠标位置的对话框"
-
 #. Translators: input help message for a Golden Cursor command.
 msgid "Changes mouse movement unit"
 msgstr "更改每次移动鼠标时的单位。"
+
+#. Translators: Input help message for a Golden Cursor add-on command.
+msgid "toggles reporting of mouse coordinates in pixels when mouse moves"
+msgstr "切换是否在鼠标移动过程中读出像素坐标"
 
 #. Translators: reported when new mouse coordinate announcement is on.
 msgid "Report new mouse coordinates on"
@@ -157,13 +167,13 @@ msgstr "读出鼠标位置"
 msgid "Report new mouse coordinates off"
 msgstr "不读鼠标位置"
 
-#. Translators: Input help message for a Golden Cursor add-on command.
-msgid "toggles reporting of mouse coordinates in pixels when mouse moves"
-msgstr "切换是否在鼠标移动过程中读出像素坐标"
-
 #. Translators: Input help message for a Golden Cursor command.
 msgid "Reports current X and Y mouse position"
 msgstr "读出当前鼠标的横纵坐标位置。"
+
+#. Translators: input help mode message for a Golden Cursor add-on command.
+msgid "Toggles mouse arrows to move the mouse with the arrow keys"
+msgstr "开关鼠标方向键模式，以使用方向键移动鼠标"
 
 #. Translators: presented when toggling mouse arrows feature.
 msgid "Mouse arrows on"
@@ -172,10 +182,6 @@ msgstr "打开鼠标方向键模式"
 #. Translators: presented when toggling mouse arrows feature.
 msgid "Mouse arrows off"
 msgstr "关闭鼠标方向键模式"
-
-#. Translators: input help mode message for a Golden Cursor add-on command.
-msgid "Toggles mouse arrows to move the mouse with the arrow keys"
-msgstr "开关鼠标方向键模式，以使用方向键移动鼠标"
 
 #. Translators: Input help message for a Golden Cursor command.
 msgid "Moves the Mouse pointer to the right"
@@ -198,6 +204,12 @@ msgid ""
 "Opens a dialog to enter the X and Y coordinates for the mouse to move to"
 msgstr "打开跳转鼠标位置的对话框。"
 
+#. Translators: Input help message for a Golden Cursor command.
+msgid ""
+"Toggles mouse movement restriction between current application and "
+"unrestricted"
+msgstr "在当前应用和无限制之间切换鼠标限制区域。"
+
 #. Translators: presented when mouse movement is restricted to current application.
 msgid "Mouse movement restricted to current application"
 msgstr "仅当前应用"
@@ -205,12 +217,6 @@ msgstr "仅当前应用"
 #. Translators: presented when mouse movement is unrestricted.
 msgid "Mouse movement unrestricted"
 msgstr "无限制"
-
-#. Translators: Input help message for a Golden Cursor command.
-msgid ""
-"Toggles mouse movement restriction between current application and "
-"unrestricted"
-msgstr "在当前应用和无限制之间切换鼠标限制区域。"
 
 #. Translators: This is the label for a checkbox in the
 #. Golden Cursor settings dialog.

@@ -2,7 +2,7 @@
 
 * Autor: salah atair, Joseph Lee
 * Baixe a [versão estável][1]
-* Compatibilidade com NVDA: 2019.3 e posteriores
+* Compatibilidade com NVDA: 2019.3 e além
 
 Este complemento possibilita mover o mouse usando o teclado e salvar
 posições do mouse em aplicativos.
@@ -11,8 +11,8 @@ posições do mouse em aplicativos.
 
 * Control+NVDA+L: ver as posições salvas do mouse para um aplicativo, se
   houver.
-* Shift+NVDA+l: salva uma tag ou um rótulo para a posição atual do mouse no
-  aplicativo atualmente focalizado.
+* Shift+NVDA+l: salva uma etiqueta (tag) ou um rótulo para a posição atual
+  do mouse no aplicativo atualmente focalizado.
 * Windows+NVDA+C: muda a unidade de movimento do mouse.
 * Windows+NVDA+R: Alterna a restrição do mouse.
 * Windows+NVDA+S: alterna o anúncio da posição do mouse em pixels.
@@ -39,6 +39,13 @@ Nota: Estes gestos podem ser reatribuídos via diálogo Definir Comandos
 * Ao excluir posições salvas, se não houver posições salvas, as posições do
   aplicativo serão apagadas.
 
+## Versão 5.0
+
+* Código fonte do complemento modernizado para torná-lo compatível com o
+  NVDA 2021.1.
+* Resolvidos muitos problemas de estilo de codificação e possíveis falhas
+  com Flake8.
+
 ## Versão 4.0
 
 * Requer NVDA 2019.3 ou posteriores.
@@ -64,7 +71,7 @@ Nota: Estes gestos podem ser reatribuídos via diálogo Definir Comandos
 * Corrigido erro de decodificação de unicode ao tentar excluir o nome da
   etiqueta.
 * Impede várias instâncias ao abrir várias caixas de diálogo de complemento.
-* Melhor aparência da lista de posições do mouse e saltar para diálogos de
+* Melhor aparência da lista de posições do mouse e diálogo saltar para
   posição.
 
 ## Versão 2.0
@@ -96,8 +103,8 @@ Nota: Estes gestos podem ser reatribuídos via diálogo Definir Comandos
   separadamente ou usando as teclas de seta para cima ou para baixo.
 * A caixa de diálogo mostrada ao salvar a posição atual do mouse agora
   mostra as coordenadas da localização atual do mouse.
-* Ao salvar posições, foi resolvido um problema em que o NVDA podia
-  reproduzir tons de erro se a pasta de posições não existir.
+* Ao salvar posições, resolvido um problema em que o NVDA pode reproduzir
+  tons de erro se a pasta de posições não existir.
 
 ## Versão 1.4
 

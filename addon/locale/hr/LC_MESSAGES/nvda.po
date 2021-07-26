@@ -122,29 +122,30 @@ msgstr "Pozicije miša su uklonjene"
 
 #. Translators: This is the label for the Golden Cursor settings category in NVDA Settings screen.
 #. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on to be shown on installation and add-on information.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information found in Add-ons Manager.
 msgid "Golden Cursor"
 msgstr "Zlatni kursor"
-
-msgid "&Golden Cursor..."
-msgstr "Zlatni &kursor …"
-
-msgid "Golden Cursor add-on settings"
-msgstr "Postavke dodatka Zlatni kursor"
-
-#. Translators: message presented when no mouse positions are available for the focused app.
-#, python-format
-msgid "No mouse positions for %s."
-msgstr "Nema pozicija miša za %s."
 
 #. Translators: input help message for a Golden Cursor command.
 msgid "Opens a dialog listing mouse positions for the current application"
 msgstr ""
 "Otvara dijaloški okvir s popisom pozicija miša za trenutačnu aplikaciju"
 
+#. Translators: message presented when no mouse positions are available for the focused app.
+#, python-format
+msgid "No mouse positions for %s."
+msgstr "Nema pozicija miša za %s."
+
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Opens a dialog to label the current mouse position and saves it"
+msgstr ""
+"Otvara dijaloški okvir za označavanje trenutačne pozicije miša i sprema je"
+
 #. Translators: edit field label for new mouse position.
-#, python-brace-format
-msgid "Enter the name for the current mouse position (x: {x}, Y: {y})"
+#, fuzzy, python-brace-format
+msgid ""
+"Enter the name for the current mouse position (x: {positionX}, Y: {positionY}"
 msgstr "Upiši naziv za trenutačnu poziciju (x: {x}, y: {y})"
 
 #. Translators: title for save mouse position dialog.
@@ -156,14 +157,15 @@ msgstr "Spremi poziciju miša"
 msgid "Position saved in %s."
 msgstr "Pozicija je spremljena u %s."
 
-#. Translators: Input help message for a Golden Cursor command.
-msgid "Opens a dialog to label the current mouse position and saves it"
-msgstr ""
-"Otvara dijaloški okvir za označavanje trenutačne pozicije miša i sprema je"
-
 #. Translators: input help message for a Golden Cursor command.
 msgid "Changes mouse movement unit"
 msgstr "Mijenja jedinicu za pomicanje miša"
+
+#. Translators: Input help message for a Golden Cursor add-on command.
+msgid "toggles reporting of mouse coordinates in pixels when mouse moves"
+msgstr ""
+"Uključuje ili isključuje izvještavanje o koordinatama u pikselima prilikom "
+"pomicanja miša"
 
 #. Translators: reported when new mouse coordinate announcement is on.
 msgid "Report new mouse coordinates on"
@@ -173,15 +175,14 @@ msgstr "Izvještavanje o novim koordinatama miša je uključeno"
 msgid "Report new mouse coordinates off"
 msgstr "Izvještavanje o novim koordinatama miša je isključeno"
 
-#. Translators: Input help message for a Golden Cursor add-on command.
-msgid "toggles reporting of mouse coordinates in pixels when mouse moves"
-msgstr ""
-"Uključuje ili isključuje izvještavanje o koordinatama u pikselima prilikom "
-"pomicanja miša"
-
 #. Translators: Input help message for a Golden Cursor command.
 msgid "Reports current X and Y mouse position"
 msgstr "Izvještava o trenutačnoj x i y poziciji miša"
+
+#. Translators: input help mode message for a Golden Cursor add-on command.
+msgid "Toggles mouse arrows to move the mouse with the arrow keys"
+msgstr ""
+"Uključuje ili isključuje mogućnost pomicanja miša pomoću tipki sa strelicama"
 
 #. Translators: presented when toggling mouse arrows feature.
 msgid "Mouse arrows on"
@@ -190,11 +191,6 @@ msgstr "Pomicanje miša strelicama je uključeno"
 #. Translators: presented when toggling mouse arrows feature.
 msgid "Mouse arrows off"
 msgstr "Pomicanje miša strelicama je isključeno"
-
-#. Translators: input help mode message for a Golden Cursor add-on command.
-msgid "Toggles mouse arrows to move the mouse with the arrow keys"
-msgstr ""
-"Uključuje ili isključuje mogućnost pomicanja miša pomoću tipki sa strelicama"
 
 #. Translators: Input help message for a Golden Cursor command.
 msgid "Moves the Mouse pointer to the right"
@@ -219,14 +215,6 @@ msgstr ""
 "Otvara dijaloški okvir za postavljanje x i y koordinata na koje se miša želi "
 "premjestiti"
 
-#. Translators: presented when mouse movement is restricted to current application.
-msgid "Mouse movement restricted to current application"
-msgstr "Pomicanje miša ograničeno na trenutačnu aplikaciju"
-
-#. Translators: presented when mouse movement is unrestricted.
-msgid "Mouse movement unrestricted"
-msgstr "Neograničeno pomicanje miša"
-
 #. Translators: Input help message for a Golden Cursor command.
 msgid ""
 "Toggles mouse movement restriction between current application and "
@@ -234,6 +222,14 @@ msgid ""
 msgstr ""
 "Mijenja između dviju vrsta ograničenja za pomicanje miša: pomicanje "
 "ograničeno na trenutačnu aplikaciju i neograničeno pomicanje"
+
+#. Translators: presented when mouse movement is restricted to current application.
+msgid "Mouse movement restricted to current application"
+msgstr "Pomicanje miša ograničeno na trenutačnu aplikaciju"
+
+#. Translators: presented when mouse movement is unrestricted.
+msgid "Mouse movement unrestricted"
+msgstr "Neograničeno pomicanje miša"
 
 #. Translators: This is the label for a checkbox in the
 #. Golden Cursor settings dialog.
@@ -244,10 +240,6 @@ msgstr "&Najavi nove koordinate miša kad se miš pomakne"
 msgid "Mouse movement &unit (in pixels)"
 msgstr "&Jedinica pomicanja miša (u pikselima)"
 
-#. Translators: This is the label for the Golden Cursor settings dialog.
-msgid "Golden Cursor Settings"
-msgstr "Postavke dodatka Zlatni kursor"
-
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
@@ -256,3 +248,12 @@ msgid ""
 msgstr ""
 "Omogućuje pomicanje miša tipkovnicom. Detalje je moguće naći u pomoći "
 "dodatka."
+
+#~ msgid "&Golden Cursor..."
+#~ msgstr "Zlatni &kursor …"
+
+#~ msgid "Golden Cursor add-on settings"
+#~ msgstr "Postavke dodatka Zlatni kursor"
+
+#~ msgid "Golden Cursor Settings"
+#~ msgstr "Postavke dodatka Zlatni kursor"

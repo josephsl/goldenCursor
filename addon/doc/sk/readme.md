@@ -40,6 +40,11 @@ Klávesové skratky môžete zmeniť v dialógu klávesové skratky.
 * Ak vymažete poslednú zapamätanú pozíciu pre aktuálnu aplikáciu, zmaže sa
   celý súbor s dátami pre aktuálnu aplikáciu.
 
+## Version 5.0
+
+* Modernized add-on source code to make it compatible with NVDA 2021.1.
+* Resolved many coding style issues and potential bugs with Flake8.
+
 ## Verzia 4.0
 
 * Vyžaduje NVDA od verzie 2019.3.
@@ -85,8 +90,8 @@ Klávesové skratky môžete zmeniť v dialógu klávesové skratky.
 * Zmenený dialóg na presun kurzora myšy. Zmenil sa názov okna a súradnice je
   možné zadať alebo nastaviť šípkami.
 * Dialóg pri ukladaní obsahuje aktuálnu pozíciu kurzora myši.
-* NVDA viac neprehrá zvuk chyby, ak sa nepodarilo nájsť priečinok s
-  uloženými súradnicami.
+* When saving positions, resolved an issue where NVDA may play error tones
+  if the positions folder does not exist.
 
 ## Verzia 1.4
 

@@ -117,22 +117,28 @@ msgstr "Pozície odstránené"
 
 #. Translators: This is the label for the Golden Cursor settings category in NVDA Settings screen.
 #. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on to be shown on installation and add-on information.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information found in Add-ons Manager.
 msgid "Golden Cursor"
 msgstr "Pokročilý kurzor myši"
+
+#. Translators: input help message for a Golden Cursor command.
+msgid "Opens a dialog listing mouse positions for the current application"
+msgstr "Otvorí zoznam s uloženými pozíciami pre aktuálnu aplikáciu"
 
 #. Translators: message presented when no mouse positions are available for the focused app.
 #, python-format
 msgid "No mouse positions for %s."
 msgstr "Nenašli sa žiadne pozície pre %s."
 
-#. Translators: input help message for a Golden Cursor command.
-msgid "Opens a dialog listing mouse positions for the current application"
-msgstr "Otvorí zoznam s uloženými pozíciami pre aktuálnu aplikáciu"
+#. Translators: Input help message for a Golden Cursor command.
+msgid "Opens a dialog to label the current mouse position and saves it"
+msgstr "Otvorí dialóg na pomenovanie a uloženie pozície"
 
 #. Translators: edit field label for new mouse position.
-#, python-brace-format
-msgid "Enter the name for the current mouse position (x: {x}, Y: {y})"
+#, fuzzy, python-brace-format
+msgid ""
+"Enter the name for the current mouse position (x: {positionX}, Y: {positionY}"
 msgstr "Zadajte názov pre pozíciu myši (x: {x}, Y: {y})"
 
 #. Translators: title for save mouse position dialog.
@@ -144,13 +150,13 @@ msgstr "Uložiť pozíciu"
 msgid "Position saved in %s."
 msgstr "Pozícia uložená v %s."
 
-#. Translators: Input help message for a Golden Cursor command.
-msgid "Opens a dialog to label the current mouse position and saves it"
-msgstr "Otvorí dialóg na pomenovanie a uloženie pozície"
-
 #. Translators: input help message for a Golden Cursor command.
 msgid "Changes mouse movement unit"
 msgstr "Zmení jednotku na pohyb myši"
+
+#. Translators: Input help message for a Golden Cursor add-on command.
+msgid "toggles reporting of mouse coordinates in pixels when mouse moves"
+msgstr "Zapína a vypína oznamovanie pozície kurzora v pixeloch"
 
 #. Translators: reported when new mouse coordinate announcement is on.
 msgid "Report new mouse coordinates on"
@@ -160,13 +166,13 @@ msgstr "Oznamovať pozíciu myši"
 msgid "Report new mouse coordinates off"
 msgstr "Neoznamovať pozíciu myši"
 
-#. Translators: Input help message for a Golden Cursor add-on command.
-msgid "toggles reporting of mouse coordinates in pixels when mouse moves"
-msgstr "Zapína a vypína oznamovanie pozície kurzora v pixeloch"
-
 #. Translators: Input help message for a Golden Cursor command.
 msgid "Reports current X and Y mouse position"
 msgstr "Oznámy pozíciu myši"
+
+#. Translators: input help mode message for a Golden Cursor add-on command.
+msgid "Toggles mouse arrows to move the mouse with the arrow keys"
+msgstr "Zapína a vypína ovládanie myši šípkami"
 
 #. Translators: presented when toggling mouse arrows feature.
 msgid "Mouse arrows on"
@@ -175,10 +181,6 @@ msgstr "Ovládanie myši šípkami zapnuté"
 #. Translators: presented when toggling mouse arrows feature.
 msgid "Mouse arrows off"
 msgstr "Ovládanie myši šípkami vypnuté"
-
-#. Translators: input help mode message for a Golden Cursor add-on command.
-msgid "Toggles mouse arrows to move the mouse with the arrow keys"
-msgstr "Zapína a vypína ovládanie myši šípkami"
 
 #. Translators: Input help message for a Golden Cursor command.
 msgid "Moves the Mouse pointer to the right"
@@ -201,6 +203,13 @@ msgid ""
 "Opens a dialog to enter the X and Y coordinates for the mouse to move to"
 msgstr "Otvorí dialóg na ručné zadanie pozície myši"
 
+#. Translators: Input help message for a Golden Cursor command.
+msgid ""
+"Toggles mouse movement restriction between current application and "
+"unrestricted"
+msgstr ""
+"Zapína a vypína obmedzenie pohybu kurzora myši na okno aktuálnej aplikácie"
+
 #. Translators: presented when mouse movement is restricted to current application.
 msgid "Mouse movement restricted to current application"
 msgstr "Pohyb myši obmedzený na aktuálne okno"
@@ -208,13 +217,6 @@ msgstr "Pohyb myši obmedzený na aktuálne okno"
 #. Translators: presented when mouse movement is unrestricted.
 msgid "Mouse movement unrestricted"
 msgstr "Obmedzenie myši vypnuté"
-
-#. Translators: Input help message for a Golden Cursor command.
-msgid ""
-"Toggles mouse movement restriction between current application and "
-"unrestricted"
-msgstr ""
-"Zapína a vypína obmedzenie pohybu kurzora myši na okno aktuálnej aplikácie"
 
 #. Translators: This is the label for a checkbox in the
 #. Golden Cursor settings dialog.

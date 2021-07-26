@@ -44,6 +44,11 @@ párbeszédpanelén az Aranykurzor kategóriában.
   alkalmazáshoz egy egérpozíció sem, az alkalmazáshoz tartozó egérpozíciós
   fájl is törlődik.
 
+## Version 5.0
+
+* Modernized add-on source code to make it compatible with NVDA 2021.1.
+* Resolved many coding style issues and potential bugs with Flake8.
+
 ## 4.0-s verzió
 
 * Az NVDA 2019.3 és újabb verziójára van szükség a futtatáshoz.
@@ -99,8 +104,8 @@ párbeszédpanelén az Aranykurzor kategóriában.
   lenyíl segítségével.
 * Az egérpozíciók elmentésére szolgáló ablak már mutatja az aktuális
   egérpozíció koordinátáit.
-* Egy egérpozíció elmentésénél az NVDA már nem ad hibajelző hangot, ha az
-  egérpozíciók mappája nem létezik.
+* When saving positions, resolved an issue where NVDA may play error tones
+  if the positions folder does not exist.
 
 ## 1.4-es verzió
 
