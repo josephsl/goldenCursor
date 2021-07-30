@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: goldenCursor 1.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2016-03-18 05:37+1000\n"
-"PO-Revision-Date: 2018-01-29 18:19+0100\n"
+"PO-Revision-Date: 2021-07-26 11:18+0200\n"
 "Last-Translator: Juan C. Buño <oprisniki@gmail.com>\n"
 "Language-Team: NVDA add-ons translation team <oprisniki@gmail.com>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.11\n"
+"X-Generator: Poedit 3.0\n"
 
 #, python-format
 msgid "Mouse positions for %s"
@@ -145,10 +145,12 @@ msgstr ""
 "Abre un diálogo para etiquetar la posición actual del ratón y guardarla"
 
 #. Translators: edit field label for new mouse position.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "Enter the name for the current mouse position (x: {positionX}, Y: {positionY}"
-msgstr "Introduce el nombre para la posición actual del ratón (x: {x}, Y: {y})"
+msgstr ""
+"Introduce el nombre para la posición actual del ratón (x: {positionX}, Y: "
+"{positionY})"
 
 #. Translators: title for save mouse position dialog.
 msgid "Save mouse position"
@@ -166,7 +168,7 @@ msgstr "Cambia la unidad de movimiento del ratón"
 #. Translators: Input help message for a Golden Cursor add-on command.
 msgid "toggles reporting of mouse coordinates in pixels when mouse moves"
 msgstr ""
-"Conmuta el anunciado de las coordenadas del ratón en píxeles cuando se mueva"
+"conmuta el anunciado de las coordenadas del ratón en píxeles cuando se mueva"
 
 #. Translators: reported when new mouse coordinate announcement is on.
 msgid "Report new mouse coordinates on"

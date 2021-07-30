@@ -9,14 +9,14 @@ msgstr ""
 "Project-Id-Version: goldenCursor 1.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2016-03-18 05:37+1000\n"
-"PO-Revision-Date: 2019-11-15 23:30+0100\n"
+"PO-Revision-Date: 2021-07-28 17:18+0200\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: hr <LL@li.org>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.4\n"
+"X-Generator: Poedit 3.0\n"
 
 #, python-format
 msgid "Mouse positions for %s"
@@ -143,10 +143,10 @@ msgstr ""
 "Otvara dijaloški okvir za označavanje trenutačne pozicije miša i sprema je"
 
 #. Translators: edit field label for new mouse position.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "Enter the name for the current mouse position (x: {positionX}, Y: {positionY}"
-msgstr "Upiši naziv za trenutačnu poziciju (x: {x}, y: {y})"
+msgstr "Upiši naziv za trenutačnu poziciju (x: {positionX}, y: {positionY})"
 
 #. Translators: title for save mouse position dialog.
 msgid "Save mouse position"

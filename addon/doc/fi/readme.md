@@ -39,10 +39,11 @@ Syötekomennot-valintaikkunasta Golden Cursor -kategorian alta.
 * Mikäli tallennettuja sijainteja ei ole jäljellä niitä poistettaessa,
   sovelluksen sijainnit tyhjennetään.
 
-## Version 5.0
+## Versio 5.0
 
-* Modernized add-on source code to make it compatible with NVDA 2021.1.
-* Resolved many coding style issues and potential bugs with Flake8.
+* Lisäosa tehty yhteensopivaksi NVDA 2021.1:n kanssa lähdekoodia
+  uudistamalla.
+* Ratkaistu useita koodaustyylin ongelmia ja mahdollisia bugeja Flake8:lla.
 
 ## Versio 4.0
 
@@ -96,8 +97,8 @@ Syötekomennot-valintaikkunasta Golden Cursor -kategorian alta.
   erikseen tai Nuoli ylös/alas-näppäimiä käyttäen.
 * Nykyistä hiiren sijaintia tallennettaessa näytettävä valintaikkuna näyttää
   nyt sijainnin koordinaatit.
-* When saving positions, resolved an issue where NVDA may play error tones
-  if the positions folder does not exist.
+* Ratkaistu ongelma, jossa NVDA saattaa toistaa virheääniä sijainteja
+  tallennettaessa, mikäli sijaintien kansiota ei ole olemassa.
 
 ## Versio 1.4
 

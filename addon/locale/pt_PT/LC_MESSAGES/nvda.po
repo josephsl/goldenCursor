@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Cursor Dourado 2.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2017-12-26 10:18+0000\n"
-"PO-Revision-Date: 2020-06-23 20:50+0100\n"
+"PO-Revision-Date: 2021-07-26 12:54+0100\n"
 "Last-Translator: Ângelo Abrantes <ampa4374@gmail.com>\n"
 "Language-Team: Equipa Portuguesa do NVDA <angelomiguelabrantes@gmail.com; "
 "rui.fontes@tiflotecnia.com>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 2.3.1\n"
+"X-Generator: Poedit 3.0\n"
 "X-Poedit-Basepath: ../../../globalPlugins\n"
 "X-Poedit-SearchPath-0: goldenCursor.py\n"
 
@@ -147,10 +147,11 @@ msgid "Opens a dialog to label the current mouse position and saves it"
 msgstr "Abre um diálogo para etiquetar a posição actual do rato e guarda-a"
 
 #. Translators: edit field label for new mouse position.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "Enter the name for the current mouse position (x: {positionX}, Y: {positionY}"
-msgstr "Escreva um nome para a posição actual do rato (x: {x}, Y: {y})"
+msgstr ""
+"Escreva um nome para a posição actual do rato (x: {positionX}, Y: {positionY}"
 
 #. Translators: title for save mouse position dialog.
 msgid "Save mouse position"
