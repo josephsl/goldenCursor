@@ -8,18 +8,18 @@ msgstr ""
 "Project-Id-Version: goldenCursor 1.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2016-04-22 07:00+1000\n"
-"PO-Revision-Date: 2019-02-02 15:36+0100\n"
+"PO-Revision-Date: 2021-08-03 16:13+0200\n"
 "Last-Translator: Ruslan Kolodyazhni <eye0@rambler.ru>\n"
 "Language-Team: \n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Poedit 3.0\n"
 
 #, python-format
 msgid "Mouse positions for %s"
-msgstr "Положения мыши для %s"
+msgstr "Положение мыши для %s"
 
 msgid "New mouse position"
 msgstr "Новое положение мыши"
@@ -142,10 +142,10 @@ msgid "Opens a dialog to label the current mouse position and saves it"
 msgstr "Открывает диалог для пометки текущего положения мыши и его сохранения"
 
 #. Translators: edit field label for new mouse position.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "Enter the name for the current mouse position (x: {positionX}, Y: {positionY}"
-msgstr "Введите имя для текущего положения мыши (x: {x}, Y: {y})"
+msgstr "Введите имя текущей позиции мыши (x: {positionX}, Y: {positionY}"
 
 #. Translators: title for save mouse position dialog.
 msgid "Save mouse position"

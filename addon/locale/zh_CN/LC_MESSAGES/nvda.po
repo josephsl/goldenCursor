@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: goldenCursor 3.0\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2021-03-19 14:31+0800\n"
-"PO-Revision-Date: 2021-03-19 16:47+0800\n"
+"PO-Revision-Date: 2021-07-26 21:15+0800\n"
 "Last-Translator: dingpengyu <dingpengyu06@gmail.com>\n"
 "Language-Team: NVDASimplified Chinese team All volunteers <Copyright (C) "
 "2010-2019>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 2.4.3\n"
 
 #, python-format
 msgid "Mouse positions for %s"
@@ -137,10 +137,10 @@ msgid "Opens a dialog to label the current mouse position and saves it"
 msgstr "打开保存当前鼠标位置的对话框"
 
 #. Translators: edit field label for new mouse position.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "Enter the name for the current mouse position (x: {positionX}, Y: {positionY}"
-msgstr "输入要保存当前鼠标位置的名称（x：{x}，Y：{y}）"
+msgstr "输入要保存当前鼠标位置的名称（x： {positionX}，Y： {positionY}）"
 
 #. Translators: title for save mouse position dialog.
 msgid "Save mouse position"

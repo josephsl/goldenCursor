@@ -40,8 +40,9 @@ Bemærk: Disse kommandoer kan ændres ved brug af NVDA-dialogen
 
 ## Version 5.0
 
-* Modernized add-on source code to make it compatible with NVDA 2021.1.
-* Resolved many coding style issues and potential bugs with Flake8.
+* Moderniserede tilføjelsens kildekode for at gøre den kompatibel med NVDA
+  2021.1.
+* Løst mange problemer med kodningstil og potentielle fejl med Flake8.
 
 ## Version 4.0
 
@@ -97,8 +98,8 @@ Bemærk: Disse kommandoer kan ændres ved brug af NVDA-dialogen
   eller ved hjælp af pilene op og ned.
 * Dialogboksen, der vises, når du gemmer den aktuelle museposition, viser nu
   koordinater for den aktuelle museplacering.
-* When saving positions, resolved an issue where NVDA may play error tones
-  if the positions folder does not exist.
+* Løst et problem der udløste en fejltone, når du gemmer positioner, hvis
+  positionsmappen ikke findes.
 
 ## Version 1.4
 
