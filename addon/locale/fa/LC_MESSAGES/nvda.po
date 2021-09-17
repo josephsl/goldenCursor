@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: goldenCursor 1.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2016-03-18 05:37+1000\n"
-"PO-Revision-Date: 2019-11-15 17:33+0330\n"
+"PO-Revision-Date: 2021-09-13 11:06+0330\n"
 "Last-Translator: Mohammadreza Rashad <mohammadreza5712@gmail.com>\n"
 "Language-Team: NVDA Translation Team <nvda-translations@groups.io>\n"
 "Language: fa\n"
@@ -144,10 +144,10 @@ msgstr ""
 "پنجره‌ای را برای برچسب گذاشتن روی موقعیتِ جاریِ موس و ذخیره کردنِ آن باز میکند."
 
 #. Translators: edit field label for new mouse position.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "Enter the name for the current mouse position (x: {positionX}, Y: {positionY}"
-msgstr "برای موقعیتِ جاریِ موس یک نام وارد کنید (x: {x}, Y: {y})"
+msgstr "برای موقعیتِ جاریِ موس یک نام وارد کنید (x: {positionX}, Y: {positionY})"
 
 #. Translators: title for save mouse position dialog.
 msgid "Save mouse position"

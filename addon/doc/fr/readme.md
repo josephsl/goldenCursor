@@ -2,7 +2,7 @@
 
 * Auteur : salah atair, Joseph Lee
 * Télécharger [version stable][1]
-* NVDA compatibility: 2019.3 and beyond
+* Compatibilité NVDA : 2019.3 et ultérieure
 
 Cette extension vous permet de déplacer la souris à l'aide du clavier et de
 sauvegarder la position de la souris pour les applications.
@@ -10,7 +10,7 @@ sauvegarder la position de la souris pour les applications.
 ## Touche de commandes
 
 * Contrôle+NVDA+L : afficher les positions de la souris sauvegardées pour
-  une application, le cas échéant.
+  une application, s'il y en a
 * Maj+NVDA+l : sauvegarde un tag ou une étiquette pour la position actuelle
   de la souris dans l'application ayant actuellement le focus.
 * Windows+NVDA+C : changer l'unité de mouvement de la souris.
@@ -45,18 +45,21 @@ commandes de NVDA sous la catégorie Golden Cursor.
 
 ## Version 5.0
 
-* Modernized add-on source code to make it compatible with NVDA 2021.1.
-* Resolved many coding style issues and potential bugs with Flake8.
+* Code source de l'extension modernisé pour le rendre compatible avec NVDA
+  2021.1.
+* Résolution de nombreux problèmes de style de code et de bugs potentiels
+  avec Flake8.
 
 ## Version 4.0
 
-* Requires NVDA 2019.3 or later.
-* Golden Cursor settings dialog has been replaced by Golden Cursor settings
-  panel.
+* Nécessite NVDA 2019.3 ou ultérieure.
+* Le dialogue des paramètres Golden Cursor a été remplacée par le panneau de
+  paramètres Golden Cursor.
 
 ## Version 3.3
 
-* Internal changes to support future NVDA releases.
+* Modifications internes pour prendre en charge les futures versions de
+  NVDA.
 
 ## Version 3.2
 
@@ -111,8 +114,8 @@ commandes de NVDA sous la catégorie Golden Cursor.
 * Le dialogue affichée lors de la sauvegarde de la position actuelle de la
   souris affiche maintenant les coordonnées de l'emplacement actuel de la
   souris.
-* When saving positions, resolved an issue where NVDA may play error tones
-  if the positions folder does not exist.
+* Lors de l'enregistrement des positions, résolution d'un problème où NVDA
+  peut émettre un son d'erreur si le dossier des positions n'existe pas.
 
 ## Version 1.4
 
@@ -121,7 +124,7 @@ commandes de NVDA sous la catégorie Golden Cursor.
 
 ## Version 1.0
 
-* Première version
+* Première version.
 
 [[!tag stable dev]]
 
