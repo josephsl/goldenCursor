@@ -425,6 +425,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			self.bindGesture("kb:leftArrow", "moveMouseLeft")
 			self.bindGesture("kb:downArrow", "moveMouseDown")
 			self.bindGesture("kb:upArrow", "moveMouseUp")
+			_dict={
+				"kb:control+rightArrow": "moveByObjectRight",
+				"kb:control+leftArrow": "moveByObjectLeft",
+				"kb:control+downArrow": "moveByObjectDown",
+				"kb:control+upArrow": "moveByObjectUp"
+			}
+			self.bindGestures(_dict)
 			# Translators: presented when toggling mouse arrows feature.
 			ui.message(_("Mouse arrows on"))
 		else:
@@ -523,6 +530,83 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			return
 		if config.conf["goldenCursor"]["reportNewMouseCoordinates"]:
 			ui.message(str(x if direction in (GCMouseRight, GCMouseLeft) else y))
+
+	@scriptHandler.script(
+		# Translators: Input help message for a Golden Cursor command.
+		description=_("Moves the Mouse pointer right to the adjacent object "),
+		gesture="kb:nvda+control+windows+rightArrow"
+	)
+	def script_moveByObjectRight(self, gesture):
+		self.moveMouseByObject(GCMouseRight)
+
+
+	@scriptHandler.script(
+		# Translators: Input help message for a Golden Cursor command.
+		description=_("Moves the Mouse pointer left to the adjacent object "),
+		gesture="kb:nvda+control+windows+leftArrow"
+	)
+	def script_moveByObjectLeft(self,gesture):
+		self.moveMouseByObject(GCMouseLeft)
+
+	@scriptHandler.script(
+		# Translators: Input help message for a Golden Cursor command.
+		description=_("Moves the Mouse pointer down to the adjacent object"),
+		gesture="kb:nvda+control+windows+downArrow"
+	)
+	def script_moveByObjectDown(self,gesture):
+		self.moveMouseByObject(GCMouseDown)
+
+	@scriptHandler.script(
+		# Translators: Input help message for a Golden Cursor command.
+		description=_("Moves the Mouse pointer up to the adjacent object"),
+		gesture="kb:nvda+control+windows+upArrow"
+	)
+	def script_moveByObjectUp(self,gesture):
+		self.moveMouseByObject(GCMouseUp)
+
+	def moveMouseByObject(self, direction):
+		w, h = api.getDesktopObject().location[2:]
+		x, y = winUser.getCursorPos()
+		if direction== GCMouseRight:
+			# The mouse will jump by 5 pixels in this range.
+			movementRange= range(x, w, 5)
+			movingIndex= 0 # HORIZONTAL movement
+			restrictionBackStep= -5
+		elif direction== GCMouseLeft:
+			movementRange= range(x, 0, -5)
+			movingIndex= 0
+			restrictionBackStep= 5
+		elif direction== GCMouseDown:
+			movementRange= range(y, h, 5)
+			movingIndex= 1 # vertical movement
+			restrictionBackStep= -5
+		elif direction== GCMouseUp:
+			movementRange= range(y, 0, -5)
+			movingIndex= 1
+			restrictionBackStep= 5
+		# Current mouse object
+		currentObj= self.getMouse()
+		for pixelValue in movementRange:
+			point= (pixelValue, y) if movingIndex==0 else (x, pixelValue)
+			newObj= currentObj.objectFromPoint(*point)
+			# The first different object we encounter
+			if newObj != currentObj:
+				break
+		else:
+			# loop ended without breaking
+			wx.Bell()
+		newX, newY= point
+		if self.restriction and self.getAppRestriction.appModule.appName != newObj.appModule.appName:
+			# change point from tuple to list, so we can mutate it.
+			point= list(point)
+			# Move 5 pixels back to stay in restricted application.
+			point[movingIndex]=point[movingIndex]+restrictionBackStep
+			wx.Bell()
+		# Move mouse to the new position.
+		setMousePosition(*point)
+		if config.conf["goldenCursor"]["reportNewMouseCoordinates"]:
+			x,y= point
+			ui.message(str(x) if movingIndex==0 else str(y))
 
 	def getMouse(self):
 		return api.getDesktopObject().objectFromPoint(*winUser.getCursorPos())

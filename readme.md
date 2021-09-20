@@ -17,6 +17,7 @@ This add-on allows you to move the mouse using a keyboard and save mouse positio
 * Windows+NVDA+P: report mouse position.
 * Windows+NVDA+M: sswitch mouse arrows on or off.
 * Windows+NVDA+arrow keys (or just arrow keys if mouse arrows is on): move mouse.
+* Windows+NVDA+control+arrow keys (or just control+arrow keys if mouse arrows is on): move mouse to adjacent object.
 
 Note: these gestures can be reassigned via NVDA's Input Gestures dialog under Golden Cursor category.
 
